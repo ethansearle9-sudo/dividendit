@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dividend IT — Outsourced Cybersecurity & IT Ireland</title>
+  <meta name="description" content="Ireland's leading outsourced cybersecurity & IT partner for business owners. IT that pays back — protecting your business, driving efficiency, and building long-term value. Serving startups, entrepreneurs and value creators across Ireland." />
+  <meta property="og:title" content="Dividend IT — Outsourced Cybersecurity & IT Ireland" />
+  <meta property="og:description" content="Dividend IT manages your outsourced cybersecurity & IT so your business runs faster, stays protected, and becomes more valuable. From startup to exit — no jargon, no surprises, just IT that works." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dividendit.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white: #ffffff;
+      --off-white: #f8f8f6;
+      --light-grey: #f0efed;
+      --mid-grey: #e2e0dc;
+      --text-muted: #8a8780;
+      --text-body: #3d3c3a;
+      --text-dark: #1a1917;
+      --accent-green: #2d6a4f;
+      --accent-green-light: #e8f4ef;
+      --accent-green-mid: #b7dac9;
+      --border: #e2e0dc;
+      --font-display: 'DM Serif Display', serif;
+      --font-body: 'DM Sans', sans-serif;
+      --max-w: 1160px;
+      --radius: 4px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--text-body);
+      background: var(--white);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+    }
+    .nav-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.35rem; color: var(--text-dark);
+      text-decoration: none; letter-spacing: -0.01em;
+    }
+    .nav-logo span { color: var(--accent-green); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.875rem; font-weight: 500;
+      color: var(--text-body); text-decoration: none;
+      letter-spacing: 0.01em; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent-green); }
+    .nav-cta {
+      background: var(--text-dark) !important;
+      color: var(--white) !important;
+      padding: 0.55rem 1.25rem !important;
+      border-radius: var(--radius) !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--accent-green) !important; }
+
+    /* ── HERO ── */
+    #hero {
+      padding: 140px 2rem 100px;
+      background: var(--white);
+      position: relative; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; top: 0; right: -10%;
+      width: 55%; height: 100%;
+      background: var(--off-white);
+      clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+      z-index: 0;
+    }
+    .hero-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      position: relative; z-index: 1;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent-green); margin-bottom: 1.25rem;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block;
+      width: 24px; height: 1px; background: var(--accent-green);
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      line-height: 1.08; letter-spacing: -0.02em;
+      color: var(--text-dark); margin-bottom: 1.25rem;
+    }
+    .hero-title em { font-style: italic; color: var(--accent-green); }
+    .hero-sub {
+      font-size: 1.1rem; color: var(--text-body);
+      line-height: 1.7; max-width: 460px; margin-bottom: 2.5rem;
+    }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+    .btn-primary {
+      background: var(--text-dark); color: var(--white);
+      padding: 0.85rem 1.75rem; border-radius: var(--radius);
+      font-size: 0.9rem; font-weight: 600; text-decoration: none;
+      transition: background 0.2s, transform 0.15s; display: inline-block;
+    }
+    .btn-primary:hover { background: var(--accent-green); transform: translateY(-1px); }
+    .btn-secondary {
+      color: var(--text-body); font-size: 0.9rem; font-weight: 500;
+      text-decoration: none; display: inline-flex;
+      align-items: center; gap: 0.4rem; transition: color 0.2s;
+    }
+    .btn-secondary:hover { color: var(--text-dark); }
+    .btn-secondary::after { content: '→'; transition: transform 0.2s; }
+    .btn-secondary:hover::after { transform: translateX(3px); }
+    .hero-stats { display: flex; flex-direction: column; gap: 1.5rem; }
+    .hero-stat-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 8px; padding: 1.5rem;
+      animation: fadeUp 0.6s ease both;
+    }
+    .hero-stat-card:nth-child(2) { animation-delay: 0.1s; margin-left: 2rem; }
+    .hero-stat-card:nth-child(3) { animation-delay: 0.2s; }
+    .stat-number {
+      font-family: var(--font-display); font-size: 2.5rem;
+      color: var(--text-dark); line-height: 1; margin-bottom: 0.35rem;
+    }
+    .stat-number span { color: var(--accent-green); }
+    .stat-label { font-size: 0.875rem; color: var(--text-muted); line-height: 1.4; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar { background: var(--text-dark); padding: 1.25rem 2rem; }
+    .trust-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: flex; align-items: center;
+      justify-content: center; gap: 3rem; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-size: 0.8rem; font-weight: 500;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.04em; text-transform: uppercase;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 100px 2rem; }
+    .section-inner { max-width: var(--max-w); margin: 0 auto; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent-green); margin-bottom: 1rem;
+    }
+    .section-label::before {
+      content: ''; display: block;
+      width: 20px; height: 1px; background: var(--accent-green);
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      line-height: 1.15; letter-spacing: -0.02em;
+      color: var(--text-dark); margin-bottom: 1.25rem;
+    }
+    .section-sub {
+      font-size: 1.05rem; color: var(--text-muted);
+      max-width: 560px; line-height: 1.7;
+    }
+
+    /* ── JOURNEY SECTION ── */
+    #journey { background: var(--off-white); }
+    .journey-tabs {
+      display: flex; gap: 0;
+      border: 1.5px solid var(--border);
+      border-radius: 10px; overflow: hidden;
+      margin: 3rem 0 0; width: fit-content;
+    }
+    .journey-tab {
+      padding: 0.75rem 2rem;
+      font-size: 0.875rem; font-weight: 600;
+      color: var(--text-muted); cursor: pointer;
+      background: var(--white);
+      border: none; border-right: 1px solid var(--border);
+      transition: all 0.2s; font-family: var(--font-body);
+      letter-spacing: 0.02em;
+    }
+    .journey-tab:last-child { border-right: none; }
+    .journey-tab.active {
+      background: var(--text-dark); color: var(--white);
+    }
+    .journey-tab:not(.active):hover { background: var(--off-white); color: var(--text-dark); }
+    .journey-panels { margin-top: 2.5rem; }
+    .journey-panel { display: none; }
+    .journey-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .journey-panel-left h3 {
+      font-family: var(--font-display);
+      font-size: 1.8rem; line-height: 1.2;
+      color: var(--text-dark); margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .journey-panel-left h3 em { font-style: italic; color: var(--accent-green); }
+    .journey-panel-left p {
+      font-size: 1rem; color: var(--text-body);
+      line-height: 1.8; margin-bottom: 1.25rem;
+    }
+    .journey-panel-left p:last-of-type { margin-bottom: 1.75rem; }
+    .journey-pain-list {
+      display: flex; flex-direction: column; gap: 0.65rem;
+      margin-bottom: 2rem;
+    }
+    .journey-pain-item {
+      display: flex; gap: 0.75rem; align-items: flex-start;
+      font-size: 0.875rem; color: var(--text-body); line-height: 1.5;
+    }
+    .journey-pain-item::before {
+      content: '—'; color: var(--accent-green);
+      font-weight: 700; flex-shrink: 0; margin-top: 0.1rem;
+    }
+    .journey-panel-right {
+      display: flex; flex-direction: column; gap: 1.25rem;
+    }
+    .journey-promise {
+      background: var(--text-dark); color: var(--white);
+      border-radius: 12px; padding: 2rem;
+    }
+    .journey-promise h4 {
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5); margin-bottom: 0.85rem;
+    }
+    .journey-promise p {
+      font-size: 0.95rem; color: rgba(255,255,255,0.85);
+      line-height: 1.75;
+    }
+    .journey-promise strong { color: var(--white); }
+    .journey-stat {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.5rem;
+    }
+    .journey-stat-num {
+      font-family: var(--font-display); font-size: 2.8rem;
+      color: var(--text-dark); line-height: 1; margin-bottom: 0.35rem;
+    }
+    .journey-stat-num span { color: var(--accent-green); }
+    .journey-stat-label { font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; }
+    .journey-cta {
+      background: var(--accent-green-light);
+      border: 1px solid var(--accent-green-mid);
+      border-radius: 10px; padding: 1.5rem;
+    }
+    .journey-cta p {
+      font-size: 0.875rem; color: var(--text-body);
+      margin-bottom: 1rem; line-height: 1.6;
+    }
+    .journey-cta strong { color: var(--text-dark); }
+
+    /* ── CORE STORY ── */
+    #story { background: var(--text-dark); }
+    .story-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 6rem; align-items: center;
+    }
+    .story-left .section-label { color: rgba(255,255,255,0.4); }
+    .story-left .section-label::before { background: rgba(255,255,255,0.3); }
+    .story-left .section-title { color: var(--white); }
+    .story-text p {
+      font-size: 1rem; color: rgba(255,255,255,0.7);
+      line-height: 1.85; margin-bottom: 1.25rem;
+    }
+    .story-text p:last-child { margin-bottom: 0; }
+    .story-text strong { color: var(--white); font-weight: 600; }
+    .story-text em { color: rgba(255,255,255,0.9); font-style: italic; }
+    .story-right { display: flex; flex-direction: column; gap: 1.25rem; }
+    .story-card {
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px; padding: 1.75rem;
+    }
+    .story-card-icon { font-size: 1.5rem; margin-bottom: 0.85rem; }
+    .story-card h4 {
+      font-size: 0.875rem; font-weight: 600;
+      color: var(--white); margin-bottom: 0.5rem;
+    }
+    .story-card p { font-size: 0.825rem; color: rgba(255,255,255,0.55); line-height: 1.65; }
+    .story-promise {
+      background: var(--accent-green);
+      border-radius: 10px; padding: 1.75rem;
+      border: none;
+    }
+    .story-promise h4 { color: rgba(255,255,255,0.8); }
+    .story-promise p { color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.7; }
+
+    /* ── PROBLEM ── */
+    #problem { background: var(--off-white); }
+    .problem-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: center; margin-top: 4rem;
+    }
+    .problem-points { display: flex; flex-direction: column; gap: 1.5rem; }
+    .problem-point { display: flex; gap: 1rem; align-items: flex-start; }
+    .problem-icon {
+      width: 40px; height: 40px;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 8px; display: flex;
+      align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 1.1rem;
+    }
+    .problem-point h4 { font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem; }
+    .problem-point p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
+    .problem-callout {
+      background: var(--text-dark); color: var(--white);
+      border-radius: 12px; padding: 2.5rem;
+    }
+    .problem-callout h3 {
+      font-family: var(--font-display); font-size: 1.6rem;
+      line-height: 1.25; margin-bottom: 1rem;
+    }
+    .problem-callout p { font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 1.5rem; }
+    .callout-tag {
+      display: inline-block; background: var(--accent-green);
+      color: var(--white); font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 0.35rem 0.85rem; border-radius: 2rem;
+    }
+
+    /* ── SMOKING GUN ── */
+    #smoking-gun { background: var(--white); }
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px; background: var(--border);
+      border: 1.5px solid var(--border);
+      border-radius: 12px; overflow: hidden; margin-top: 3.5rem;
+    }
+    .stat-block {
+      background: var(--white); padding: 2.25rem 2rem;
+      transition: background 0.2s;
+    }
+    .stat-block:hover { background: var(--off-white); }
+    .stat-block-number {
+      font-family: var(--font-display); font-size: 3rem;
+      color: var(--text-dark); line-height: 1; margin-bottom: 0.5rem;
+    }
+    .stat-block-number span { color: var(--accent-green); }
+    .stat-block-label { font-size: 0.875rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.4rem; }
+    .stat-block-desc { font-size: 0.825rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 0.75rem; }
+    .stat-block-source {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      font-size: 0.72rem; font-weight: 500;
+      color: var(--text-muted); text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1px;
+    }
+    .stat-block-source::after { content: "\2192"; font-size: 0.7rem; margin-left: 0.25rem; display: inline-block; transition: transform 0.2s; }
+    .stat-block-source:hover { color: var(--accent-green); border-bottom-color: var(--accent-green); }
+    .stat-block-source:hover::after { transform: translateX(3px); }
+    .stat-block-cost-breakdown {
+      display: flex; flex-direction: column; gap: 0.5rem;
+      margin: 0.65rem 0 0.75rem; padding: 0.85rem;
+      background: var(--off-white); border-radius: 6px;
+      border-left: 2px solid var(--accent-green);
+    }
+    .cost-item {
+      display: flex; justify-content: space-between; align-items: baseline;
+      font-size: 0.775rem; line-height: 1.4;
+    }
+    .cost-item-label { color: var(--text-muted); max-width: 160px; }
+    .cost-item-value { font-weight: 600; color: var(--text-dark); white-space: nowrap; margin-left: 0.5rem; }
+    .stat-pivot {
+      margin-top: 3.5rem;
+      background: var(--off-white);
+      border-left: 3px solid var(--accent-green);
+      padding: 2rem 2.5rem;
+      border-radius: 0 8px 8px 0;
+    }
+    .stat-pivot p { font-size: 1.05rem; color: var(--text-body); line-height: 1.75; }
+    .stat-pivot strong { color: var(--text-dark); }
+
+    /* ── SECTORS ── */
+    #sectors { background: var(--off-white); }
+    .sectors-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-top: 3.5rem;
+    }
+    .sector-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 12px; padding: 2rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative; overflow: hidden;
+    }
+    .sector-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.07); }
+    .sector-icon { font-size: 2rem; margin-bottom: 1.25rem; display: block; }
+    .sector-card h3 {
+      font-size: 1.05rem; font-weight: 600;
+      color: var(--text-dark); margin-bottom: 0.5rem;
+    }
+    .sector-card .sector-dependency {
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--accent-green); margin-bottom: 0.85rem;
+    }
+    .sector-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.25rem; }
+    .sector-promise {
+      background: var(--off-white); border-radius: 6px;
+      padding: 0.85rem 1rem;
+      font-size: 0.8rem; color: var(--text-body);
+      line-height: 1.55; border-left: 2px solid var(--accent-green);
+    }
+    .sector-promise strong { color: var(--text-dark); font-weight: 600; }
+
+    /* ── SOLUTION ── */
+    #solution { background: var(--white); }
+    .pillars-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-top: 3.5rem;
+    }
+    .pillar {
+      background: var(--off-white); border: 1px solid var(--border);
+      border-radius: 10px; padding: 2rem;
+      position: relative; overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .pillar:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.07); }
+    .pillar-num {
+      font-family: var(--font-display); font-size: 3.5rem;
+      color: var(--mid-grey); line-height: 1;
+      position: absolute; top: 1.25rem; right: 1.5rem;
+    }
+    .pillar-icon {
+      width: 44px; height: 44px; background: var(--accent-green-light);
+      border-radius: 10px; display: flex;
+      align-items: center; justify-content: center;
+      font-size: 1.25rem; margin-bottom: 1.25rem;
+    }
+    .pillar h3 { font-size: 1.05rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.6rem; }
+    .pillar p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; }
+
+    /* ── HOW IT WORKS ── */
+    #how-it-works { background: var(--off-white); }
+    .steps { display: flex; flex-direction: column; margin-top: 3.5rem; }
+    .step {
+      display: grid; grid-template-columns: 80px 1fr;
+      gap: 2.5rem; padding: 2.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .step:last-child { border-bottom: none; }
+    .step-num {
+      font-family: var(--font-display); font-size: 3.5rem;
+      color: var(--mid-grey); line-height: 1; padding-top: 0.2rem;
+    }
+    .step-content h3 { font-size: 1.2rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem; }
+    .step-content p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; max-width: 600px; }
+    .step-tag {
+      display: inline-block; font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--accent-green); margin-bottom: 0.5rem;
+    }
+
+    /* ── PACKAGES ── */
+    #packages { background: var(--white); }
+    .packages-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem; margin-top: 3.5rem; align-items: start;
+    }
+    .package {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 12px; overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .package:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
+    .package.featured { border: 2px solid var(--text-dark); position: relative; }
+    .featured-badge {
+      position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+      background: var(--text-dark); color: var(--white);
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 0.3rem 1rem;
+      border-radius: 0 0 6px 6px;
+    }
+    .package-header { padding: 2rem 2rem 1.5rem; border-bottom: 1px solid var(--border); }
+    .package-name { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 0.5rem; }
+    .package-price { font-family: var(--font-display); font-size: 2.5rem; color: var(--text-dark); line-height: 1; margin-bottom: 0.25rem; }
+    .package-price sub { font-family: var(--font-body); font-size: 0.875rem; font-weight: 400; color: var(--text-muted); vertical-align: baseline; }
+    .package-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; margin-top: 0.75rem; }
+    .package-features { padding: 1.5rem 2rem 2rem; }
+    .package-features ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .package-features li { font-size: 0.875rem; color: var(--text-body); display: flex; gap: 0.65rem; align-items: flex-start; line-height: 1.45; }
+    .package-features li::before { content: '✓'; color: var(--accent-green); font-weight: 700; flex-shrink: 0; margin-top: 0.05rem; }
+    .package-cta { padding: 0 2rem 2rem; }
+    .btn-package {
+      display: block; text-align: center; padding: 0.85rem;
+      border-radius: var(--radius); font-size: 0.875rem; font-weight: 600;
+      text-decoration: none; transition: all 0.2s;
+      border: 1.5px solid var(--text-dark); color: var(--text-dark);
+    }
+    .btn-package:hover { background: var(--text-dark); color: var(--white); }
+    .package.featured .btn-package { background: var(--text-dark); color: var(--white); }
+    .package.featured .btn-package:hover { background: var(--accent-green); border-color: var(--accent-green); }
+
+    /* ── DIVIDEND INDEX ── */
+    #dividend-index { background: var(--off-white); }
+    .index-header {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: end; margin-bottom: 3.5rem;
+    }
+    .index-header-right {
+      display: flex; flex-direction: column;
+      align-items: flex-end; gap: 1rem;
+    }
+    .index-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--text-dark); color: var(--white);
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 0.4rem 1rem;
+      border-radius: 2rem;
+    }
+    .index-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .index-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 10px; padding: 2rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .index-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.07); }
+    .index-card-tag {
+      font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent-green); margin-bottom: 0.85rem;
+    }
+    .index-card h3 { font-family: var(--font-display); font-size: 1.2rem; line-height: 1.3; color: var(--text-dark); margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+    .index-card p { font-size: 0.825rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.25rem; }
+    .index-card-link {
+      font-size: 0.8rem; font-weight: 600;
+      color: var(--text-dark); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      transition: color 0.2s;
+    }
+    .index-card-link:hover { color: var(--accent-green); }
+    .index-card-link::after { content: '→'; transition: transform 0.2s; }
+    .index-card-link:hover::after { transform: translateX(3px); }
+    .index-featured {
+      background: var(--text-dark); color: var(--white);
+      border-color: var(--text-dark);
+    }
+    .index-featured .index-card-tag { color: rgba(255,255,255,0.5); }
+    .index-featured h3 { color: var(--white); }
+    .index-featured p { color: rgba(255,255,255,0.65); }
+    .index-featured .index-card-link { color: rgba(255,255,255,0.8); }
+    .index-featured .index-card-link:hover { color: var(--white); }
+
+    /* ── ABOUT ── */
+    #about { background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; margin-top: 4rem; }
+    .about-text p { font-size: 1rem; color: var(--text-body); line-height: 1.8; margin-bottom: 1.25rem; }
+    .about-text p:last-child { margin-bottom: 0; }
+    .about-text strong { color: var(--text-dark); font-weight: 600; }
+    .about-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+    .promise-card { background: var(--off-white); border-radius: 10px; padding: 1.75rem; }
+    .promise-card h4 { font-size: 0.85rem; font-weight: 600; color: var(--text-dark); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 1rem; }
+    .promise-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .promise-item { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 0.875rem; color: var(--text-body); line-height: 1.5; }
+    .promise-item::before { content: '—'; color: var(--accent-green); font-weight: 700; flex-shrink: 0; }
+    .credentials { display: flex; flex-direction: column; gap: 0.75rem; }
+    .credential { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: var(--off-white); border-radius: 8px; }
+    .credential-num { font-family: var(--font-display); font-size: 1.6rem; color: var(--text-dark); line-height: 1; min-width: 60px; }
+    .credential-label { font-size: 0.825rem; color: var(--text-muted); line-height: 1.4; }
+
+    /* ── OBJECTIONS ── */
+    #objections { background: var(--off-white); }
+    .faq-list { margin-top: 3rem; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-q {
+      width: 100%; background: none; border: none; text-align: left;
+      padding: 1.5rem 0; font-family: var(--font-body); font-size: 1rem;
+      font-weight: 600; color: var(--text-dark); cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    }
+    .faq-q:hover { color: var(--accent-green); }
+    .faq-icon { flex-shrink: 0; font-size: 1.25rem; transition: transform 0.3s; color: var(--text-muted); }
+    .faq-item.open .faq-icon { transform: rotate(45deg); color: var(--accent-green); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-item.open .faq-a { max-height: 300px; padding-bottom: 1.5rem; }
+    .faq-a p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.75; }
+
+    /* ── LEAD BANNER ── */
+    .lead-banner {
+      background: var(--accent-green-light); border: 1px solid var(--accent-green-mid);
+      border-radius: 10px; padding: 2rem 2.5rem;
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 2rem;
+      flex-wrap: wrap; margin-top: 4rem;
+    }
+    .lead-banner-text h4 { font-size: 1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem; }
+    .lead-banner-text p { font-size: 0.875rem; color: var(--text-muted); }
+    .btn-green {
+      background: var(--accent-green); color: var(--white);
+      padding: 0.75rem 1.5rem; border-radius: var(--radius);
+      font-size: 0.875rem; font-weight: 600; text-decoration: none;
+      white-space: nowrap; transition: opacity 0.2s; flex-shrink: 0;
+    }
+    .btn-green:hover { opacity: 0.88; }
+
+    /* ── CTA ── */
+    #cta { background: var(--text-dark); padding: 100px 2rem; }
+    .cta-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+    .cta-inner .section-label { justify-content: center; color: rgba(255,255,255,0.5); }
+    .cta-inner .section-label::before { background: rgba(255,255,255,0.3); }
+    .cta-inner .section-title { color: var(--white); }
+    .cta-inner p { color: rgba(255,255,255,0.65); font-size: 1.05rem; line-height: 1.7; margin: 1.25rem 0 2.5rem; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-light {
+      background: var(--white); color: var(--text-dark);
+      padding: 0.9rem 2rem; border-radius: var(--radius);
+      font-size: 0.9rem; font-weight: 600; text-decoration: none;
+      transition: background 0.2s, transform 0.15s; display: inline-block;
+    }
+    .btn-light:hover { background: var(--off-white); transform: translateY(-1px); }
+    .btn-outline-light {
+      border: 1.5px solid rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.8); padding: 0.9rem 2rem;
+      border-radius: var(--radius); font-size: 0.9rem; font-weight: 500;
+      text-decoration: none; transition: all 0.2s; display: inline-block;
+    }
+    .btn-outline-light:hover { border-color: rgba(255,255,255,0.7); color: var(--white); }
+    .cta-note { margin-top: 1.5rem; font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+
+    /* ── FOOTER ── */
+    footer { background: var(--text-dark); border-top: 1px solid rgba(255,255,255,0.07); padding: 3rem 2rem; }
+    .footer-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 1.5rem;
+    }
+    .footer-logo { font-family: var(--font-display); font-size: 1.15rem; color: var(--white); text-decoration: none; }
+    .footer-logo span { color: var(--accent-green); }
+    .footer-tagline { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-top: 0.25rem; }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.825rem; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(255,255,255,0.8); }
+    .footer-copy { font-size: 0.775rem; color: rgba(255,255,255,0.25); }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .hero-inner, .problem-grid, .story-inner, .about-grid, .index-header { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-bg { display: none; }
+      .pillars-grid, .packages-grid, .stats-grid, .sectors-grid, .index-grid { grid-template-columns: 1fr; }
+      .journey-panel.active { grid-template-columns: 1fr; gap: 2.5rem; }
+      .nav-links { display: none; }
+      .journey-tabs { width: 100%; }
+      .journey-tab { flex: 1; text-align: center; padding: 0.75rem 1rem; }
+      .index-header-right { align-items: flex-start; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 70px 1.25rem; }
+      .trust-inner { gap: 1.5rem; }
+    }
+
+    /* PAGE ROUTING */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* INSIGHTS NAV */
+    .insights-nav { background: var(--off-white); border-bottom: 1px solid var(--border); padding: 0.75rem 2rem; position: sticky; top: 68px; z-index: 90; }
+    .insights-nav-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; gap: 1rem; font-size: 0.8rem; color: var(--text-muted); }
+    .insights-nav-inner a { color: var(--text-muted); text-decoration: none; cursor: pointer; transition: color 0.2s; }
+    .insights-nav-inner a:hover { color: var(--accent-green); }
+    .insights-nav-inner span { color: var(--text-dark); font-weight: 500; }
+
+    /* WHITE PAPER STYLES */
+    .wp-hero { background: var(--text-dark); padding: 100px 2rem 80px; }
+    .wp-hero-inner { max-width: 860px; margin: 0 auto; }
+    .wp-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 1.25rem; }
+    .wp-tag::before { content: ''; display: block; width: 20px; height: 1px; background: var(--accent-green); }
+    .wp-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--white); margin-bottom: 1.5rem; }
+    .wp-intro { font-size: 1.1rem; color: rgba(255,255,255,0.7); line-height: 1.75; max-width: 700px; margin-bottom: 2.5rem; }
+    .wp-meta { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .wp-meta-item { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
+    .wp-meta-item strong { color: rgba(255,255,255,0.7); }
+    .wp-body { padding: 80px 2rem; }
+    .wp-body-inner { max-width: 860px; margin: 0 auto; }
+    .wp-body-inner h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--text-dark); margin: 3rem 0 1rem; letter-spacing: -0.02em; line-height: 1.2; }
+    .wp-body-inner h2:first-child { margin-top: 0; }
+    .wp-body-inner h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin: 2rem 0 0.75rem; }
+    .wp-body-inner p { font-size: 1rem; color: var(--text-body); line-height: 1.85; margin-bottom: 1.25rem; }
+    .wp-body-inner strong { color: var(--text-dark); }
+    .wp-body-inner a { color: var(--accent-green); text-decoration: underline; text-underline-offset: 3px; }
+    .wp-stat-callout { background: var(--off-white); border-left: 3px solid var(--accent-green); padding: 1.75rem 2rem; border-radius: 0 8px 8px 0; margin: 2rem 0; }
+    .wp-stat-callout .wp-stat-num { font-family: var(--font-display); font-size: 2.8rem; color: var(--text-dark); line-height: 1; margin-bottom: 0.35rem; }
+    .wp-stat-callout .wp-stat-num span { color: var(--accent-green); }
+    .wp-stat-callout p { font-size: 0.925rem; color: var(--text-muted); line-height: 1.65; margin: 0; }
+    .wp-data-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.875rem; }
+    .wp-data-table th { text-align: left; padding: 0.75rem 1rem; background: var(--text-dark); color: var(--white); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.04em; }
+    .wp-data-table td { padding: 0.85rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-body); line-height: 1.5; }
+    .wp-data-table tr:last-child td { border-bottom: none; }
+    .wp-data-table tr:nth-child(even) td { background: var(--off-white); }
+    .wp-data-table td strong { color: var(--text-dark); }
+    .wp-source-block { background: var(--light-grey); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .wp-source-block h4 { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem; }
+    .wp-source-block ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .wp-source-block li { font-size: 0.8rem; color: var(--text-muted); display: flex; gap: 0.5rem; }
+    .wp-source-block li::before { content: '—'; color: var(--accent-green); flex-shrink: 0; }
+    .wp-source-block a { color: var(--accent-green); text-decoration: none; }
+    .wp-source-block a:hover { text-decoration: underline; }
+    .wp-cta { background: var(--text-dark); border-radius: 12px; padding: 2.5rem; margin: 3rem 0; text-align: center; }
+    .wp-cta h3 { font-family: var(--font-display); font-size: 1.6rem; color: var(--white); margin-bottom: 0.75rem; }
+    .wp-cta p { font-size: 0.95rem; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 1.75rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .wp-cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .wp-related { background: var(--off-white); padding: 60px 2rem; border-top: 1px solid var(--border); }
+    .wp-related-inner { max-width: 860px; margin: 0 auto; }
+    .wp-related h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--text-dark); margin-bottom: 2rem; }
+    .wp-related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .wp-related-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+    .wp-related-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+    .wp-related-tag { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 0.5rem; }
+    .wp-related-card h4 { font-size: 0.95rem; font-weight: 600; color: var(--text-dark); line-height: 1.4; margin-bottom: 0.5rem; }
+    .wp-related-card p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.55; }
+    @media (max-width: 600px) { .wp-related-grid { grid-template-columns: 1fr; } .wp-hero { padding: 80px 1.25rem 60px; } .wp-body { padding: 60px 1.25rem; } }
+
+  </style>
+</head>
+<body>
+
+<div class="page active" id="page-home">
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a onclick="showPage('home')" class="nav-logo" style="cursor:pointer">Dividend<span>IT</span></span>
+    <ul class="nav-links">
+      <li><a onclick="showPage('home');scrollToSection('journey')" style="cursor:pointer">Who We Serve</span></li>
+      <li><a onclick="showPage('home');scrollToSection('solution')" style="cursor:pointer">Services</span></li>
+      <li><a onclick="showPage('home');scrollToSection('packages')" style="cursor:pointer">Pricing</span></li>
+      <li><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">Insights</span></li>
+      <li><a onclick="showPage('home');scrollToSection('about')" style="cursor:pointer">About</span></li>
+      <li><a onclick="showPage('home');scrollToSection('cta')" class="nav-cta" style="cursor:pointer">Book a Call</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Outsourced Cybersecurity & IT — Ireland</div>
+      <h1 class="hero-title">IT That<br><em>Pays Back.</em></h1>
+      <p class="hero-sub">Dividend IT manages your outsourced cybersecurity & IT so your business runs faster, stays protected, and becomes more valuable. From startup to exit — no jargon, no surprises, just IT that works.</p>
+      <div class="hero-actions">
+        <a href="#cta" class="btn-primary">Book a Free 20-Min Call</a>
+        <a href="#lead-magnet" class="btn-secondary">Get the Free Guide</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat-card">
+        <div class="stat-number"><span>50%</span></div>
+        <div class="stat-label">of Irish SMBs experienced a cyber attack in the past 12 months</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="stat-number"><span>70%</span></div>
+        <div class="stat-label">of business owners who want to exit will never successfully do so</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="stat-number">€<span>21k</span></div>
+        <div class="stat-label">average cost to fully remediate a cyber attack on an Irish business</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">🔒 Seamlessly Secure</div>
+    <div class="trust-item">⏱ 24/7 Monitoring</div>
+    <div class="trust-item">💼 Business-First Thinking</div>
+    <div class="trust-item">📊 EBITDA Aligned</div>
+    <div class="trust-item">🇮🇪 Ireland & UK</div>
+  </div>
+</div>
+
+<!-- JOURNEY — WHO WE SERVE -->
+<section id="journey">
+  <div class="section-inner">
+    <div class="section-label reveal">Who We Serve</div>
+    <h2 class="section-title reveal">One Partner.<br>Every Stage of the Journey.</h2>
+    <p class="section-sub reveal">Whether you're building from scratch, scaling through the chaos, or protecting what you've created — Dividend IT is built for where you are right now.</p>
+
+    <div class="journey-tabs reveal">
+      <button class="journey-tab active" onclick="switchTab('value-creator')">Value Creator</button>
+      <button class="journey-tab" onclick="switchTab('entrepreneur')">Entrepreneur</button>
+      <button class="journey-tab" onclick="switchTab('startup')">Startup</button>
+    </div>
+
+    <div class="journey-panels">
+
+      <!-- VALUE CREATOR -->
+      <div class="journey-panel active" id="panel-value-creator">
+        <div class="journey-panel-left">
+          <h3>You've built something<br><em>genuinely valuable.</em><br>Don't let it slip away.</h3>
+          <p>You've figured out the game. You've built a brand, a platform, a team that executes without you. You understand EBITDA. You're thinking about acquisition, succession, or exit — and you know that every decision you make now either protects or erodes the value of what you've created.</p>
+          <p>At this stage, IT isn't just infrastructure. It's a risk factor in your due diligence. It's a line item in your valuation. It's the thing that could be exploited to compromise everything you've built — if it isn't properly managed.</p>
+          <div class="journey-pain-list">
+            <div class="journey-pain-item">Acquisition due diligence exposing IT vulnerabilities</div>
+            <div class="journey-pain-item">Theft of IP, sensitive data, or client information</div>
+            <div class="journey-pain-item">Cyber breach causing reputational damage at the worst possible time</div>
+            <div class="journey-pain-item">Payment fraud at operating entity level</div>
+            <div class="journey-pain-item">Technology misaligned to EBITDA and exit valuation</div>
+          </div>
+          <a href="#cta" class="btn-primary">Protect What You've Built →</a>
+        </div>
+        <div class="journey-panel-right">
+          <div class="journey-promise">
+            <h4>The Dividend IT Promise — Value Creator</h4>
+            <p>We've seen what happens when a business gets to the finish line and loses it. Not because the business wasn't good. Because the technology wasn't protected. <strong>We make sure that never happens to yours.</strong></p>
+            <p style="margin-top:0.85rem; font-size:0.875rem; color:rgba(255,255,255,0.65);">Seamlessly secure IT, EBITDA-aligned spend, and a technology posture that holds up under any level of due diligence.</p>
+          </div>
+          <div class="journey-stat">
+            <div class="journey-stat-num"><span>78%</span></div>
+            <div class="journey-stat-label">of business owners lack a formal transition team — leaving their exit exposed at the most critical stage</div>
+          </div>
+          <div class="journey-cta">
+            <p><strong>Recommended package:</strong> Grow — Strategic technology partnership with vCTO, EBITDA reporting, exit planning support, and 24/7 security.</p>
+            <a href="#packages" class="btn-green">View the Grow Package →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENTREPRENEUR -->
+      <div class="journey-panel" id="panel-entrepreneur">
+        <div class="journey-panel-left">
+          <h3>You're in the trenches.<br><em>We know exactly</em><br>how that feels.</h3>
+          <p>You took the risk. You breathed an idea into a business. You're hiring, firing, chasing payments, managing cash flow, dealing with every crisis that lands on your desk — and somewhere in between, trying to figure out how to get yourself out of the day-to-day.</p>
+          <p>You know what needs to happen. You need to build the processes, the people, and the systems that let your business run without you in the middle of everything. But right now, every day is a battle just to keep moving forward.</p>
+          <p>The last thing you need is IT adding to the list.</p>
+          <div class="journey-pain-list">
+            <div class="journey-pain-item">Slow or unreliable systems killing team productivity</div>
+            <div class="journey-pain-item">Email compromise and payment fraud exposure</div>
+            <div class="journey-pain-item">No technology strategy — just firefighting</div>
+            <div class="journey-pain-item">IT provider that doesn't understand your business</div>
+            <div class="journey-pain-item">No time to think about where technology should be taking you</div>
+          </div>
+          <a href="#cta" class="btn-primary">Get IT Off Your Plate →</a>
+        </div>
+        <div class="journey-panel-right">
+          <div class="journey-promise">
+            <h4>The Dividend IT Promise — Entrepreneur</h4>
+            <p>We've got the scar tissue to show for it. We know this journey. <strong>Our promise is simple — IT and cybersecurity will never add to your list of headaches.</strong></p>
+            <p style="margin-top:0.85rem; font-size:0.875rem; color:rgba(255,255,255,0.65);">We take it completely off your plate — and we act as your strategic technology advisor, keeping one eye on where your business needs to go, not just where it is today.</p>
+          </div>
+          <div class="journey-stat">
+            <div class="journey-stat-num"><span>70%</span></div>
+            <div class="journey-stat-label">of business owners who want to exit never successfully do — most because they were never set up to scale without the founder at the centre</div>
+          </div>
+          <div class="journey-cta">
+            <p><strong>Recommended package:</strong> Operate — Your complete outsourced IT department. Everything managed, everything included.</p>
+            <a href="#packages" class="btn-green">View the Operate Package →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- STARTUP -->
+      <div class="journey-panel" id="panel-startup">
+        <div class="journey-panel-left">
+          <h3>You've backed yourself.<br><em>Build on the right</em><br>foundation.</h3>
+          <p>You've taken the leap. You're hustling at every level — bringing your idea to life, landing your first clients, building something from nothing. Every decision matters and every euro counts.</p>
+          <p>You don't need complexity. You need the basics done right — secure email, reliable systems, file storage, and the right applications to run your business — set up properly from day one so you never have to undo bad habits later.</p>
+          <div class="journey-pain-list">
+            <div class="journey-pain-item">Getting the basics set up quickly and correctly</div>
+            <div class="journey-pain-item">Email security and data protection from day one</div>
+            <div class="journey-pain-item">Reliable systems that support growth, not limit it</div>
+            <div class="journey-pain-item">Affordable, all-inclusive pricing with no surprises</div>
+          </div>
+          <a href="#cta" class="btn-primary">Start on the Right Foot →</a>
+        </div>
+        <div class="journey-panel-right">
+          <div class="journey-promise">
+            <h4>The Dividend IT Promise — Startup</h4>
+            <p>A startup package built for where you are right now. <strong>Simple, secure, and priced fairly.</strong></p>
+            <p style="margin-top:0.85rem; font-size:0.875rem; color:rgba(255,255,255,0.65);">We set you up right from day one — and when you're ready to scale, we grow with you. The businesses we work with at startup become our most loyal partners at entrepreneur and value creator stage.</p>
+          </div>
+          <div class="journey-stat">
+            <div class="journey-stat-num"><span>49%</span></div>
+            <div class="journey-stat-label">of businesses don't make it past year five — getting the foundations right from day one dramatically improves your odds</div>
+          </div>
+          <div class="journey-cta">
+            <p><strong>Recommended package:</strong> Secure — The foundation. Seamlessly secure IT and reliable support at an accessible price point.</p>
+            <a href="#packages" class="btn-green">View the Secure Package →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CORE STORY -->
+<section id="story">
+  <div class="story-inner">
+    <div class="story-left">
+      <div class="section-label">Our Why</div>
+      <h2 class="section-title">We Know How Hard<br>You're Working to<br>Build Something.</h2>
+      <div class="story-text">
+        <p>Building a business is one of the hardest things a human being can do. You've sacrificed time with the people you love. You've risked money you couldn't afford to lose. You've backed yourself when nobody else would.</p>
+        <p>Every day you show up and execute — because you have to. Because people are depending on you. Because you made a promise to your customers and you intend to keep it.</p>
+        <p><em>The last thing you need is technology getting in the way of that.</em></p>
+        <p>Dividend IT exists for one reason — to make sure it never does. <strong>From the day you start building, through every stage of growth, all the way to the exit you've been working towards.</strong></p>
+        <p>We don't just keep the lights on. We protect the dream.</p>
+      </div>
+    </div>
+    <div class="story-right">
+      <div class="story-card">
+        <div class="story-card-icon">🔒</div>
+        <h4>Protect What You've Built</h4>
+        <p>Seamlessly secure IT and cybersecurity that runs quietly in the background — so a breach, a fraud, or a system failure never becomes the thing that brings it all down.</p>
+      </div>
+      <div class="story-card">
+        <div class="story-card-icon">⚡</div>
+        <h4>Enable Your Competitive Advantage</h4>
+        <p>Fast, reliable outsourced IT that keeps your team executing at full capacity. Technology that enables your positioning — never limits it.</p>
+      </div>
+      <div class="story-card">
+        <div class="story-card-icon">📈</div>
+        <h4>Drive Value to the Finish Line</h4>
+        <p>A technology strategy aligned to your EBITDA and your exit. Because the value you've created deserves to be realised — not eroded by misaligned IT spend or a breach at the worst possible time.</p>
+      </div>
+      <div class="story-promise story-card">
+        <div class="story-card-icon">🤝</div>
+        <h4>The Dividend Promise</h4>
+        <p>A dividend is a return on investment. That's exactly what your IT should be. Not a cost to minimise — a lever that pays you back.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="section-inner">
+    <div class="section-label reveal">The Problem</div>
+    <h2 class="section-title reveal">Your IT Should Be an Asset.<br>For Most Businesses, It's a Liability.</h2>
+    <div class="problem-grid">
+      <div class="problem-points reveal">
+        <div class="problem-point">
+          <div class="problem-icon">🐌</div>
+          <div>
+            <h4>Slow systems drain productivity</h4>
+            <p>Every minute your team waits for a screen to load is output lost. It adds up to thousands annually — and never shows up on an invoice.</p>
+          </div>
+        </div>
+        <div class="problem-point">
+          <div class="problem-icon">🔓</div>
+          <div>
+            <h4>Security gaps you don't know about</h4>
+            <p>Most IT providers are reactive. By the time they find the gap, the damage is done. Proactive protection is the only kind that works.</p>
+          </div>
+        </div>
+        <div class="problem-point">
+          <div class="problem-icon">📉</div>
+          <div>
+            <h4>IT costs eating your margins</h4>
+            <p>Expensing technology instead of capitalising it quietly reduces your EBITDA — and therefore your business valuation — year after year.</p>
+          </div>
+        </div>
+        <div class="problem-point">
+          <div class="problem-icon">🗺️</div>
+          <div>
+            <h4>No technology strategy</h4>
+            <p>Most IT providers keep the lights on. Few align technology to where your business is going — growth, profitability, or a future exit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="problem-callout reveal">
+        <h3>Most IT companies keep the lights on. Few understand what it takes to run a profitable business.</h3>
+        <p>That's the problem Dividend IT was built to solve. We speak business first, technology second — and we work directly with shareholders, not IT managers.</p>
+        <p>Think of us less like an outsourced cybersecurity & IT provider, and more like a technology partner with a genuine stake in your success.</p>
+        <span class="callout-tag">That's the Dividend difference</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SMOKING GUN -->
+<section id="smoking-gun">
+  <div class="section-inner">
+    <div class="section-label reveal">The Numbers</div>
+    <h2 class="section-title reveal">What Every Irish Business Owner<br>Needs to See</h2>
+    <p class="section-sub reveal">This isn't scare tactics. This is the reality of running a business without the right outsourced cybersecurity & IT partner in place.</p>
+
+    <div class="stats-grid reveal">
+
+      <div class="stat-block">
+        <div class="stat-block-number"><span>50%</span></div>
+        <div class="stat-block-label">of Irish SMBs were attacked last year</div>
+        <div class="stat-block-desc">Half of businesses like yours experienced a cyber breach or attack in the past 12 months. This is not a large-company problem.</div>
+        <span onclick="showInsight('cyber-risk'); return false;" class="stat-block-source" style="cursor:pointer">Source: Cyber Ireland &amp; NCSC Ireland</span>
+      </div>
+
+      <div class="stat-block">
+        <div class="stat-block-number">3<span>×</span></div>
+        <div class="stat-block-label">more likely to be targeted than large firms</div>
+        <div class="stat-block-desc">SMBs account for 50% of all attacks despite representing a fraction of economic output. Criminals know defences are weaker — and they exploit it deliberately.</div>
+        <span onclick="showInsight('cyber-risk'); return false;" class="stat-block-source" style="cursor:pointer">Source: Verizon DBIR 2024</span>
+      </div>
+
+      <div class="stat-block">
+        <div class="stat-block-number">€<span>21k</span></div>
+        <div class="stat-block-label">The real cost of a cyber incident — it goes far beyond remediation</div>
+        <div class="stat-block-desc">Most businesses focus on the recovery cost. The full financial impact is significantly higher when you factor in fraud, downtime, and lost revenue.</div>
+        <div class="stat-block-cost-breakdown">
+          <div class="cost-item">
+            <span class="cost-item-label">Average remediation cost</span>
+            <span class="cost-item-value">€21,000</span>
+          </div>
+          <div class="cost-item">
+            <span class="cost-item-label">Irish SME losses to email &amp; invoice fraud (2 yrs)</span>
+            <span class="cost-item-value">€17,000,000</span>
+          </div>
+          <div class="cost-item">
+            <span class="cost-item-label">Revenue lost to fraud annually</span>
+            <span class="cost-item-value">6.5% of turnover</span>
+          </div>
+          <div class="cost-item">
+            <span class="cost-item-label">Avg downtime cost per hour</span>
+            <span class="cost-item-value">€5,600</span>
+          </div>
+        </div>
+        <span onclick="showInsight('true-cost'); return false;" class="stat-block-source" style="cursor:pointer">Source: FraudSMART, BPFI &amp; Central Bank Ireland</span>
+      </div>
+
+      <div class="stat-block">
+        <div class="stat-block-number"><span>17%</span></div>
+        <div class="stat-block-label">of attacked businesses no longer exist</div>
+        <div class="stat-block-desc">A breach isn't just an IT problem. Without preparation, it can end the business entirely — and one in six that get hit never recover.</div>
+        <span onclick="showInsight('cyber-risk'); return false;" class="stat-block-source" style="cursor:pointer">Source: Hiscox Cyber Readiness Report</span>
+      </div>
+
+      <div class="stat-block">
+        <div class="stat-block-number"><span>70%</span></div>
+        <div class="stat-block-label">of owners never achieve a successful exit</div>
+        <div class="stat-block-desc">Most business owners never realise the value they've created. Technology misalignment and poor exit preparation are among the most common — and preventable — reasons why.</div>
+        <span onclick="showInsight('exit-value'); return false;" class="stat-block-source" style="cursor:pointer">Source: Business Exit Survey, Pepperdine University</span>
+      </div>
+
+      <div class="stat-block">
+        <div class="stat-block-number"><span>78%</span></div>
+        <div class="stat-block-label">lack a formal business transition team</div>
+        <div class="stat-block-desc">Most business owners approaching exit have no plan in place — and technology due diligence is almost always an afterthought that costs them at the worst possible time.</div>
+        <span onclick="showInsight('exit-value'); return false;" class="stat-block-source" style="cursor:pointer">Source: Exit Planning Institute, State of Owner Readiness</span>
+      </div>
+
+    </div>
+
+    <div class="stat-pivot reveal">
+      <p>There are two risks every Irish business owner faces. The risk of a <strong>cyber incident destroying what you've built today.</strong> And the risk of <strong>never realising the value of what you've spent years creating.</strong> Dividend IT exists to eliminate both.</p>
+    </div>
+
+    <div class="lead-banner reveal" id="lead-magnet">
+      <div class="lead-banner-text">
+        <h4>Free Guide — 5 Ways to Drive Business Value With Your IT</h4>
+        <p>Practical insights for Irish business owners. No jargon, no sales pitch. Just five things you can act on today.</p>
+      </div>
+      <a href="#cta" class="btn-green">Download Free Guide →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTORS -->
+<section id="sectors">
+  <div class="section-inner">
+    <div class="section-label reveal">Sectors We Serve</div>
+    <h2 class="section-title reveal">We Understand Your Business.<br>Not Just Your Technology.</h2>
+    <p class="section-sub reveal">Different businesses have different critical dependencies. We know what matters most in your sector — and we build our service around protecting it.</p>
+
+    <div class="sectors-grid">
+      <div class="sector-card reveal">
+        <span class="sector-icon">🏦</span>
+        <div class="sector-dependency">Critical dependency: Data & Identity</div>
+        <h3>Financial Services & Wealth Management</h3>
+        <p>Your business model is built on trust. Wealth advisers, client relationships, high net worth individuals — and enormous amounts of sensitive financial data that, if compromised, could be catastrophic for your clients and your reputation.</p>
+        <div class="sector-promise"><strong>Our focus:</strong> Protecting client identity and sensitive financial data. Preventing fraud. Ensuring your cybersecurity posture is beyond reproach — because your clients deserve nothing less.</div>
+      </div>
+      <div class="sector-card reveal">
+        <span class="sector-icon">📦</span>
+        <div class="sector-dependency">Critical dependency: System Availability</div>
+        <h3>Distribution</h3>
+        <p>Your customers work on return on shelf space. If your systems are down, product doesn't move, stock doesn't hit shelves, and transactions are lost. Every hour of downtime has a direct and measurable cost to your relationships and your revenue.</p>
+        <div class="sector-promise"><strong>Our focus:</strong> Maximum system availability, proactive monitoring, and rapid response. Because when your systems are down, your business is down — and your customers notice.</div>
+      </div>
+      <div class="sector-card reveal">
+        <span class="sector-icon">🏭</span>
+        <div class="sector-dependency">Critical dependency: Process Continuity</div>
+        <h3>Manufacturing</h3>
+        <p>When you've digitised your production process — inventory management, raw materials, finished goods, backflushing — system availability isn't just important, it's everything. A cyber incident or IT failure on the production floor doesn't just cost money. It stops the business.</p>
+        <div class="sector-promise"><strong>Our focus:</strong> Protecting your production environment, securing your operational technology, and ensuring your digitised manufacturing process never becomes your single point of failure.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section id="solution">
+  <div class="section-inner">
+    <div class="section-label reveal">What We Do</div>
+    <h2 class="section-title reveal">Outsourced Cybersecurity &amp; IT.<br>Built for Business Owners.</h2>
+    <p class="section-sub reveal">From CIO advisory and cybersecurity frameworks down to implementation, management, and 24/7 support. Everything included. One partner. One monthly fee.</p>
+
+    <div class="pillars-grid">
+      <div class="pillar reveal">
+        <div class="pillar-num">01</div>
+        <div class="pillar-icon">🔒</div>
+        <h3>Seamlessly Secure</h3>
+        <p>Protect your intellectual capital, sensitive data, systems, and people with a cybersecurity framework built for business shareholders. Prevent payment fraud, data theft, and breaches — before they happen.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pillar-num">02</div>
+        <div class="pillar-icon">⚡</div>
+        <h3>Operationally Efficient</h3>
+        <p>Good IT just works. When it doesn't — our qualified engineers are available to ensure it never becomes a headache. Fast, reliable outsourced IT that keeps your team executing at full capacity, every day.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pillar-num">03</div>
+        <div class="pillar-icon">📈</div>
+        <h3>Strategically Aligned</h3>
+        <p>From CIO advisory down to implementation. A technology roadmap built around your business goals — growth, profitability, and the exit you're working towards. IT spend optimised to drive EBITDA, not erode it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <div class="section-inner">
+    <div class="section-label reveal">The Process</div>
+    <h2 class="section-title reveal">Getting Started Is Easier<br>Than You Think.</h2>
+    <p class="section-sub reveal">Most business owners assume switching outsourced cybersecurity & IT provider will be complicated and disruptive. It isn't. Here's exactly what happens.</p>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <div class="step-tag">Free · 20 Minutes · No Obligation</div>
+          <h3>We Listen First</h3>
+          <p>A conversation — not a sales pitch. We want to understand your business, how your team works, and where technology is either holding you back or leaving value on the table. By the end of the call, you'll know whether we're the right fit. If we're not, we'll tell you honestly.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <div class="step-tag">Technology & Security Review</div>
+          <h3>We Assess Your Business</h3>
+          <p>A full review of your current IT and cybersecurity setup — infrastructure, security posture, systems, and support needs. You receive a clear, plain-English report with an honest picture of where you stand and a practical roadmap for where you need to go. Useful whether you work with us or not.</p>
+        </div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <div class="step-tag">From Day One</div>
+          <h3>We Take It Off Your Plate</h3>
+          <p>We handle everything — infrastructure, cybersecurity, support desk, and technology roadmap. Your team gets seamlessly secure IT that just works. You get a trusted outsourced cybersecurity & IT partner who proactively manages your technology and reports back in language you actually understand. No more chasing IT issues. Just IT that pays back.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <div class="section-inner">
+    <div class="section-label reveal">Pricing</div>
+    <h2 class="section-title reveal">Clear Pricing.<br>No Surprises.</h2>
+    <p class="section-sub reveal">One simple monthly fee per user. Everything included. No hidden costs, no long lock-in contracts, no unexpected invoices.</p>
+
+    <div class="packages-grid">
+      <div class="package reveal">
+        <div class="package-header">
+          <div class="package-name">Secure — Startup</div>
+          <div class="package-price">€75<sub> / user / mo</sub></div>
+          <div class="package-desc">The foundation. Seamlessly secure outsourced IT for businesses building from the ground up. Get the basics done right from day one.</div>
+        </div>
+        <div class="package-features">
+          <ul>
+            <li>Managed endpoint detection & response</li>
+            <li>Email security & anti-phishing</li>
+            <li>Multi-factor authentication management</li>
+            <li>Automated patch management</li>
+            <li>Dark web monitoring</li>
+            <li>Remote helpdesk — business hours</li>
+            <li>Unlimited support tickets</li>
+            <li>Daily automated backups</li>
+            <li>Monthly plain-English health report</li>
+          </ul>
+        </div>
+        <div class="package-cta"><a href="#cta" class="btn-package">Get Started</a></div>
+      </div>
+
+      <div class="package featured reveal">
+        <div class="featured-badge">Most Popular</div>
+        <div class="package-header">
+          <div class="package-name">Operate — Entrepreneur</div>
+          <div class="package-price">€100<sub> / user / mo</sub></div>
+          <div class="package-desc">Your complete outsourced IT department. Everything in Secure, plus full managed IT operations — so you can focus on scaling the business, not fighting fires.</div>
+        </div>
+        <div class="package-features">
+          <ul>
+            <li>Everything in Secure</li>
+            <li>Proactive infrastructure monitoring</li>
+            <li>Network management & optimisation</li>
+            <li>Software licence management</li>
+            <li>Dedicated account manager</li>
+            <li>2-hour response SLA</li>
+            <li>On-site support — business hours</li>
+            <li>Security awareness training — quarterly</li>
+            <li>GDPR compliance support</li>
+            <li>Quarterly technology roadmap review</li>
+          </ul>
+        </div>
+        <div class="package-cta"><a href="#cta" class="btn-package">Get Started</a></div>
+      </div>
+
+      <div class="package reveal">
+        <div class="package-header">
+          <div class="package-name">Grow — Value Creator</div>
+          <div class="package-price">€120<sub> / user / mo</sub></div>
+          <div class="package-desc">Strategic technology partnership. Built for shareholders focused on protecting value, driving EBITDA, and building towards a successful exit.</div>
+        </div>
+        <div class="package-features">
+          <ul>
+            <li>Everything in Operate</li>
+            <li>Virtual CTO — strategic tech leadership</li>
+            <li>Annual technology roadmap</li>
+            <li>IT spend optimisation & EBITDA reporting</li>
+            <li>Technology due diligence support</li>
+            <li>Exit & succession technology planning</li>
+            <li>24/7 security monitoring & response</li>
+            <li>Annual penetration testing</li>
+            <li>1-hour SLA · 24/7 helpdesk</li>
+            <li>Monthly strategic review with founder</li>
+          </ul>
+        </div>
+        <div class="package-cta"><a href="#cta" class="btn-package">Get Started</a></div>
+      </div>
+    </div>
+
+    <div class="lead-banner reveal">
+      <div class="lead-banner-text">
+        <h4>Not sure which package is right for you?</h4>
+        <p>Book a free 20-minute call. We'll tell you honestly — and we'll never recommend more than you need.</p>
+      </div>
+      <a href="#cta" class="btn-green">Book a Free Call →</a>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDEND INDEX -->
+<section id="dividend-index">
+  <div class="section-inner">
+    <div class="index-header reveal">
+      <div>
+        <div class="section-label">The Dividend Index</div>
+        <h2 class="section-title">Technology Insights for<br>Irish Business Owners.</h2>
+        <p class="section-sub">Research, frameworks, and plain-English insights to help you use technology as a competitive advantage — at every stage of your business journey.</p>
+      </div>
+      <div class="index-header-right">
+        <div class="index-badge">🔬 Dividend IT Insights Hub</div>
+        <p style="font-size:0.825rem; color:var(--text-muted); text-align:right; max-width:280px; line-height:1.6;">Practical intelligence for entrepreneurs and value creators. No jargon. No vendor bias. Just insight you can act on.</p>
+      </div>
+    </div>
+
+    <div class="index-grid reveal">
+      <div class="index-card index-featured">
+        <div class="index-card-tag">Featured Research</div>
+        <h3>5 Ways to Drive Business Value With Your IT</h3>
+        <p>The practical guide for Irish business owners on using technology to protect margins, prevent fraud, and build a more valuable business.</p>
+        <a href="#cta" class="index-card-link">Download Free Guide</a>
+      </div>
+      <div class="index-card">
+        <div class="index-card-tag">Cybersecurity</div>
+        <h3>The Irish SMB Cyber Risk Report: What the Numbers Really Mean</h3>
+        <p>50% of Irish SMBs were attacked last year. 17% no longer exist. Here's what the data tells us — and what to do about it.</p>
+        <a href="#cta" class="index-card-link">Read the Insight</a>
+      </div>
+      <div class="index-card">
+        <div class="index-card-tag">Business Value</div>
+        <h3>How Your IT Spend Is Quietly Eroding Your EBITDA — And How to Fix It</h3>
+        <p>Most business owners expense technology when they should be capitalising it. Here's what that's costing you — and how to correct it.</p>
+        <a href="#cta" class="index-card-link">Read the Insight</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label reveal">Our Story</div>
+    <h2 class="section-title reveal">We Started This Because Business<br>Owners Deserve Better.</h2>
+
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I didn't grow up thinking about IT. I grew up watching my grandfather run his business.</p>
+        <p>He owned a group of car dealerships — a real operator, sharp instincts, built something from nothing. I spent my childhood watching him trade, watching him lead, watching him build. It left a mark that never faded.</p>
+        <p>But I also watched his business go under. Not because he wasn't good at what he did. Because he didn't manage risk properly. Because he didn't plan for what came next. Because the things that should have protected what he'd built — weren't in place.</p>
+        <p>That stayed with me.</p>
+        <p>For the past decade, I helped scale an outsourced cybersecurity & IT business from <strong>€1 million to €4 million</strong>. I spent ten years sitting across the table from business owners, understanding what they actually needed — not products, not jargon, but a partner who spoke their language.</p>
+        <p>Most IT companies weren't delivering that. They still aren't. <strong>That's why I built Dividend IT.</strong></p>
+        <p>The name is intentional. A dividend is a return on investment — something that pays you back. That's exactly what your IT should do.</p>
+      </div>
+      <div class="about-sidebar reveal">
+        <div class="promise-card">
+          <h4>Our Promise</h4>
+          <div class="promise-list">
+            <div class="promise-item">We will never blind you with jargon</div>
+            <div class="promise-item">We will never sell you something you don't need</div>
+            <div class="promise-item">We will always tell you the truth about where you're exposed</div>
+            <div class="promise-item">We will build a strategy around where your business is going</div>
+          </div>
+        </div>
+        <div class="credentials">
+          <div class="credential">
+            <div class="credential-num">10+</div>
+            <div class="credential-label">Years scaling outsourced IT & cybersecurity for Irish SMBs</div>
+          </div>
+          <div class="credential">
+            <div class="credential-num">€4M</div>
+            <div class="credential-label">Revenue scaled at prior MSP — from €1M starting point</div>
+          </div>
+          <div class="credential">
+            <div class="credential-num">3</div>
+            <div class="credential-label">Core sectors — distribution, manufacturing & financial services</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OBJECTIONS -->
+<section id="objections">
+  <div class="section-inner">
+    <div class="section-label reveal">Common Questions</div>
+    <h2 class="section-title reveal">Everything You Want to Know<br>Before You Call.</h2>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q">What if we're already locked into a contract with another provider? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>We'll review your current contract and advise you on the cleanest way to transition. In most cases it's simpler than you think — and we manage the migration so your business experiences zero disruption.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How long does it take to get up and running? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Most businesses are fully onboarded within 30 days. We have a proven process that keeps disruption to an absolute minimum. Your team will barely notice the change — except that things start working better.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">We're not sure we're big enough for this. <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>If you have between 10 and 150 people and your business depends on technology working — you're exactly the right size. The businesses that benefit most are the ones that have outgrown their current IT setup but haven't yet hired a full internal team.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How is Dividend IT different from our current outsourced cybersecurity & IT provider? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Most IT providers focus on keeping the lights on. We focus on making your business more efficient, more secure, and more valuable. We work directly with business owners — not just your IT admin — and we align everything we do to your commercial goals. If your current provider has never talked to you about EBITDA or exit planning, that's the difference.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Are there long-term contracts? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>No lock-in beyond a 3-month onboarding period. We keep clients because the service is good — not because they're contractually trapped. Annual contracts are available with a 10% discount if you prefer that structure.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What does it actually cost? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Our packages start at €75 per user per month — fully inclusive, no hidden fees. A 25-person business on our Operate package pays €2,500 per month. Irish businesses lose an average of €5,600 per hour of IT downtime. The maths tends to take care of itself.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-inner">
+    <div class="section-label">Ready to Start?</div>
+    <h2 class="section-title">Let's Find Out If<br>We're a Fit.</h2>
+    <p>We don't work with everyone. We work with business owners who are serious about using technology as a competitive advantage — and who want a partner invested in their success at every stage of the journey.</p>
+    <div class="cta-actions">
+      <a href="mailto:hello@dividendit.com" class="btn-light">Book a Free 20-Min Call</a>
+      <a href="#lead-magnet" class="btn-outline-light">Download the Free Guide</a>
+    </div>
+    <p class="cta-note">No obligation. No hard sell. No jargon. Just an honest conversation about your business.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="#hero" class="footer-logo">Dividend<span>IT</span></a>
+      <div class="footer-tagline">Outsourced Cybersecurity & IT — Ireland & UK</div>
+    </div>
+    <div class="footer-links">
+      <a href="#journey">Who We Serve</a>
+      <a href="#solution">Services</a>
+      <a href="#packages">Pricing</a>
+      <a href="#dividend-index">Insights</a>
+      <a href="#about">About</a>
+      <a href="#cta">Contact</a>
+    </div>
+    <div class="footer-copy">© 2025 Dividend IT. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // Page routing
+  function scrollToStat(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.style.transition = 'background 0.3s';
+      el.style.background = 'var(--accent-green-light)';
+      setTimeout(() => { el.style.background = ''; }, 1500);
+    }
+  }
+
+  function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    const page = document.getElementById('page-' + pageId);
+    if (page) page.classList.add('active');
+    window.scrollTo(0, 0);
+    initReveal();
+  }
+  function showInsight(id) { showPage(id); }
+  function scrollToSection(id) {
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+
+  // Journey tabs
+  function switchTab(segment) {
+    document.querySelectorAll('.journey-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.journey-panel').forEach(p => p.classList.remove('active'));
+    event.target.classList.add('active');
+    document.getElementById('panel-' + segment).classList.add('active');
+  }
+
+  // Scroll reveal
+  function initReveal() {
+    const reveals = document.querySelectorAll('.reveal:not(.visible)');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 60);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => obs.observe(el));
+  }
+  initReveal();
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Nav active state
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--accent-green)' : '';
+    });
+  });
+</script>
+
+
+</div><!-- end page-home -->
+
+<!-- WHITE PAPER 1: CYBER RISK -->
+<div class="page" id="page-cyber-risk">
+  <div class="insights-nav"><div class="insights-nav-inner">
+    <a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">&larr; The Dividend Index</a>
+    <span>/</span><span>The Cyber Risk Facing Irish SMBs</span>
+  </div></div>
+  <div class="wp-hero"><div class="wp-hero-inner">
+    <div class="wp-tag">Cybersecurity Research</div>
+    <h1 class="wp-title">The Cyber Risk Facing Irish SMBs &mdash; What the Data Really Tells Us</h1>
+    <p class="wp-intro">Half of Irish small and medium businesses experienced a cyber attack last year. One in six that were hit are no longer operating. This is not a large-company problem &mdash; and the data makes that abundantly clear.</p>
+    <div class="wp-meta">
+      <div class="wp-meta-item"><strong>Published by:</strong> The Dividend Index</div>
+      <div class="wp-meta-item"><strong>Reading time:</strong> 6 minutes</div>
+      <div class="wp-meta-item"><strong>Audience:</strong> Irish business owners &amp; shareholders</div>
+    </div>
+  </div></div>
+  <div class="wp-body"><div class="wp-body-inner">
+    <h2>The Scale of the Problem</h2>
+    <p>For years, cybersecurity was treated as a large-company concern. That perception has been comprehensively dismantled by the data. Small and medium businesses are now the primary target of cybercriminals, and Irish SMBs are no exception.</p>
+    <div class="wp-stat-callout">
+      <div class="wp-stat-num"><span>50%</span></div>
+      <p>of Irish SMBs experienced a cyber attack or breach in the past 12 months, according to research by Cyber Ireland and the National Cyber Security Centre (NCSC).</p>
+    </div>
+    <p>One in two businesses targeted. The question for every Irish business owner is no longer whether their business will be targeted &mdash; it is whether they will be prepared when it happens.</p>
+    <h2>Why SMBs Are the Primary Target</h2>
+    <p>Attackers go where defences are weakest. Large enterprises have invested heavily in cybersecurity infrastructure. SMBs, by contrast, typically operate with limited IT budgets, no dedicated security staff, and technology that is often outdated or improperly configured.</p>
+    <div class="wp-stat-callout">
+      <div class="wp-stat-num">3<span>&times;</span></div>
+      <p>SMBs are three times more likely to be targeted than large enterprises, according to the Verizon Data Breach Investigations Report 2024. Despite representing a fraction of total economic output, SMBs account for over 50% of all reported cyber attacks globally.</p>
+    </div>
+    <h2>The Most Common Attack Vectors</h2>
+    <table class="wp-data-table">
+      <thead><tr><th>Attack Type</th><th>Description</th><th>Primary Impact</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Phishing &amp; Email Compromise</strong></td><td>Fraudulent emails to steal credentials or redirect payments</td><td>Financial loss, data breach</td></tr>
+        <tr><td><strong>Ransomware</strong></td><td>Malware encrypts business data and demands payment for restoration</td><td>Operational shutdown, data loss</td></tr>
+        <tr><td><strong>Invoice Redirection Fraud</strong></td><td>Impersonation of supplier communications to redirect payments</td><td>Direct financial loss</td></tr>
+        <tr><td><strong>Credential Theft</strong></td><td>Compromised passwords used to access business systems</td><td>Data breach, reputational damage</td></tr>
+        <tr><td><strong>Supply Chain Attacks</strong></td><td>Exploitation of trusted third-party relationships</td><td>Data breach, compliance risk</td></tr>
+      </tbody>
+    </table>
+    <p>According to FraudSMART, invoice redirection fraud alone accounted for &euro;15.7 million in losses to Irish SMBs between January 2023 and December 2024. These are not sophisticated nation-state attacks &mdash; they succeed because businesses lack basic controls to prevent them.</p>
+    <h2>The Consequences: Beyond the Financial Hit</h2>
+    <p><strong>Operational disruption.</strong> More than half of Irish SMBs that experience a cyber attack suffer significant downtime. For a distribution business, a manufacturing operation, or a financial services firm, every hour of downtime has a measurable and immediate cost.</p>
+    <p><strong>Reputational damage.</strong> In sectors where client trust is the foundation of the business model, a breach can cost clients. The long-term commercial impact of reputational damage is rarely captured in incident cost estimates but is often the most significant consequence.</p>
+    <p><strong>Regulatory and compliance exposure.</strong> Under GDPR, Irish businesses must report certain data breaches to the Data Protection Commission within 72 hours. Failure to demonstrate adequate security controls can result in substantial fines.</p>
+    <div class="wp-stat-callout">
+      <div class="wp-stat-num"><span>17%</span></div>
+      <p>of Irish businesses that experienced a cyber attack are no longer operating, according to the Hiscox Cyber Readiness Report. One in six businesses that get hit do not survive it.</p>
+    </div>
+    <h2>The Preparedness Gap</h2>
+    <p>Only 22% of Irish businesses have a formal cybersecurity incident management plan in place. The vast majority are hoping it will not happen to them. Hope is not a strategy. The businesses that survive cyber incidents are the ones that have treated cybersecurity as a proactive, strategic investment &mdash; not a reactive cost.</p>
+    <h2>What Good Looks Like</h2>
+    <p>Effective cybersecurity for an Irish SMB does not require a large budget or a dedicated internal security team. The core elements include: managed endpoint detection and response, email security and anti-phishing controls, multi-factor authentication on all systems, automated patch management, tested backup and recovery, and a documented incident response plan.</p>
+    <h2>The Bottom Line</h2>
+    <p>Cyber attacks are a near-certainty over any meaningful time horizon for Irish SMBs. The cost of proper cybersecurity protection is a fraction of the cost of remediating a single incident. For business owners who have spent years building something valuable, the calculus is straightforward. The risk is real. The cost of prevention is known. The cost of inaction is not.</p>
+    <div class="wp-source-block">
+      <h4>Sources &amp; Further Reading</h4>
+      <ul>
+        <li><a href="https://cyberireland.ie" target="_blank">Cyber Ireland &mdash; Irish Cybersecurity Industry Report</a></li>
+        <li><a href="https://www.ncsc.gov.ie" target="_blank">National Cyber Security Centre Ireland (NCSC)</a></li>
+        <li><a href="https://www.verizon.com/business/resources/reports/dbir/" target="_blank">Verizon Data Breach Investigations Report 2024</a></li>
+        <li><a href="https://www.hiscoxgroup.com/cyber-readiness" target="_blank">Hiscox Cyber Readiness Report</a></li>
+        <li><a href="https://www.fraudsmart.ie" target="_blank">FraudSMART &mdash; Banking &amp; Payments Federation Ireland</a></li>
+        <li><a href="https://www.centralbank.ie/statistics/data-and-analysis/payment-fraud-statistics" target="_blank">Central Bank of Ireland &mdash; Payment Fraud Statistics 2024</a></li>
+      </ul>
+    </div>
+    <div class="wp-cta">
+      <h3>Is Your Business Protected?</h3>
+      <p>Book a free 20-minute call with Dividend IT. We will give you an honest assessment of your current cybersecurity posture &mdash; no jargon, no obligation, just clarity.</p>
+      <div class="wp-cta-actions">
+        <a href="mailto:hello@dividendit.com" class="btn-light">Book a Free Call</a>
+        <a onclick="showPage('home');scrollToSection('lead-magnet')" class="btn-outline-light" style="cursor:pointer">Download the Free Guide</a>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="wp-related">
+    <div class="wp-related-inner">
+      <h3>Related Research from The Dividend Index</h3>
+      <div class="wp-related-grid">
+        <div class="wp-related-card" onclick="showInsight('true-cost')" style="cursor:pointer">
+          <div class="wp-related-tag">Financial Impact</div>
+          <h4>The True Cost of a Cyber Incident</h4>
+          <p>Payment fraud, productivity loss, and reputational damage. The full financial picture.</p>
+        </div>
+        <div class="wp-related-card" onclick="showInsight('exit-value')" style="cursor:pointer">
+          <div class="wp-related-tag">Business Value &amp; Exit</div>
+          <h4>Why 70% of Business Owners Never Realise the Value They Built</h4>
+          <p>The data behind the exit failure rate and the role of technology.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <footer>
+    <div class="footer-inner">
+      <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a><div class="footer-tagline">Outsourced Cybersecurity &amp; IT &mdash; Ireland &amp; UK</div></div>
+      <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
+      <div class="footer-copy">&copy; 2025 Dividend IT. All rights reserved.</div>
+    </div>
+  </footer>
+</div>
+
+<!-- WHITE PAPER 2: TRUE COST -->
+<div class="page" id="page-true-cost">
+  <div class="insights-nav"><div class="insights-nav-inner">
+    <a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">&larr; The Dividend Index</a>
+    <span>/</span><span>The True Cost of a Cyber Incident</span>
+  </div></div>
+  <div class="wp-hero"><div class="wp-hero-inner">
+    <div class="wp-tag">Financial Impact Research</div>
+    <h1 class="wp-title">The True Cost of a Cyber Incident for Irish Businesses &mdash; Beyond the &euro;21k Headline</h1>
+    <p class="wp-intro">The average cost to remediate a cyber attack on an Irish business is &euro;21,000. But that figure captures only the direct recovery cost. When you factor in payment fraud, productivity loss, and reputational damage, the true financial impact is significantly higher &mdash; and for many businesses, existential.</p>
+    <div class="wp-meta">
+      <div class="wp-meta-item"><strong>Published by:</strong> The Dividend Index</div>
+      <div class="wp-meta-item"><strong>Reading time:</strong> 7 minutes</div>
+      <div class="wp-meta-item"><strong>Audience:</strong> Irish business owners &amp; shareholders</div>
+    </div>
+  </div></div>
+  <div class="wp-body"><div class="wp-body-inner">
+    <h2>The Headline Figure Is Only the Beginning</h2>
+    <p>The &euro;21,000 average figure cited across Irish cybersecurity research represents the direct recovery cost &mdash; engaging specialists, restoring systems, investigating the incident. It is a significant number. But for most businesses that have experienced a serious cyber incident, the remediation cost is the smallest part of the story. The full financial impact encompasses five distinct cost categories.</p>
+    <h2>Cost Category 1: Direct Remediation</h2>
+    <div class="wp-stat-callout">
+      <div class="wp-stat-num">&euro;<span>21k</span></div>
+      <p>Average cost to fully remediate a cyber attack on an Irish business. Covers incident response, forensic investigation, system restoration, and security hardening.</p>
+    </div>
+    <h2>Cost Category 2: Payment Fraud</h2>
+    <p>Payment fraud is one of the most significant and fastest-growing financial threats facing Irish businesses &mdash; directly enabled by cybersecurity failures. The Central Bank of Ireland&rsquo;s Payment Fraud Statistics for 2024 paint a stark picture.</p>
+    <div class="wp-stat-callout">
+      <div class="wp-stat-num">&euro;<span>160M</span></div>
+      <p>Total value of fraudulent payments in Ireland in 2024 &mdash; up nearly 25% from the previous year, with a 40% rise in the volume of fraudulent transactions, according to the Central Bank of Ireland.</p>
+    </div>
+    <p>For Irish SMBs, invoice redirection fraud is the dominant attack vector. A fraudster impersonates a supplier&rsquo;s email, claims bank account details have changed, and redirects legitimate payments to their own account. By the time it is discovered, the money is long gone.</p>
+    <div class="wp-stat-callout">
+      <div class="wp-stat-num">&euro;<span>17M</span></div>
+      <p>Lost by Irish SMEs through email scams and invoice redirection fraud over a two-year period, according to FraudSMART and the Banking &amp; Payments Federation Ireland (BPFI).</p>
+    </div>
+    <h2>Cost Category 3: Productivity Loss and Downtime</h2>
+    <div class="wp-stat-callout">
+      <div class="wp-stat-num">&euro;<span>5,600</span></div>
+      <p>Average cost per hour of IT downtime for an Irish business, across direct revenue loss, staff productivity, and operational disruption.</p>
+    </div>
+    <p>More than half of Irish SMBs that experience a cyber attack suffer significant business downtime. For distribution and manufacturing businesses operating on tight schedules, every hour of downtime has an immediate and measurable commercial cost.</p>
+    <h2>Cost Category 4: Revenue Lost to Fraud</h2>
+    <div class="wp-stat-callout">
+      <div class="wp-stat-num">6.5<span>%</span></div>
+      <p>of annual revenue lost to fraud by businesses in 2024, according to the AFP Payments Fraud and Control Survey. For a business turning over &euro;2 million, that represents &euro;130,000 per year in fraud-related losses.</p>
+    </div>
+    <h2>Cost Category 5: Reputational Damage</h2>
+    <p>For financial services and wealth management businesses, a breach is not just an operational event &mdash; it is a commercial crisis. High net worth individuals and institutional clients do not tolerate security failures from firms entrusted with their financial data. Client attrition following a serious breach in this sector can take years to recover from.</p>
+    <h2>The Total Cost Perspective</h2>
+    <table class="wp-data-table">
+      <thead><tr><th>Cost Category</th><th>Typical Range for Irish SMB</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Direct remediation</strong></td><td>&euro;15,000 &ndash; &euro;50,000+</td></tr>
+        <tr><td><strong>Payment fraud losses</strong></td><td>&euro;5,000 &ndash; &euro;250,000+</td></tr>
+        <tr><td><strong>Downtime &amp; productivity</strong></td><td>&euro;5,600 per hour of downtime</td></tr>
+        <tr><td><strong>Revenue lost to fraud</strong></td><td>Up to 6.5% of annual turnover</td></tr>
+        <tr><td><strong>Reputational &amp; client attrition</strong></td><td>Highly variable &mdash; can exceed all other categories combined</td></tr>
+      </tbody>
+    </table>
+    <h2>The Prevention Calculus</h2>
+    <p>A business with 30 users on a fully managed outsourced cybersecurity &amp; IT package at &euro;100 per user per month pays &euro;36,000 per year for comprehensive, proactive protection. A single serious cyber incident, when all cost categories are considered, will typically cost multiples of that annual investment. The business case for proactive cybersecurity investment is not a matter of opinion. It is a straightforward financial calculation.</p>
+    <div class="wp-source-block">
+      <h4>Sources &amp; Further Reading</h4>
+      <ul>
+        <li><a href="https://www.centralbank.ie/statistics/data-and-analysis/payment-fraud-statistics" target="_blank">Central Bank of Ireland &mdash; Payment Fraud Statistics 2024</a></li>
+        <li><a href="https://www.fraudsmart.ie" target="_blank">FraudSMART / BPFI &mdash; SME Fraud Research</a></li>
+        <li><a href="https://www.rte.ie/news/business/2025/1017/1539050-central-bank-payment-fraud-statistics-2024/" target="_blank">RT&Eacute; News &mdash; 40% Rise in Fraudulent Payments in Ireland (2025)</a></li>
+        <li><a href="https://cyberireland.ie" target="_blank">Cyber Ireland &mdash; Irish Cybersecurity Industry Report</a></li>
+      </ul>
+    </div>
+    <div class="wp-cta">
+      <h3>Know Your Real Exposure</h3>
+      <p>A free Technology &amp; Security Review from Dividend IT gives you a clear, plain-English picture of where your business is exposed &mdash; and what it would cost to fix it.</p>
+      <div class="wp-cta-actions">
+        <a href="mailto:hello@dividendit.com" class="btn-light">Book a Free Review</a>
+        <a onclick="showPage('home');scrollToSection('lead-magnet')" class="btn-outline-light" style="cursor:pointer">Download the Free Guide</a>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="wp-related">
+    <div class="wp-related-inner">
+      <h3>Related Research from The Dividend Index</h3>
+      <div class="wp-related-grid">
+        <div class="wp-related-card" onclick="showInsight('cyber-risk')" style="cursor:pointer">
+          <div class="wp-related-tag">Cybersecurity Research</div>
+          <h4>The Cyber Risk Facing Irish SMBs</h4>
+          <p>50% of Irish SMBs attacked last year. The full picture of the threat landscape.</p>
+        </div>
+        <div class="wp-related-card" onclick="showInsight('exit-value')" style="cursor:pointer">
+          <div class="wp-related-tag">Business Value &amp; Exit</div>
+          <h4>Why 70% of Business Owners Never Realise the Value They Built</h4>
+          <p>The data behind the exit failure rate and what technology has to do with it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <footer>
+    <div class="footer-inner">
+      <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a><div class="footer-tagline">Outsourced Cybersecurity &amp; IT &mdash; Ireland &amp; UK</div></div>
+      <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
+      <div class="footer-copy">&copy; 2025 Dividend IT. All rights reserved.</div>
+    </div>
+  </footer>
+</div>
+
+<!-- WHITE PAPER 3: EXIT VALUE -->
+<div class="page" id="page-exit-value">
+  <div class="insights-nav"><div class="insights-nav-inner">
+    <a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">&larr; The Dividend Index</a>
+    <span>/</span><span>Technology, Business Value &amp; Exit</span>
+  </div></div>
+  <div class="wp-hero"><div class="wp-hero-inner">
+    <div class="wp-tag">Business Value &amp; Exit Research</div>
+    <h1 class="wp-title">Why 70% of Irish Business Owners Never Realise the Value They&rsquo;ve Built &mdash; And What Technology Has to Do With It</h1>
+    <p class="wp-intro">Most Irish business owners spend years building something genuinely valuable. The majority never realise that value. This research examines the data behind the business exit failure rate, and the often-overlooked role that technology alignment plays in determining which businesses successfully cross the finish line.</p>
+    <div class="wp-meta">
+      <div class="wp-meta-item"><strong>Published by:</strong> The Dividend Index</div>
+      <div class="wp-meta-item"><strong>Reading time:</strong> 8 minutes</div>
+      <div class="wp-meta-item"><strong>Audience:</strong> Irish business owners, shareholders &amp; value creators</div>
+    </div>
+  </div></div>
+  <div class="wp-body"><div class="wp-body-inner">
+    <h2>The Exit Problem Nobody Talks About</h2>
+    <p>The narrative around entrepreneurship tends to focus on the beginning &mdash; the idea, the founding, the early struggle to survive. Far less attention is paid to the end of the journey: the moment when a business owner attempts to realise the value of everything they have built.</p>
+    <div class="wp-stat-callout">
+      <div class="wp-stat-num"><span>70%</span></div>
+      <p>of business owners who want to exit their business will never successfully do so, according to research by the Exit Planning Institute. The majority of business owners who have spent years building value never realise it.</p>
+    </div>
+    <p>This is not a failure of ambition or effort. Many of these business owners have built genuinely profitable, well-run operations. The failure is one of preparation &mdash; specifically, the failure to build a business that is structured, documented, and positioned in a way that makes it attractive and defensible to a buyer or investor.</p>
+    <h2>The Preparation Gap</h2>
+    <div class="wp-stat-callout">
+      <div class="wp-stat-num"><span>78%</span></div>
+      <p>of business owners lack a formal transition team when approaching exit, according to the Exit Planning Institute&rsquo;s State of Owner Readiness Survey. The majority have no structured plan and no documented preparation for the transition process.</p>
+    </div>
+    <p>Business acquisitions are rigorous, adversarial processes. Buyers deploy teams of specialists whose explicit purpose is to identify risk, challenge assumptions, and find reasons to reduce the purchase price or walk away entirely. A business owner who arrives at that process without adequate preparation will find every gap in their documentation becoming a lever in the buyer&rsquo;s hands.</p>
+    <h2>Where Technology Fits In</h2>
+    <p>Technology due diligence has become a standard component of any serious business acquisition. A decade ago, it was relatively superficial. Today, it is a comprehensive forensic investigation examining every dimension of a business&rsquo;s technology posture.</p>
+    <table class="wp-data-table">
+      <thead><tr><th>Due Diligence Area</th><th>What Buyers Look For</th><th>Common Issues Found</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Cybersecurity posture</strong></td><td>Proactive security management, incident history, vulnerability assessments</td><td>No MDR, unpatched systems, undisclosed incidents</td></tr>
+        <tr><td><strong>Data governance</strong></td><td>GDPR compliance, data mapping, retention policies</td><td>No data mapping, non-compliant practices</td></tr>
+        <tr><td><strong>IT infrastructure</strong></td><td>Age and condition of hardware, software licence compliance</td><td>End-of-life hardware, unlicensed software</td></tr>
+        <tr><td><strong>Technology spend</strong></td><td>How IT costs are classified, EBITDA impact</td><td>Inflated operating costs from misclassified IT expenditure</td></tr>
+        <tr><td><strong>Key person dependency</strong></td><td>Whether IT management is documented and transferable</td><td>Critical systems managed by one person with no documentation</td></tr>
+        <tr><td><strong>Vendor relationships</strong></td><td>IT supplier contracts, termination clauses, transferability</td><td>Long lock-in contracts, non-transferable licences</td></tr>
+      </tbody>
+    </table>
+    <h2>The EBITDA Connection</h2>
+    <p>In most SMB transactions, valuation is expressed as a multiple of EBITDA &mdash; typically between four and eight times. Every euro of EBITDA added to the business is multiplied by the transaction multiple in the final valuation. A &euro;100,000 improvement in annual EBITDA at a six times multiple creates &euro;600,000 of additional enterprise value.</p>
+    <p><strong>The capitalisation versus expensing decision.</strong> Many Irish businesses expense their entire technology spend as an operating cost, directly reducing EBITDA. In many cases, a significant proportion of this expenditure could legitimately be capitalised as a fixed asset &mdash; sitting on the balance sheet rather than reducing annual profit. The cumulative impact of misclassifying technology expenditure over multiple years can be a material reduction in both EBITDA and business valuation.</p>
+    <p><strong>Technology-driven efficiency gains.</strong> The right technology, properly implemented, reduces the cost of delivering revenue. Automation of manual processes, elimination of duplicate systems, and optimisation of software licences all contribute to margin improvement &mdash; and therefore to enterprise value.</p>
+    <h2>The Role of a Technology Partner in Exit Preparation</h2>
+    <p>The businesses that achieve successful exits are typically the ones that have treated technology as a strategic asset rather than an operational overhead. A strategic technology partner contributes to exit preparation through technology due diligence readiness, EBITDA optimisation through proper cost classification, security and compliance assurance that removes buyer concern, and continuity documentation that eliminates key person dependencies.</p>
+    <h2>Starting the Journey at the Right Stage</h2>
+    <p>Exit preparation cannot be effectively compressed into the six to twelve months before a transaction. The businesses that achieve the best outcomes build towards exit-readiness over years. A business that is exit-ready is simply a better business &mdash; more profitable, more resilient, and easier to run. The investment pays dividends long before any transaction takes place.</p>
+    <h2>The Bottom Line</h2>
+    <p>Seventy percent of business owners who want to exit never successfully do so. Technology readiness is a consistent and preventable factor in failed transactions and reduced valuations. For Irish business owners who have spent years building something valuable, addressing the technology dimension of exit readiness is one of the highest-return investments they can make.</p>
+    <div class="wp-source-block">
+      <h4>Sources &amp; Further Reading</h4>
+      <ul>
+        <li><a href="https://www.exitplanninginstitute.com" target="_blank">Exit Planning Institute &mdash; State of Owner Readiness Survey</a></li>
+        <li><a href="https://www.pepperdine.edu/graziadio/research/pepperdine-private-capital-markets-project/" target="_blank">Pepperdine University &mdash; Private Capital Markets Report</a></li>
+        <li><a href="https://www.ibm.com/thought-leadership/institute-business-value/en-us" target="_blank">IBM Institute for Business Value</a></li>
+        <li><a href="https://cyberireland.ie" target="_blank">Cyber Ireland &mdash; Irish Cybersecurity Industry Report</a></li>
+        <li><a href="https://www.revenue.ie" target="_blank">Irish Revenue &mdash; Capital Allowances for IT Equipment</a></li>
+      </ul>
+    </div>
+    <div class="wp-cta">
+      <h3>Is Your Technology Exit-Ready?</h3>
+      <p>Dividend IT works with value creators across Ireland to align technology with EBITDA, prepare for due diligence, and protect the value they&rsquo;ve spent years building.</p>
+      <div class="wp-cta-actions">
+        <a href="mailto:hello@dividendit.com" class="btn-light">Book a Free Call</a>
+        <a onclick="showPage('home');scrollToSection('packages')" class="btn-outline-light" style="cursor:pointer">View the Grow Package</a>
+      </div>
+    </div>
+  </div></div>
+
+  <div class="wp-related">
+    <div class="wp-related-inner">
+      <h3>Related Research from The Dividend Index</h3>
+      <div class="wp-related-grid">
+        <div class="wp-related-card" onclick="showInsight('cyber-risk')" style="cursor:pointer">
+          <div class="wp-related-tag">Cybersecurity Research</div>
+          <h4>The Cyber Risk Facing Irish SMBs</h4>
+          <p>50% of Irish SMBs attacked last year. The full picture of the threat landscape.</p>
+        </div>
+        <div class="wp-related-card" onclick="showInsight('true-cost')" style="cursor:pointer">
+          <div class="wp-related-tag">Financial Impact</div>
+          <h4>The True Cost of a Cyber Incident</h4>
+          <p>Payment fraud, productivity loss, and reputational damage. The full financial picture.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <footer>
+    <div class="footer-inner">
+      <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a><div class="footer-tagline">Outsourced Cybersecurity &amp; IT &mdash; Ireland &amp; UK</div></div>
+      <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
+      <div class="footer-copy">&copy; 2025 Dividend IT. All rights reserved.</div>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
