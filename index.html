@@ -140,7 +140,9 @@
       background: var(--white); border: 1px solid var(--border);
       border-radius: 8px; padding: 1.5rem;
       animation: fadeUp 0.6s ease both;
+      cursor: pointer; transition: border-color 0.2s, box-shadow 0.2s;
     }
+    .hero-stat-card:hover { border-color: var(--accent-green); box-shadow: 0 4px 16px rgba(45,106,79,0.12); }
     .hero-stat-card:nth-child(2) { animation-delay: 0.1s; margin-left: 2rem; }
     .hero-stat-card:nth-child(3) { animation-delay: 0.2s; }
     .stat-number {
@@ -784,15 +786,15 @@
       </div>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat-card">
+      <div class="hero-stat-card" onclick="document.getElementById('stat-50').scrollIntoView({behavior:'smooth',block:'center'})">
         <div class="stat-number"><span>50%</span></div>
         <div class="stat-label">of Irish SMBs experienced a cyber attack in the past 12 months</div>
       </div>
-      <div class="hero-stat-card">
+      <div class="hero-stat-card" onclick="document.getElementById('stat-70').scrollIntoView({behavior:'smooth',block:'center'})">
         <div class="stat-number"><span>70%</span></div>
         <div class="stat-label">of business owners who want to exit will never successfully do so</div>
       </div>
-      <div class="hero-stat-card">
+      <div class="hero-stat-card" onclick="document.getElementById('stat-21k').scrollIntoView({behavior:'smooth',block:'center'})">
         <div class="stat-number">€<span>21k</span></div>
         <div class="stat-label">average cost to fully remediate a cyber attack on an Irish business</div>
       </div>
@@ -1020,7 +1022,7 @@
 
     <div class="stats-grid reveal">
 
-      <div class="stat-block">
+      <div class="stat-block" id="stat-50">
         <div class="stat-block-number"><span>50%</span></div>
         <div class="stat-block-label">of Irish SMBs were attacked last year</div>
         <div class="stat-block-desc">Half of businesses like yours experienced a cyber breach or attack in the past 12 months. This is not a large-company problem.</div>
@@ -1034,7 +1036,7 @@
         <span onclick="showInsight('cyber-risk'); return false;" class="stat-block-source" style="cursor:pointer">Source: Verizon DBIR 2024</span>
       </div>
 
-      <div class="stat-block">
+      <div class="stat-block" id="stat-21k">
         <div class="stat-block-number">€<span>21k</span></div>
         <div class="stat-block-label">The real cost of a cyber incident — it goes far beyond remediation</div>
         <div class="stat-block-desc">Most businesses focus on the recovery cost. The full financial impact is significantly higher when you factor in fraud, downtime, and lost revenue.</div>
@@ -1066,7 +1068,7 @@
         <span onclick="showInsight('cyber-risk'); return false;" class="stat-block-source" style="cursor:pointer">Source: Hiscox Cyber Readiness Report</span>
       </div>
 
-      <div class="stat-block">
+      <div class="stat-block" id="stat-70">
         <div class="stat-block-number"><span>70%</span></div>
         <div class="stat-block-label">of owners never achieve a successful exit</div>
         <div class="stat-block-desc">Most business owners never realise the value they've created. Technology misalignment and poor exit preparation are among the most common — and preventable — reasons why.</div>
