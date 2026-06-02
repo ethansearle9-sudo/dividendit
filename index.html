@@ -1537,15 +1537,6 @@
 </script>
 
 
-<!-- LEAD MAGNET MODAL -->
-<div class="lm-overlay" id="lm-overlay" onclick="closeLMIfOutside(event)">
-  <div class="lm-modal">
-    <button class="lm-close" onclick="closeLeadMagnet()">×</button>
-    <div class="lm-tag">Free Guide</div>
-    <h2>5 Ways to Drive Business Value With Your IT</h2>
-    <p>Practical insights for Irish business owners. No jargon, no sales pitch. Just five things you can act on today.</p>
-    <div class="lm-points">
-      <div class="lm-point">How to capitalise IT spend and improve your EBITDA</div>
 
 </div><!-- end page-home -->
 
@@ -2239,6 +2230,28 @@
   </footer>
 
 </div><!-- end page-guide -->
+
+<!-- LEAD MAGNET MODAL -->
+<div class="lm-overlay" id="lm-overlay" onclick="closeLMIfOutside(event)">
+  <div class="lm-modal">
+    <button class="lm-close" onclick="closeLeadMagnet()">&times;</button>
+    <div class="lm-tag">Free Guide</div>
+    <h2>5 Ways to Drive Business Value With Your IT</h2>
+    <p>Practical insights for Irish business owners. No jargon, no sales pitch. Just five things you can act on today.</p>
+    <div class="lm-points">
+      <div class="lm-point">How to capitalise IT spend and improve your EBITDA</div>
+      <div class="lm-point">The cybersecurity framework that protects without complexity</div>
+      <div class="lm-point">IT controls that prevent payment fraud</div>
+      <div class="lm-point">How to eliminate productivity-killing technology</div>
+      <div class="lm-point">Using technology to build a more valuable, exit-ready business</div>
+    </div>
+    <form class="lm-form" onsubmit="submitLeadMagnet(event)">
+      <input type="email" class="lm-input" id="lm-email" placeholder="Your email address" required />
+      <button type="submit" class="lm-submit">Send Me the Free Guide &rarr;</button>
+      <p class="lm-note">No spam. No hard sell. Unsubscribe any time.</p>
+    </form>
+  </div>
+</div>
 
 </body>
 </html>
