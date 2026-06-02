@@ -912,9 +912,10 @@
             <p>We've got the scar tissue to show for it. We know this journey. <strong>Our promise is simple — IT and cybersecurity will never add to your list of headaches.</strong></p>
             <p style="margin-top:0.85rem; font-size:0.875rem; color:rgba(255,255,255,0.65);">We take it completely off your plate — and we act as your strategic technology advisor, keeping one eye on where your business needs to go, not just where it is today.</p>
           </div>
-          <div class="journey-stat">
+          <div class="journey-stat" onclick="showInsight('exit-value')" style="cursor:pointer" onmouseover="this.style.borderColor='var(--accent-green)'" onmouseout="this.style.borderColor=''">
             <div class="journey-stat-num"><span>70%</span></div>
             <div class="journey-stat-label">of business owners who want to exit never successfully do — most because they were never set up to scale without the founder at the centre</div>
+            <div style="font-size:0.72rem;font-weight:600;color:var(--accent-green);margin-top:0.5rem;">Read the full research →</div>
           </div>
           <div class="journey-cta">
             <p><strong>Recommended package:</strong> Operate — Your complete outsourced IT department. Everything managed, everything included.</p>
@@ -1331,23 +1332,31 @@
     </div>
 
     <div class="index-grid reveal">
-      <div class="index-card index-featured">
-        <div class="index-card-tag">Featured Research</div>
+      <div class="index-card index-featured" onclick="openLeadMagnet()" style="cursor:pointer">
+        <div class="index-card-tag">Free Guide</div>
         <h3>5 Ways to Drive Business Value With Your IT</h3>
         <p>The practical guide for Irish business owners on using technology to protect margins, prevent fraud, and build a more valuable business.</p>
         <a onclick="openLeadMagnet()" class="index-card-link" style="cursor:pointer">Download Free Guide</a>
       </div>
-      <div class="index-card">
-        <div class="index-card-tag">Cybersecurity</div>
-        <h3>The Irish SMB Cyber Risk Report: What the Numbers Really Mean</h3>
-        <p>50% of Irish SMBs were attacked last year. 17% no longer exist. Here's what the data tells us — and what to do about it.</p>
-        <a href="#cta" class="index-card-link">Read the Insight</a>
+      <div class="index-card" onclick="showInsight('cyber-risk')" style="cursor:pointer">
+        <div class="index-card-tag">Cybersecurity Research</div>
+        <h3>The Cyber Risk Facing Irish SMBs — What the Data Really Tells Us</h3>
+        <p>50% of Irish SMBs were attacked last year. 17% no longer exist. Here's the full picture of the threat landscape.</p>
+        <a onclick="showInsight('cyber-risk')" class="index-card-link" style="cursor:pointer">Read the Research</a>
       </div>
-      <div class="index-card">
-        <div class="index-card-tag">Business Value</div>
-        <h3>How Your IT Spend Is Quietly Eroding Your EBITDA — And How to Fix It</h3>
-        <p>Most business owners expense technology when they should be capitalising it. Here's what that's costing you — and how to correct it.</p>
-        <a href="#cta" class="index-card-link">Read the Insight</a>
+      <div class="index-card" onclick="showInsight('true-cost')" style="cursor:pointer">
+        <div class="index-card-tag">Financial Impact</div>
+        <h3>The True Cost of a Cyber Incident — Beyond the €21k Headline</h3>
+        <p>Payment fraud, productivity loss, and reputational damage. The full financial impact of a cyber incident.</p>
+        <a onclick="showInsight('true-cost')" class="index-card-link" style="cursor:pointer">Read the Research</a>
+      </div>
+    </div>
+    <div style="margin-top:1.5rem;" class="reveal">
+      <div class="index-card" onclick="showInsight('exit-value')" style="cursor:pointer;display:block;">
+        <div class="index-card-tag">Business Value &amp; Exit</div>
+        <h3>Why 70% of Irish Business Owners Never Realise the Value They&rsquo;ve Built &mdash; And What Technology Has to Do With It</h3>
+        <p style="max-width:700px;">Most business owners spend years building something valuable — and never realise it. The data behind the exit failure rate and the role of technology alignment.</p>
+        <a onclick="showInsight('exit-value')" class="index-card-link" style="cursor:pointer">Read the Research</a>
       </div>
     </div>
   </div>
