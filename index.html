@@ -789,11 +789,11 @@
   <div class="nav-inner">
     <div style="display:flex;flex-direction:column;gap:2px;"><a onclick="showPage('home')" class="nav-logo" style="cursor:pointer">Dividend<span>IT</span></a><div style="font-size:0.65rem;color:var(--text-muted);letter-spacing:0.02em;font-family:var(--font-body);font-weight:400;line-height:1;">Outsourced Cybersecurity &amp; IT</div></div>
     <ul class="nav-links">
-      <li><a onclick="showPage('home');scrollToSection('journey')" style="cursor:pointer">Who We Serve</a></li>
-      <li><a onclick="showPage('home');scrollToSection('solution')" style="cursor:pointer">Services</a></li>
-      <li><a onclick="showPage('home');scrollToSection('packages')" style="cursor:pointer">Pricing</a></li>
-      <li><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a></li>
-      <li><a onclick="showPage('home');scrollToSection('about')" style="cursor:pointer">About</a></li>
+      <li><a onclick="scrollToSection('journey')" style="cursor:pointer">Who We Serve</a></li>
+      <li><a onclick="scrollToSection('solution')" style="cursor:pointer">Services</a></li>
+      <li><a onclick="scrollToSection('packages')" style="cursor:pointer">Pricing</a></li>
+      <li><a onclick="scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a></li>
+      <li><a onclick="scrollToSection('about')" style="cursor:pointer">About</a></li>
       <li><a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="nav-cta" style="cursor:pointer">Book a Call</a></li>
     </ul>
   </div>
@@ -1535,19 +1535,63 @@
     showPage('guide');
   }
 
-  function showPage(pageId) {
+  // ─── ROUTING WITH BROWSER HISTORY ───
+  // Renders a page without touching history (used by popstate + initial load)
+  function renderPage(pageId, sectionId) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
     const page = document.getElementById('page-' + pageId);
     if (page) page.classList.add('active');
-    window.scrollTo(0, 0);
+    else { document.getElementById('page-home').classList.add('active'); pageId = 'home'; }
+    if (sectionId) {
+      setTimeout(() => {
+        const el = document.getElementById(sectionId);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 120);
+    } else {
+      window.scrollTo(0, 0);
+    }
     initReveal();
   }
+
+  // Called by clicks — updates the URL + history, then renders
+  function showPage(pageId, sectionId) {
+    const hash = (pageId === 'home')
+      ? (sectionId ? '#' + sectionId : '#')
+      : '#' + pageId;
+    if (location.hash !== hash) {
+      history.pushState({ pageId: pageId, sectionId: sectionId || null }, '', hash);
+    }
+    renderPage(pageId, sectionId);
+  }
   function showInsight(id) { showPage(id); }
+
+  // Homepage in-section scrolling (keeps existing nav behaviour, now history-aware)
   function scrollToSection(id) {
-    setTimeout(() => {
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 100);
+    showPage('home', id);
+  }
+
+  // Back / Forward buttons
+  window.addEventListener('popstate', (e) => {
+    routeFromHash();
+  });
+
+  // Read the current URL hash and show the matching page (for direct/shared links + back/forward)
+  function routeFromHash() {
+    const raw = location.hash.replace('#', '');
+    if (!raw) { renderPage('home'); return; }
+    // If the hash matches a known page id, open that page
+    if (document.getElementById('page-' + raw)) {
+      renderPage(raw);
+    } else {
+      // Otherwise treat it as a homepage section anchor
+      renderPage('home', raw);
+    }
+  }
+  // On first load, route to whatever the URL points at (enables shareable deep links)
+  if (document.readyState === 'loading') {
+    window.addEventListener('DOMContentLoaded', routeFromHash);
+  } else {
+    routeFromHash();
   }
 
   // Journey tabs
@@ -1602,7 +1646,7 @@
 <!-- WHITE PAPER 1: CYBER RISK -->
 <div class="page" id="page-cyber-risk">
   <div class="insights-nav"><div class="insights-nav-inner">
-    <a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">&larr; The Dividend Index</a>
+    <a onclick="scrollToSection('dividend-index')" style="cursor:pointer">&larr; The Dividend Index</a>
     <span>/</span><span>The Cyber Risk Facing Irish SMBs</span>
   </div></div>
   <div class="wp-hero"><div class="wp-hero-inner">
@@ -1696,7 +1740,7 @@
     <footer>
     <div class="footer-inner">
       <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a><div class="footer-tagline">Outsourced Cybersecurity &amp; IT</div></div>
-      <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
+      <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
       <div class="footer-copy">&copy; 2026 Dividend IT. All rights reserved.</div>
     </div>
   </footer>
@@ -1705,7 +1749,7 @@
 <!-- WHITE PAPER 2: TRUE COST -->
 <div class="page" id="page-true-cost">
   <div class="insights-nav"><div class="insights-nav-inner">
-    <a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">&larr; The Dividend Index</a>
+    <a onclick="scrollToSection('dividend-index')" style="cursor:pointer">&larr; The Dividend Index</a>
     <span>/</span><span>The True Cost of a Cyber Incident</span>
   </div></div>
   <div class="wp-hero"><div class="wp-hero-inner">
@@ -1802,7 +1846,7 @@
     <footer>
     <div class="footer-inner">
       <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a><div class="footer-tagline">Outsourced Cybersecurity &amp; IT</div></div>
-      <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
+      <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
       <div class="footer-copy">&copy; 2026 Dividend IT. All rights reserved.</div>
     </div>
   </footer>
@@ -1811,7 +1855,7 @@
 <!-- WHITE PAPER 3: EXIT VALUE -->
 <div class="page" id="page-exit-value">
   <div class="insights-nav"><div class="insights-nav-inner">
-    <a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">&larr; The Dividend Index</a>
+    <a onclick="scrollToSection('dividend-index')" style="cursor:pointer">&larr; The Dividend Index</a>
     <span>/</span><span>Technology, Business Value &amp; Exit</span>
   </div></div>
   <div class="wp-hero"><div class="wp-hero-inner">
@@ -1876,7 +1920,7 @@
       <p>Dividend IT works with value creators across Ireland to align technology with EBITDA, prepare for due diligence, and protect the value they&rsquo;ve spent years building.</p>
       <div class="wp-cta-actions">
         <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-light">Book a Free Call</a>
-        <a onclick="showPage('home');scrollToSection('packages')" class="btn-outline-light" style="cursor:pointer">View the Grow Package</a>
+        <a onclick="scrollToSection('packages')" class="btn-outline-light" style="cursor:pointer">View the Grow Package</a>
       </div>
     </div>
   </div></div>
@@ -1901,7 +1945,7 @@
     <footer>
     <div class="footer-inner">
       <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a><div class="footer-tagline">Outsourced Cybersecurity &amp; IT</div></div>
-      <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
+      <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
       <div class="footer-copy">&copy; 2026 Dividend IT. All rights reserved.</div>
     </div>
   </footer>
@@ -2040,7 +2084,7 @@
         <p>Book a free 20-minute call with Dividend IT. We'll give you an honest assessment of where your business stands on each of these five areas — no jargon, no obligation, just clarity.</p>
         <div class="wp-cta-actions">
           <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-light">Book a Free Call</a>
-          <a onclick="showPage('home');scrollToSection('packages')" class="btn-outline-light" style="cursor:pointer">View Our Packages</a>
+          <a onclick="scrollToSection('packages')" class="btn-outline-light" style="cursor:pointer">View Our Packages</a>
         </div>
       </div>
 
@@ -2050,7 +2094,7 @@
   <footer>
     <div class="footer-inner">
       <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a><div class="footer-tagline">Outsourced Cybersecurity &amp; IT</div></div>
-      <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
+      <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
       <div class="footer-copy">&copy; 2026 Dividend IT. All rights reserved.</div>
     </div>
   </footer>
@@ -2063,7 +2107,7 @@
 <!-- WHITE PAPER: STARTUP SURVIVAL -->
 <div class="page" id="page-startup-survival">
   <div class="insights-nav"><div class="insights-nav-inner">
-    <a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">&larr; The Dividend Index</a>
+    <a onclick="scrollToSection('dividend-index')" style="cursor:pointer">&larr; The Dividend Index</a>
     <span>/</span><span>Startup &amp; Business Survival</span>
   </div></div>
   <div class="wp-hero"><div class="wp-hero-inner">
@@ -2125,7 +2169,7 @@
       <p>Dividend IT works with early-stage Irish businesses to get technology right from day one &mdash; simply, securely, and at a price point that makes sense for where you are right now.</p>
       <div class="wp-cta-actions">
         <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-light">Book a Free Call</a>
-        <a onclick="showPage('home');scrollToSection('packages')" class="btn-outline-light" style="cursor:pointer">View the Secure Package</a>
+        <a onclick="scrollToSection('packages')" class="btn-outline-light" style="cursor:pointer">View the Secure Package</a>
       </div>
     </div>
 
@@ -2150,7 +2194,7 @@
   <footer>
     <div class="footer-inner">
       <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a><div class="footer-tagline">Outsourced Cybersecurity &amp; IT</div></div>
-      <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
+      <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
       <div class="footer-copy">&copy; 2026 Dividend IT. All rights reserved.</div>
     </div>
   </footer>
