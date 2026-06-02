@@ -945,9 +945,10 @@
             <p>A startup package built for where you are right now. <strong>Simple, secure, and priced fairly.</strong></p>
             <p style="margin-top:0.85rem; font-size:0.875rem; color:rgba(255,255,255,0.65);">We set you up right from day one — and when you're ready to scale, we grow with you. The businesses we work with at startup become our most loyal partners at entrepreneur and value creator stage.</p>
           </div>
-          <div class="journey-stat">
+          <div class="journey-stat" onclick="showInsight('startup-survival')" style="cursor:pointer" onmouseover="this.style.borderColor='var(--accent-green)'" onmouseout="this.style.borderColor=''">
             <div class="journey-stat-num"><span>49%</span></div>
             <div class="journey-stat-label">of businesses don't make it past year five — getting the foundations right from day one dramatically improves your odds</div>
+            <div style="font-size:0.72rem;font-weight:600;color:var(--accent-green);margin-top:0.5rem;">Read the full research →</div>
           </div>
           <div class="journey-cta">
             <p><strong>Recommended package:</strong> Secure — The foundation. Seamlessly secure IT and reliable support at an accessible price point.</p>
@@ -1113,7 +1114,12 @@
         <div class="stat-block-desc">Most business owners approaching exit have no plan in place — and technology due diligence is almost always an afterthought that costs them at the worst possible time.</div>
         <span onclick="showInsight('exit-value'); return false;" class="stat-block-source" style="cursor:pointer">Source: Exit Planning Institute, State of Owner Readiness</span>
       </div>
-
+        <div class="stat-block" id="stat-49">
+          <div class="stat-block-number"><span>49%</span></div>
+          <div class="stat-block-label">of businesses don't make it past year five</div>
+          <div class="stat-block-desc">Half of all new businesses fail within five years. Getting the technology foundations right from day one dramatically improves the odds of survival and growth.</div>
+          <span onclick="showInsight('startup-survival')" class="stat-block-source" style="cursor:pointer">Source: CSO Business in Ireland 2023 — Read the full research →</span>
+        </div>
     </div>
 
     <div class="stat-pivot reveal">
@@ -1358,6 +1364,14 @@
         <h3>Why 70% of Irish Business Owners Never Realise the Value They&rsquo;ve Built &mdash; And What Technology Has to Do With It</h3>
         <p style="max-width:700px;">Most business owners spend years building something valuable — and never realise it. The data behind the exit failure rate and the role of technology alignment.</p>
         <a onclick="showInsight('exit-value')" class="index-card-link" style="cursor:pointer">Read the Research</a>
+      </div>
+    </div>
+    <div style="margin-top:1.5rem;" class="reveal">
+      <div class="index-card" onclick="showInsight('startup-survival')" style="cursor:pointer;display:block;">
+        <div class="index-card-tag">Startup &amp; Business Survival</div>
+        <h3>Why 49% of Businesses Fail Before Year Five &mdash; And How Getting IT Right From Day One Changes the Odds</h3>
+        <p style="max-width:700px;">Half of all new businesses don't survive past year five. The technology decisions you make in the first 12 months have a direct impact on whether your business is one of them.</p>
+        <a onclick="showInsight('startup-survival')" class="index-card-link" style="cursor:pointer">Read the Research</a>
       </div>
     </div>
   </div>
@@ -2288,6 +2302,104 @@
 
 </div><!-- end page-guide -->
 
+
+
+
+<!-- WHITE PAPER: STARTUP SURVIVAL -->
+<div class="page" id="page-startup-survival">
+  <div class="insights-nav"><div class="insights-nav-inner">
+    <a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">&larr; The Dividend Index</a>
+    <span>/</span><span>Startup &amp; Business Survival</span>
+  </div></div>
+  <div class="wp-hero"><div class="wp-hero-inner">
+    <div class="wp-tag">Startup &amp; Business Survival Research</div>
+    <h1 class="wp-title">Why 49% of Businesses Fail Before Year Five &mdash; And How Getting IT Right From Day One Changes the Odds</h1>
+    <p class="wp-intro">Half of all new businesses don&rsquo;t survive past year five. Most fail not because the idea was wrong or the founder lacked drive &mdash; but because the foundations weren&rsquo;t right. Technology is one of the most overlooked foundations of all.</p>
+    <div class="wp-meta">
+      <div class="wp-meta-item"><strong>Published by:</strong> The Dividend Index</div>
+      <div class="wp-meta-item"><strong>Reading time:</strong> 5 minutes</div>
+      <div class="wp-meta-item"><strong>Audience:</strong> Irish startup founders &amp; early-stage business owners</div>
+    </div>
+  </div></div>
+  <div class="wp-body"><div class="wp-body-inner">
+
+    <h2>The Survival Problem</h2>
+    <p>Starting a business is one of the most courageous things a person can do. You back yourself with your time, your money, and your reputation. You take on the uncertainty, the long hours, and the pressure that comes with building something from nothing.</p>
+    <div class="wp-stat-callout">
+      <div class="wp-stat-num"><span>49%</span></div>
+      <p>of businesses in Ireland do not make it past year five, according to CSO Business in Ireland data. For every two businesses that start today, one will not be trading in five years.</p>
+    </div>
+    <p>The reasons businesses fail are well documented &mdash; insufficient capital, poor cash flow management, failure to find product-market fit, and inability to scale beyond the founder. But one factor that is consistently underestimated is the role of technology. Not because technology is glamorous or strategic in the early years &mdash; but because getting it wrong creates costs, vulnerabilities, and inefficiencies that compound over time and quietly drain the resources a young business needs to survive.</p>
+
+    <h2>The Cost of Getting Technology Wrong Early</h2>
+    <p>Most startup founders approach technology reactively. They set up a Gmail account, download whatever software comes recommended in a Facebook group, and deal with IT problems as they arise. This approach works until it doesn&rsquo;t &mdash; and when it stops working, the cost is disproportionate to the size of the business.</p>
+    <p><strong>Security from day one.</strong> Early-stage businesses are not invisible to cybercriminals. In fact, they are frequently targeted precisely because they are assumed to have weak defences. A phishing attack that compromises your email account, a ransomware incident that encrypts your files, or an invoice fraud that diverts a client payment can be existential events for a business with limited cash reserves. The average cost to recover from a cyber attack in Ireland is &euro;21,000 &mdash; a figure that could end many early-stage businesses outright.</p>
+    <p><strong>The cost of bad habits.</strong> Technology decisions made in the first twelve months of a business are surprisingly sticky. The email platform you choose, the way you store files, the applications you use to manage client relationships &mdash; these become embedded in your processes and your team&rsquo;s muscle memory. Undoing bad technology habits later is significantly more expensive and disruptive than getting them right from the start.</p>
+    <p><strong>Productivity from the beginning.</strong> In the early years, every hour matters. Every hour your team spends fighting unreliable technology, dealing with system errors, or manually doing things that should be automated is an hour not spent on building the business. The cumulative productivity cost of poor technology in the first two years of a business is rarely quantified &mdash; but it is real, and it is significant.</p>
+
+    <h2>What &lsquo;Right&rsquo; Looks Like for a Startup</h2>
+    <p>Getting technology right from day one does not mean spending a fortune on enterprise-grade infrastructure. It means making sensible, properly configured decisions that protect the business, support its growth, and avoid creating problems that will need to be undone later.</p>
+    <table class="wp-data-table">
+      <thead><tr><th>Technology Area</th><th>What to Get Right</th><th>Why It Matters</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Email &amp; Collaboration</strong></td><td>Microsoft 365 or Google Workspace, properly configured with security settings enabled</td><td>Business email on a custom domain with MFA and email security filtering from day one</td></tr>
+        <tr><td><strong>Data Storage</strong></td><td>Cloud-based file storage with proper access controls and automated backup</td><td>Prevents data loss, enables remote working, protects client information</td></tr>
+        <tr><td><strong>Device Security</strong></td><td>Managed endpoint protection on all devices used for work</td><td>Prevents malware, ransomware, and credential theft on business devices</td></tr>
+        <tr><td><strong>Password Management</strong></td><td>Multi-factor authentication on all accounts and a password manager</td><td>Single biggest reducer of credential-based cyber risk</td></tr>
+        <tr><td><strong>GDPR Compliance</strong></td><td>Basic data protection policies and secure handling of any personal data</td><td>Legal requirement from day one for any business handling personal data</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Technology as a Foundation for Growth</h2>
+    <p>The businesses that make it past year five &mdash; and that go on to build something genuinely valuable &mdash; are typically the ones that treated their early operational decisions seriously. They chose the right tools, configured them properly, and built processes around them that could scale as the business grew.</p>
+    <p>Technology is not the most exciting part of starting a business. But it is one of the foundations everything else is built on. A business with secure, reliable, well-configured technology from day one has fewer crises to manage, fewer hours lost to IT problems, and fewer vulnerabilities for criminals to exploit. Those advantages compound over time.</p>
+    <p>The cost of getting technology right from day one is modest. The cost of getting it wrong &mdash; in lost productivity, security incidents, and the expense of fixing bad decisions later &mdash; can be significant. For a business navigating the most vulnerable years of its existence, that difference matters.</p>
+
+    <div class="wp-source-block">
+      <h4>Sources &amp; Further Reading</h4>
+      <ul>
+        <li><a href="https://www.cso.ie/en/releasesandpublications/ep/p-biiilb/businessinireland2023-insightsonthelifecycleofbusinesses" target="_blank">CSO &mdash; Business in Ireland 2023: Insights on the Lifecycle of Businesses</a></li>
+        <li><a href="https://cyberireland.ie" target="_blank">Cyber Ireland &mdash; Irish Cybersecurity Industry Report</a></li>
+        <li><a href="https://www.ncsc.gov.ie" target="_blank">National Cyber Security Centre Ireland (NCSC)</a></li>
+        <li><a href="https://www.localenterprise.ie" target="_blank">Local Enterprise Office Ireland &mdash; Starting a Business</a></li>
+      </ul>
+    </div>
+
+    <div class="wp-cta">
+      <h3>Start on the Right Foundation</h3>
+      <p>Dividend IT works with early-stage Irish businesses to get technology right from day one &mdash; simply, securely, and at a price point that makes sense for where you are right now.</p>
+      <div class="wp-cta-actions">
+        <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-light">Book a Free Call</a>
+        <a onclick="showPage('home');scrollToSection('packages')" class="btn-outline-light" style="cursor:pointer">View the Secure Package</a>
+      </div>
+    </div>
+
+  </div></div>
+
+  <div class="wp-related"><div class="wp-related-inner">
+    <h3>Related Research from The Dividend Index</h3>
+    <div class="wp-related-grid">
+      <div class="wp-related-card" onclick="showInsight('cyber-risk')" style="cursor:pointer">
+        <div class="wp-related-tag">Cybersecurity Research</div>
+        <h4>The Cyber Risk Facing Irish SMBs</h4>
+        <p>50% of Irish SMBs attacked last year. The full picture of the threat landscape.</p>
+      </div>
+      <div class="wp-related-card" onclick="showInsight('exit-value')" style="cursor:pointer">
+        <div class="wp-related-tag">Business Value &amp; Exit</div>
+        <h4>Why 70% of Business Owners Never Realise the Value They Built</h4>
+        <p>The data behind the exit failure rate and the role of technology alignment.</p>
+      </div>
+    </div>
+  </div></div>
+
+  <footer>
+    <div class="footer-inner">
+      <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a><div class="footer-tagline">Outsourced Cybersecurity &amp; IT &mdash; Ireland &amp; UK</div></div>
+      <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
+      <div class="footer-copy">&copy; 2025 Dividend IT. All rights reserved.</div>
+    </div>
+  </footer>
+</div><!-- end page-startup-survival -->
 
 </body>
 </html>
