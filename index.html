@@ -169,7 +169,7 @@
     }
 
     /* ── SECTIONS ── */
-    section { padding: 100px 2rem; }
+    section { padding: 100px 2rem; scroll-margin-top: 80px; }
     .section-inner { max-width: var(--max-w); margin: 0 auto; }
     .section-label {
       display: inline-flex; align-items: center; gap: 0.5rem;
@@ -693,6 +693,8 @@
     /* PAGE ROUTING */
     .page { display: none; }
     .page.active { display: block; }
+    /* Non-home pages start below the fixed 68px nav so the sticky breadcrumb sits flush and no gap appears on scroll */
+    .page:not(#page-home) { padding-top: 68px; }
 
     /* INSIGHTS NAV */
     .insights-nav { background: var(--off-white); border-bottom: 1px solid var(--border); padding: 0.75rem 2rem; position: sticky; top: 68px; z-index: 90; }
@@ -794,7 +796,6 @@
       <li><a onclick="showPage('home');scrollToSection('packages')" style="cursor:pointer">Pricing</a></li>
       <li><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a></li>
       <li><a onclick="showPage('home');scrollToSection('about')" style="cursor:pointer">About</a></li>
-      <li><a onclick="showPage('uk')" style="cursor:pointer">London &amp; UK</a></li>
       <li><a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="nav-cta" style="cursor:pointer">Book a Call</a></li>
     </ul>
   </div>
@@ -939,7 +940,7 @@
             <div class="journey-pain-item">Reliable systems that support growth, not limit it</div>
             <div class="journey-pain-item">Affordable, all-inclusive pricing with no surprises</div>
           </div>
-          <a href="#cta" class="btn-primary">Start on the Right Foot →</a>
+          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary">Start on the Right Foot →</a>
         </div>
         <div class="journey-panel-right">
           <div class="journey-promise">
@@ -1089,7 +1090,7 @@
           </div>
           <div class="cost-item">
             <span class="cost-item-label">Irish SME losses to email &amp; invoice fraud (2 yrs)</span>
-            <span class="cost-item-value">€17,000,000</span>
+            <span class="cost-item-value">€18,900,000</span>
           </div>
           <div class="cost-item">
             <span class="cost-item-label">Revenue lost to fraud annually</span>
@@ -1466,7 +1467,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q">Are there long-term contracts? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>No lock-in beyond a 3-month onboarding period. We keep clients because the service is good — not because they're contractually trapped. Annual contracts are available with a 10% discount if you prefer that structure.</p></div>
+        <div class="faq-a"><p>No. Our contracts are monthly rolling — you're never locked in. We simply ask for a 3-month minimum at the start, purely so we have time to onboard you properly and prove the value before you commit further. After that, you stay month to month for as long as the service is good. If you'd prefer to fix your price, annual contracts are available with a 10% discount.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">What does it actually cost? <span class="faq-icon">+</span></button>
@@ -1505,7 +1506,7 @@
       <a href="#about">About</a>
       <a href="#cta">Contact</a>
     </div>
-    <div class="footer-copy">© 2025 Dividend IT. All rights reserved.</div>
+    <div class="footer-copy">© 2026 Dividend IT. All rights reserved.</div>
   </div>
 </footer>
 
@@ -1639,7 +1640,7 @@
         <tr><td><strong>Supply Chain Attacks</strong></td><td>Exploitation of trusted third-party relationships</td><td>Data breach, compliance risk</td></tr>
       </tbody>
     </table>
-    <p>According to FraudSMART, invoice redirection fraud alone accounted for &euro;15.7 million in losses to Irish SMBs between January 2023 and December 2024. These are not sophisticated nation-state attacks &mdash; they succeed because businesses lack basic controls to prevent them.</p>
+    <p>According to FraudSMART, email-related scams &mdash; the majority of them invoice-redirection fraud &mdash; cost Irish SMEs almost &euro;19 million (&euro;18.9m) over the two years to early 2026, with average losses of over &euro;22,000 per incident. These are not sophisticated nation-state attacks &mdash; they succeed because businesses lack basic controls to prevent them.</p>
     <h2>The Consequences: Beyond the Financial Hit</h2>
     <p><strong>Operational disruption.</strong> More than half of Irish SMBs that experience a cyber attack suffer significant downtime. For a distribution business, a manufacturing operation, or a financial services firm, every hour of downtime has a measurable and immediate cost.</p>
     <p><strong>Reputational damage.</strong> In sectors where client trust is the foundation of the business model, a breach can cost clients. The long-term commercial impact of reputational damage is rarely captured in incident cost estimates but is often the most significant consequence.</p>
@@ -1696,7 +1697,7 @@
     <div class="footer-inner">
       <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a><div class="footer-tagline">Outsourced Cybersecurity &amp; IT</div></div>
       <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
-      <div class="footer-copy">&copy; 2025 Dividend IT. All rights reserved.</div>
+      <div class="footer-copy">&copy; 2026 Dividend IT. All rights reserved.</div>
     </div>
   </footer>
 </div>
@@ -1733,8 +1734,8 @@
     </div>
     <p>For Irish SMBs, invoice redirection fraud is the dominant attack vector. A fraudster impersonates a supplier&rsquo;s email, claims bank account details have changed, and redirects legitimate payments to their own account. By the time it is discovered, the money is long gone.</p>
     <div class="wp-stat-callout">
-      <div class="wp-stat-num">&euro;<span>17M</span></div>
-      <p>Lost by Irish SMEs through email scams and invoice redirection fraud over a two-year period, according to FraudSMART and the Banking &amp; Payments Federation Ireland (BPFI).</p>
+      <div class="wp-stat-num">&euro;<span>18.9M</span></div>
+      <p>Lost by Irish SMEs to email-related scams &mdash; primarily invoice redirection fraud &mdash; over the two years to early 2026, with average losses of over &euro;22,000 per incident, according to FraudSMART and the Banking &amp; Payments Federation Ireland (BPFI).</p>
     </div>
     <h2>Cost Category 3: Productivity Loss and Downtime</h2>
     <div class="wp-stat-callout">
@@ -1802,7 +1803,7 @@
     <div class="footer-inner">
       <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a><div class="footer-tagline">Outsourced Cybersecurity &amp; IT</div></div>
       <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
-      <div class="footer-copy">&copy; 2025 Dividend IT. All rights reserved.</div>
+      <div class="footer-copy">&copy; 2026 Dividend IT. All rights reserved.</div>
     </div>
   </footer>
 </div>
@@ -1901,278 +1902,13 @@
     <div class="footer-inner">
       <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a><div class="footer-tagline">Outsourced Cybersecurity &amp; IT</div></div>
       <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
-      <div class="footer-copy">&copy; 2025 Dividend IT. All rights reserved.</div>
+      <div class="footer-copy">&copy; 2026 Dividend IT. All rights reserved.</div>
     </div>
   </footer>
 </div>
 
 
 
-<!-- ══════════════════════════════════════════════
-     UK / LONDON PAGE
-══════════════════════════════════════════════ -->
-<div class="page" id="page-uk">
-
-  <section id="uk-hero" style="padding: 140px 2rem 100px; background: var(--white); position: relative; overflow: hidden;">
-    <div class="hero-bg"></div>
-    <div class="hero-inner">
-      <div class="hero-content">
-        <div class="hero-eyebrow">Outsourced Cybersecurity &amp; IT &mdash; London &amp; UK</div>
-        <h1 class="hero-title">IT That<br><em>Pays Back.</em></h1>
-        <p class="hero-sub">Dividend IT manages your outsourced cybersecurity &amp; IT so your London business runs faster, stays protected, and becomes more valuable. No jargon. No lock-in. No surprises.</p>
-        <div class="hero-actions">
-          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary">Book a Free 20-Min Call</a>
-          <a onclick="openLeadMagnet()" class="btn-secondary" style="cursor:pointer">Get the Free Guide</a>
-        </div>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat-card" onclick="showInsight('cyber-risk')" style="cursor:pointer">
-          <div class="stat-number"><span>50%</span></div>
-          <div class="stat-label">of UK businesses experienced a cyber attack or breach in 2024</div>
-          <div class="card-hint">See the data &rarr;</div>
-        </div>
-        <div class="hero-stat-card" onclick="showInsight('cyber-risk')" style="cursor:pointer">
-          <div class="stat-number"><span>67%</span></div>
-          <div class="stat-label">of medium-sized UK businesses were successfully attacked in 2024</div>
-          <div class="card-hint">See the data &rarr;</div>
-        </div>
-        <div class="hero-stat-card" onclick="showInsight('true-cost')" style="cursor:pointer">
-          <div class="stat-number">&pound;<span>7,960</span></div>
-          <div class="stat-label">average cost to recover from a serious cyber breach for a UK SMB</div>
-          <div class="card-hint">See the data &rarr;</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="trust-bar">
-    <div class="trust-inner">
-      <div class="trust-item">🔒 Seamlessly Secure</div>
-      <div class="trust-item">⏱ 24/7 Monitoring, Remediation &amp; Support</div>
-      <div class="trust-item">💼 Business-First Thinking</div>
-      <div class="trust-item">📊 EBITDA Aligned</div>
-      <div class="trust-item">🇬🇧 London &amp; UK</div>
-    </div>
-  </div>
-
-  <section style="padding: 100px 2rem; background: var(--off-white);">
-    <div class="section-inner">
-      <div class="section-label reveal">The Problem</div>
-      <h2 class="section-title reveal">Your IT Should Be Working For You.<br>For Most London Businesses, It Isn&rsquo;t.</h2>
-      <div class="problem-grid">
-        <div class="problem-points reveal">
-          <div class="problem-point"><div class="problem-icon">🐌</div><div><h4>Slow systems killing productivity</h4><p>In London, time is money more than anywhere else. Every hour your team battles unreliable systems is revenue and competitive edge lost.</p></div></div>
-          <div class="problem-point"><div class="problem-icon">🔓</div><div><h4>Cyber threats you don&rsquo;t know about</h4><p>London businesses are prime targets. The density of financial activity and sensitive data makes your city the most attacked region in the UK.</p></div></div>
-          <div class="problem-point"><div class="problem-icon">📉</div><div><h4>IT spend eroding your margins</h4><p>Misclassified technology expenditure quietly reduces your EBITDA year after year &mdash; and most business owners never realise it until it&rsquo;s too late.</p></div></div>
-          <div class="problem-point"><div class="problem-icon">🗺️</div><div><h4>No technology strategy</h4><p>Most IT providers in London focus on keeping the lights on. Few speak your language &mdash; growth, margins, valuation, exit.</p></div></div>
-        </div>
-        <div class="problem-callout reveal">
-          <h3>London has no shortage of IT providers. It has a shortage of IT partners who understand business.</h3>
-          <p>That&rsquo;s the gap Dividend IT was built to fill. We work directly with business owners &mdash; not IT managers &mdash; and we align everything we do to your commercial objectives.</p>
-          <p>Remote-first, always available, and built for the pace of London business.</p>
-          <span class="callout-tag">That&rsquo;s the Dividend difference</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding: 100px 2rem; background: var(--white);">
-    <div class="section-inner">
-      <div class="section-label reveal">The Numbers</div>
-      <h2 class="section-title reveal">What Every London Business Owner<br>Needs to See</h2>
-      <p class="section-sub reveal">UK government data. No scare tactics. Just the reality of running a business without the right outsourced cybersecurity &amp; IT partner.</p>
-
-      <div class="stats-grid reveal">
-        <div class="stat-block" id="uk-stat-50">
-          <div class="stat-block-number"><span>50%</span></div>
-          <div class="stat-block-label">of UK businesses attacked in 2024</div>
-          <div class="stat-block-desc">Half of all UK businesses experienced a cyber attack or breach in 2024. Medium-sized businesses are even more exposed &mdash; 67% were successfully targeted.</div>
-          <span onclick="showInsight('cyber-risk')" class="stat-block-source" style="cursor:pointer">Source: UK Gov Cyber Security Breaches Survey 2024</span>
-        </div>
-        <div class="stat-block">
-          <div class="stat-block-number"><span>85%</span></div>
-          <div class="stat-block-label">of UK breaches started with phishing</div>
-          <div class="stat-block-desc">Email compromise remains the dominant attack vector. Invoice redirection fraud, CEO impersonation, and credential theft all begin the same way &mdash; in your inbox.</div>
-          <span onclick="showInsight('true-cost')" class="stat-block-source" style="cursor:pointer">Source: UK Government Cyber Breaches Survey</span>
-        </div>
-        <div class="stat-block" id="uk-stat-cost">
-          <div class="stat-block-number">&pound;<span>7,960</span></div>
-          <div class="stat-block-label">average recovery cost for a UK SMB breach</div>
-          <div class="stat-block-desc">The direct recovery cost for micro and small UK businesses from a serious breach &mdash; before factoring in downtime, lost revenue, and reputational damage.</div>
-          <span onclick="showInsight('true-cost')" class="stat-block-source" style="cursor:pointer">Source: BT &amp; Be the Business Research 2025</span>
-        </div>
-        <div class="stat-block" id="uk-stat-67">
-          <div class="stat-block-number"><span>67%</span></div>
-          <div class="stat-block-label">of medium businesses successfully attacked</div>
-          <div class="stat-block-desc">As your business grows, you become a more attractive target. Two thirds of medium-sized UK businesses experienced a successful attack in 2024.</div>
-          <span onclick="showInsight('cyber-risk')" class="stat-block-source" style="cursor:pointer">Source: UK Gov Cyber Security Breaches Survey 2024</span>
-        </div>
-        <div class="stat-block">
-          <div class="stat-block-number"><span>39%</span></div>
-          <div class="stat-block-label">of UK SMBs have had no cyber security training</div>
-          <div class="stat-block-desc">Around two million UK SMBs have never provided cybersecurity training to their staff &mdash; despite phishing being the number one attack vector.</div>
-          <span onclick="showInsight('cyber-risk')" class="stat-block-source" style="cursor:pointer">Source: BT &amp; Be the Business 2025</span>
-        </div>
-        <div class="stat-block">
-          <div class="stat-block-number"><span>70%</span></div>
-          <div class="stat-block-label">of business owners never achieve a successful exit</div>
-          <div class="stat-block-desc">Most business owners never realise the value they&rsquo;ve built. Technology misalignment is one of the most common &mdash; and preventable &mdash; reasons why.</div>
-          <span onclick="showInsight('exit-value')" class="stat-block-source" style="cursor:pointer">Source: Exit Planning Institute — Read the full research →</span>
-        </div>
-      </div>
-
-      <div class="stat-pivot reveal">
-        <p>London is the most targeted region in the UK for cyber attacks. The density of financial services, professional services, and high-value distribution businesses makes it a prime target. <strong>The question isn&rsquo;t whether your business will be targeted &mdash; it&rsquo;s whether you&rsquo;ll be ready.</strong></p>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding: 100px 2rem; background: var(--off-white);">
-    <div class="section-inner">
-      <div class="section-label reveal">What We Do</div>
-      <h2 class="section-title reveal">Outsourced Cybersecurity &amp; IT.<br>Built for London Business Owners.</h2>
-      <p class="section-sub reveal">Remote-first delivery. UK-based support. Everything managed, everything included &mdash; so you can focus on running your business.</p>
-      <div class="pillars-grid">
-        <div class="pillar reveal">
-          <div class="pillar-num">01</div>
-          <div class="pillar-icon">🔒</div>
-          <h3>Seamlessly Secure</h3>
-          <p>Cyber Essentials aligned security framework, 24/7 monitoring, email security, and endpoint protection. Built to UK standards and ICO compliant &mdash; protecting your data, your clients, and your reputation.</p>
-        </div>
-        <div class="pillar reveal">
-          <div class="pillar-num">02</div>
-          <div class="pillar-icon">⚡</div>
-          <h3>Operationally Efficient</h3>
-          <p>Remote-first IT support that keeps your London team productive regardless of where they work. Fast response, proactive monitoring, and IT that never becomes a conversation topic.</p>
-        </div>
-        <div class="pillar reveal">
-          <div class="pillar-num">03</div>
-          <div class="pillar-icon">📈</div>
-          <h3>Strategically Aligned</h3>
-          <p>Technology spend optimised to EBITDA. A roadmap built around your business goals &mdash; growth, profitability, and the exit you&rsquo;re building towards. We speak shareholder, not IT.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding: 100px 2rem; background: var(--white);">
-    <div class="section-inner">
-      <div class="section-label reveal">Pricing</div>
-      <h2 class="section-title reveal">Clear Pricing.<br>No Surprises.</h2>
-      <p class="section-sub reveal">One simple monthly fee per user. Everything included. No hidden costs, no long lock-in contracts.</p>
-      <div class="packages-grid">
-        <div class="package reveal">
-          <div class="package-header">
-            <div class="package-name">Secure</div>
-            <div class="package-price">&pound;65<sub> / user / mo</sub></div>
-            <div class="package-desc">The foundation. Seamlessly secure outsourced IT and reliable support for businesses ready to stop tolerating technology that doesn&rsquo;t work.</div>
-          </div>
-          <div class="package-features"><ul>
-            <li>Managed endpoint detection &amp; response</li>
-            <li>Email security &amp; anti-phishing</li>
-            <li>Multi-factor authentication management</li>
-            <li>Automated patch management</li>
-            <li>Dark web monitoring</li>
-            <li>Remote helpdesk &mdash; business hours</li>
-            <li>Unlimited support tickets</li>
-            <li>Daily automated backups</li>
-            <li>Monthly plain-English health report</li>
-            <li>Cyber Essentials alignment</li>
-          </ul></div>
-          <div class="package-cta"><a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-package">Book a Call</a></div>
-        </div>
-        <div class="package featured reveal">
-          <div class="featured-badge">Most Popular</div>
-          <div class="package-header">
-            <div class="package-name">Operate</div>
-            <div class="package-price">&pound;85<sub> / user / mo</sub></div>
-            <div class="package-desc">Your complete outsourced IT department. Everything in Secure, plus full managed IT operations for growing London businesses.</div>
-          </div>
-          <div class="package-features"><ul>
-            <li>Everything in Secure</li>
-            <li>Proactive infrastructure monitoring</li>
-            <li>Network management &amp; optimisation</li>
-            <li>Software licence management</li>
-            <li>Dedicated account manager</li>
-            <li>2-hour response SLA</li>
-            <li>Security awareness training &mdash; quarterly</li>
-            <li>UK GDPR &amp; ICO compliance support</li>
-            <li>Quarterly technology roadmap review</li>
-            <li>Cyber Essentials Plus support</li>
-          </ul></div>
-          <div class="package-cta"><a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-package">Book a Call</a></div>
-        </div>
-        <div class="package reveal">
-          <div class="package-header">
-            <div class="package-name">Grow</div>
-            <div class="package-price">&pound;105<sub> / user / mo</sub></div>
-            <div class="package-desc">Strategic technology partnership. For London business owners focused on growth, EBITDA, and building towards a successful exit.</div>
-          </div>
-          <div class="package-features"><ul>
-            <li>Everything in Operate</li>
-            <li>Virtual CTO &mdash; strategic tech leadership</li>
-            <li>Annual technology roadmap</li>
-            <li>IT spend optimisation &amp; EBITDA reporting</li>
-            <li>Technology due diligence support</li>
-            <li>Exit &amp; succession technology planning</li>
-            <li>24/7 security monitoring &amp; response</li>
-            <li>Annual penetration testing</li>
-            <li>1-hour SLA &middot; 24/7 helpdesk</li>
-            <li>Monthly strategic review with founder</li>
-          </ul></div>
-          <div class="package-cta"><a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-package">Book a Call</a></div>
-        </div>
-      </div>
-      <div class="lead-banner reveal">
-        <div class="lead-banner-text">
-          <h4>Not sure which package is right for your business?</h4>
-          <p>Book a free 20-minute call. We&rsquo;ll tell you honestly &mdash; and we&rsquo;ll never recommend more than you need.</p>
-        </div>
-        <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-green">Book a Free Call &rarr;</a>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding: 100px 2rem; background: var(--off-white);">
-    <div class="section-inner">
-      <div class="section-label reveal">Common Questions</div>
-      <h2 class="section-title reveal">Everything You Want to Know<br>Before You Call.</h2>
-      <div class="faq-list reveal">
-        <div class="faq-item"><button class="faq-q">Can you support a London business remotely? <span class="faq-icon">+</span></button><div class="faq-a"><p>Yes &mdash; and we&rsquo;re built for it. The vast majority of IT support and cybersecurity management is delivered remotely. Most London businesses we work with never need an engineer on-site. When on-site support is required, we arrange it through our UK partner network.</p></div></div>
-        <div class="faq-item"><button class="faq-q">Are you Cyber Essentials certified? <span class="faq-icon">+</span></button><div class="faq-a"><p>We align all client environments to Cyber Essentials standards as a minimum. Our Operate and Grow packages include active Cyber Essentials Plus support &mdash; which is increasingly required for UK government contracts and supply chain compliance.</p></div></div>
-        <div class="faq-item"><button class="faq-q">How do you handle UK GDPR and ICO compliance? <span class="faq-icon">+</span></button><div class="faq-a"><p>UK GDPR compliance support is included in our Operate and Grow packages &mdash; covering data mapping, breach notification procedures, and ICO reporting requirements. We work alongside your legal advisers rather than replacing them.</p></div></div>
-        <div class="faq-item"><button class="faq-q">What&rsquo;s the difference between you and a London-based IT provider? <span class="faq-icon">+</span></button><div class="faq-a"><p>Most IT providers focus on keeping systems running. We focus on making your business more secure, more efficient, and more valuable. We work directly with business owners &mdash; not just your operations manager &mdash; and we align everything we do to your commercial goals. If your current provider has never talked to you about EBITDA or exit planning, that&rsquo;s the difference.</p></div></div>
-        <div class="faq-item"><button class="faq-q">Are there long-term contracts? <span class="faq-icon">+</span></button><div class="faq-a"><p>No lock-in beyond a 3-month onboarding period. We keep clients because the service is good &mdash; not because they&rsquo;re contractually trapped. Annual contracts available with a 10% discount.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding: 100px 2rem; background: var(--text-dark);">
-    <div class="cta-inner">
-      <div class="section-label" style="justify-content:center;color:rgba(255,255,255,0.5);">Ready to Start?</div>
-      <h2 class="section-title" style="color:var(--white);">Let&rsquo;s Find Out If<br>We&rsquo;re a Fit.</h2>
-      <p style="color:rgba(255,255,255,0.65);font-size:1.05rem;line-height:1.7;margin:1.25rem 0 2.5rem;">We work with London business owners who are serious about using technology as a competitive advantage. Remote-first, no jargon, no hard sell. Just an honest conversation about your business.</p>
-      <div class="cta-actions">
-        <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-light">Book a Free 20-Min Call</a>
-        <a onclick="openLeadMagnet()" class="btn-outline-light" style="cursor:pointer">Download the Free Guide</a>
-      </div>
-      <p class="cta-note">No obligation. No hard sell. No jargon. Just an honest conversation about your business.</p>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-inner">
-      <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a><div class="footer-tagline">Outsourced Cybersecurity &amp; IT</div></div>
-      <div class="footer-links">
-        <a onclick="showPage('home')" style="cursor:pointer">Ireland</a>
-        <a onclick="showPage('uk')" style="cursor:pointer">London &amp; UK</a>
-        <a href="mailto:hello@dividendit.com">Contact</a>
-      </div>
-      <div class="footer-copy">&copy; 2025 Dividend IT. All rights reserved.</div>
-    </div>
-  </footer>
-
-</div><!-- end page-uk -->
 
 <!-- LEAD GATE PAGE -->
 <div class="page" id="page-lead-gate">
@@ -2215,7 +1951,7 @@
     <div class="footer-inner">
       <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a><div class="footer-tagline">Outsourced Cybersecurity &amp; IT</div></div>
       <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a href="mailto:hello@dividendit.com">Contact</a></div>
-      <div class="footer-copy">&copy; 2025 Dividend IT. All rights reserved.</div>
+      <div class="footer-copy">&copy; 2026 Dividend IT. All rights reserved.</div>
     </div>
   </footer>
 </div><!-- end page-lead-gate -->
@@ -2273,7 +2009,7 @@
         <div class="guide-tip-num">03</div>
         <div class="guide-tip-tag">Payment Fraud Prevention</div>
         <h3>Use IT Controls to Protect Against Payment Fraud</h3>
-        <p>Invoice redirection fraud — where a criminal hacks or impersonates a supplier's email and redirects your payment to their account — cost Irish SMBs €17 million over a two-year period, according to FraudSMART and the Banking &amp; Payments Federation Ireland. It is the fastest-growing financial threat facing Irish businesses, and it is almost entirely preventable with the right IT controls.</p>
+        <p>Invoice redirection fraud — where a criminal hacks or impersonates a supplier's email and redirects your payment to their account — is the dominant form of a wider problem: email-related scams cost Irish SMEs almost €19 million (€18.9m) over the two years to early 2026, with average losses of over €22,000 per incident, according to FraudSMART and the Banking &amp; Payments Federation Ireland. It is the fastest-growing financial threat facing Irish businesses, and it is almost entirely preventable with the right IT controls.</p>
         <p>The attack works because criminals exploit weak email security. They either compromise a legitimate supplier email account or create a convincing spoofed version of it, then contact your accounts payable team claiming bank account details have changed. Without the right controls, there's no way to detect the fraud until it's too late.</p>
         <p><strong>The IT controls that prevent it:</strong> Advanced email security that flags external senders impersonating known contacts. DMARC, DKIM, and SPF configuration that prevents criminals from spoofing your own domain. A documented payment verification procedure that requires any change to supplier bank details to be independently verified by phone — never by email.</p>
         <div class="guide-action"><strong>Quick win:</strong> Implement a simple rule — any request to change supplier bank details must be verified by calling the supplier directly on a number already in your system. Not the number provided in the email. This one control prevents the majority of invoice fraud attempts.</div>
@@ -2315,7 +2051,7 @@
     <div class="footer-inner">
       <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a><div class="footer-tagline">Outsourced Cybersecurity &amp; IT</div></div>
       <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
-      <div class="footer-copy">&copy; 2025 Dividend IT. All rights reserved.</div>
+      <div class="footer-copy">&copy; 2026 Dividend IT. All rights reserved.</div>
     </div>
   </footer>
 
@@ -2415,7 +2151,7 @@
     <div class="footer-inner">
       <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a><div class="footer-tagline">Outsourced Cybersecurity &amp; IT</div></div>
       <div class="footer-links"><a onclick="showPage('home')" style="cursor:pointer">Home</a><a onclick="showPage('home');scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a><a href="mailto:hello@dividendit.com">Contact</a></div>
-      <div class="footer-copy">&copy; 2025 Dividend IT. All rights reserved.</div>
+      <div class="footer-copy">&copy; 2026 Dividend IT. All rights reserved.</div>
     </div>
   </footer>
 </div><!-- end page-startup-survival -->
