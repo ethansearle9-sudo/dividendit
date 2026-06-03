@@ -803,6 +803,7 @@
       <li><a onclick="scrollToSection('journey')" style="cursor:pointer">Who We Serve</a></li>
       <li><a onclick="scrollToSection('solution')" style="cursor:pointer">Services</a></li>
       <li><a onclick="scrollToSection('packages')" style="cursor:pointer">Pricing</a></li>
+      <li><a onclick="showPage('roi')" style="cursor:pointer">Cost Calculator</a></li>
       <li><a onclick="scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a></li>
       <li><a onclick="scrollToSection('about')" style="cursor:pointer">About</a></li>
       <li><a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="nav-cta" style="cursor:pointer">Book a Call</a></li>
@@ -1557,7 +1558,8 @@
     'exit-value': 'Article — Why 70% Never Realise Exit Value',
     'startup-survival': 'Article — Why Startups Fail Before Year 5',
     'guide': 'Guide — 5 Ways to Drive Business Value',
-    'lead-gate': 'Lead Gate — Free Guide Signup'
+    'lead-gate': 'Lead Gate — Free Guide Signup',
+    'roi': 'ROI Calculator — In-House vs Outsourced IT'
   };
   var ARTICLE_PAGES = ['cyber-risk','true-cost','exit-value','startup-survival'];
 
@@ -1588,6 +1590,7 @@
       trackEvent('article_view', { article_id: pageId, article_title: title });
     }
     if (pageId === 'lead-gate') trackEvent('guide_open', { source: 'lead_gate' });
+    if (pageId === 'roi' && typeof calcROI === 'function') calcROI();
     setupScrollDepth(pageId);
   }
 
@@ -2268,6 +2271,149 @@
     </div>
   </footer>
 </div><!-- end page-startup-survival -->
+
+<!-- ROI CALCULATOR PAGE -->
+<div class="page" id="page-roi">
+  <div class="insights-nav"><div class="insights-nav-inner">
+    <a onclick="showPage('home')" style="cursor:pointer">&larr; Back to Home</a>
+    <span>/</span><span>In-House vs Outsourced IT Calculator</span>
+  </div></div>
+  <div class="wp-hero"><div class="wp-hero-inner">
+    <div class="wp-tag">Cost Calculator</div>
+    <h1 class="wp-title">In-House IT vs Dividend IT &mdash; What Would You Actually Save?</h1>
+    <p class="wp-intro">Most growing businesses assume hiring internal IT is the cheaper option. Enter your numbers below and see the real comparison &mdash; including the costs that don't show up on the salary line.</p>
+  </div></div>
+
+  <div class="wp-body"><div class="wp-body-inner">
+    <div class="roi-calc">
+      <div class="roi-inputs">
+        <div class="roi-field">
+          <label for="roi-staff">How many staff (users) in your business?</label>
+          <div class="roi-slider-row">
+            <input type="range" id="roi-staff" min="10" max="150" value="40" step="5" oninput="calcROI()" />
+            <span class="roi-staff-val" id="roi-staff-val">40</span>
+          </div>
+        </div>
+
+        <div class="roi-field">
+          <label>If you hired internally, what level?</label>
+          <div class="roi-toggle" id="roi-level">
+            <button class="roi-opt active" data-val="support" onclick="setROI('level','support')">IT Support (~&euro;40k)</button>
+            <button class="roi-opt" data-val="manager" onclick="setROI('level','manager')">IT Manager (~&euro;70k)</button>
+          </div>
+        </div>
+
+        <div class="roi-field">
+          <label>Include the security &amp; software tooling you'd still need to buy separately?</label>
+          <div class="roi-toggle" id="roi-tooling">
+            <button class="roi-opt active" data-val="yes" onclick="setROI('tooling','yes')">Yes &mdash; full stack</button>
+            <button class="roi-opt" data-val="no" onclick="setROI('tooling','no')">No &mdash; salary only</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-result" id="roi-result">
+        <div class="roi-result-grid">
+          <div class="roi-col">
+            <div class="roi-col-label">In-house, per year</div>
+            <div class="roi-col-num" id="roi-inhouse">&euro;0</div>
+            <div class="roi-col-note" id="roi-inhouse-note"></div>
+          </div>
+          <div class="roi-col roi-col-accent">
+            <div class="roi-col-label">Dividend IT (Operate), per year</div>
+            <div class="roi-col-num" id="roi-divi">&euro;0</div>
+            <div class="roi-col-note">Complete IT function + full security framework, whole team behind it</div>
+          </div>
+        </div>
+        <div class="roi-verdict" id="roi-verdict"></div>
+        <div class="roi-cta">
+          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{button_label:'ROI Calculator',location:'roi'})">Book a Free 20-Min Review</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="roi-disclaimer">Figures are indicative estimates based on average Irish salaries (Indeed/Glassdoor, 2026), typical employer overhead of ~30% (PRSI, recruitment, equipment, cover), and a representative SMB security stack. Your actual numbers will vary &mdash; a free review gives you the precise picture.</p>
+  </div></div>
+
+  <footer>
+    <div class="footer-inner">
+      <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a>
+      <div class="footer-tagline">Seamlessly Secure IT &mdash; Ireland</div></div>
+      <div class="footer-copy">&copy; 2026 Dividend IT. All rights reserved.</div>
+    </div>
+  </footer>
+</div><!-- end page-roi -->
+
+<style>
+  .roi-calc { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin: 2rem 0 1.5rem; align-items: start; }
+  .roi-inputs { display: flex; flex-direction: column; gap: 2rem; }
+  .roi-field label { display: block; font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.85rem; line-height: 1.4; }
+  .roi-slider-row { display: flex; align-items: center; gap: 1.25rem; }
+  .roi-slider-row input[type=range] { flex: 1; accent-color: var(--accent-green); height: 4px; }
+  .roi-staff-val { font-family: var(--font-display); font-size: 1.75rem; color: var(--accent-green); min-width: 50px; text-align: right; }
+  .roi-toggle { display: flex; gap: 0.65rem; }
+  .roi-opt { flex: 1; padding: 0.8rem 0.5rem; border: 1.5px solid var(--border); background: var(--white); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.85rem; font-weight: 500; color: var(--text-body); cursor: pointer; transition: all 0.2s; }
+  .roi-opt:hover { border-color: var(--accent-green); }
+  .roi-opt.active { background: var(--text-dark); color: var(--white); border-color: var(--text-dark); }
+  .roi-result { background: var(--off-white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; }
+  .roi-result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+  .roi-col { padding: 1.25rem; border-radius: 8px; background: var(--white); border: 1px solid var(--border); }
+  .roi-col-accent { border: 2px solid var(--accent-green); }
+  .roi-col-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.5rem; }
+  .roi-col-num { font-family: var(--font-display); font-size: 2rem; color: var(--text-dark); line-height: 1; margin-bottom: 0.5rem; }
+  .roi-col-accent .roi-col-num { color: var(--accent-green); }
+  .roi-col-note { font-size: 0.8rem; color: var(--text-muted); line-height: 1.45; }
+  .roi-verdict { font-size: 1.05rem; line-height: 1.6; color: var(--text-dark); padding: 1.25rem; background: var(--accent-green-light); border-radius: 8px; margin-bottom: 1.5rem; }
+  .roi-verdict strong { color: var(--accent-green); }
+  .roi-cta { text-align: center; }
+  .roi-disclaimer { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; font-style: italic; margin-top: 1rem; }
+  @media (max-width: 760px) {
+    .roi-calc { grid-template-columns: 1fr; gap: 2rem; }
+    .roi-result-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<script>
+  var roiState = { level: 'support', tooling: 'yes' };
+  function setROI(key, val) {
+    roiState[key] = val;
+    var group = key === 'level' ? 'roi-level' : 'roi-tooling';
+    document.querySelectorAll('#' + group + ' .roi-opt').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-val') === val);
+    });
+    calcROI();
+  }
+  function calcROI() {
+    var staff = parseInt(document.getElementById('roi-staff').value, 10);
+    document.getElementById('roi-staff-val').textContent = staff;
+    // In-house annual cost
+    var salary = roiState.level === 'manager' ? 70000 : 40000;
+    var overhead = salary * 0.30; // PRSI, recruitment, equipment, cover
+    var tooling = roiState.tooling === 'yes' ? (staff * 22 * 12) : 0; // ~€22/user/mo representative stack
+    var inhouse = salary + overhead + tooling;
+    // Dividend IT — Operate €100/user/mo
+    var divi = staff * 100 * 12;
+    var saving = inhouse - divi;
+    document.getElementById('roi-inhouse').textContent = '€' + inhouse.toLocaleString();
+    document.getElementById('roi-divi').textContent = '€' + divi.toLocaleString();
+    var noteParts = ['1 × ' + (roiState.level === 'manager' ? 'IT Manager' : 'IT Support') + ' salary + ~30% overhead'];
+    if (roiState.tooling === 'yes') noteParts.push('+ security/software stack');
+    document.getElementById('roi-inhouse-note').textContent = noteParts.join(' ');
+    var verdict = document.getElementById('roi-verdict');
+    if (saving > 3000) {
+      verdict.innerHTML = 'Outsourcing to Dividend IT would save you roughly <strong>€' + saving.toLocaleString() + ' per year</strong> &mdash; and instead of one person, you get a full team, a complete security framework, and no single-point-of-failure risk.';
+    } else if (saving > -8000) {
+      verdict.innerHTML = 'At your size, the cost is <strong>broadly comparable</strong> &mdash; but for the same spend you get a whole team and a complete security framework rather than one individual, with no key-person risk and no recruitment, cover, or admin burden.';
+    } else {
+      verdict.innerHTML = 'A single hire looks cheaper on paper here &mdash; but one person can\'t cover the full security framework, and you carry the key-person risk, the cover gaps, and the admin. <strong>The real question is capability, not just cost.</strong> A 20-minute review shows you exactly where you\'d be exposed.';
+    }
+    // Fire GA event once after the user stops adjusting (debounced) for clean data
+    clearTimeout(window._roiTimer);
+    window._roiTimer = setTimeout(function(){
+      trackEvent('roi_calculated', { staff: staff, level: roiState.level, tooling: roiState.tooling, inhouse: inhouse, saving: saving });
+    }, 1200);
+  }
+</script>
 
 </body>
 </html>
