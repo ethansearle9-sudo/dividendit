@@ -804,6 +804,7 @@
       <li><a onclick="scrollToSection('solution')" style="cursor:pointer">Services</a></li>
       <li><a onclick="scrollToSection('packages')" style="cursor:pointer">Pricing</a></li>
       <li><a onclick="showPage('roi')" style="cursor:pointer">Cost Calculator</a></li>
+      <li><a onclick="showPage('value')" style="cursor:pointer">Value Calculator</a></li>
       <li><a onclick="scrollToSection('dividend-index')" style="cursor:pointer">The Dividend Index</a></li>
       <li><a onclick="scrollToSection('about')" style="cursor:pointer">About</a></li>
       <li><a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="nav-cta" style="cursor:pointer">Book a Call</a></li>
@@ -1559,7 +1560,8 @@
     'startup-survival': 'Article — Why Startups Fail Before Year 5',
     'guide': 'Guide — 5 Ways to Drive Business Value',
     'lead-gate': 'Lead Gate — Free Guide Signup',
-    'roi': 'ROI Calculator — In-House vs Outsourced IT'
+    'roi': 'ROI Calculator — In-House vs Outsourced IT',
+    'value': 'Value Impact — IT, EBITDA & Exit Multiple'
   };
   var ARTICLE_PAGES = ['cyber-risk','true-cost','exit-value','startup-survival'];
 
@@ -2328,6 +2330,7 @@
         <div class="roi-verdict" id="roi-verdict"></div>
         <div class="roi-cta">
           <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{button_label:'ROI Calculator',location:'roi'})">Book a Free 20-Min Review</a>
+          <a onclick="showPage('value')" style="cursor:pointer; display:block; margin-top:1rem; font-size:0.9rem; color:var(--accent-green); font-weight:600;">Now see what that saving is worth at exit &rarr;</a>
         </div>
       </div>
     </div>
@@ -2343,6 +2346,194 @@
     </div>
   </footer>
 </div><!-- end page-roi -->
+
+<!-- VALUE IMPACT ENGINE PAGE -->
+<div class="page" id="page-value">
+  <div class="insights-nav"><div class="insights-nav-inner">
+    <a onclick="showPage('home')" style="cursor:pointer">&larr; Back to Home</a>
+    <span>/</span><span>The Exit Value Impact Calculator</span>
+  </div></div>
+  <div class="wp-hero"><div class="wp-hero-inner">
+    <div class="wp-tag">Value Creation Engine</div>
+    <h1 class="wp-title">Your IT Isn't a Cost. At Exit, It's a Multiple.</h1>
+    <p class="wp-intro">Every euro of recurring profit you free up doesn't just save you money this year &mdash; at exit, a buyer pays a multiple of it. And the way your technology is run quietly decides whether you sell at the bottom or the top of your sector's range. See what it's worth.</p>
+  </div></div>
+
+  <div class="wp-body"><div class="wp-body-inner">
+
+    <!-- STAGE SELECTOR -->
+    <div class="val-stage-wrap">
+      <p class="val-stage-q">First &mdash; where is your business on its journey?</p>
+      <div class="val-stages" id="val-stages">
+        <button class="val-stage" data-stage="startup" onclick="setStage('startup')">
+          <span class="val-stage-name">The Startup</span>
+          <span class="val-stage-desc">Bootstrapping, finding product-market fit, making the idea real</span>
+        </button>
+        <button class="val-stage" data-stage="entrepreneur" onclick="setStage('entrepreneur')">
+          <span class="val-stage-name">The Entrepreneur</span>
+          <span class="val-stage-desc">Scaling &mdash; building the people, process and systems behind growth</span>
+        </button>
+        <button class="val-stage" data-stage="value-creator" onclick="setStage('value-creator')">
+          <span class="val-stage-name">The Value Creator</span>
+          <span class="val-stage-desc">Driving EBITDA and enterprise value, preparing for an eventual exit</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ADAPTIVE INTRO (changes by stage) -->
+    <div class="val-narrative" id="val-narrative" style="display:none;"></div>
+
+    <!-- CALCULATOR (revealed after stage chosen) -->
+    <div class="val-calc" id="val-calc" style="display:none;">
+      <div class="val-inputs">
+        <div class="val-field">
+          <label for="val-ebitda" id="val-ebitda-label">Annual recurring profit / saving to add to EBITDA (&euro;)</label>
+          <input type="number" id="val-ebitda" value="50000" step="1000" oninput="calcValue()" />
+          <p class="val-hint" id="val-ebitda-hint"></p>
+        </div>
+        <div class="val-field">
+          <label>Your sector (sets the typical exit multiple)</label>
+          <div class="val-sectors" id="val-sectors">
+            <button class="val-sec active" data-mult="5.0" onclick="setSector(this,5.0,'Distribution / Wholesale')">Distribution</button>
+            <button class="val-sec" data-mult="5.3" onclick="setSector(this,5.3,'Manufacturing')">Manufacturing</button>
+            <button class="val-sec" data-mult="7.0" onclick="setSector(this,7.0,'Financial / Professional Services')">Financial Services</button>
+            <button class="val-sec" data-mult="5.3" onclick="setSector(this,5.3,'Other / Mid-market average')">Other</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="val-result" id="val-result">
+        <div class="val-headline" id="val-headline"></div>
+        <div class="val-breakdown" id="val-breakdown"></div>
+        <div class="val-erosion" id="val-erosion"></div>
+        <div class="val-cta">
+          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" id="val-cta-btn" onclick="trackEvent('book_call_click',{button_label:'Value Impact Calculator',location:'value',stage:valState.stage})">Book a Free 20-Min Review</a>
+          <p class="val-cta-sub" id="val-cta-sub"></p>
+        </div>
+      </div>
+    </div>
+
+    <p class="roi-disclaimer">Multiples are indicative sector ranges for UK&amp;I SME transactions (Dealsuite M&amp;A Monitor 2025; UK SME valuation benchmarks 2025&ndash;26). The UK&amp;I mid-market average is 5.3x EBITDA. Actual multiples depend on earnings quality, recurring revenue, growth, customer concentration and &mdash; critically &mdash; how dependent the business is on individuals. A free review shows you where you'd really sit.</p>
+  </div></div>
+
+  <footer>
+    <div class="footer-inner">
+      <div><a onclick="showPage('home')" class="footer-logo" style="cursor:pointer">Dividend<span>IT</span></a>
+      <div class="footer-tagline">Seamlessly Secure IT &mdash; Ireland</div></div>
+      <div class="footer-copy">&copy; 2026 Dividend IT. All rights reserved.</div>
+    </div>
+  </footer>
+</div><!-- end page-value -->
+
+<style>
+  .val-stage-wrap { margin: 2rem 0 2.5rem; }
+  .val-stage-q { font-family: var(--font-display); font-size: 1.5rem; color: var(--text-dark); margin-bottom: 1.5rem; }
+  .val-stages { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+  .val-stage { text-align: left; padding: 1.5rem; border: 1.5px solid var(--border); background: var(--white); border-radius: 10px; cursor: pointer; transition: all 0.2s; display: flex; flex-direction: column; gap: 0.5rem; }
+  .val-stage:hover { border-color: var(--accent-green); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.06); }
+  .val-stage.active { border-color: var(--accent-green); border-width: 2px; background: var(--accent-green-light); }
+  .val-stage-name { font-family: var(--font-display); font-size: 1.2rem; color: var(--text-dark); }
+  .val-stage-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+  .val-narrative { background: var(--text-dark); color: var(--white); border-radius: 12px; padding: 2.25rem 2.5rem; margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.7; }
+  .val-narrative strong { color: #8fd9b6; }
+  .val-calc { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2.5rem; align-items: start; margin-bottom: 1.5rem; }
+  .val-inputs { display: flex; flex-direction: column; gap: 1.75rem; }
+  .val-field label { display: block; font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.75rem; line-height: 1.4; }
+  .val-field input[type=number] { width: 100%; padding: 0.85rem 1rem; border: 1.5px solid var(--border); border-radius: var(--radius); font-family: var(--font-body); font-size: 1.1rem; color: var(--text-dark); }
+  .val-field input[type=number]:focus { outline: none; border-color: var(--accent-green); }
+  .val-hint { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; line-height: 1.45; }
+  .val-sectors { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .val-sec { padding: 0.75rem 0.5rem; border: 1.5px solid var(--border); background: var(--white); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.85rem; font-weight: 500; color: var(--text-body); cursor: pointer; transition: all 0.2s; }
+  .val-sec:hover { border-color: var(--accent-green); }
+  .val-sec.active { background: var(--text-dark); color: var(--white); border-color: var(--text-dark); }
+  .val-result { background: var(--off-white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; }
+  .val-headline { font-family: var(--font-display); font-size: 2.2rem; line-height: 1.15; color: var(--accent-green); margin-bottom: 1.25rem; }
+  .val-breakdown { font-size: 1rem; line-height: 1.7; color: var(--text-body); margin-bottom: 1.25rem; }
+  .val-breakdown strong { color: var(--text-dark); }
+  .val-erosion { font-size: 0.95rem; line-height: 1.65; color: var(--text-body); padding: 1.25rem; background: var(--white); border-left: 3px solid var(--accent-green); border-radius: 0 8px 8px 0; margin-bottom: 1.5rem; }
+  .val-erosion strong { color: var(--text-dark); }
+  .val-cta { text-align: center; }
+  .val-cta-sub { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.75rem; line-height: 1.5; }
+  @media (max-width: 820px) {
+    .val-stages { grid-template-columns: 1fr; }
+    .val-calc { grid-template-columns: 1fr; gap: 2rem; }
+    .val-headline { font-size: 1.8rem; }
+  }
+</style>
+
+<script>
+  var valState = { stage: null, multiple: 5.0, sectorName: 'Distribution / Wholesale' };
+
+  // Segment-adaptive narrative + framing
+  var STAGE_COPY = {
+    'startup': {
+      narrative: 'You\'re building something from nothing &mdash; and exit feels like a lifetime away. Here\'s the uncomfortable truth most founders learn too late: <strong>the decisions you make about systems and security now are the ones a buyer scrutinises later</strong>. Building clean from day one costs almost nothing. Retro-fitting it under due-diligence pressure costs deals. Even at this stage, every euro of profit you protect is a euro that will one day be multiplied.',
+      ebitdaLabel: 'Annual profit you could protect or free up (&euro;)',
+      ebitdaHint: 'Even modest at this stage \u2014 the habit of treating profit as future enterprise value is what separates founders who exit well from the 86% who don\'t.',
+      ctaSub: 'Start clean. A 20-minute call sets you up so you never have to retro-fit under pressure.'
+    },
+    'entrepreneur': {
+      narrative: 'You\'ve found product-market fit &mdash; now you\'re building the people, process and systems to scale. This is the exact stage where founder-run IT breaks, and where <strong>hidden operational drag and key-person risk start quietly capping your future multiple</strong>. Buyers pay a premium for businesses that run on systems, not heroics. Every euro you free up now compounds &mdash; first as profit, then as multiplied exit value.',
+      ebitdaLabel: 'Annual saving / recurring profit to add to EBITDA (&euro;)',
+      ebitdaHint: 'Prefilled from your IT cost calculator if you ran it. This is recurring profit \u2014 which is what gets multiplied at exit.',
+      ctaSub: 'Build the systems that scale and protect your multiple. Let\'s map your current setup.'
+    },
+    'value-creator': {
+      narrative: 'You already think in multiples &mdash; so here\'s the number that matters. The gap between a median and a premium multiple in your sector is typically <strong>two to four times EBITDA</strong>, and what closes it isn\'t luck, it\'s preparation: documented systems, low key-person risk, and a security posture that survives due diligence. The way your IT is run is, right now, either adding to or subtracting from the price a buyer will pay.',
+      ebitdaLabel: 'Recurring EBITDA impact to value (&euro;)',
+      ebitdaHint: 'Enter the saving, recurring profit, or EBITDA line you want to see multiplied. Editable \u2014 use your real numbers.',
+      ctaSub: 'You know the multiple matters. Let\'s pressure-test where your IT puts you in the range before a buyer does.'
+    }
+  };
+
+  function setStage(stage) {
+    valState.stage = stage;
+    document.querySelectorAll('#val-stages .val-stage').forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-stage') === stage);
+    });
+    var copy = STAGE_COPY[stage];
+    var narr = document.getElementById('val-narrative');
+    narr.innerHTML = copy.narrative;
+    narr.style.display = 'block';
+    document.getElementById('val-ebitda-label').innerHTML = copy.ebitdaLabel;
+    document.getElementById('val-ebitda-hint').innerHTML = copy.ebitdaHint;
+    document.getElementById('val-calc').style.display = 'grid';
+    // Prefill from ROI calculator if they came from there with a positive saving
+    if (window._roiSaving && window._roiSaving > 0) {
+      document.getElementById('val-ebitda').value = Math.round(window._roiSaving);
+    }
+    trackEvent('value_stage_selected', { stage: stage });
+    calcValue();
+    document.getElementById('val-narrative').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  function setSector(btn, mult, name) {
+    valState.multiple = mult;
+    valState.sectorName = name;
+    document.querySelectorAll('#val-sectors .val-sec').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    calcValue();
+  }
+
+  function calcValue() {
+    if (!valState.stage) return;
+    var ebitda = parseFloat(document.getElementById('val-ebitda').value) || 0;
+    var mult = valState.multiple;
+    var valueAdd = ebitda * mult;
+    document.getElementById('val-headline').innerHTML = '&euro;' + Math.round(valueAdd).toLocaleString() + ' in enterprise value';
+    document.getElementById('val-breakdown').innerHTML =
+      '<strong>&euro;' + Math.round(ebitda).toLocaleString() + '</strong> of recurring annual profit, valued at your sector\'s typical <strong>' + mult + 'x</strong> multiple (' + valState.sectorName + '), becomes <strong>&euro;' + Math.round(valueAdd).toLocaleString() + '</strong> of enterprise value at exit. That\'s the part most owners never count.';
+    // Cyber erosion — reverse multiplier, tied to live stats
+    var breachExposure = 21000 * mult;
+    document.getElementById('val-erosion').innerHTML =
+      'It runs the other way too. A single unmitigated cyber incident &mdash; average direct cost &euro;21,000 for an Irish SMB &mdash; isn\'t just a &euro;21k problem. If it surfaces in due diligence, or dents the recurring earnings buyers price on, the same <strong>' + mult + 'x</strong> multiple works against you: roughly <strong>&euro;' + Math.round(breachExposure).toLocaleString() + ' of enterprise value at risk</strong> from one preventable gap. 50% of Irish SMBs were hit last year.';
+    document.getElementById('val-cta-sub').innerHTML = STAGE_COPY[valState.stage].ctaSub;
+    clearTimeout(window._valTimer);
+    window._valTimer = setTimeout(function(){
+      trackEvent('value_calculated', { stage: valState.stage, ebitda: ebitda, multiple: mult, value_add: valueAdd, sector: valState.sectorName });
+    }, 1200);
+  }
+</script>
 
 <style>
   .roi-calc { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin: 2rem 0 1.5rem; align-items: start; }
@@ -2408,6 +2599,7 @@
       verdict.innerHTML = 'A single hire looks cheaper on paper here &mdash; but one person can\'t cover the full security framework, and you carry the key-person risk, the cover gaps, and the admin. <strong>The real question is capability, not just cost.</strong> A 20-minute review shows you exactly where you\'d be exposed.';
     }
     // Fire GA event once after the user stops adjusting (debounced) for clean data
+    window._roiSaving = saving; // stash for the value-impact page
     clearTimeout(window._roiTimer);
     window._roiTimer = setTimeout(function(){
       trackEvent('roi_calculated', { staff: staff, level: roiState.level, tooling: roiState.tooling, inhouse: inhouse, saving: saving });
