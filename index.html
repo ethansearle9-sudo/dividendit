@@ -2,6 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) — Dividend IT GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRJXMHZ0N7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    // send_page_view:false — we fire page_view manually per in-app page so each article reports separately
+    gtag('config', 'G-NRJXMHZ0N7', { send_page_view: false });
+    // Helper used throughout the site to log funnel events
+    function trackEvent(name, params){ try { gtag('event', name, params || {}); } catch(e){} }
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dividend IT — Outsourced Cybersecurity & IT Ireland</title>
   <meta name="description" content="Ireland's leading outsourced cybersecurity & IT partner for business owners. IT that pays back — protecting your business, driving efficiency, and building long-term value. Serving startups, entrepreneurs and value creators across Ireland." />
@@ -1527,6 +1538,8 @@
   function submitGuideForm(e) {
     e.preventDefault();
     const email = document.getElementById('guide-email').value;
+    // GA4: official lead conversion event — maps to the "Generate leads" objective
+    trackEvent('generate_lead', { method: 'guide_download', currency: 'EUR', value: 1 });
     fetch('https://formspree.io/f/xlgvqpbb', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -1536,6 +1549,18 @@
   }
 
   // ─── ROUTING WITH BROWSER HISTORY ───
+  // Friendly titles for each in-app page so GA reports show them separately & readably
+  var PAGE_TITLES = {
+    'home': 'Home — IT That Pays Back',
+    'cyber-risk': 'Article — Cyber Risk Facing Irish SMBs',
+    'true-cost': 'Article — True Cost of a Cyber Incident',
+    'exit-value': 'Article — Why 70% Never Realise Exit Value',
+    'startup-survival': 'Article — Why Startups Fail Before Year 5',
+    'guide': 'Guide — 5 Ways to Drive Business Value',
+    'lead-gate': 'Lead Gate — Free Guide Signup'
+  };
+  var ARTICLE_PAGES = ['cyber-risk','true-cost','exit-value','startup-survival'];
+
   // Renders a page without touching history (used by popstate + initial load)
   function renderPage(pageId, sectionId) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -1551,6 +1576,19 @@
       window.scrollTo(0, 0);
     }
     initReveal();
+    // ── GA4: fire a manual page_view for this in-app page ──
+    var title = PAGE_TITLES[pageId] || pageId;
+    trackEvent('page_view', {
+      page_title: title,
+      page_location: location.origin + location.pathname + '#' + pageId,
+      page_path: '/' + (pageId === 'home' ? '' : pageId)
+    });
+    // ── GA4: extra signal when a research article is opened ──
+    if (ARTICLE_PAGES.indexOf(pageId) !== -1) {
+      trackEvent('article_view', { article_id: pageId, article_title: title });
+    }
+    if (pageId === 'lead-gate') trackEvent('guide_open', { source: 'lead_gate' });
+    setupScrollDepth(pageId);
   }
 
   // Called by clicks — updates the URL + history, then renders
@@ -1593,6 +1631,37 @@
   } else {
     routeFromHash();
   }
+
+  // ── GA4: scroll-depth on articles (did they actually read it?) ──
+  var scrollFired = {};
+  function setupScrollDepth(pageId) {
+    if (ARTICLE_PAGES.indexOf(pageId) === -1 && pageId !== 'guide') return;
+    scrollFired[pageId] = scrollFired[pageId] || {};
+  }
+  window.addEventListener('scroll', function() {
+    var active = document.querySelector('.page.active');
+    if (!active) return;
+    var pid = active.id.replace('page-', '');
+    if (ARTICLE_PAGES.indexOf(pid) === -1 && pid !== 'guide') return;
+    var pct = (window.scrollY + window.innerHeight) / document.body.scrollHeight * 100;
+    scrollFired[pid] = scrollFired[pid] || {};
+    [50, 75, 90].forEach(function(mark) {
+      if (pct >= mark && !scrollFired[pid][mark]) {
+        scrollFired[pid][mark] = true;
+        trackEvent('scroll_depth', { page_id: pid, percent: mark });
+      }
+    });
+  }, { passive: true });
+
+  // ── GA4: track every Book-a-Call / Calendly click, with where it was clicked ──
+  document.addEventListener('click', function(ev) {
+    var link = ev.target.closest && ev.target.closest('a[href*="calendly.com"]');
+    if (!link) return;
+    var label = (link.textContent || 'Book a Call').trim().replace(/\s+/g, ' ').slice(0, 60);
+    var activePage = document.querySelector('.page.active');
+    var loc = activePage ? activePage.id.replace('page-', '') : 'unknown';
+    trackEvent('book_call_click', { button_label: label, location: loc });
+  }, true);
 
   // Journey tabs
   function switchTab(segment) {
