@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- Google tag (gtag.js) — Dividend IT GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRJXMHZ0N7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -12,10 +11,10 @@
     function trackEvent(name, params){ try { gtag('event', name, params || {}); } catch(e){} }
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services & Pricing — Dividend IT | Outsourced Cybersecurity & IT Ireland</title>
-  <meta name="description" content="Three simple per-user plans — Secure, Operate, Grow — built around the NIS2 cybersecurity framework. M365 included. Monthly rolling contracts. No lock-in." />
-  <meta property="og:title" content="Services & Pricing — Dividend IT" />
-  <meta property="og:description" content="Three simple per-user plans built around the NIS2 cybersecurity framework. M365 included. No lock-in." />
+  <title>Services — Dividend IT | Outsourced Cybersecurity & IT Ireland</title>
+  <meta name="description" content="Outsourced IT and cybersecurity for Irish SMBs. We take on your technology completely — helpdesk, security, devices, Microsoft 365, and infrastructure — so you can run your business without IT holding you back." />
+  <meta property="og:title" content="Services — Dividend IT" />
+  <meta property="og:description" content="Outsourced IT and cybersecurity for Irish SMBs. Three service levels built around the NIS2 cybersecurity framework. M365 included. No lock-in." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dividendit.com/services" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -68,65 +67,25 @@
       display: flex; align-items: center; justify-content: space-between;
       height: 68px;
     }
-    .nav-logo {
-      font-family: var(--font-display);
-      font-size: 1.35rem; color: var(--text-dark);
-      text-decoration: none; letter-spacing: -0.01em;
-    }
+    .nav-logo { font-family: var(--font-display); font-size: 1.35rem; color: var(--text-dark); text-decoration: none; letter-spacing: -0.01em; }
     .nav-logo span { color: var(--accent-green); }
     .nav-links { display: flex; align-items: center; gap: 1.9rem; list-style: none; }
     .nav-links > li { position: relative; }
-    .nav-links a {
-      font-size: 0.875rem; font-weight: 500;
-      color: var(--text-body); text-decoration: none;
-      letter-spacing: 0.01em; transition: color 0.2s;
-      white-space: nowrap;
-    }
+    .nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--text-body); text-decoration: none; letter-spacing: 0.01em; transition: color 0.2s; white-space: nowrap; }
     .nav-links a:hover { color: var(--accent-green); }
-    .nav-dd-trigger {
-      display: inline-flex; align-items: center; gap: 0.3rem;
-      cursor: pointer; font-size: 0.875rem; font-weight: 500;
-      color: var(--text-body); transition: color 0.2s;
-      background: none; border: none; font-family: var(--font-body);
-      padding: 0; letter-spacing: 0.01em;
-    }
+    .nav-dd-trigger { display: inline-flex; align-items: center; gap: 0.3rem; cursor: pointer; font-size: 0.875rem; font-weight: 500; color: var(--text-body); transition: color 0.2s; background: none; border: none; font-family: var(--font-body); padding: 0; letter-spacing: 0.01em; }
     .nav-dd-trigger:hover { color: var(--accent-green); }
     .nav-dd-trigger svg { width: 10px; height: 10px; transition: transform 0.2s; }
     .nav-dd:hover .nav-dd-trigger svg { transform: rotate(180deg); }
-    .nav-dd-menu {
-      position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(8px);
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 8px; box-shadow: 0 12px 32px rgba(0,0,0,0.10);
-      padding: 0.5rem; min-width: 190px;
-      opacity: 0; visibility: hidden; transition: opacity 0.18s, transform 0.18s;
-      list-style: none;
-    }
-    .nav-dd:hover .nav-dd-menu,
-    .nav-dd.open .nav-dd-menu {
-      opacity: 1; visibility: visible; transform: translateX(-50%) translateY(2px);
-    }
+    .nav-dd-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(8px); background: var(--white); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 12px 32px rgba(0,0,0,0.10); padding: 0.5rem; min-width: 190px; opacity: 0; visibility: hidden; transition: opacity 0.18s, transform 0.18s; list-style: none; }
+    .nav-dd:hover .nav-dd-menu, .nav-dd.open .nav-dd-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(2px); }
     .nav-dd-menu li { display: block; }
-    .nav-dd-menu a {
-      display: block; padding: 0.6rem 0.85rem; border-radius: 6px;
-      font-size: 0.85rem; color: var(--text-body); transition: background 0.15s, color 0.15s;
-    }
+    .nav-dd-menu a { display: block; padding: 0.6rem 0.85rem; border-radius: 6px; font-size: 0.85rem; color: var(--text-body); transition: background 0.15s, color 0.15s; }
     .nav-dd-menu a:hover { background: var(--off-white); color: var(--accent-green); }
-    .nav-cta {
-      background: var(--text-dark) !important;
-      color: var(--white) !important;
-      padding: 0.55rem 1.25rem !important;
-      border-radius: var(--radius) !important;
-      transition: background 0.2s !important;
-    }
+    .nav-cta { background: var(--text-dark) !important; color: var(--white) !important; padding: 0.55rem 1.25rem !important; border-radius: var(--radius) !important; transition: background 0.2s !important; }
     .nav-cta:hover { background: var(--accent-green) !important; }
-    .nav-toggle {
-      display: none; background: none; border: none; cursor: pointer;
-      padding: 0.4rem; flex-direction: column; gap: 4px;
-    }
-    .nav-toggle span {
-      display: block; width: 22px; height: 2px; background: var(--text-dark);
-      border-radius: 2px; transition: transform 0.25s, opacity 0.25s;
-    }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.4rem; flex-direction: column; gap: 4px; }
+    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text-dark); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
     .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .nav-toggle.open span:nth-child(2) { opacity: 0; }
     .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
@@ -134,261 +93,129 @@
     /* ── SHARED ── */
     section { padding: 100px 2rem; }
     .section-inner { max-width: var(--max-w); margin: 0 auto; }
-    .section-label {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      font-size: 0.75rem; font-weight: 600;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--accent-green); margin-bottom: 1rem;
-    }
-    .section-label::before {
-      content: ''; display: block;
-      width: 20px; height: 1px; background: var(--accent-green);
-    }
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
-      line-height: 1.15; letter-spacing: -0.02em;
-      color: var(--text-dark); margin-bottom: 1.25rem;
-    }
-    .section-sub {
-      font-size: 1.05rem; color: var(--text-muted);
-      max-width: 560px; line-height: 1.7; margin-bottom: 0;
-    }
+    .section-label { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 1rem; }
+    .section-label::before { content: ''; display: block; width: 20px; height: 1px; background: var(--accent-green); }
+    .section-title { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 2.8rem); line-height: 1.15; letter-spacing: -0.02em; color: var(--text-dark); margin-bottom: 1.25rem; }
+    .section-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 560px; line-height: 1.7; }
 
     /* ── HERO ── */
-    #hero {
-      background: var(--white);
-      padding: 80px 2rem 90px;
-      text-align: center;
-    }
-    .hero-inner { max-width: 820px; margin: 0 auto; }
-    .hero-eyebrow {
-      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--accent-green); margin-bottom: 1.5rem;
-    }
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.6rem, 5vw, 4rem);
-      line-height: 1.08; letter-spacing: -0.02em;
-      color: var(--text-dark); margin-bottom: 1.5rem;
-    }
+    #hero { background: var(--white); padding: 80px 2rem 90px; text-align: center; }
+    .hero-inner { max-width: 860px; margin: 0 auto; }
+    .hero-eyebrow { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 1.5rem; }
+    .hero-title { font-family: var(--font-display); font-size: clamp(2.6rem, 5vw, 4rem); line-height: 1.08; letter-spacing: -0.02em; color: var(--text-dark); margin-bottom: 1.5rem; }
     .hero-title em { font-style: italic; color: var(--accent-green); }
-    .hero-sub {
-      font-size: 1.15rem; line-height: 1.7; color: var(--text-body);
-      max-width: 620px; margin: 0 auto 2.5rem;
+    .hero-sub { font-size: 1.15rem; line-height: 1.75; color: var(--text-body); max-width: 640px; margin: 0 auto 2.5rem; }
+    .hero-pillars {
+      display: flex; gap: 0; justify-content: center;
+      border: 1px solid var(--border); border-radius: 10px;
+      overflow: hidden; width: fit-content; margin: 0 auto;
     }
-    .hero-trust {
-      display: flex; gap: 0.75rem; justify-content: center;
-      font-size: 0.85rem; color: var(--text-muted); font-weight: 500;
-      flex-wrap: wrap;
+    .hero-pillar {
+      padding: 0.85rem 1.5rem; font-size: 0.82rem; font-weight: 500;
+      color: var(--text-muted); border-right: 1px solid var(--border);
+      display: flex; flex-direction: column; align-items: center; gap: 0.3rem;
     }
+    .hero-pillar:last-child { border-right: none; }
+    .hero-pillar strong { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-dark); }
+
+    /* ── WHAT WE DO ── */
+    #what-we-do { background: var(--off-white); }
+    .what-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .what-left { }
+    .what-left p { font-size: 1.05rem; line-height: 1.85; color: var(--text-body); margin-bottom: 1.25rem; }
+    .what-left p strong { color: var(--text-dark); }
+    .what-right { display: flex; flex-direction: column; gap: 1rem; }
+    .what-item {
+      display: flex; gap: 1.25rem; align-items: flex-start;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.5rem;
+    }
+    .what-item-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .what-item-text h4 { font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.3rem; }
+    .what-item-text p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; }
 
     /* ── NIS2 FRAMEWORK ── */
     #framework { background: var(--text-dark); }
     .framework-inner { max-width: var(--max-w); margin: 0 auto; }
     .framework-inner .section-label { color: var(--accent-green-mid); }
     .framework-inner .section-label::before { background: var(--accent-green-mid); }
-    .framework-title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
-      line-height: 1.15; letter-spacing: -0.02em;
-      color: var(--white); margin-bottom: 1.25rem;
-    }
-    .framework-sub {
-      font-size: 1.05rem; color: rgba(255,255,255,0.65);
-      max-width: 600px; line-height: 1.7; margin-bottom: 3.5rem;
-    }
-    .framework-pillars {
-      display: grid; grid-template-columns: repeat(5, 1fr);
-      gap: 1px; background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 12px; overflow: hidden;
-    }
-    .pillar {
-      background: rgba(255,255,255,0.04);
-      padding: 2rem 1.5rem;
-      display: flex; flex-direction: column; gap: 0.75rem;
-    }
-    .pillar-number {
-      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: var(--accent-green-mid);
-    }
+    .framework-title { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 2.8rem); line-height: 1.15; letter-spacing: -0.02em; color: var(--white); margin-bottom: 1.25rem; }
+    .framework-sub { font-size: 1.05rem; color: rgba(255,255,255,0.65); max-width: 600px; line-height: 1.7; margin-bottom: 3.5rem; }
+    .framework-pillars { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; }
+    .pillar { background: rgba(255,255,255,0.04); padding: 2rem 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .pillar-number { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-green-mid); }
     .pillar-icon { font-size: 1.75rem; }
-    .pillar-name {
-      font-family: var(--font-display);
-      font-size: 1.15rem; color: var(--white); letter-spacing: -0.01em;
-    }
-    .pillar-desc {
-      font-size: 0.82rem; color: rgba(255,255,255,0.55);
-      line-height: 1.6; flex: 1;
-    }
-    .pillar-tier {
-      display: inline-block; font-size: 0.65rem; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--accent-green-mid);
-      border: 1px solid var(--accent-green);
-      border-radius: 20px; padding: 0.2rem 0.65rem;
-      margin-top: 0.25rem; width: fit-content;
-    }
-    .framework-note {
-      margin-top: 2.5rem;
-      background: rgba(255,255,255,0.05);
-      border-left: 3px solid var(--accent-green);
-      border-radius: 0 8px 8px 0;
-      padding: 1.5rem 2rem;
-      font-size: 0.95rem; color: rgba(255,255,255,0.65); line-height: 1.7;
-    }
+    .pillar-name { font-family: var(--font-display); font-size: 1.15rem; color: var(--white); letter-spacing: -0.01em; }
+    .pillar-desc { font-size: 0.82rem; color: rgba(255,255,255,0.55); line-height: 1.6; flex: 1; }
+    .pillar-tier { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-green-mid); border: 1px solid var(--accent-green); border-radius: 20px; padding: 0.2rem 0.65rem; margin-top: 0.25rem; width: fit-content; }
+    .framework-note { margin-top: 2.5rem; background: rgba(255,255,255,0.05); border-left: 3px solid var(--accent-green); border-radius: 0 8px 8px 0; padding: 1.5rem 2rem; font-size: 0.95rem; color: rgba(255,255,255,0.65); line-height: 1.7; }
     .framework-note strong { color: var(--white); }
 
-    /* ── PACKAGES ── */
+    /* ── SERVICE LEVELS ── */
     #packages { background: var(--off-white); }
     .packages-inner { max-width: var(--max-w); margin: 0 auto; }
-    .packages-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem; margin-top: 3.5rem; align-items: stretch;
-    }
+    .packages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; align-items: stretch; }
     .package { display: flex; flex-direction: column; position: relative; }
     .package-features { flex: 1; }
-    .package {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 12px; overflow: hidden;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
+    .package { background: var(--white); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
     .package:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
     .package.featured { border: 2px solid var(--text-dark); }
-    .featured-badge {
-      position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
-      background: var(--text-dark); color: var(--white);
-      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em;
-      text-transform: uppercase; padding: 0.3rem 1rem;
-      border-radius: 0 0 6px 6px;
-    }
+    .featured-badge { position: absolute; top: -1px; left: 50%; transform: translateX(-50%); background: var(--text-dark); color: var(--white); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 1rem; border-radius: 0 0 6px 6px; }
     .package-header { padding: 2rem 2rem 1.5rem; border-bottom: 1px solid var(--border); }
     .package-name { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 0.5rem; }
-    .package-price { font-family: var(--font-display); font-size: 2.5rem; color: var(--text-dark); line-height: 1; margin-bottom: 0.25rem; }
-    .package-price sub { font-family: var(--font-body); font-size: 0.875rem; font-weight: 400; color: var(--text-muted); vertical-align: baseline; }
-    .package-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; margin-top: 0.75rem; }
-    .package-m365 {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      margin-top: 0.85rem; font-size: 0.75rem; font-weight: 600;
-      color: var(--accent-green); letter-spacing: 0.02em;
-      background: var(--accent-green-light); border-radius: 20px;
-      padding: 0.25rem 0.75rem;
-    }
+    .package-headline { font-family: var(--font-display); font-size: 1.6rem; color: var(--text-dark); line-height: 1.15; margin-bottom: 0.85rem; letter-spacing: -0.01em; }
+    .package-desc { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
+    .package-m365 { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1rem; font-size: 0.75rem; font-weight: 600; color: var(--accent-green); letter-spacing: 0.02em; background: var(--accent-green-light); border-radius: 20px; padding: 0.25rem 0.75rem; }
     .package-features { padding: 1.5rem 2rem; }
     .package-features ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
     .package-features li { font-size: 0.875rem; color: var(--text-body); display: flex; gap: 0.65rem; align-items: flex-start; line-height: 1.45; }
     .package-features li::before { content: '✓'; color: var(--accent-green); font-weight: 700; flex-shrink: 0; margin-top: 0.05rem; }
-    .package-features .feature-group {
-      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--text-muted);
-      padding: 0.75rem 0 0.25rem; border-top: 1px solid var(--border);
-      margin-top: 0.25rem; display: block;
-    }
+    .package-features .feature-group { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); padding: 0.75rem 0 0.25rem; border-top: 1px solid var(--border); margin-top: 0.25rem; display: block; }
     .package-features .feature-group:first-child { padding-top: 0; border-top: none; margin-top: 0; }
     .package-cta { padding: 0 2rem 2rem; }
-    .btn-package {
-      display: block; text-align: center; padding: 0.85rem;
-      border-radius: var(--radius); font-size: 0.875rem; font-weight: 600;
-      text-decoration: none; transition: all 0.2s;
-      border: 1.5px solid var(--text-dark); color: var(--text-dark);
-    }
+    .btn-package { display: block; text-align: center; padding: 0.85rem; border-radius: var(--radius); font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: all 0.2s; border: 1.5px solid var(--text-dark); color: var(--text-dark); }
     .btn-package:hover { background: var(--text-dark); color: var(--white); }
     .package.featured .btn-package { background: var(--text-dark); color: var(--white); }
     .package.featured .btn-package:hover { background: var(--accent-green); border-color: var(--accent-green); }
-    .packages-note {
-      margin-top: 2.5rem;
-      display: flex; align-items: flex-start; gap: 1rem;
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 10px; padding: 1.5rem 2rem;
-    }
+    .packages-note { margin-top: 2.5rem; display: flex; align-items: flex-start; gap: 1rem; background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem 2rem; }
     .packages-note-icon { font-size: 1.5rem; flex-shrink: 0; }
     .packages-note p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
     .packages-note strong { color: var(--text-dark); }
 
-    /* ── INFRA ADD-ONS ── */
+    /* ── INFRASTRUCTURE ── */
     #infrastructure { background: var(--white); }
     .infra-inner { max-width: var(--max-w); margin: 0 auto; }
-    .infra-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-top: 3.5rem; align-items: start; }
-    .infra-left p { font-size: 1rem; line-height: 1.8; color: var(--text-body); margin-bottom: 1.5rem; }
-    .infra-left strong { color: var(--text-dark); }
-    .infra-example {
-      background: var(--accent-green-light);
-      border-radius: 10px; padding: 1.75rem;
-      margin-top: 0.5rem;
+    .infra-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; margin-bottom: 4rem; }
+    .infra-intro p { font-size: 1rem; line-height: 1.8; color: var(--text-body); margin-bottom: 1.25rem; }
+    .infra-intro strong { color: var(--text-dark); }
+    .infra-assets { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .infra-asset {
+      background: var(--off-white); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1.5rem 1.25rem; text-align: center;
     }
-    .infra-example-label {
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--accent-green); margin-bottom: 1rem;
+    .infra-asset-icon { font-size: 1.75rem; margin-bottom: 0.65rem; }
+    .infra-asset h4 { font-size: 0.875rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.3rem; }
+    .infra-asset p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+    .infra-note {
+      margin-top: 2rem;
+      background: var(--accent-green-light); border-left: 3px solid var(--accent-green);
+      border-radius: 0 8px 8px 0; padding: 1.25rem 1.75rem;
+      font-size: 0.9rem; color: var(--text-body); line-height: 1.6;
     }
-    .infra-example-row {
-      display: flex; justify-content: space-between; align-items: center;
-      font-size: 0.875rem; color: var(--text-body); padding: 0.5rem 0;
-      border-bottom: 1px solid var(--accent-green-mid);
-    }
-    .infra-example-row:last-of-type { border-bottom: none; }
-    .infra-example-row .label { font-weight: 400; }
-    .infra-example-row .val { font-weight: 600; color: var(--text-dark); }
-    .infra-example-total {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 0.75rem 0 0; margin-top: 0.5rem;
-      border-top: 2px solid var(--accent-green-mid);
-    }
-    .infra-example-total .label { font-size: 0.875rem; font-weight: 600; color: var(--text-dark); }
-    .infra-example-total .val { font-family: var(--font-display); font-size: 1.5rem; color: var(--accent-green); }
-    .infra-table { width: 100%; border-collapse: collapse; }
-    .infra-table th {
-      text-align: left; font-size: 0.7rem; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--text-muted); padding: 0 0 0.75rem;
-      border-bottom: 2px solid var(--border);
-    }
-    .infra-table th:last-child { text-align: right; }
-    .infra-table td {
-      font-size: 0.9rem; color: var(--text-body);
-      padding: 0.85rem 0; border-bottom: 1px solid var(--border);
-      line-height: 1.4;
-    }
-    .infra-table td:last-child { text-align: right; font-weight: 600; color: var(--text-dark); white-space: nowrap; }
-    .infra-table tr:last-child td { border-bottom: none; }
-    .infra-table .infra-group-head td {
-      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em;
-      text-transform: uppercase; color: var(--accent-green);
-      padding: 1.5rem 0 0.4rem; border-bottom: none;
-    }
-    .infra-table .infra-group-head:first-child td { padding-top: 0.85rem; }
+    .infra-note strong { color: var(--text-dark); }
 
     /* ── ONBOARDING ── */
     #onboarding { background: var(--off-white); }
     .onboarding-inner { max-width: var(--max-w); margin: 0 auto; }
     .onboarding-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
-    .onboarding-step {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 12px; padding: 2.25rem 2rem;
-    }
-    .onboarding-num {
-      font-family: var(--font-display); font-size: 2.5rem;
-      color: var(--accent-green-mid); line-height: 1; margin-bottom: 1rem;
-    }
-    .onboarding-step h3 {
-      font-family: var(--font-display); font-size: 1.3rem;
-      color: var(--text-dark); margin-bottom: 0.6rem;
-    }
-    .onboarding-step .timeframe {
-      display: inline-block; font-size: 0.7rem; font-weight: 700;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--accent-green); margin-bottom: 0.85rem;
-    }
+    .onboarding-step { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2.25rem 2rem; }
+    .onboarding-num { font-family: var(--font-display); font-size: 2.5rem; color: var(--accent-green-mid); line-height: 1; margin-bottom: 1rem; }
+    .onboarding-step h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--text-dark); margin-bottom: 0.6rem; }
+    .onboarding-step .timeframe { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 0.85rem; }
     .onboarding-step p { font-size: 0.9rem; line-height: 1.65; color: var(--text-muted); }
-    .onboarding-outcome {
-      margin-top: 2.5rem;
-      background: var(--text-dark); border-radius: 10px; padding: 2rem 2.5rem;
-      display: flex; align-items: center; gap: 1.5rem;
-    }
+    .onboarding-outcome { margin-top: 2.5rem; background: var(--text-dark); border-radius: 10px; padding: 2rem 2.5rem; display: flex; align-items: center; gap: 1.5rem; }
     .onboarding-outcome-icon { font-size: 2rem; flex-shrink: 0; }
-    .onboarding-outcome p {
-      font-size: 1rem; color: rgba(255,255,255,0.8); line-height: 1.65;
-    }
+    .onboarding-outcome p { font-size: 1rem; color: rgba(255,255,255,0.8); line-height: 1.65; }
     .onboarding-outcome strong { color: var(--white); }
 
     /* ── CTA ── */
@@ -396,37 +223,18 @@
     .cta-inner { max-width: 700px; margin: 0 auto; }
     .cta-label { color: rgba(255,255,255,0.5) !important; }
     .cta-label::before { background: rgba(255,255,255,0.3) !important; }
-    .cta-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.2rem, 4vw, 3.2rem);
-      line-height: 1.1; color: var(--white);
-      margin: 1rem 0 1.5rem; letter-spacing: -0.02em;
-    }
+    .cta-title { font-family: var(--font-display); font-size: clamp(2.2rem, 4vw, 3.2rem); line-height: 1.1; color: var(--white); margin: 1rem 0 1.5rem; letter-spacing: -0.02em; }
     #cta p { color: rgba(255,255,255,0.7); font-size: 1.08rem; line-height: 1.7; margin-bottom: 2.5rem; }
     .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn-light {
-      background: var(--white); color: var(--text-dark);
-      padding: 0.85rem 1.75rem; border-radius: var(--radius);
-      font-size: 0.9rem; font-weight: 600; text-decoration: none;
-      transition: background 0.2s; display: inline-block;
-    }
+    .btn-light { background: var(--white); color: var(--text-dark); padding: 0.85rem 1.75rem; border-radius: var(--radius); font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: background 0.2s; display: inline-block; }
     .btn-light:hover { background: var(--off-white); }
-    .btn-outline-light {
-      border: 1.5px solid rgba(255,255,255,0.35); color: rgba(255,255,255,0.85);
-      padding: 0.85rem 1.75rem; border-radius: var(--radius);
-      font-size: 0.9rem; font-weight: 600; text-decoration: none;
-      transition: border-color 0.2s, color 0.2s; display: inline-block;
-    }
+    .btn-outline-light { border: 1.5px solid rgba(255,255,255,0.35); color: rgba(255,255,255,0.85); padding: 0.85rem 1.75rem; border-radius: var(--radius); font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
     .btn-outline-light:hover { border-color: var(--white); color: var(--white); }
     .cta-note { margin-top: 1.5rem; font-size: 0.82rem; color: rgba(255,255,255,0.35); }
 
     /* ── FOOTER ── */
     footer { background: var(--text-dark); border-top: 1px solid rgba(255,255,255,0.08); }
-    .footer-inner {
-      max-width: var(--max-w); margin: 0 auto;
-      padding: 3rem 2rem;
-      display: flex; flex-direction: column; gap: 2rem;
-    }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; padding: 3rem 2rem; display: flex; flex-direction: column; gap: 2rem; }
     .footer-logo { font-family: var(--font-display); font-size: 1.2rem; color: var(--white); text-decoration: none; }
     .footer-logo span { color: var(--accent-green); }
     .footer-tagline { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-top: 0.3rem; }
@@ -437,27 +245,25 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 960px) {
-      .framework-pillars { grid-template-columns: 1fr 1fr; }
-      .pillar:nth-child(5) { grid-column: 1 / -1; }
       .nav-toggle { display: flex; }
-      .nav-links {
-        display: none; flex-direction: column; align-items: flex-start;
-        position: absolute; top: 68px; left: 0; right: 0;
-        background: var(--white); border-bottom: 1px solid var(--border);
-        padding: 1rem 2rem 1.5rem; gap: 0;
-      }
+      .nav-links { display: none; flex-direction: column; align-items: flex-start; position: absolute; top: 68px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--border); padding: 1rem 2rem 1.5rem; gap: 0; }
       .nav-links.open { display: flex; }
       .nav-links > li { width: 100%; padding: 0.6rem 0; border-bottom: 1px solid var(--border); }
       .nav-links > li:last-child { border-bottom: none; padding-top: 1rem; }
       .nav-dd-menu { position: static; transform: none; opacity: 1; visibility: visible; box-shadow: none; padding: 0; border: none; min-width: auto; }
       .nav-dd .nav-dd-menu { display: none; }
       .nav-dd.open .nav-dd-menu { display: block; padding-left: 1rem; }
-      .nav-cta { display: inline-block; }
+      .framework-pillars { grid-template-columns: 1fr 1fr; }
+      .pillar:nth-child(5) { grid-column: 1 / -1; }
     }
     @media (max-width: 860px) {
       section { padding: 70px 1.25rem; }
+      .hero-pillars { flex-wrap: wrap; width: 100%; }
+      .hero-pillar { flex: 1 1 40%; border-bottom: 1px solid var(--border); }
+      .what-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .packages-grid { grid-template-columns: 1fr; }
-      .infra-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .infra-intro { grid-template-columns: 1fr; gap: 2rem; }
+      .infra-assets { grid-template-columns: repeat(2, 1fr); }
       .onboarding-steps { grid-template-columns: 1fr; }
       .framework-pillars { grid-template-columns: 1fr; }
       .pillar:nth-child(5) { grid-column: auto; }
@@ -501,21 +307,70 @@
 <!-- 1. HERO -->
 <section id="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">Services &amp; Pricing · Ireland</div>
-    <h1 class="hero-title">One number per user.<br>Everything <em>in</em>.</h1>
-    <p class="hero-sub">Three simple plans built around the EU NIS2 cybersecurity framework. Microsoft 365 included in every tier. Monthly rolling — no lock-in, no surprise invoices.</p>
-    <div class="hero-trust">
-      <span>M365 included</span><span>·</span><span>No lock-in</span><span>·</span><span>NIS2 aligned</span><span>·</span><span>Monthly rolling</span>
+    <div class="hero-eyebrow">Outsourced IT &amp; Cybersecurity · Ireland</div>
+    <h1 class="hero-title">Your IT, taken care of.<br><em>Completely.</em></h1>
+    <p class="hero-sub">We take on your technology — helpdesk, security, devices, Microsoft 365, and infrastructure — so you can run your business without IT problems holding you back. One partner. One monthly invoice. Everything managed.</p>
+    <div class="hero-pillars">
+      <div class="hero-pillar"><strong>Helpdesk</strong>When things go wrong, we fix them</div>
+      <div class="hero-pillar"><strong>Cybersecurity</strong>Protecting your business 24/7</div>
+      <div class="hero-pillar"><strong>Microsoft 365</strong>Included, managed, always current</div>
+      <div class="hero-pillar"><strong>Infrastructure</strong>Servers, networks, cloud</div>
+      <div class="hero-pillar"><strong>No lock-in</strong>Monthly rolling contracts</div>
     </div>
   </div>
 </section>
 
-<!-- 2. NIS2 FRAMEWORK -->
+<!-- 2. WHAT WE DO -->
+<section id="what-we-do">
+  <div class="section-inner">
+    <div class="what-grid">
+      <div class="what-left">
+        <div class="section-label">What we actually do</div>
+        <h2 class="section-title">We become your IT department.</h2>
+        <p>Most businesses our size are cobbling together their IT — one supplier for internet, another for security, someone else for the laptops, and a Microsoft reseller on top. You're the glue holding it all together, and every problem lands in your inbox.</p>
+        <p>We replace all of that. <strong>One partner, one point of contact, one monthly invoice.</strong> We handle everything from your helpdesk calls to your cybersecurity posture to your Microsoft licences — and we proactively manage your environment so problems don't reach you in the first place.</p>
+        <p>We work with Irish businesses between 10 and 150 people. We don't work with everyone — we're looking for owners who want a genuine partner, not just a supplier to call when something breaks.</p>
+      </div>
+      <div class="what-right">
+        <div class="what-item">
+          <div class="what-item-icon">🛡️</div>
+          <div class="what-item-text">
+            <h4>Cybersecurity — built in, not bolted on</h4>
+            <p>Endpoint detection, email security, DNS filtering, MFA, patching, and backup — active protection running on every device, every day. Not a product we sell you and walk away from.</p>
+          </div>
+        </div>
+        <div class="what-item">
+          <div class="what-item-icon">🖥️</div>
+          <div class="what-item-text">
+            <h4>Helpdesk &amp; device management</h4>
+            <p>Your team calls us when things go wrong. We also keep everything patched, monitored, and running before it breaks — so your people stay productive.</p>
+          </div>
+        </div>
+        <div class="what-item">
+          <div class="what-item-icon">📧</div>
+          <div class="what-item-text">
+            <h4>Microsoft 365 — included and managed</h4>
+            <p>Teams, Exchange, SharePoint, OneDrive, and Office apps — licenced, configured, and managed for your team. No separate invoice, no separate supplier.</p>
+          </div>
+        </div>
+        <div class="what-item">
+          <div class="what-item-icon">📊</div>
+          <div class="what-item-text">
+            <h4>Strategic IT (Grow tier)</h4>
+            <p>Quarterly technology roadmap reviews, NIS2 compliance reporting, and a vCIO who thinks about your technology the way you think about your business — as an asset, not a cost.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. NIS2 FRAMEWORK -->
 <section id="framework">
   <div class="framework-inner">
     <div class="section-label">The framework behind everything</div>
-    <h2 class="framework-title">Built on EU cybersecurity law.<br>Not on what's easiest to sell.</h2>
-    <p class="framework-sub">The EU NIS2 Directive defines the five pillars every organisation must address to be genuinely secure. We structure every tier around them — so you're not just getting IT support, you're getting a defensible, compliance-ready security posture.</p>
+    <h2 class="framework-title">We structure everything around<br>EU cybersecurity law.</h2>
+    <p class="framework-sub">The NIS2 Directive defines five pillars that every organisation must address to be genuinely secure. We use this as the backbone of how we deliver — so when a customer asks "are we compliant?", the answer isn't a guess. It's documented evidence.</p>
     <div class="framework-pillars">
       <div class="pillar">
         <div class="pillar-number">Pillar 01</div>
@@ -554,17 +409,17 @@
       </div>
     </div>
     <div class="framework-note">
-      <strong>Why this matters for you:</strong> From May 2024, NIS2 applies to a much broader set of Irish businesses than its predecessor. Directors can be held personally liable for breaches of the duty of care. We structure everything we deliver so you can demonstrate compliance — not just claim it.
+      <strong>Why this matters for you as a director:</strong> From May 2024, NIS2 applies to a much broader set of Irish businesses than its predecessor. Directors can be held personally liable for breaches of the duty of care. We structure every engagement so you can demonstrate compliance — not just claim it.
     </div>
   </div>
 </section>
 
-<!-- 3. PACKAGES -->
+<!-- 4. SERVICE LEVELS -->
 <section id="packages">
   <div class="packages-inner">
-    <div class="section-label">Service tiers</div>
-    <h2 class="section-title">Start secure. Scale when you're ready.</h2>
-    <p class="section-sub">Every customer starts on Secure — NIS2 Protect baseline, M365 included, all devices under management within two weeks. Move to Operate or Grow when the business needs it.</p>
+    <div class="section-label">Service levels</div>
+    <h2 class="section-title">Start secure. Grow when you're ready.</h2>
+    <p class="section-sub">Every customer starts on Secure — NIS2 Protect baseline, M365 included, all devices under management within two weeks. Step up to Operate or Grow as the business needs more.</p>
 
     <div class="packages-grid">
 
@@ -572,32 +427,30 @@
       <div class="package">
         <div class="package-header">
           <div class="package-name">Secure</div>
-          <div class="package-price">€75<sub>/user/mo</sub></div>
-          <p class="package-desc">Baseline cybersecurity and IT support. NIS2 Identify &amp; Protect. The right starting point for every customer.</p>
+          <div class="package-headline">Foundation security &amp; IT support</div>
+          <p class="package-desc">The right starting point for every customer. Cybersecurity baseline, helpdesk, device management, and M365 — all running within two weeks of signing.</p>
           <div class="package-m365">✓ M365 Business Standard included</div>
         </div>
         <div class="package-features">
           <ul>
             <li class="feature-group">Cybersecurity — NIS2 Protect</li>
-            <li>Managed EDR — Huntress (MDR layer on Windows Defender)</li>
+            <li>Managed EDR — Huntress (MDR on top of Windows Defender)</li>
             <li>Email security — Microsoft Defender / Mail Assure</li>
-            <li>DNS filtering — N-able DNS Filter</li>
-            <li>MFA enforcement — Entra ID Free</li>
-            <li>Patch &amp; vulnerability management — automated via N-central</li>
+            <li>DNS filtering — blocks malicious sites before they load</li>
+            <li>MFA enforced across all accounts — Entra ID</li>
+            <li>Automated patch &amp; vulnerability management</li>
             <li>Security awareness training — annual baseline</li>
+            <li>Cloud backup — M365 and devices (N-able Cove)</li>
             <li class="feature-group">IT Management</li>
-            <li>Remote service desk (helpdesk)</li>
+            <li>Remote service desk — helpdesk for your whole team</li>
             <li>Device management — all existing equipment taken on as-is</li>
-            <li>M365 management — licences, config, user admin</li>
-            <li>Asset inventory — documented in Hudu on day one</li>
-            <li>RMM agent on all devices — N-central</li>
-            <li>Cloud backup — N-able Cove (M365 + devices)</li>
-            <li class="feature-group">Identity</li>
-            <li>Entra ID Free — MFA, basic conditional access</li>
+            <li>M365 administration — licences, config, user onboarding/offboarding</li>
+            <li>Full asset inventory — documented on day one</li>
+            <li>RMM agent on all devices — proactive monitoring via N-central</li>
           </ul>
         </div>
         <div class="package-cta">
-          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-package" onclick="trackEvent('book_call_click',{location:'services_secure'})">Get started on Secure →</a>
+          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-package" onclick="trackEvent('book_call_click',{location:'services_secure'})">Talk to us about Secure →</a>
         </div>
       </div>
 
@@ -606,30 +459,28 @@
         <div class="featured-badge">Most Popular</div>
         <div class="package-header">
           <div class="package-name">Operate</div>
-          <div class="package-price">€100<sub>/user/mo</sub></div>
-          <p class="package-desc">Everything in Secure, plus full operational IT management. NIS2 Detect &amp; Respond added. For businesses that need everything working — and someone to know when it doesn't.</p>
+          <div class="package-headline">Full managed IT &amp; active security</div>
+          <p class="package-desc">Everything in Secure, plus full on-site IT management, active threat detection, and infrastructure support. For businesses where everything needs to work — and someone needs to know when it doesn't.</p>
           <div class="package-m365">✓ M365 Business Premium included</div>
         </div>
         <div class="package-features">
           <ul>
             <li class="feature-group">Everything in Secure, plus:</li>
-            <li>Advanced monitoring &amp; alerting — N-central + Huntress MDR</li>
-            <li>Active incident detection &amp; response — not just alerting</li>
-            <li>Conditional access policies — Entra ID P1</li>
+            <li>Active incident detection &amp; response — Huntress MDR, not just alerting</li>
+            <li>Advanced monitoring &amp; alerting — N-central + Huntress</li>
+            <li>Conditional access policies — blocks risky sign-ins automatically</li>
             <li>Device compliance enforcement — Microsoft Intune</li>
             <li class="feature-group">Full IT Management</li>
-            <li>On-site support — scheduled and reactive</li>
+            <li>On-site support — scheduled visits and reactive callouts</li>
             <li>Server management — physical and virtual</li>
             <li>Network management — firewall, switches, WiFi</li>
-            <li>Public cloud management — Azure / AWS</li>
-            <li>Line of business app management</li>
-            <li>Voice / UCaaS — CRM-integrated telephony</li>
-            <li class="feature-group">Identity</li>
-            <li>Entra ID P1 — conditional access, Intune MDM, SSPR</li>
+            <li>Cloud management — Azure / AWS</li>
+            <li>Line of business app management — we own the vendor relationship</li>
+            <li>Voice &amp; unified communications — CRM-integrated telephony</li>
           </ul>
         </div>
         <div class="package-cta">
-          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-package" onclick="trackEvent('book_call_click',{location:'services_operate'})">Get started on Operate →</a>
+          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-package" onclick="trackEvent('book_call_click',{location:'services_operate'})">Talk to us about Operate →</a>
         </div>
       </div>
 
@@ -637,29 +488,27 @@
       <div class="package">
         <div class="package-header">
           <div class="package-name">Grow</div>
-          <div class="package-price">€120<sub>/user/mo</sub></div>
-          <p class="package-desc">Everything in Operate, plus strategic IT and full NIS2 compliance. For owners who want their technology aligned to the long-term value of their business.</p>
+          <div class="package-headline">Strategic IT &amp; full NIS2 compliance</div>
+          <p class="package-desc">Everything in Operate, plus a vCIO who aligns your technology to your business goals — quarterly roadmaps, NIS2 compliance reporting, and IT that actively builds the value of what you've created.</p>
           <div class="package-m365">✓ M365 Business Premium included</div>
         </div>
         <div class="package-features">
           <ul>
             <li class="feature-group">Everything in Operate, plus:</li>
-            <li>24/7 SOC / MDR — Huntress full managed detection</li>
+            <li>24/7 SOC — Huntress full managed detection and response</li>
             <li>NIS2 compliance reporting — audit-ready evidence pack</li>
-            <li>Incident response planning — written IRP, tested annually</li>
-            <li>DR planning &amp; testing — quarterly restore tests</li>
-            <li>Annual penetration test (third-party)</li>
+            <li>Written incident response plan — tested annually</li>
+            <li>DR planning &amp; quarterly restore testing</li>
+            <li>Annual penetration test — independent, third-party</li>
             <li class="feature-group">Strategic IT</li>
-            <li>vCIO — quarterly technology roadmap review</li>
-            <li>Business workflow optimisation</li>
-            <li>Private cloud — EU data sovereignty (NIS2/GDPR)</li>
-            <li>12-month technology roadmap, aligned to business goals</li>
-            <li class="feature-group">Identity</li>
-            <li>Entra ID P2 — privileged identity management, risk-based access, identity protection</li>
+            <li>vCIO — quarterly technology roadmap aligned to business goals</li>
+            <li>Business workflow optimisation — after the first 6 months</li>
+            <li>Private cloud — EU data sovereignty (NIS2 and GDPR compliant)</li>
+            <li>12-month technology roadmap, reviewed and updated quarterly</li>
           </ul>
         </div>
         <div class="package-cta">
-          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-package" onclick="trackEvent('book_call_click',{location:'services_grow'})">Get started on Grow →</a>
+          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-package" onclick="trackEvent('book_call_click',{location:'services_grow'})">Talk to us about Grow →</a>
         </div>
       </div>
 
@@ -667,100 +516,100 @@
 
     <div class="packages-note">
       <div class="packages-note-icon">ℹ️</div>
-      <p><strong>Per-user pricing covers your people.</strong> If your business has servers, firewalls, or managed network infrastructure, these are quoted separately on a per-asset basis — at a fixed, transparent price. See the infrastructure pricing below. All contracts are <strong>monthly rolling</strong> — no lock-in.</p>
+      <p><strong>Wondering about cost?</strong> We don't publish pricing on the website because every environment is different — 10 users with no server is a very different engagement to 80 users with three sites and a server stack. Book a 20-minute call and we'll give you a clear number based on your actual situation. <strong>No obligation, no hard sell.</strong></p>
     </div>
   </div>
 </section>
 
-<!-- 4. INFRASTRUCTURE ADD-ONS -->
+<!-- 5. INFRASTRUCTURE -->
 <section id="infrastructure">
   <div class="infra-inner">
     <div class="section-label">Infrastructure management</div>
-    <h2 class="section-title">Your environment, priced fairly.</h2>
-    <p class="section-sub">Servers, firewalls, and network infrastructure vary by business. We quote each customer's environment separately — on a fixed, standardised price list. No surprises, no custom negotiations.</p>
-    <div class="infra-grid">
+    <h2 class="section-title">We manage what you already have.</h2>
 
-      <div class="infra-left">
-        <p>Every business has a different environment — a retail business might have just a firewall and 12 laptops; a manufacturing site might have three servers, a firewall stack, 20 switches, and 40 access points. We don't try to fold that variability into the per-user price. Instead, <strong>per-user tiers cover your people; per-asset add-ons cover your infrastructure</strong> — at a fixed rate that's fast to quote and easy to understand.</p>
-        <p>Hardware — servers, switches, laptops, cabling, UPS — is always a <strong>one-off project cost</strong>, quoted separately from ongoing management.</p>
-        <div class="infra-example">
-          <div class="infra-example-label">Example quote — 25-person business with a server and firewall</div>
-          <div class="infra-example-row"><span class="label">25 users × Operate (€100)</span><span class="val">€2,500</span></div>
-          <div class="infra-example-row"><span class="label">1 managed server</span><span class="val">€150</span></div>
-          <div class="infra-example-row"><span class="label">1 managed firewall</span><span class="val">€100</span></div>
-          <div class="infra-example-total"><span class="label">Monthly total</span><span class="val">€2,750</span></div>
-        </div>
+    <div class="infra-intro">
+      <div>
+        <p>Every business has a different environment. Some have just laptops and a firewall. Others have servers, multiple sites, cloud infrastructure, and a network stack that's grown over years. We take on all of it.</p>
+        <p>Per-user pricing covers your people. Infrastructure — servers, firewalls, switches, access points, cloud — is quoted separately based on what you actually have. <strong>A fixed, transparent price for each asset type</strong>, assembled into a quote that reflects your specific environment.</p>
+        <p>Hardware — servers, switches, access points, laptops, cabling, UPS — is always a one-off project cost, quoted and invoiced separately from the monthly management fee.</p>
       </div>
-
-      <div class="infra-right">
-        <table class="infra-table">
-          <thead>
-            <tr>
-              <th>Asset</th>
-              <th>Monthly</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="infra-group-head"><td colspan="2">Compute</td></tr>
-            <tr><td>Managed server (physical or VM)</td><td>€150</td></tr>
-            <tr class="infra-group-head"><td colspan="2">Network</td></tr>
-            <tr><td>Managed firewall (Fortinet / SonicWall)</td><td>€100</td></tr>
-            <tr><td>Managed network switch</td><td>€40</td></tr>
-            <tr><td>Managed WiFi access point</td><td>€25</td></tr>
-            <tr><td>UPS monitoring</td><td>€25</td></tr>
-            <tr class="infra-group-head"><td colspan="2">Sites &amp; Cloud</td></tr>
-            <tr><td>Branch site management</td><td>€150</td></tr>
-            <tr><td>Private cloud (white-label EU IaaS)</td><td>Quoted per resource</td></tr>
-          </tbody>
-        </table>
-        <p style="font-size:0.82rem;color:var(--text-muted);margin-top:1.25rem;line-height:1.6;">Hardware — servers, switches, access points, UPS, laptops, cabling — is always a one-off project cost, quoted and invoiced separately from the monthly management fee.</p>
+      <div>
+        <p>Regardless of what your environment looks like today, we take it on as-is. No requirement to replace equipment before we start. No minimum spec. We document everything on day one, identify what needs attention, and build a plan from there.</p>
+        <p>If you want to talk through what that looks like for your specific setup, book a call — we'll walk through your environment and give you a clear picture of what's involved.</p>
+        <a href="https://calendly.com/ethan-searle9/30min" target="_blank" style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.9rem;font-weight:600;color:var(--accent-green);text-decoration:none;" onclick="trackEvent('book_call_click',{location:'services_infra'})">Book a call to discuss your environment →</a>
       </div>
+    </div>
 
+    <div class="infra-assets">
+      <div class="infra-asset">
+        <div class="infra-asset-icon">🖥️</div>
+        <h4>Servers</h4>
+        <p>Physical and virtual — Windows Server, Linux, domain controllers, file servers, application servers</p>
+      </div>
+      <div class="infra-asset">
+        <div class="infra-asset-icon">🔥</div>
+        <h4>Firewalls</h4>
+        <p>Fortinet, SonicWall, and other enterprise-grade firewalls — managed, monitored, firmware updated</p>
+      </div>
+      <div class="infra-asset">
+        <div class="infra-asset-icon">🌐</div>
+        <h4>Network switches &amp; WiFi</h4>
+        <p>Managed switches and wireless access points — configuration, monitoring, and firmware management</p>
+      </div>
+      <div class="infra-asset">
+        <div class="infra-asset-icon">☁️</div>
+        <h4>Cloud &amp; hosted</h4>
+        <p>Azure, AWS, and private cloud — resource management, cost optimisation, and EU data sovereignty options</p>
+      </div>
+    </div>
+
+    <div class="infra-note">
+      <strong>Multi-site businesses:</strong> We manage branch offices and remote sites as part of the same engagement — network, devices, and infrastructure across every location, under one agreement.
     </div>
   </div>
 </section>
 
-<!-- 5. ONBOARDING -->
+<!-- 6. ONBOARDING -->
 <section id="onboarding">
   <div class="onboarding-inner">
     <div class="section-label">How we start</div>
-    <h2 class="section-title">NIS2-secure in two weeks.<br>Not two months.</h2>
-    <p class="section-sub">Most customers come to us with existing equipment, no Active Directory setup, and a mix of M365 licences. That's the standard starting point — not the exception. Here's how we handle it.</p>
+    <h2 class="section-title">Secure in two weeks.<br>Not two months.</h2>
+    <p class="section-sub">Most customers come to us with existing equipment, no Active Directory or Entra setup, and a mix of M365 licences. That's the standard starting point — not the exception.</p>
 
     <div class="onboarding-steps">
       <div class="onboarding-step">
         <div class="onboarding-num">01</div>
         <div class="timeframe">Week 1–2</div>
         <h3>Secure Foundation</h3>
-        <p>Pre-onboarding call to collect credentials and document your environment. N-central agent deployed to all devices — remotely, no AD required. Huntress EDR live. MFA enforced. DNS filtering on. Backup configured. Licences audited and aligned.</p>
+        <p>Pre-onboarding call to document your environment. Agent deployed remotely to all devices — no AD required. Huntress EDR live. MFA enforced. DNS filtering on. Backup running. M365 licences audited and aligned. You're NIS2 Protect-compliant before the end of week two.</p>
       </div>
       <div class="onboarding-step">
         <div class="onboarding-num">02</div>
         <div class="timeframe">Month 1–3</div>
         <h3>Stabilise</h3>
-        <p>Patch management automated. Security awareness training deployed. Firewall and network reviewed — infrastructure add-ons quoted if needed. Gap report produced, showing your position against full NIS2 compliance. Gap report becomes the natural conversation for moving to Operate or Grow.</p>
+        <p>Patch management automated. Security awareness training deployed. Firewall and network reviewed. A gap report shows exactly where you stand against full NIS2 compliance — and becomes the natural conversation about moving to Operate or Grow if that's where you need to go.</p>
       </div>
       <div class="onboarding-step">
         <div class="onboarding-num">03</div>
         <div class="timeframe">Month 6+</div>
         <h3>Optimise</h3>
-        <p>Workflow review with you and your team. Technology roadmap built around your goals. Private cloud assessment if relevant. Annual penetration test scheduled. From here, technology is actively building value — not just keeping the lights on.</p>
+        <p>Workflow review with you and your team. Technology roadmap built around your goals. From here, your technology isn't just keeping the lights on — it's actively making your business faster, safer, and more valuable.</p>
       </div>
     </div>
 
     <div class="onboarding-outcome">
       <div class="onboarding-outcome-icon">🛡️</div>
-      <p><strong>No Active Directory? No problem.</strong> The majority of businesses we onboard don't have an existing AD or Entra ID setup. Our deployment playbook handles this — N-central network discovery finds all devices, and we push the agent using local admin credentials. You're secured before we even begin the infrastructure conversation.</p>
+      <p><strong>No Active Directory? No Entra setup? No problem.</strong> The majority of businesses we onboard don't have an existing directory setup — especially if they're coming from another MSP or managing IT themselves. Our deployment playbook handles it: network discovery finds all devices, and we push the agent using local admin credentials. You're secured before we even begin the infrastructure conversation.</p>
     </div>
   </div>
 </section>
 
-<!-- 6. CTA -->
+<!-- 7. CTA -->
 <section id="cta">
   <div class="cta-inner">
-    <div class="section-label cta-label">Ready to find out where you stand?</div>
+    <div class="section-label cta-label">Ready to find out if we're a fit?</div>
     <h2 class="cta-title">Let's have an honest conversation.</h2>
-    <p>We don't work with everyone. We work with owners who are serious about using technology to protect what they've built, compete harder, and create lasting value. If that's you — let's talk.</p>
+    <p>We don't work with everyone. We work with owners who are serious about protecting what they've built, competing harder, and not spending another year holding their IT together themselves. If that's you — let's talk.</p>
     <div class="cta-actions">
       <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-light" onclick="trackEvent('book_call_click',{location:'services_cta'})">Book a Free 20-Min Call</a>
       <a href="/get-the-guide" class="btn-outline-light">Get the Free Guide</a>
@@ -790,9 +639,8 @@
 </footer>
 
 <script>
-  trackEvent('page_view', { page_title: 'Services & Pricing — Dividend IT', page_location: location.href, page_path: location.pathname });
+  trackEvent('page_view', { page_title: 'Services — Dividend IT', page_location: location.href, page_path: location.pathname });
 
-  // Mobile nav toggle
   (function(){
     var toggle = document.querySelector('.nav-toggle');
     var links = document.querySelector('.nav-links');
@@ -819,16 +667,13 @@
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Dividend IT — Managed IT & Cybersecurity Services",
-  "description": "Outsourced IT and cybersecurity for Irish SMBs. Three per-user tiers — Secure, Operate, Grow — built around the NIS2 framework. M365 included. Monthly rolling contracts.",
+  "description": "Outsourced IT and cybersecurity for Irish SMBs. Three service levels — Secure, Operate, Grow — built around the NIS2 framework. M365 included. Monthly rolling contracts.",
   "provider": {
     "@type": "Organization",
     "name": "Dividend IT",
     "url": "https://dividendit.com"
   },
-  "areaServed": {
-    "@type": "Country",
-    "name": "Ireland"
-  },
+  "areaServed": { "@type": "Country", "name": "Ireland" },
   "serviceType": "Managed IT Services, Cybersecurity, NIS2 Compliance"
 }
 </script>
