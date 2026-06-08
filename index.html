@@ -862,6 +862,27 @@
     .lead-gate-submit { width: 100%; background: var(--text-dark); color: var(--white); padding: 0.9rem; border: none; border-radius: var(--radius); font-family: var(--font-body); font-size: 0.925rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
     .lead-gate-submit:hover { background: var(--accent-green); }
 
+    /* MID-PAGE GUIDE CTA */
+    .mid-guide-cta { background: var(--text-dark); padding: 80px 2rem; }
+    .mid-guide-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .mid-guide-text .section-label { color: var(--accent-green); }
+    .mid-guide-text h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: var(--white); line-height: 1.15; letter-spacing: -0.02em; margin: 0.75rem 0 1rem; }
+    .mid-guide-text p { font-size: 0.975rem; color: rgba(255,255,255,0.65); line-height: 1.8; }
+    .mid-guide-points { list-style: none; margin: 1.25rem 0 0; display: flex; flex-direction: column; gap: 0.6rem; }
+    .mid-guide-points li { font-size: 0.875rem; color: rgba(255,255,255,0.7); display: flex; gap: 0.65rem; align-items: flex-start; line-height: 1.5; }
+    .mid-guide-points li::before { content: '✓'; color: var(--accent-green); font-weight: 700; flex-shrink: 0; }
+    .mid-guide-form-wrap { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 2.5rem; }
+    .mid-guide-form-wrap h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--white); margin-bottom: 0.5rem; }
+    .mid-guide-form-wrap p { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1.5rem; }
+    .mid-guide-form { display: flex; flex-direction: column; gap: 0.75rem; }
+    .mid-guide-input { width: 100%; padding: 0.875rem 1rem; border: 1.5px solid rgba(255,255,255,0.15); border-radius: var(--radius); background: rgba(255,255,255,0.07); font-family: var(--font-body); font-size: 0.925rem; color: var(--white); outline: none; transition: border-color 0.2s; box-sizing: border-box; }
+    .mid-guide-input::placeholder { color: rgba(255,255,255,0.35); }
+    .mid-guide-input:focus { border-color: var(--accent-green); }
+    .mid-guide-submit { width: 100%; background: var(--accent-green); color: var(--white); padding: 0.9rem; border: none; border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+    .mid-guide-submit:hover { background: #235c42; }
+    .mid-guide-note { font-size: 0.75rem; color: rgba(255,255,255,0.35); text-align: center; margin-top: 0.5rem; }
+    @media (max-width: 860px) { .mid-guide-inner { grid-template-columns: 1fr; gap: 2.5rem; } }
+
     /* ═══ STORY-SPINE HOMEPAGE ═══ */
     .sp-hero, .sp-stakes, .sp-turn, .sp-journey, .sp-proof, .sp-tools, .sp-segments, .sp-about, .sp-cta { padding: 110px 2rem; }
     .sp-hero-inner, .sp-stakes-inner, .sp-turn-inner, .sp-journey-inner, .sp-proof-inner, .sp-tools-inner, .sp-segments-inner, .sp-about-inner, .sp-cta-inner { max-width: var(--max-w); margin: 0 auto; }
@@ -1117,6 +1138,33 @@
   </div>
 </section>
 
+<!-- MID-PAGE GUIDE CTA -->
+<section class="mid-guide-cta">
+  <div class="mid-guide-inner">
+    <div class="mid-guide-text">
+      <div class="section-label">Free resource</div>
+      <h2>5 ways your IT should be paying you back</h2>
+      <p>Most owners don't know what good IT looks like — let alone how to make it work for the business. The guide covers the five foundations every Irish SMB should have in place.</p>
+      <ul class="mid-guide-points">
+        <li>How to build a security foundation without a full-time IT hire</li>
+        <li>What a proper IT setup actually costs vs. what you're probably spending</li>
+        <li>How technology decisions affect your exit multiple and EBITDA</li>
+        <li>The five systems every growing Irish business needs by year three</li>
+        <li>What good IT governance looks like when you're scaling</li>
+      </ul>
+    </div>
+    <div class="mid-guide-form-wrap">
+      <h3>Get the free guide</h3>
+      <p>Delivered to your inbox — no obligation, no hard sell.</p>
+      <form class="mid-guide-form" onsubmit="submitMidGuideForm(event)">
+        <input type="email" id="mid-guide-email" class="mid-guide-input" placeholder="Your email address" required>
+        <button type="submit" class="mid-guide-submit">Send Me the Guide →</button>
+      </form>
+      <p class="mid-guide-note">No spam. Unsubscribe any time.</p>
+    </div>
+  </div>
+</section>
+
 <!-- 6. THE TOOLS -->
 <section id="tools" class="sp-tools">
   <div class="sp-tools-inner">
@@ -1215,64 +1263,4 @@
   </div>
 </footer>
 <script>
-  trackEvent('page_view', { page_title: 'Home — IT That Pays Back', page_location: location.href, page_path: location.pathname });
-  function scrollToStat(id){var el=document.getElementById(id);if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.style.transition='background 0.3s';el.style.background='var(--accent-green-light)';setTimeout(function(){el.style.background='';},1500);}}
-  // Journey stage tabs (Value Creator / Entrepreneur / Startup)
-  function switchTab(stage){
-    document.querySelectorAll('.journey-tab').forEach(function(t){t.classList.remove('active');});
-    document.querySelectorAll('.journey-panel').forEach(function(p){p.classList.remove('active');});
-    var panel=document.getElementById('panel-'+stage);
-    if(panel)panel.classList.add('active');
-    // activate the clicked tab
-    document.querySelectorAll('.journey-tab').forEach(function(t){
-      if(t.getAttribute('onclick')&&t.getAttribute('onclick').indexOf("'"+stage+"'")!==-1)t.classList.add('active');
-    });
-    trackEvent('journey_tab',{stage:stage});
-  }
-  function submitGuideForm(e){e.preventDefault();var email=document.getElementById('guide-email').value;trackEvent('generate_lead',{method:'guide_download',currency:'EUR',value:1});fetch('https://formspree.io/f/xlgvqpbb',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,source:'Dividend IT Lead Magnet'})}).catch(function(){});window.location.href='/guide';}
-  var _sd={};
-  window.addEventListener('scroll',function(){var pct=(window.scrollY+window.innerHeight)/document.body.scrollHeight*100;[50,75,90].forEach(function(m){if(pct>=m&&!_sd[m]){_sd[m]=true;trackEvent('scroll_depth',{page_id:'home',percent:m});}});},{passive:true});
-  document.addEventListener('click',function(ev){var l=ev.target.closest&&ev.target.closest('a[href*="calendly.com"]');if(!l)return;var label=(l.textContent||'Book a Call').trim().replace(/\s+/g,' ').slice(0,60);trackEvent('book_call_click',{button_label:label,location:'home'});},true);
-  var reveals=document.querySelectorAll('.reveal');if(reveals.length){var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1});reveals.forEach(function(el){obs.observe(el);});}
-  function initReveal(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');});}
-  document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){b.parentElement.classList.toggle('open');});});
-  // Mobile nav toggle + dropdown tap
-  (function(){
-    var toggle = document.querySelector('.nav-toggle');
-    var links = document.querySelector('.nav-links');
-    if (toggle && links) {
-      toggle.addEventListener('click', function(){
-        var open = links.classList.toggle('open');
-        toggle.classList.toggle('open', open);
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    }
-    // On mobile, tapping a dropdown trigger toggles its submenu (desktop uses hover)
-    document.querySelectorAll('.nav-dd-trigger').forEach(function(t){
-      t.addEventListener('click', function(e){
-        if (window.innerWidth <= 960) {
-          e.preventDefault();
-          t.parentElement.classList.toggle('open');
-        }
-      });
-    });
-  })();
-
-  
-  // Segment selector (Who this is for)
-  document.querySelectorAll('.sp-seg-tab').forEach(function(tab){
-    tab.addEventListener('click', function(){
-      var seg = tab.getAttribute('data-seg');
-      document.querySelectorAll('.sp-seg-tab').forEach(function(t){ t.classList.remove('active'); });
-      document.querySelectorAll('.sp-seg-panel').forEach(function(p){ p.classList.remove('active'); });
-      tab.classList.add('active');
-      var panel = document.querySelector('.sp-seg-panel[data-panel="'+seg+'"]');
-      if(panel) panel.classList.add('active');
-      try{ trackEvent('segment_select',{segment:seg}); }catch(e){}
-    });
-  });
-
-</script>
-
-</body>
-</html>
+  trackEvent('page_view', { page_title: 'Home — IT That Pays Back', page_locatio

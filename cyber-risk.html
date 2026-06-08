@@ -942,6 +942,14 @@
     </div>
     <h2>The Preparedness Gap</h2>
     <p>Only 22% of Irish businesses have a formal cybersecurity incident management plan in place. The vast majority are hoping it will not happen to them. Hope is not a strategy. The businesses that survive cyber incidents are the ones that have treated cybersecurity as a proactive, strategic investment &mdash; not a reactive cost.</p>
+    <div class="wp-cta" style="margin:2.5rem 0;">
+      <h3>Want to know exactly what to do about it?</h3>
+      <p>The free Dividend IT guide covers the five security and IT foundations every Irish SMB needs — what they are, what they cost, and how to put them in place without a full-time IT hire.</p>
+      <div class="wp-cta-actions">
+        <a href="/get-the-guide" class="btn-light" onclick="trackEvent('generate_lead',{method:'guide_click',currency:'EUR',value:1,location:'cyber_risk_mid'})">Get the Free Guide →</a>
+        <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-outline-light" onclick="trackEvent('book_call_click',{location:'cyber_risk_mid'})">Book a Free Call Instead</a>
+      </div>
+    </div>
     <h2>What Good Looks Like</h2>
     <p>Effective cybersecurity for an Irish SMB does not require a large budget or a dedicated internal security team. The core elements include: managed endpoint detection and response, email security and anti-phishing controls, multi-factor authentication on all systems, automated patch management, tested backup and recovery, and a documented incident response plan.</p>
     <h2>The Bottom Line</h2>
@@ -1012,27 +1020,4 @@
   document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){b.parentElement.classList.toggle('open');});});
   // Mobile nav toggle + dropdown tap
   (function(){
-    var toggle = document.querySelector('.nav-toggle');
-    var links = document.querySelector('.nav-links');
-    if (toggle && links) {
-      toggle.addEventListener('click', function(){
-        var open = links.classList.toggle('open');
-        toggle.classList.toggle('open', open);
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    }
-    // On mobile, tapping a dropdown trigger toggles its submenu (desktop uses hover)
-    document.querySelectorAll('.nav-dd-trigger').forEach(function(t){
-      t.addEventListener('click', function(e){
-        if (window.innerWidth <= 960) {
-          e.preventDefault();
-          t.parentElement.classList.toggle('open');
-        }
-      });
-    });
-  })();
-
-  </script>
-
-</body>
-</html>
+    var togg
