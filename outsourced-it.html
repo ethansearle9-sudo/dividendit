@@ -13,7 +13,7 @@
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Outsourced IT for Irish Business Owners: The Guide to Building Value | Dividend IT</title>
-  <meta name="description" content="A business owner's guide to outsourced IT in Ireland — how the right IT partner protects, strengthens and grows the value of your business. Security, efficiency and long-term value, explained without jargon." />
+  <meta name="description" content="Outsourced IT for Irish businesses: what it costs, what you get, and how the right partner protects and builds value. Plain-English guide for Irish business owners." />
   <meta property="og:title" content="Outsourced IT for Irish Business Owners: The Guide to Building Value" />
   <meta property="og:description" content="How the right outsourced IT partner protects, strengthens and grows the value of your Irish business — security, efficiency and value, without the jargon." />
   <meta property="og:type" content="article" />
@@ -1033,12 +1033,12 @@
   </div>
 </footer>
 <script>
-  trackEvent('page_view', { page_title: 'Article — Cyber Risk Facing Irish SMBs', page_location: location.href, page_path: location.pathname });
+  trackEvent('page_view', { page_title: 'Outsourced IT — Dividend IT', page_location: location.href, page_path: location.pathname });
   function scrollToStat(id){var el=document.getElementById(id);if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.style.transition='background 0.3s';el.style.background='var(--accent-green-light)';setTimeout(function(){el.style.background='';},1500);}}
   function submitGuideForm(e){e.preventDefault();var email=document.getElementById('guide-email').value;trackEvent('generate_lead',{method:'guide_download',currency:'EUR',value:1});fetch('https://formspree.io/f/xlgvqpbb',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,source:'Dividend IT Lead Magnet'})}).catch(function(){});window.location.href='/guide';}
   var _sd={};
-  window.addEventListener('scroll',function(){var pct=(window.scrollY+window.innerHeight)/document.body.scrollHeight*100;[50,75,90].forEach(function(m){if(pct>=m&&!_sd[m]){_sd[m]=true;trackEvent('scroll_depth',{page_id:'cyber-risk',percent:m});}});},{passive:true});
-  document.addEventListener('click',function(ev){var l=ev.target.closest&&ev.target.closest('a[href*="calendly.com"]');if(!l)return;var label=(l.textContent||'Book a Call').trim().replace(/\s+/g,' ').slice(0,60);trackEvent('book_call_click',{button_label:label,location:'cyber-risk'});},true);
+  window.addEventListener('scroll',function(){var pct=(window.scrollY+window.innerHeight)/document.body.scrollHeight*100;[50,75,90].forEach(function(m){if(pct>=m&&!_sd[m]){_sd[m]=true;trackEvent('scroll_depth',{page_id:'outsourced-it',percent:m});}});},{passive:true});
+  document.addEventListener('click',function(ev){var l=ev.target.closest&&ev.target.closest('a[href*="calendly.com"]');if(!l)return;var label=(l.textContent||'Book a Call').trim().replace(/\s+/g,' ').slice(0,60);trackEvent('book_call_click',{button_label:label,location:'outsourced-it'});},true);
   var reveals=document.querySelectorAll('.reveal');if(reveals.length){var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1});reveals.forEach(function(el){obs.observe(el);});}
   function initReveal(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');});}
   document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){b.parentElement.classList.toggle('open');});});
@@ -1050,20 +1050,4 @@
       toggle.addEventListener('click', function(){
         var open = links.classList.toggle('open');
         toggle.classList.toggle('open', open);
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    }
-    // On mobile, tapping a dropdown trigger toggles its submenu (desktop uses hover)
-    document.querySelectorAll('.nav-dd-trigger').forEach(function(t){
-      t.addEventListener('click', function(e){
-        if (window.innerWidth <= 960) {
-          e.preventDefault();
-          t.parentElement.classList.toggle('open');
-        }
-      });
-    });
-  })();
-
-  </script>
-</body>
-</html>
+        toggle.setAttribute('aria-expanded', open ? 'true' : 
