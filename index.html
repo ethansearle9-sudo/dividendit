@@ -146,13 +146,13 @@
       padding: 1rem 1.5rem 1.5rem; min-width: 980px;
       display: flex; gap: 0;
       opacity: 0; visibility: hidden; pointer-events: none;
-      transition: opacity 0.18s 0s, visibility 0s 0.18s;
+      transition: opacity 0.18s, visibility 0s 0.18s;
       z-index: 200;
     }
     .nav-dd:hover .nav-mega-menu,
     .nav-dd.open .nav-mega-menu {
       opacity: 1; visibility: visible; pointer-events: auto;
-      transition: opacity 0.18s 0.18s, visibility 0s 0.18s;
+      transition: opacity 0.18s;
     }
     /* Suppress re-open immediately after navigation */
     .nav-dd.nav-closing .nav-mega-menu,

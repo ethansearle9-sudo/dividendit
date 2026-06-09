@@ -179,13 +179,13 @@
       padding: 1rem 1.5rem 1.5rem; min-width: 980px;
       display: flex; gap: 0;
       opacity: 0; visibility: hidden; pointer-events: none;
-      transition: opacity 0.18s 0s, visibility 0s 0.18s;
+      transition: opacity 0.18s, visibility 0s 0.18s;
       z-index: 200;
     }
     .nav-dd:hover .nav-mega-menu,
     .nav-dd.open .nav-mega-menu {
       opacity: 1; visibility: visible; pointer-events: auto;
-      transition: opacity 0.18s 0.18s, visibility 0s 0.18s;
+      transition: opacity 0.18s;
     }
     /* Suppress re-open immediately after navigation */
     /* ── HERO ── */
@@ -1009,6 +1009,25 @@
     </ul>
   </div>
 </nav>
+<script>
+(function(){
+  /* Close mega menu when a link inside it is clicked, and suppress re-open briefly */
+  document.querySelectorAll('.nav-mega-menu a').forEach(function(a){
+    a.addEventListener('click', function(){
+      var dd = this.closest('.nav-dd');
+      if(dd){ dd.classList.add('nav-closing'); }
+    });
+  });
+  /* Hamburger toggle */
+  var toggle = document.querySelector('.nav-toggle');
+  var links  = document.querySelector('.nav-links');
+  if(toggle) toggle.addEventListener('click', function(){
+    toggle.classList.toggle('open');
+    links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', links.classList.contains('open'));
+  });
+})();
+</script>
 <script>
 (function(){
   /* Close mega menu when a link inside it is clicked, and suppress re-open briefly */
