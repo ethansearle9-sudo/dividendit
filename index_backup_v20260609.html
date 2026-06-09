@@ -136,69 +136,6 @@
     .nav-toggle.open span:nth-child(2) { opacity: 0; }
     .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
-    /* ── MEGA MENU ── */
-    .nav-mega-menu {
-      position: absolute; top: calc(100% + 10px); left: 0;
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 10px; box-shadow: 0 16px 40px rgba(0,0,0,0.11);
-      padding: 1.5rem; min-width: 580px;
-      display: flex; gap: 2rem;
-      opacity: 0; visibility: hidden;
-      transition: opacity 0.18s, transform 0.18s;
-      transform: translateY(6px);
-      z-index: 200;
-    }
-    .nav-dd:hover .nav-mega-menu,
-    .nav-dd.open .nav-mega-menu {
-      opacity: 1; visibility: visible; transform: translateY(0);
-    }
-    .nav-mega-col { flex: 1; min-width: 0; }
-    .nav-mega-col--right { border-left: 1px solid var(--border); padding-left: 1.75rem; min-width: 195px; flex: 0 0 195px; }
-    .nav-mega-label {
-      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.09em;
-      text-transform: uppercase; color: var(--text-muted);
-      padding: 0 0.75rem 0.6rem; display: block;
-      border-bottom: 1px solid var(--border); margin-bottom: 0.4rem;
-    }
-    .nav-mega-menu ul { list-style: none; }
-    .nav-mega-menu ul a {
-      display: block; padding: 0.5rem 0.75rem; border-radius: 6px;
-      font-size: 0.83rem; color: var(--text-body); transition: background 0.14s, color 0.14s;
-    }
-    .nav-mega-menu ul a:hover { background: var(--off-white); color: var(--accent-green); }
-    .nav-mega-divider { height: 1px; background: var(--border); margin: 0.4rem 0.75rem; }
-    .nav-mega-sublabel {
-      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.07em;
-      text-transform: uppercase; color: var(--text-muted);
-      padding: 0.6rem 0.75rem 0.2rem; display: block;
-    }
-    /* Protect flyout */
-    .nav-sub-dd { position: relative; }
-    .nav-sub-trigger {
-      display: flex; align-items: center; justify-content: space-between;
-      width: 100%; padding: 0.5rem 0.75rem; border-radius: 6px;
-      font-size: 0.83rem; font-weight: 500; color: var(--text-body);
-      background: none; border: none; font-family: var(--font-body);
-      cursor: pointer; transition: background 0.14s, color 0.14s;
-      letter-spacing: 0.01em;
-    }
-    .nav-sub-trigger:hover { background: var(--off-white); color: var(--accent-green); }
-    .nav-sub-trigger svg { width: 8px; height: 8px; opacity: 0.5; flex-shrink: 0; }
-    .nav-sub-menu {
-      position: absolute; top: -0.5rem; left: calc(100% + 6px);
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.10);
-      padding: 0.5rem; min-width: 230px; list-style: none;
-      opacity: 0; visibility: hidden; transition: opacity 0.14s;
-      z-index: 300;
-    }
-    .nav-sub-dd:hover .nav-sub-menu,
-    .nav-sub-dd.open .nav-sub-menu { opacity: 1; visibility: visible; }
-    .nav-sub-menu a {
-      display: block; padding: 0.5rem 0.85rem; border-radius: 6px;
-      font-size: 0.83rem; color: var(--text-body); transition: background 0.14s, color 0.14s;
-    }
-    .nav-sub-menu a:hover { background: var(--off-white); color: var(--accent-green); }
 
     /* ── HERO ── */
     #hero-legacy-unused {
@@ -825,23 +762,6 @@
       }
       .nav-dd:hover .nav-dd-menu { transform: none; }
       .nav-dd-trigger svg { display: none; }
-      /* Mega menu on mobile: stack columns vertically */
-      .nav-mega-menu {
-        position: static; transform: none; opacity: 1; visibility: visible;
-        box-shadow: none; border: none; padding: 0 0 0.5rem 0.85rem;
-        flex-direction: column; gap: 0.5rem; min-width: 0; background: none;
-      }
-      .nav-dd:hover .nav-mega-menu, .nav-dd.open .nav-mega-menu { transform: none; }
-      .nav-mega-col--right { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 0.75rem; min-width: 0; flex: 1; }
-      .nav-mega-label { padding-left: 0; }
-      .nav-mega-menu ul a { padding-left: 0; }
-      /* Protect sub-menu on mobile: static */
-      .nav-sub-menu {
-        position: static; transform: none; opacity: 1; visibility: visible;
-        box-shadow: none; border: none; padding: 0 0 0 0.85rem;
-        min-width: 0; background: none;
-      }
-      .nav-sub-trigger { padding-left: 0; font-weight: 600; color: var(--text-muted); font-size: 0.8rem; }
       .nav-cta { display: inline-block; text-align: center; margin-top: 0.25rem; }
       .journey-tabs { width: 100%; }
       .journey-tab { flex: 1; text-align: center; padding: 0.75rem 1rem; }
@@ -1077,55 +997,9 @@
     <div style="display:flex;flex-direction:column;gap:2px;"><a href="/" class="nav-logo">Dividend<span>IT</span></a><div style="font-size:0.65rem;color:var(--text-muted);letter-spacing:0.02em;font-family:var(--font-body);font-weight:400;line-height:1;">Outsourced Cybersecurity &amp; IT</div></div>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <ul class="nav-links">
-
-      <!-- Solutions mega-menu -->
-      <li class="nav-dd">
-        <button class="nav-dd-trigger" aria-haspopup="true">Solutions <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
-        <div class="nav-mega-menu">
-
-          <!-- Left col: Cyber Security -->
-          <div class="nav-mega-col">
-            <span class="nav-mega-label">Outsourced Cyber Security</span>
-            <ul>
-              <li><a href="/fully-managed-cyber">Fully Managed Cyber Security</a></li>
-              <li><a href="/co-managed-cyber">Co-Managed Cyber Security</a></li>
-            </ul>
-            <div class="nav-mega-divider"></div>
-            <span class="nav-mega-sublabel">Products</span>
-            <ul>
-              <li><a href="/iam">Identity &amp; Access Management (IAM)</a></li>
-              <li class="nav-sub-dd">
-                <button class="nav-sub-trigger">Protect <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
-                <ul class="nav-sub-menu">
-                  <li><a href="/endpoint-security">Endpoint Security</a></li>
-                  <li><a href="/network-security">Network Security</a></li>
-                  <li><a href="/detection-response">Detection &amp; Response</a></li>
-                  <li><a href="/backup-dr">Recover (Backup &amp; DR)</a></li>
-                  <li><a href="/governance-cyber">Governance</a></li>
-                </ul>
-              </li>
-              <li><a href="/cyber-risk-assessment">Cyber Risk Assessment</a></li>
-              <li><a href="/pen-testing">Pen Testing</a></li>
-              <li><a href="/ma-cyber-due-diligence">M&amp;A Cyber Due Diligence</a></li>
-            </ul>
-          </div>
-
-          <!-- Right col: Managed IT -->
-          <div class="nav-mega-col nav-mega-col--right">
-            <span class="nav-mega-label">Managed IT</span>
-            <ul>
-              <li><a href="/outsourced-it">Outsourced IT</a></li>
-              <li><a href="/microsoft-solutions">Microsoft Solutions</a></li>
-              <li><a href="/cloud">Cloud</a></li>
-              <li><a href="/it-consulting">IT Consulting &amp; Projects</a></li>
-              <li><a href="/communication-collaboration">Communication &amp; Collaboration</a></li>
-            </ul>
-          </div>
-
-        </div>
-      </li>
-
       <li><a href="/#journey">Who We Serve</a></li>
+      <li><a href="/services">Services</a></li>
+      <li><a href="/outsourced-it">Outsourced IT</a></li>
       <li class="nav-dd">
         <button class="nav-dd-trigger" aria-haspopup="true">Tools <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
         <ul class="nav-dd-menu">
@@ -1389,65 +1263,4 @@
   </div>
 </footer>
 <script>
-  trackEvent('page_view', { page_title: 'Home — IT That Pays Back', page_location: location.href, page_path: location.pathname });
-  function scrollToStat(id){var el=document.getElementById(id);if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.style.transition='background 0.3s';el.style.background='var(--accent-green-light)';setTimeout(function(){el.style.background='';},1500);}}
-  // Journey stage tabs (Value Creator / Entrepreneur / Startup)
-  function switchTab(stage){
-    document.querySelectorAll('.journey-tab').forEach(function(t){t.classList.remove('active');});
-    document.querySelectorAll('.journey-panel').forEach(function(p){p.classList.remove('active');});
-    var panel=document.getElementById('panel-'+stage);
-    if(panel)panel.classList.add('active');
-    // activate the clicked tab
-    document.querySelectorAll('.journey-tab').forEach(function(t){
-      if(t.getAttribute('onclick')&&t.getAttribute('onclick').indexOf("'"+stage+"'")!==-1)t.classList.add('active');
-    });
-    trackEvent('journey_tab',{stage:stage});
-  }
-  function submitGuideForm(e){e.preventDefault();var email=document.getElementById('guide-email').value;trackEvent('generate_lead',{method:'guide_download',currency:'EUR',value:1});fetch('https://formspree.io/f/xlgvqpbb',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,source:'Dividend IT Lead Magnet'})}).catch(function(){});window.location.href='/guide';}
-  function submitMidGuideForm(e){e.preventDefault();var email=document.getElementById('mid-guide-email').value;trackEvent('generate_lead',{method:'guide_download',currency:'EUR',value:1,location:'mid_page_home'});fetch('https://formspree.io/f/xlgvqpbb',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:email,source:'Dividend IT Lead Magnet — Homepage Mid'})}).catch(function(){});window.location.href='/guide';}
-  var _sd={};
-  window.addEventListener('scroll',function(){var pct=(window.scrollY+window.innerHeight)/document.body.scrollHeight*100;[50,75,90].forEach(function(m){if(pct>=m&&!_sd[m]){_sd[m]=true;trackEvent('scroll_depth',{page_id:'home',percent:m});}});},{passive:true});
-  document.addEventListener('click',function(ev){var l=ev.target.closest&&ev.target.closest('a[href*="calendly.com"]');if(!l)return;var label=(l.textContent||'Book a Call').trim().replace(/\s+/g,' ').slice(0,60);trackEvent('book_call_click',{button_label:label,location:'home'});},true);
-  var reveals=document.querySelectorAll('.reveal');if(reveals.length){var obs=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:0.1});reveals.forEach(function(el){obs.observe(el);});}
-  function initReveal(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');});}
-  document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){b.parentElement.classList.toggle('open');});});
-  // Mobile nav toggle + dropdown tap
-  (function(){
-    var toggle = document.querySelector('.nav-toggle');
-    var links = document.querySelector('.nav-links');
-    if (toggle && links) {
-      toggle.addEventListener('click', function(){
-        var open = links.classList.toggle('open');
-        toggle.classList.toggle('open', open);
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    }
-    // On mobile, tapping a dropdown trigger toggles its submenu (desktop uses hover)
-    document.querySelectorAll('.nav-dd-trigger').forEach(function(t){
-      t.addEventListener('click', function(e){
-        if (window.innerWidth <= 960) {
-          e.preventDefault();
-          t.parentElement.classList.toggle('open');
-        }
-      });
-    });
-  })();
-
-  
-  // Segment selector (Who this is for)
-  document.querySelectorAll('.sp-seg-tab').forEach(function(tab){
-    tab.addEventListener('click', function(){
-      var seg = tab.getAttribute('data-seg');
-      document.querySelectorAll('.sp-seg-tab').forEach(function(t){ t.classList.remove('active'); });
-      document.querySelectorAll('.sp-seg-panel').forEach(function(p){ p.classList.remove('active'); });
-      tab.classList.add('active');
-      var panel = document.querySelector('.sp-seg-panel[data-panel="'+seg+'"]');
-      if(panel) panel.classList.add('active');
-      try{ trackEvent('segment_select',{segment:seg}); }catch(e){}
-    });
-  });
-
-</script>
-
-</body>
-</html>
+  trackEvent('page_view', { page_title: 'Home — IT That Pays Back', page_loca

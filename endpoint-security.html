@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRJXMHZ0N7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NRJXMHZ0N7', { send_page_view: false });
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Endpoint Security for Irish Business — EDR, Patching & Email Security | Dividend IT</title>
+  <meta name="description" content="Protect every device in your business with managed EDR, automated patching, cyber awareness training and email security from Dividend IT Ireland." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <link rel="canonical" href="https://dividendit.com/endpoint-security" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white: #ffffff; --off-white: #f8f8f6; --light-grey: #f0efed;
+      --mid-grey: #e2e0dc; --text-muted: #8a8780; --text-body: #3d3c3a;
+      --text-dark: #1a1917; --accent-green: #2d6a4f; --accent-green-light: #e8f4ef;
+      --border: #e2e0dc; --font-display: 'DM Serif Display', serif;
+      --font-body: 'DM Sans', sans-serif; --max-w: 1160px; --radius: 4px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text-body); background: var(--white);
+      font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,0.96); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border); padding: 0 2rem; }
+    .nav-inner { max-width: var(--max-w); margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { font-family: var(--font-display); font-size: 1.35rem; color: var(--text-dark);
+      text-decoration: none; letter-spacing: -0.01em; }
+    .nav-logo span { color: var(--accent-green); }
+    .nav-links { display: flex; align-items: center; gap: 1.9rem; list-style: none; }
+    .nav-links > li { position: relative; }
+    .nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--text-body);
+      text-decoration: none; letter-spacing: 0.01em; transition: color 0.2s; white-space: nowrap; }
+    .nav-links a:hover { color: var(--accent-green); }
+    .nav-dd-trigger { display: inline-flex; align-items: center; gap: 0.3rem;
+      cursor: pointer; font-size: 0.875rem; font-weight: 500; color: var(--text-body);
+      transition: color 0.2s; background: none; border: none; font-family: var(--font-body);
+      padding: 0; letter-spacing: 0.01em; }
+    .nav-dd-trigger:hover { color: var(--accent-green); }
+    .nav-dd-trigger svg { width: 10px; height: 10px; transition: transform 0.2s; }
+    .nav-dd:hover .nav-dd-trigger svg { transform: rotate(180deg); }
+    .nav-dd-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(8px);
+      background: var(--white); border: 1px solid var(--border); border-radius: 8px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.10); padding: 0.5rem; min-width: 190px;
+      opacity: 0; visibility: hidden; transition: opacity 0.18s, transform 0.18s; list-style: none; }
+    .nav-dd:hover .nav-dd-menu, .nav-dd.open .nav-dd-menu {
+      opacity: 1; visibility: visible; transform: translateX(-50%) translateY(2px); }
+    .nav-dd-menu li { display: block; }
+    .nav-dd-menu a { display: block; padding: 0.6rem 0.85rem; border-radius: 6px;
+      font-size: 0.85rem; color: var(--text-body); transition: background 0.15s, color 0.15s; }
+    .nav-dd-menu a:hover { background: var(--off-white); color: var(--accent-green); }
+    .nav-cta { background: var(--text-dark) !important; color: var(--white) !important;
+      padding: 0.55rem 1.25rem !important; border-radius: var(--radius) !important;
+      transition: background 0.2s !important; }
+    .nav-cta:hover { background: var(--accent-green) !important; }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer;
+      padding: 0.4rem; flex-direction: column; gap: 4px; }
+    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text-dark);
+      border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+    /* Mega menu */
+    .nav-mega-menu { position: absolute; top: calc(100% + 10px); left: 0;
+      background: var(--white); border: 1px solid var(--border); border-radius: 10px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.11); padding: 1.5rem; min-width: 580px;
+      display: flex; gap: 2rem; opacity: 0; visibility: hidden;
+      transition: opacity 0.18s, transform 0.18s; transform: translateY(6px); z-index: 200; }
+    .nav-dd:hover .nav-mega-menu, .nav-dd.open .nav-mega-menu {
+      opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-mega-col { flex: 1; min-width: 0; }
+    .nav-mega-col--right { border-left: 1px solid var(--border); padding-left: 1.75rem;
+      min-width: 195px; flex: 0 0 195px; }
+    .nav-mega-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.09em;
+      text-transform: uppercase; color: var(--text-muted); padding: 0 0.75rem 0.6rem;
+      display: block; border-bottom: 1px solid var(--border); margin-bottom: 0.4rem; }
+    .nav-mega-menu ul { list-style: none; }
+    .nav-mega-menu ul a { display: block; padding: 0.5rem 0.75rem; border-radius: 6px;
+      font-size: 0.83rem; color: var(--text-body); transition: background 0.14s, color 0.14s; }
+    .nav-mega-menu ul a:hover { background: var(--off-white); color: var(--accent-green); }
+    .nav-mega-divider { height: 1px; background: var(--border); margin: 0.4rem 0.75rem; }
+    .nav-mega-sublabel { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--text-muted); padding: 0.6rem 0.75rem 0.2rem; display: block; }
+    .nav-sub-dd { position: relative; }
+    .nav-sub-trigger { display: flex; align-items: center; justify-content: space-between;
+      width: 100%; padding: 0.5rem 0.75rem; border-radius: 6px; font-size: 0.83rem;
+      font-weight: 500; color: var(--text-body); background: none; border: none;
+      font-family: var(--font-body); cursor: pointer; transition: background 0.14s, color 0.14s;
+      letter-spacing: 0.01em; }
+    .nav-sub-trigger:hover { background: var(--off-white); color: var(--accent-green); }
+    .nav-sub-trigger svg { width: 8px; height: 8px; opacity: 0.5; flex-shrink: 0; }
+    .nav-sub-menu { position: absolute; top: -0.5rem; left: calc(100% + 6px);
+      background: var(--white); border: 1px solid var(--border); border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.10); padding: 0.5rem; min-width: 230px;
+      list-style: none; opacity: 0; visibility: hidden; transition: opacity 0.14s; z-index: 300; }
+    .nav-sub-dd:hover .nav-sub-menu, .nav-sub-dd.open .nav-sub-menu { opacity: 1; visibility: visible; }
+    .nav-sub-menu a { display: block; padding: 0.5rem 0.85rem; border-radius: 6px;
+      font-size: 0.83rem; color: var(--text-body); transition: background 0.14s, color 0.14s; }
+    .nav-sub-menu a:hover { background: var(--off-white); color: var(--accent-green); }
+    /* Page content */
+    .page-wrap { max-width: var(--max-w); margin: 0 auto; padding: 120px 2rem 80px; }
+    h1 { font-family: var(--font-display); font-size: clamp(2rem,4vw,3rem);
+      line-height: 1.1; letter-spacing: -0.02em; color: var(--text-dark); margin-bottom: 1.25rem; }
+    h1 em { font-style: italic; color: var(--accent-green); }
+    h2 { font-family: var(--font-display); font-size: 1.6rem; color: var(--text-dark);
+      margin: 2.5rem 0 0.75rem; }
+    h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin: 1.5rem 0 0.4rem; }
+    p { margin-bottom: 1rem; max-width: 680px; }
+    .eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent-green); margin-bottom: 1rem; display: block; }
+    .lead { font-size: 1.15rem; color: var(--text-body); line-height: 1.7; max-width: 640px; margin-bottom: 2rem; }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 0.6rem; list-style: none; margin: 1rem 0 2rem; }
+    .pill-list li { background: var(--accent-green-light); color: var(--accent-green);
+      padding: 0.35rem 0.85rem; border-radius: 100px; font-size: 0.82rem; font-weight: 500; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1.5rem; margin: 2rem 0; }
+    .card { background: var(--off-white); border-radius: 8px; padding: 1.5rem; }
+    .card h3 { margin-top: 0; }
+    .card p { font-size: 0.9rem; margin-bottom: 0; }
+    .cta-strip { background: var(--text-dark); color: var(--white); border-radius: 10px;
+      padding: 2.5rem; margin-top: 4rem; display: flex; align-items: center;
+      justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .cta-strip h2 { font-family: var(--font-display); font-size: 1.6rem; color: var(--white); margin: 0; }
+    .cta-strip p { color: rgba(255,255,255,0.7); margin: 0.5rem 0 0; max-width: none; }
+    .btn-primary { display: inline-block; background: var(--accent-green); color: var(--white);
+      padding: 0.75rem 1.75rem; border-radius: var(--radius); font-weight: 600;
+      font-size: 0.9rem; text-decoration: none; transition: opacity 0.2s; white-space: nowrap; }
+    .btn-primary:hover { opacity: 0.88; }
+    footer { border-top: 1px solid var(--border); padding: 2.5rem 2rem;
+      font-size: 0.82rem; color: var(--text-muted); text-align: center; }
+    footer a { color: var(--text-muted); text-decoration: none; }
+    footer a:hover { color: var(--accent-green); }
+    @media (max-width: 960px) {
+      .nav-toggle { display: flex; }
+      .nav-links { position: fixed; top: 68px; left: 0; right: 0;
+        background: var(--white); border-bottom: 1px solid var(--border);
+        flex-direction: column; align-items: stretch; gap: 0;
+        padding: 0.5rem 1.25rem 1.25rem; box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+        max-height: calc(100vh - 68px); overflow-y: auto; display: none; }
+      .nav-links.open { display: flex; }
+      .nav-links > li { width: 100%; border-bottom: 1px solid var(--border); }
+      .nav-links > li:last-child { border-bottom: none; padding-top: 0.75rem; }
+      .nav-links a, .nav-dd-trigger { padding: 0.9rem 0; width: 100%; font-size: 0.95rem; }
+      .nav-dd-trigger { justify-content: space-between; }
+      .nav-dd-menu { position: static; transform: none; opacity: 1; visibility: visible;
+        box-shadow: none; border: none; padding: 0 0 0.5rem 0.85rem; min-width: 0; background: none; }
+      .nav-dd:hover .nav-dd-menu { transform: none; }
+      .nav-dd-trigger svg { display: none; }
+      .nav-mega-menu { position: static; transform: none; opacity: 1; visibility: visible;
+        box-shadow: none; border: none; padding: 0 0 0.5rem 0.85rem;
+        flex-direction: column; gap: 0.5rem; min-width: 0; background: none; }
+      .nav-mega-col--right { border-left: none; border-top: 1px solid var(--border);
+        padding-left: 0; padding-top: 0.75rem; min-width: 0; flex: 1; }
+      .nav-mega-label { padding-left: 0; }
+      .nav-mega-menu ul a { padding-left: 0; }
+      .nav-sub-menu { position: static; transform: none; opacity: 1; visibility: visible;
+        box-shadow: none; border: none; padding: 0 0 0 0.85rem; min-width: 0; background: none; }
+      .nav-sub-trigger { padding-left: 0; font-weight: 600; color: var(--text-muted); font-size: 0.8rem; }
+      .nav-cta { display: inline-block; text-align: center; margin-top: 0.25rem; }
+      .cta-strip { flex-direction: column; gap: 1.25rem; }
+    }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div style="display:flex;flex-direction:column;gap:2px;"><a href="/" class="nav-logo">Dividend<span>IT</span></a><div style="font-size:0.65rem;color:var(--text-muted);letter-spacing:0.02em;font-family:var(--font-body);font-weight:400;line-height:1;">Outsourced Cybersecurity &amp; IT</div></div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">Solutions <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <div class="nav-mega-menu">
+          <div class="nav-mega-col">
+            <span class="nav-mega-label">Outsourced Cyber Security</span>
+            <ul>
+              <li><a href="/fully-managed-cyber">Fully Managed Cyber Security</a></li>
+              <li><a href="/co-managed-cyber">Co-Managed Cyber Security</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Products</span>
+            <ul>
+              <li><a href="/iam">Identity &amp; Access Management (IAM)</a></li>
+              <li class="nav-sub-dd">
+                <button class="nav-sub-trigger">Protect <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+                <ul class="nav-sub-menu">
+                  <li><a href="/endpoint-security">Endpoint Security</a></li>
+                  <li><a href="/network-security">Network Security</a></li>
+                  <li><a href="/detection-response">Detection &amp; Response</a></li>
+                  <li><a href="/backup-dr">Recover (Backup &amp; DR)</a></li>
+                  <li><a href="/governance-cyber">Governance</a></li>
+                </ul>
+              </li>
+              <li><a href="/cyber-risk-assessment">Cyber Risk Assessment</a></li>
+              <li><a href="/pen-testing">Pen Testing</a></li>
+              <li><a href="/ma-cyber-due-diligence">M&amp;A Cyber Due Diligence</a></li>
+            </ul>
+          </div>
+          <div class="nav-mega-col nav-mega-col--right">
+            <span class="nav-mega-label">Managed IT</span>
+            <ul>
+              <li><a href="/outsourced-it">Outsourced IT</a></li>
+              <li><a href="/microsoft-solutions">Microsoft Solutions</a></li>
+              <li><a href="/cloud">Cloud</a></li>
+              <li><a href="/it-consulting">IT Consulting &amp; Projects</a></li>
+              <li><a href="/communication-collaboration">Communication &amp; Collaboration</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li><a href="/#journey">Who We Serve</a></li>
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">Tools <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <ul class="nav-dd-menu">
+          <li><a href="/cost-calculator">Cost Calculator</a></li>
+          <li><a href="/value-calculator">Value Calculator</a></li>
+        </ul>
+      </li>
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">Insights <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <ul class="nav-dd-menu">
+          <li><a href="/#tools">Calculators</a></li>
+          <li><a href="/#about">About</a></li>
+        </ul>
+      </li>
+      <li><a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="nav-cta">Book a Call</a></li>
+    </ul>
+  </div>
+</nav>
+<main>
+<div class="page-wrap">
+  <span class="eyebrow">Cyber Security · Protect</span>
+  <h1>Endpoint<br><em>Security</em></h1>
+  <p class="lead">Your endpoints — laptops, desktops, mobile devices — are the most common entry point for attacks. We deploy and manage enterprise-grade EDR (Endpoint Detection & Response), automate patching across your fleet, train your team to spot threats, and lock down inbound and outbound email.</p>
+  <div class="card-grid"><div class="card"><h3>EDR (Endpoint Detection & Response)</h3><p>AI-powered threat detection that catches what traditional antivirus misses — and automatically contains threats.</p></div><div class="card"><h3>Automated Patch Management</h3><p>Every device, every application — patched on schedule. No more 'I'll do it later'.</p></div><div class="card"><h3>Cyber Awareness Training</h3><p>Monthly simulated phishing and micro-training keeps your team as your strongest security asset, not your weakest link.</p></div><div class="card"><h3>Email Security (Inbound & Outbound)</h3><p>Block phishing, malware, spoofing and data leaks at the email gateway — before they reach inboxes.</p></div></div>
+  
+  <div class="cta-strip">
+    <div>
+      <h2>Ready to get started?</h2>
+      <p>Book a free 30-minute call. No jargon, no lock-in.</p>
+    </div>
+    <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary">Book a Free Call</a>
+  </div>
+</div>
+</main>
+<footer>
+  <p>© 2025 Dividend IT · <a href="/">Home</a> · <a href="mailto:hello@dividendit.com">hello@dividendit.com</a></p>
+</footer>
+
+  <script>
+    // Hamburger toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    if (toggle) toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', links.classList.contains('open'));
+    });
+  </script>
+
+</body>
+</html>
