@@ -107,39 +107,16 @@
       border-radius: 0 0 10px 10px; box-shadow: 0 16px 40px rgba(0,0,0,0.11);
       padding: 1rem 1.5rem 1.5rem; min-width: 980px;
       display: flex; gap: 0;
-      opacity: 0; visibility: hidden;
-      transition: opacity 0.18s;
+      opacity: 0; visibility: hidden; pointer-events: none;
+      transition: opacity 0.18s 0s, visibility 0s 0.18s;
       z-index: 200;
     }
     .nav-dd:hover .nav-mega-menu,
     .nav-dd.open .nav-mega-menu {
-      opacity: 1; visibility: visible;
+      opacity: 1; visibility: visible; pointer-events: auto;
+      transition: opacity 0.18s 0.18s, visibility 0s 0.18s;
     }
-    .nav-mega-col { flex: 1 1 0; min-width: 290px; padding-right: 1.5rem; }
-    .nav-mega-col--right { flex: 1 1 0; min-width: 290px; border-left: 1px solid var(--border); padding-left: 1.5rem; padding-right: 1.5rem; }
-    .nav-mega-col--right:last-child { padding-right: 0; }
-    .nav-mega-label {
-      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.09em;
-      text-transform: uppercase; color: var(--text-muted);
-      padding: 0 0.75rem 0.6rem; display: block;
-      border-bottom: 1px solid var(--border); margin-bottom: 0.4rem;
-      text-decoration: none;
-    }
-    a.nav-mega-label:hover { color: var(--accent-green); }
-    .nav-mega-menu ul { list-style: none; }
-    .nav-mega-menu ul a {
-      display: block; padding: 0.5rem 0.75rem; border-radius: 6px;
-      font-size: 0.83rem; color: var(--text-body); transition: background 0.14s, color 0.14s;
-      pointer-events: auto; position: relative; z-index: 1;
-    }
-    .nav-mega-menu ul a:hover { background: var(--off-white); color: var(--accent-green); }
-    .nav-mega-divider { height: 1px; background: var(--border); margin: 0.4rem 0.75rem; }
-    .nav-mega-sublabel {
-      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.07em;
-      text-transform: uppercase; color: var(--text-muted);
-      padding: 0.6rem 0.75rem 0.2rem; display: block;
-    }
-    /* Flat mega menu — no nested dropdowns */
+    /* Suppress re-open immediately after navigation */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --white: #ffffff; --off-white: #f8f8f6; --light-grey: #f0efed;
@@ -278,6 +255,25 @@
     </ul>
   </div>
 </nav>
+<script>
+(function(){
+  /* Close mega menu when a link inside it is clicked, and suppress re-open briefly */
+  document.querySelectorAll('.nav-mega-menu a').forEach(function(a){
+    a.addEventListener('click', function(){
+      var dd = this.closest('.nav-dd');
+      if(dd){ dd.classList.add('nav-closing'); }
+    });
+  });
+  /* Hamburger toggle */
+  var toggle = document.querySelector('.nav-toggle');
+  var links  = document.querySelector('.nav-links');
+  if(toggle) toggle.addEventListener('click', function(){
+    toggle.classList.toggle('open');
+    links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', links.classList.contains('open'));
+  });
+})();
+</script>
 <main>
 <div class="page-wrap">
   <span class="eyebrow">Outsourced IT · Advisory</span>
@@ -296,14 +292,5 @@
 <footer>
   <p>© 2025 Dividend IT · <a href="/">Home</a> · <a href="mailto:hello@dividendit.com">hello@dividendit.com</a></p>
 </footer>
-<script>
-  const toggle = document.querySelector('.nav-toggle');
-  const links = document.querySelector('.nav-links');
-  if (toggle) toggle.addEventListener('click', () => {
-    toggle.classList.toggle('open');
-    links.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', links.classList.contains('open'));
-  });
-</script>
 </body>
 </html>

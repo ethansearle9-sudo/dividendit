@@ -365,6 +365,25 @@
     </ul>
   </div>
 </nav>
+<script>
+(function(){
+  /* Close mega menu when a link inside it is clicked, and suppress re-open briefly */
+  document.querySelectorAll('.nav-mega-menu a').forEach(function(a){
+    a.addEventListener('click', function(){
+      var dd = this.closest('.nav-dd');
+      if(dd){ dd.classList.add('nav-closing'); }
+    });
+  });
+  /* Hamburger toggle */
+  var toggle = document.querySelector('.nav-toggle');
+  var links  = document.querySelector('.nav-links');
+  if(toggle) toggle.addEventListener('click', function(){
+    toggle.classList.toggle('open');
+    links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', links.classList.contains('open'));
+  });
+})();
+</script>
 
 <main>
 
