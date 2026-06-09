@@ -1152,11 +1152,20 @@
 </nav>
 <script>
 (function(){
-  /* Close mega menu when a link inside it is clicked, and suppress re-open briefly */
+  /* Clean up nav-closing on page restore (back/forward cache) */
+  window.addEventListener('pageshow', function(){
+    document.querySelectorAll('.nav-dd.nav-closing').forEach(function(el){
+      el.classList.remove('nav-closing');
+    });
+  });
+  /* Close mega menu when a link inside it is clicked */
   document.querySelectorAll('.nav-mega-menu a').forEach(function(a){
     a.addEventListener('click', function(){
       var dd = this.closest('.nav-dd');
-      if(dd){ dd.classList.add('nav-closing'); }
+      if(dd){
+        dd.classList.add('nav-closing');
+        setTimeout(function(){ dd.classList.remove('nav-closing'); }, 800);
+      }
     });
   });
   /* Hamburger toggle */
