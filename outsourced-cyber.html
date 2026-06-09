@@ -11,7 +11,7 @@
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Outsourced Cyber Security for Irish Business | Dividend IT</title>
-  <meta name="description" content="Outsourced cyber security for Irish businesses. Dividend IT manages your entire security posture — detection, response, compliance and governance — so you can focus on the business." />
+  <meta name="description" content="Full-stack outsourced cyber security for Irish SMEs. Dividend IT manages your entire security posture — detection, response, identity, compliance and governance." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
@@ -144,45 +144,56 @@
       --white: #ffffff; --off-white: #f8f8f6; --light-grey: #f0efed;
       --mid-grey: #e2e0dc; --text-muted: #8a8780; --text-body: #3d3c3a;
       --text-dark: #1a1917; --accent-green: #2d6a4f; --accent-green-light: #e8f4ef;
-      --accent-green-mid: #b7dac9;
-      --border: #e2e0dc; --font-display: 'DM Serif Display', serif;
-      --font-body: 'DM Sans', sans-serif; --max-w: 1160px; --radius: 4px;
+      --accent-green-mid: #b7dac9; --border: #e2e0dc;
+      --font-display: 'DM Serif Display', serif; --font-body: 'DM Sans', sans-serif;
+      --max-w: 1160px; --radius: 4px;
     }
     html { scroll-behavior: smooth; }
     body { font-family: var(--font-body); color: var(--text-body); background: var(--white);
       font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
     .page-wrap { max-width: var(--max-w); margin: 0 auto; padding: 120px 2rem 80px; }
-    h1 { font-family: var(--font-display); font-size: clamp(2rem,4vw,3rem);
-      line-height: 1.1; letter-spacing: -0.02em; color: var(--text-dark); margin-bottom: 1.25rem; }
+    h1 { font-family: var(--font-display); font-size: clamp(2.2rem,4.5vw,3.4rem);
+      line-height: 1.08; letter-spacing: -0.025em; color: var(--text-dark); margin-bottom: 1.5rem; }
     h1 em { font-style: italic; color: var(--accent-green); }
-    h2 { font-family: var(--font-display); font-size: 1.6rem; color: var(--text-dark); margin: 2.5rem 0 0.75rem; }
-    h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin: 1.5rem 0 0.4rem; }
+    h2 { font-family: var(--font-display); font-size: clamp(1.4rem,2.5vw,1.9rem);
+      color: var(--text-dark); margin: 3.5rem 0 1rem; letter-spacing: -0.015em; }
     p { margin-bottom: 1rem; max-width: 680px; }
-    .eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em;
+    .eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em;
       text-transform: uppercase; color: var(--accent-green); margin-bottom: 1rem; display: block; }
-    .lead { font-size: 1.15rem; color: var(--text-body); line-height: 1.7; max-width: 640px; margin-bottom: 2rem; }
-    .card-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1.5rem; margin: 2rem 0; }
-    .card { background: var(--off-white); border-radius: 8px; padding: 1.5rem; }
-    .card h3 { margin-top: 0; }
-    .card p { font-size: 0.9rem; margin-bottom: 0; }
-    .link-list { list-style: none; margin: 1.5rem 0 2rem; display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 0.5rem; }
-    .link-list a { display: flex; align-items: center; gap: 0.5rem; padding: 0.65rem 0.85rem; border: 1px solid var(--border); border-radius: 6px; font-size: 0.88rem; font-weight: 500; color: var(--text-body); text-decoration: none; transition: border-color 0.15s, color 0.15s; }
-    .link-list a:hover { border-color: var(--accent-green); color: var(--accent-green); }
-    .link-list a::before { content: "→"; color: var(--accent-green); font-size: 0.8rem; }
-    .cta-strip { background: var(--text-dark); color: var(--white); border-radius: 10px;
-      padding: 2.5rem; margin-top: 4rem; display: flex; align-items: center;
+    .lead { font-size: 1.15rem; color: var(--text-body); line-height: 1.75; max-width: 660px; margin-bottom: 3rem; }
+    /* Card grid — value props */
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1.5rem; margin-bottom: 1rem; }
+    .card { background: var(--off-white); border-radius: 10px; padding: 1.75rem; }
+    .card h3 { font-size: 1rem; font-weight: 600; color: var(--text-dark); margin: 0 0 0.5rem; }
+    .card p { font-size: 0.88rem; margin: 0; color: var(--text-body); }
+    /* Service rows — two columns, clean list */
+    .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.1rem 2rem; margin: 1.25rem 0 2rem; }
+    .service-grid a { display: flex; align-items: center; gap: 0.6rem; padding: 0.6rem 0;
+      font-size: 0.92rem; font-weight: 500; color: var(--text-body); text-decoration: none;
+      border-bottom: 1px solid var(--border); transition: color 0.15s; }
+    .service-grid a:hover { color: var(--accent-green); }
+    .service-grid a::before { content: "→"; font-size: 0.75rem; color: var(--accent-green); flex-shrink: 0; }
+    /* Divider */
+    .section-divider { height: 1px; background: var(--border); margin: 0.5rem 0 0; }
+    /* CTA */
+    .cta-strip { background: var(--text-dark); color: var(--white); border-radius: 12px;
+      padding: 3rem; margin-top: 5rem; display: flex; align-items: center;
       justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
-    .cta-strip h2 { font-family: var(--font-display); font-size: 1.6rem; color: var(--white); margin: 0; }
-    .cta-strip p { color: rgba(255,255,255,0.7); margin: 0.5rem 0 0; max-width: none; }
+    .cta-strip h2 { font-family: var(--font-display); font-size: 1.75rem; color: var(--white);
+      margin: 0; letter-spacing: -0.01em; }
+    .cta-strip p { color: rgba(255,255,255,0.65); margin: 0.5rem 0 0; max-width: none; font-size: 0.95rem; }
     .btn-primary { display: inline-block; background: var(--accent-green); color: var(--white);
-      padding: 0.75rem 1.75rem; border-radius: var(--radius); font-weight: 600;
+      padding: 0.85rem 2rem; border-radius: var(--radius); font-weight: 600;
       font-size: 0.9rem; text-decoration: none; transition: opacity 0.2s; white-space: nowrap; }
     .btn-primary:hover { opacity: 0.88; }
     footer { border-top: 1px solid var(--border); padding: 2.5rem 2rem;
       font-size: 0.82rem; color: var(--text-muted); text-align: center; }
     footer a { color: var(--text-muted); text-decoration: none; }
     footer a:hover { color: var(--accent-green); }
-    @media (max-width: 960px) { .cta-strip { flex-direction: column; gap: 1.25rem; } }
+    @media (max-width: 640px) {
+      .service-grid { grid-template-columns: 1fr; }
+      .cta-strip { flex-direction: column; }
+    }
   </style>
 </head>
 <body>
@@ -237,7 +248,7 @@
               <li><a href="/proactive-pc">Proactive PC Support</a></li>
               <li><a href="/proactive-server">Proactive Server Support</a></li>
               <li><a href="/network-wifi">Seamless Network</a></li>
-              <li><a href="/wifi">WiFi</a></li>
+              <li><a href="/wifi">Seamless WiFi</a></li>
               <li><a href="/it-procurement">IT Procurement</a></li>
             </ul>
             <div class="nav-mega-divider"></div>
@@ -281,44 +292,59 @@
 </nav>
 <main>
 <div class="page-wrap">
-  <span class="eyebrow">Outsourced Cyber Security · Ireland</span>
-  <h1>Outsourced<br><em>Cyber Security</em></h1>
-  <p class="lead">Half of Irish SMBs were hit by a cyber attack last year. Most had a provider — they just didn't have the right one. Dividend IT takes full ownership of your security posture: detection, response, compliance, identity and governance, under one roof, for one monthly fee.</p>
 
-  <h2>How we protect your business</h2>
+  <span class="eyebrow">Outsourced Cyber Security · Ireland</span>
+  <h1>Security that works<br>while <em>you work.</em></h1>
+  <p class="lead">Half of Irish SMBs were hit by a cyber attack last year. Most had a provider. They just didn't have the right one. Dividend IT takes full ownership of your security posture — detection, response, identity, governance — one partner, one monthly fee, zero gaps.</p>
+
   <div class="card-grid">
-    <div class="card"><h3>Fully Managed</h3><p>We own your entire security environment. You get enterprise-grade protection without the enterprise headcount or cost.</p></div>
-    <div class="card"><h3>Co-Managed</h3><p>Already have an internal team? We plug in as your expert security layer — tools, threat intelligence and specialist depth.</p></div>
-    <div class="card"><h3>Always-On Monitoring</h3><p>24/7 detection and response across your endpoints, network and identities. Threats contained before they become incidents.</p></div>
-    <div class="card"><h3>One Point of Accountability</h3><p>No finger-pointing between vendors. One partner owns the outcome and answers for it.</p></div>
+    <div class="card">
+      <h3>Full Ownership</h3>
+      <p>We own your security environment end-to-end. No finger-pointing between vendors — one partner answers for the outcome.</p>
+    </div>
+    <div class="card">
+      <h3>Always-On Coverage</h3>
+      <p>24/7 monitoring across endpoints, network and identities. Threats contained before they become incidents.</p>
+    </div>
+    <div class="card">
+      <h3>Built for Irish SMEs</h3>
+      <p>Enterprise-grade security at a fixed monthly fee scaled to your headcount — not a budget designed for a Fortune 500.</p>
+    </div>
+    <div class="card">
+      <h3>No Jargon, No Lock-In</h3>
+      <p>Plain-English reporting to you and your board. Month-to-month contracts — we earn your business every month.</p>
+    </div>
   </div>
 
-  <h2>Managed Security Services</h2>
-  <ul class="link-list">
-    <li><a href="/fully-managed-cyber">Fully Managed Cyber Security</a></li>
-    <li><a href="/co-managed-cyber">Co-Managed Cyber Security</a></li>
-    <li><a href="/iam">Identity &amp; Access Management (IAM)</a></li>
-    <li><a href="/endpoint-security">Endpoint Security</a></li>
-    <li><a href="/network-security">Network Security</a></li>
-    <li><a href="/detection-response">Detection &amp; Response</a></li>
-    <li><a href="/backup-dr">Recover (Backup &amp; DR)</a></li>
-    <li><a href="/governance-cyber">Governance</a></li>
-  </ul>
+  <h2>Managed Security</h2>
+  <div class="section-divider"></div>
+  <div class="service-grid">
+    <a href="/fully-managed-cyber">Fully Managed Cyber Security</a>
+    <a href="/co-managed-cyber">Co-Managed Cyber Security</a>
+    <a href="/iam">Identity &amp; Access Management</a>
+    <a href="/endpoint-security">Endpoint Security</a>
+    <a href="/network-security">Network Security</a>
+    <a href="/detection-response">Detection &amp; Response</a>
+    <a href="/backup-dr">Recover (Backup &amp; DR)</a>
+    <a href="/governance-cyber">Governance</a>
+  </div>
 
   <h2>Advisory</h2>
-  <ul class="link-list">
-    <li><a href="/cyber-risk-assessment">Cyber Risk Assessment</a></li>
-    <li><a href="/pen-testing">Pen Testing</a></li>
-    <li><a href="/ma-cyber-due-diligence">M&amp;A Cyber Due Diligence</a></li>
-  </ul>
+  <div class="section-divider"></div>
+  <div class="service-grid">
+    <a href="/cyber-risk-assessment">Cyber Risk Assessment</a>
+    <a href="/pen-testing">Pen Testing</a>
+    <a href="/ma-cyber-due-diligence">M&amp;A Cyber Due Diligence</a>
+  </div>
 
   <div class="cta-strip">
     <div>
-      <h2>Find out where you're exposed</h2>
+      <h2>Find out where you're exposed.</h2>
       <p>Book a free 30-minute call. We'll tell you exactly where your risks are — no jargon, no obligation.</p>
     </div>
     <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary">Book a Free Call</a>
   </div>
+
 </div>
 </main>
 <footer>
@@ -326,7 +352,7 @@
 </footer>
 <script>
   const toggle = document.querySelector('.nav-toggle');
-  const links = document.querySelector('.nav-links');
+  const links  = document.querySelector('.nav-links');
   if (toggle) toggle.addEventListener('click', () => {
     toggle.classList.toggle('open');
     links.classList.toggle('open');
