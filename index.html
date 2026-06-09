@@ -172,39 +172,62 @@
       text-transform: uppercase; color: var(--text-muted);
       padding: 0.6rem 0.75rem 0.2rem; display: block;
     }
-    /* Protect flyout */
+    /* Protect — inline expand */
     .nav-sub-dd { position: relative; }
     .nav-sub-trigger {
       display: flex; align-items: center; justify-content: space-between;
       width: 100%; padding: 0.5rem 0.75rem; border-radius: 6px;
       font-size: 0.83rem; font-weight: 500; color: var(--text-body);
       background: none; border: none; font-family: var(--font-body);
-      cursor: pointer; transition: background 0.14s, color 0.14s;
-      letter-spacing: 0.01em;
+      cursor: pointer; transition: background 0.14s, color 0.14s; letter-spacing: 0.01em;
     }
     .nav-sub-trigger:hover,
     .nav-sub-dd:hover .nav-sub-trigger { background: var(--off-white); color: var(--accent-green); }
-    .nav-sub-trigger svg { width: 8px; height: 8px; opacity: 0.5; flex-shrink: 0; }
+    .nav-sub-trigger .arrow { width: 8px; height: 8px; opacity: 0.45; flex-shrink: 0; transition: transform 0.15s; }
+    .nav-sub-dd:hover .nav-sub-trigger .arrow { transform: rotate(90deg); }
     .nav-sub-menu {
-      position: absolute; top: 0; left: 100%;
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.10);
-      padding: 0.5rem; min-width: 230px; list-style: none;
-      opacity: 0; visibility: hidden; transition: opacity 0.14s;
-      z-index: 300;
-    }
-    /* Bridge: invisible padding on left of sub-menu so mouse can travel from trigger to menu */
-    .nav-sub-menu::before {
-      content: ''; position: absolute; top: 0; left: -8px;
-      width: 8px; height: 100%;
+      display: none; list-style: none;
+      padding: 0.2rem 0 0.2rem 1rem;
+      border-left: 2px solid var(--accent-green-mid);
+      margin: 0.1rem 0 0.1rem 0.75rem;
     }
     .nav-sub-dd:hover .nav-sub-menu,
-    .nav-sub-dd.open .nav-sub-menu { opacity: 1; visibility: visible; }
+    .nav-sub-dd.open .nav-sub-menu { display: block; }
+    .nav-sub-menu > li { position: relative; }
     .nav-sub-menu a {
-      display: block; padding: 0.5rem 0.85rem; border-radius: 6px;
-      font-size: 0.83rem; color: var(--text-body); transition: background 0.14s, color 0.14s;
+      display: block; padding: 0.4rem 0.6rem; border-radius: 6px;
+      font-size: 0.81rem; color: var(--text-body); transition: background 0.14s, color 0.14s;
     }
     .nav-sub-menu a:hover { background: var(--off-white); color: var(--accent-green); }
+    /* Endpoint & Network Security — side flyouts within Protect */
+    .nav-fly-trigger {
+      display: flex; align-items: center; justify-content: space-between;
+      width: 100%; padding: 0.4rem 0.6rem; border-radius: 6px;
+      font-size: 0.81rem; font-weight: 500; color: var(--text-body);
+      background: none; border: none; font-family: var(--font-body);
+      cursor: pointer; transition: background 0.14s, color 0.14s; letter-spacing: 0.01em;
+    }
+    .nav-fly-trigger:hover,
+    .nav-fly-dd:hover .nav-fly-trigger { background: var(--off-white); color: var(--accent-green); }
+    .nav-fly-trigger svg { width: 7px; height: 7px; opacity: 0.4; flex-shrink: 0; }
+    .nav-fly-menu {
+      position: absolute; top: 0; left: calc(100% + 4px);
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.11);
+      padding: 0.5rem; min-width: 220px; list-style: none;
+      opacity: 0; visibility: hidden; transition: opacity 0.14s; z-index: 400;
+    }
+    /* Bridge so mouse can cross the gap */
+    .nav-fly-menu::before {
+      content: ''; position: absolute; top: 0; left: -8px; width: 8px; height: 100%;
+    }
+    .nav-fly-dd:hover .nav-fly-menu,
+    .nav-fly-dd.open .nav-fly-menu { opacity: 1; visibility: visible; }
+    .nav-fly-menu a {
+      display: block; padding: 0.45rem 0.75rem; border-radius: 6px;
+      font-size: 0.8rem; color: var(--text-body); transition: background 0.14s, color 0.14s;
+    }
+    .nav-fly-menu a:hover { background: var(--off-white); color: var(--accent-green); }
 
     /* ── HERO ── */
     #hero-legacy-unused {
@@ -1101,10 +1124,24 @@
             <ul>
               <li><a href="/iam">Identity &amp; Access Management (IAM)</a></li>
               <li class="nav-sub-dd">
-                <button class="nav-sub-trigger">Protect <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+                <button class="nav-sub-trigger">Protect <svg class="arrow" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
                 <ul class="nav-sub-menu">
-                  <li><a href="/endpoint-security">Endpoint Security</a></li>
-                  <li><a href="/network-security">Network Security</a></li>
+                  <li class="nav-fly-dd">
+                    <button class="nav-fly-trigger">Endpoint Security <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+                    <ul class="nav-fly-menu">
+                      <li><a href="/endpoint-security#edr">EDR (Endpoint Detection &amp; Response)</a></li>
+                      <li><a href="/endpoint-security#patching">Patch Management</a></li>
+                      <li><a href="/endpoint-security#training">Cyber Awareness Training</a></li>
+                      <li><a href="/endpoint-security#email">Email Security (In &amp; Outbound)</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-fly-dd">
+                    <button class="nav-fly-trigger">Network Security <svg viewBox="0 0 6 10" fill="none"><path d="M1 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+                    <ul class="nav-fly-menu">
+                      <li><a href="/network-security#firewall">Firewall Management</a></li>
+                      <li><a href="/network-security#network">Secure Network &amp; WiFi</a></li>
+                    </ul>
+                  </li>
                   <li><a href="/detection-response">Detection &amp; Response</a></li>
                   <li><a href="/backup-dr">Recover (Backup &amp; DR)</a></li>
                   <li><a href="/governance-cyber">Governance</a></li>
