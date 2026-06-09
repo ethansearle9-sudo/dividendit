@@ -10,116 +10,156 @@
     gtag('config', 'G-NRJXMHZ0N7', { send_page_view: false });
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fully Managed Cyber Security Framework for Irish SMEs | Dividend IT</title>
-  <meta name="description" content="A complete, fully managed cyber security framework built for Irish SMEs. Dividend IT owns your cyber risk end-to-end — so you can focus on the business." />
+  <title>IT Strategy for Irish Business | Dividend IT</title>
+  <meta name="description" content="Align your technology to your business goals. Dividend IT develops practical, actionable IT strategies for Irish SMEs — no fluff, clear priorities." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
-  <link rel="canonical" href="https://dividendit.com/fully-managed-cyber" />
+  <link rel="canonical" href="https://dividendit.com/it-strategy" />
   <style>
+/* ── NAV ── */
+    /* ── NAV (grouped dropdowns + mobile hamburger) ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+    }
+    .nav-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: flex; align-items: center;
+      height: 68px;
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.35rem; color: var(--text-dark);
+      text-decoration: none; letter-spacing: -0.01em;
+    }
+    .nav-logo span { color: var(--accent-green); }
+    .nav-links { display: flex; align-items: center; gap: 1.1rem; list-style: none; margin-left: 2.5rem; }
+    .nav-links > li:last-child { margin-left: auto; }
+    .nav-links > li { position: relative; }
+    .nav-links a {
+      font-size: 0.875rem; font-weight: 500;
+      color: var(--text-body); text-decoration: none;
+      letter-spacing: 0.01em; transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { color: var(--accent-green); }
+    /* Dropdown trigger */
+    .nav-dd-trigger {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      cursor: pointer; font-size: 0.875rem; font-weight: 500;
+      color: var(--text-body); transition: color 0.2s;
+      background: none; border: none; font-family: var(--font-body);
+      padding: 0; letter-spacing: 0.01em;
+    }
+    .nav-dd-trigger:hover { color: var(--accent-green); }
+    .nav-dd-trigger svg { width: 10px; height: 10px; transition: transform 0.2s; }
+    .nav-dd:hover .nav-dd-trigger svg { transform: rotate(180deg); }
+    /* Dropdown menu */
+    .nav-dd-menu {
+      position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(8px);
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 8px; box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+      padding: 0.5rem; min-width: 190px;
+      opacity: 0; visibility: hidden; transition: opacity 0.18s, transform 0.18s;
+      list-style: none;
+    }
+    .nav-dd:hover .nav-dd-menu,
+    .nav-dd.open .nav-dd-menu {
+      opacity: 1; visibility: visible; transform: translateX(-50%) translateY(2px);
+    }
+    .nav-dd-menu li { display: block; }
+    .nav-dd-menu a {
+      display: block; padding: 0.6rem 0.85rem; border-radius: 6px;
+      font-size: 0.85rem; color: var(--text-body); transition: background 0.15s, color 0.15s;
+    }
+    .nav-dd-menu a:hover { background: var(--off-white); color: var(--accent-green); }
+    .nav-cta {
+      background: var(--text-dark) !important;
+      color: var(--white) !important;
+      padding: 0.55rem 1.25rem !important;
+      border-radius: var(--radius) !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--accent-green) !important; }
+    /* Hamburger */
+    .nav-toggle {
+      display: none; background: none; border: none; cursor: pointer;
+      padding: 0.4rem; flex-direction: column; gap: 4px;
+    }
+    .nav-toggle span {
+      display: block; width: 22px; height: 2px; background: var(--text-dark);
+      border-radius: 2px; transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* ── MEGA MENU ── */
+    /* No gap between nav bar and menu — use padding-top for visual breathing room */
+    .nav-mega-menu {
+      position: absolute; top: 100%; left: 0;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 0 0 10px 10px; box-shadow: 0 16px 40px rgba(0,0,0,0.11);
+      padding: 1rem 1.5rem 1.5rem; min-width: 980px;
+      display: flex; gap: 0;
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.18s;
+      z-index: 200;
+    }
+    .nav-dd:hover .nav-mega-menu,
+    .nav-dd.open .nav-mega-menu {
+      opacity: 1; visibility: visible;
+    }
+    .nav-mega-col { flex: 1 1 0; min-width: 290px; padding-right: 1.5rem; }
+    .nav-mega-col--right { flex: 1 1 0; min-width: 290px; border-left: 1px solid var(--border); padding-left: 1.5rem; padding-right: 1.5rem; }
+    .nav-mega-col--right:last-child { padding-right: 0; }
+    .nav-mega-label {
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.09em;
+      text-transform: uppercase; color: var(--text-muted);
+      padding: 0 0.75rem 0.6rem; display: block;
+      border-bottom: 1px solid var(--border); margin-bottom: 0.4rem;
+    }
+    .nav-mega-menu ul { list-style: none; }
+    .nav-mega-menu ul a {
+      display: block; padding: 0.5rem 0.75rem; border-radius: 6px;
+      font-size: 0.83rem; color: var(--text-body); transition: background 0.14s, color 0.14s;
+      pointer-events: auto; position: relative; z-index: 1;
+    }
+    .nav-mega-menu ul a:hover { background: var(--off-white); color: var(--accent-green); }
+    .nav-mega-divider { height: 1px; background: var(--border); margin: 0.4rem 0.75rem; }
+    .nav-mega-sublabel {
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--text-muted);
+      padding: 0.6rem 0.75rem 0.2rem; display: block;
+    }
+    /* Flat mega menu — no nested dropdowns */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --white: #ffffff; --off-white: #f8f8f6; --light-grey: #f0efed;
       --mid-grey: #e2e0dc; --text-muted: #8a8780; --text-body: #3d3c3a;
       --text-dark: #1a1917; --accent-green: #2d6a4f; --accent-green-light: #e8f4ef;
+      --accent-green-mid: #b7dac9;
       --border: #e2e0dc; --font-display: 'DM Serif Display', serif;
       --font-body: 'DM Sans', sans-serif; --max-w: 1160px; --radius: 4px;
     }
     html { scroll-behavior: smooth; }
     body { font-family: var(--font-body); color: var(--text-body); background: var(--white);
       font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(255,255,255,0.96); backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border); padding: 0 2rem; }
-    .nav-inner { max-width: var(--max-w); margin: 0 auto;
-      display: flex; align-items: center; height: 68px; }
-    .nav-logo { font-family: var(--font-display); font-size: 1.35rem; color: var(--text-dark);
-      text-decoration: none; letter-spacing: -0.01em; }
-    .nav-logo span { color: var(--accent-green); }
-    .nav-links { display: flex; align-items: center; gap: 1.1rem; list-style: none; margin-left: 2.5rem; }
-    .nav-links > li:last-child { margin-left: auto; }
-    .nav-links > li { position: relative; }
-    .nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--text-body);
-      text-decoration: none; letter-spacing: 0.01em; transition: color 0.2s; white-space: nowrap; }
-    .nav-links a:hover { color: var(--accent-green); }
-    .nav-dd-trigger { display: inline-flex; align-items: center; gap: 0.3rem;
-      cursor: pointer; font-size: 0.875rem; font-weight: 500; color: var(--text-body);
-      transition: color 0.2s; background: none; border: none; font-family: var(--font-body);
-      padding: 0; letter-spacing: 0.01em; }
-    .nav-dd-trigger:hover { color: var(--accent-green); }
-    .nav-dd-trigger svg { width: 10px; height: 10px; transition: transform 0.2s; }
-    .nav-dd:hover .nav-dd-trigger svg { transform: rotate(180deg); }
-    .nav-dd-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(8px);
-      background: var(--white); border: 1px solid var(--border); border-radius: 8px;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.10); padding: 0.5rem; min-width: 190px;
-      opacity: 0; visibility: hidden; transition: opacity 0.18s, transform 0.18s; list-style: none; }
-    .nav-dd:hover .nav-dd-menu, .nav-dd.open .nav-dd-menu {
-      opacity: 1; visibility: visible; transform: translateX(-50%) translateY(2px); }
-    .nav-dd-menu li { display: block; }
-    .nav-dd-menu a { display: block; padding: 0.6rem 0.85rem; border-radius: 6px;
-      font-size: 0.85rem; color: var(--text-body); transition: background 0.15s, color 0.15s; }
-    .nav-dd-menu a:hover { background: var(--off-white); color: var(--accent-green); }
-    .nav-cta { background: var(--text-dark) !important; color: var(--white) !important;
-      padding: 0.55rem 1.25rem !important; border-radius: var(--radius) !important;
-      transition: background 0.2s !important; }
-    .nav-cta:hover { background: var(--accent-green) !important; }
-    .nav-toggle { display: none; background: none; border: none; cursor: pointer;
-      padding: 0.4rem; flex-direction: column; gap: 4px; }
-    .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--text-dark);
-      border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
-    .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-    .nav-toggle.open span:nth-child(2) { opacity: 0; }
-    .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-    /* Mega menu */
-    .nav-mega-menu { position: absolute; top: 100%; left: 0;
-      background: var(--white); border: 1px solid var(--border); border-radius: 0 0 10px 10px;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.11); padding: 1rem 1.5rem 1.5rem; min-width: 980px;
-      display: flex; gap: 0; opacity: 0; visibility: hidden;
-      transition: opacity 0.18s; z-index: 200; }
-    .nav-dd:hover .nav-mega-menu, .nav-dd.open .nav-mega-menu {
-      opacity: 1; visibility: visible; }
-    .nav-mega-col { flex: 1 1 0; min-width: 290px; padding-right: 1.5rem; }
-    .nav-mega-col--right { flex: 1 1 0; min-width: 290px; border-left: 1px solid var(--border); padding-left: 1.5rem; padding-right: 1.5rem; }
-    .nav-mega-col--right:last-child { padding-right: 0; }
-    .nav-mega-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.09em;
-      text-transform: uppercase; color: var(--text-muted); padding: 0 0.75rem 0.6rem;
-      display: block; border-bottom: 1px solid var(--border); margin-bottom: 0.4rem; }
-    .nav-mega-menu ul { list-style: none; }
-    .nav-mega-menu ul a { display: block; padding: 0.5rem 0.75rem; border-radius: 6px;
-      font-size: 0.83rem; color: var(--text-body); transition: background 0.14s, color 0.14s; }
-    .nav-mega-menu ul a:hover { background: var(--off-white); color: var(--accent-green); }
-    .nav-mega-divider { height: 1px; background: var(--border); margin: 0.4rem 0.75rem; }
-    .nav-mega-sublabel { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.07em;
-      text-transform: uppercase; color: var(--text-muted); padding: 0.6rem 0.75rem 0.2rem; display: block; }
-    .nav-sub-dd { position: relative; }
-    .nav-sub-trigger:hover,
-    .nav-sub-dd:hover .nav-sub-trigger { background: var(--off-white); color: var(--accent-green); }
-    .nav-sub-trigger svg { width: 8px; height: 8px; opacity: 0.5; flex-shrink: 0; }
-    .nav-sub-menu { display: none; list-style: none;
-      padding: 0.2rem 0 0.2rem 1rem;
-      border-left: 2px solid var(--accent-green-mid);
-      margin: 0.1rem 0 0.1rem 0.75rem; }
-    .nav-sub-dd:hover .nav-sub-menu, .nav-sub-dd.open .nav-sub-menu { display: block; }
-    .nav-sub-trigger .arrow { width: 8px; height: 8px; opacity: 0.45; flex-shrink: 0; transition: transform 0.15s; }
-    .nav-sub-dd:hover .nav-sub-trigger .arrow { transform: rotate(90deg); }
-    .nav-sub-menu a { display: block; padding: 0.4rem 0.6rem; border-radius: 6px;
-      font-size: 0.81rem; color: var(--text-body); transition: background 0.14s, color 0.14s; }
-    .nav-sub-menu a:hover { background: var(--off-white); color: var(--accent-green); }
-    /* Page content */
     .page-wrap { max-width: var(--max-w); margin: 0 auto; padding: 120px 2rem 80px; }
     h1 { font-family: var(--font-display); font-size: clamp(2rem,4vw,3rem);
       line-height: 1.1; letter-spacing: -0.02em; color: var(--text-dark); margin-bottom: 1.25rem; }
     h1 em { font-style: italic; color: var(--accent-green); }
-    h2 { font-family: var(--font-display); font-size: 1.6rem; color: var(--text-dark);
-      margin: 2.5rem 0 0.75rem; }
+    h2 { font-family: var(--font-display); font-size: 1.6rem; color: var(--text-dark); margin: 2.5rem 0 0.75rem; }
     h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin: 1.5rem 0 0.4rem; }
     p { margin-bottom: 1rem; max-width: 680px; }
     .eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em;
       text-transform: uppercase; color: var(--accent-green); margin-bottom: 1rem; display: block; }
     .lead { font-size: 1.15rem; color: var(--text-body); line-height: 1.7; max-width: 640px; margin-bottom: 2rem; }
-    .pill-list { display: flex; flex-wrap: wrap; gap: 0.6rem; list-style: none; margin: 1rem 0 2rem; }
-    .pill-list li { background: var(--accent-green-light); color: var(--accent-green);
-      padding: 0.35rem 0.85rem; border-radius: 100px; font-size: 0.82rem; font-weight: 500; }
     .card-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1.5rem; margin: 2rem 0; }
     .card { background: var(--off-white); border-radius: 8px; padding: 1.5rem; }
     .card h3 { margin-top: 0; }
@@ -138,35 +178,9 @@
     footer a { color: var(--text-muted); text-decoration: none; }
     footer a:hover { color: var(--accent-green); }
     @media (max-width: 960px) {
-      .nav-toggle { display: flex; }
-      .nav-links { position: fixed; top: 68px; left: 0; right: 0;
-        background: var(--white); border-bottom: 1px solid var(--border);
-        flex-direction: column; align-items: stretch; gap: 0;
-        padding: 0.5rem 1.25rem 1.25rem; box-shadow: 0 16px 32px rgba(0,0,0,0.08);
-        max-height: calc(100vh - 68px); overflow-y: auto; display: none; }
-      .nav-links.open { display: flex; }
-      .nav-links > li { width: 100%; border-bottom: 1px solid var(--border); }
-      .nav-links > li:last-child { border-bottom: none; padding-top: 0.75rem; }
-      .nav-links a, .nav-dd-trigger { padding: 0.9rem 0; width: 100%; font-size: 0.95rem; }
-      .nav-dd-trigger { justify-content: space-between; }
-      .nav-dd-menu { position: static; transform: none; opacity: 1; visibility: visible;
-        box-shadow: none; border: none; padding: 0 0 0.5rem 0.85rem; min-width: 0; background: none; }
-      .nav-dd:hover .nav-dd-menu { transform: none; }
-      .nav-dd-trigger svg { display: none; }
-      .nav-mega-menu { position: static; transform: none; opacity: 1; visibility: visible;
-        box-shadow: none; border: none; padding: 0 0 0.5rem 0.85rem;
-        flex-direction: column; gap: 0.5rem; min-width: 0; background: none; }
-      .nav-mega-col--right { border-left: none; border-top: 1px solid var(--border);
-        padding-left: 0; padding-top: 0.75rem; min-width: 0; flex: 1; }
-      .nav-mega-label { padding-left: 0; }
-      .nav-mega-menu ul a { padding-left: 0; }
-      .nav-sub-menu { position: static; transform: none; opacity: 1; visibility: visible;
-        box-shadow: none; border: none; padding: 0 0 0 0.85rem; min-width: 0; background: none; }
-      .nav-sub-trigger { padding-left: 0; font-weight: 600; color: var(--text-muted); font-size: 0.8rem; }
-      .nav-cta { display: inline-block; text-align: center; margin-top: 0.25rem; }
       .cta-strip { flex-direction: column; gap: 1.25rem; }
     }
-</style>
+  </style>
 </head>
 <body>
 <nav>
@@ -263,11 +277,10 @@
 </nav>
 <main>
 <div class="page-wrap">
-  <span class="eyebrow">Outsourced Cyber Security · Ireland</span>
-  <h1>Fully Managed<br><em>Cyber Security</em></h1>
-  <p class="lead">You own the business — we own the cyber risk. Our Fully Managed Cyber Security Framework is purpose-built for Irish SMEs: a complete, layered defence that covers identity, endpoints, networks, email, detection and recovery — all monitored, maintained and accountable to one partner.</p>
-  <div class="card-grid"><div class="card"><h3>Complete Coverage</h3><p>Identity, endpoints, network, email security, SIEM, and backup — all managed under one framework.</p></div><div class="card"><h3>Proactive, Not Reactive</h3><p>Continuous monitoring and patch management means threats are caught before they become incidents.</p></div><div class="card"><h3>Business-Owner Reporting</h3><p>Monthly plain-English reports on your security posture — no jargon, clear accountability.</p></div><div class="card"><h3>Compliance Ready</h3><p>Aligned to CIS Controls and GDPR obligations relevant to Irish SMEs.</p></div></div>
-  
+  <span class="eyebrow">Outsourced IT · Advisory</span>
+  <h1>IT<br><em>Strategy</em></h1>
+  <p class="lead">Technology without strategy is just spending. Our IT Strategy service gives you a clear, prioritised technology roadmap that's aligned to where your business is going — with investment cases, timelines and defined outcomes at every step.</p>
+  <div class="card-grid"><div class="card"><h3>Current State Assessment</h3><p>Honest evaluation of your existing IT environment — what's working, what's not and what's holding you back.</p></div><div class="card"><h3>Business-Aligned Roadmap</h3><p>A 12-36 month technology roadmap built around your business goals, growth plans and budget reality.</p></div><div class="card"><h3>Investment Prioritisation</h3><p>Every initiative ranked by business impact and cost — so you know what to do first and why.</p></div><div class="card"><h3>Quarterly Reviews</h3><p>Strategy reviews every quarter to adapt to business change and keep your roadmap relevant.</p></div></div>
   <div class="cta-strip">
     <div>
       <h2>Ready to get started?</h2>
@@ -280,17 +293,14 @@
 <footer>
   <p>© 2025 Dividend IT · <a href="/">Home</a> · <a href="mailto:hello@dividendit.com">hello@dividendit.com</a></p>
 </footer>
-
-  <script>
-    // Hamburger toggle
-    const toggle = document.querySelector('.nav-toggle');
-    const links = document.querySelector('.nav-links');
-    if (toggle) toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      links.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', links.classList.contains('open'));
-    });
-  </script>
-
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (toggle) toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', links.classList.contains('open'));
+  });
+</script>
 </body>
 </html>
