@@ -164,6 +164,7 @@
     .nav-mega-menu ul a {
       display: block; padding: 0.5rem 0.75rem; border-radius: 6px;
       font-size: 0.83rem; color: var(--text-body); transition: background 0.14s, color 0.14s;
+      pointer-events: auto; position: relative; z-index: 1;
     }
     .nav-mega-menu ul a:hover { background: var(--off-white); color: var(--accent-green); }
     .nav-mega-divider { height: 1px; background: var(--border); margin: 0.4rem 0.75rem; }
@@ -1120,7 +1121,7 @@
               <li><a href="/co-managed-cyber">Co-Managed Cyber Security</a></li>
             </ul>
             <div class="nav-mega-divider"></div>
-            <span class="nav-mega-sublabel">Products</span>
+            <span class="nav-mega-sublabel">Services</span>
             <ul>
               <li><a href="/iam">Identity &amp; Access Management (IAM)</a></li>
               <li class="nav-sub-dd">
@@ -1142,11 +1143,11 @@
                       <li><a href="/network-security#network">Secure Network &amp; WiFi</a></li>
                     </ul>
                   </li>
-                  <li><a href="/detection-response">Detection &amp; Response</a></li>
-                  <li><a href="/backup-dr">Recover (Backup &amp; DR)</a></li>
-                  <li><a href="/governance-cyber">Governance</a></li>
                 </ul>
               </li>
+              <li><a href="/detection-response">Detection &amp; Response</a></li>
+              <li><a href="/backup-dr">Recover (Backup &amp; Disaster Recovery)</a></li>
+              <li><a href="/governance-cyber">Governance</a></li>
               <li><a href="/cyber-risk-assessment">Cyber Risk Assessment</a></li>
               <li><a href="/pen-testing">Pen Testing</a></li>
               <li><a href="/ma-cyber-due-diligence">M&amp;A Cyber Due Diligence</a></li>
