@@ -70,13 +70,13 @@
     .nav-toggle.open span:nth-child(2) { opacity: 0; }
     .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
     /* Mega menu */
-    .nav-mega-menu { position: absolute; top: calc(100% + 10px); left: 0;
-      background: var(--white); border: 1px solid var(--border); border-radius: 10px;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.11); padding: 1.5rem; min-width: 580px;
+    .nav-mega-menu { position: absolute; top: 100%; left: 0;
+      background: var(--white); border: 1px solid var(--border); border-radius: 0 0 10px 10px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.11); padding: 1rem 1.5rem 1.5rem; min-width: 580px;
       display: flex; gap: 2rem; opacity: 0; visibility: hidden;
-      transition: opacity 0.18s, transform 0.18s; transform: translateY(6px); z-index: 200; }
+      transition: opacity 0.18s; z-index: 200; }
     .nav-dd:hover .nav-mega-menu, .nav-dd.open .nav-mega-menu {
-      opacity: 1; visibility: visible; transform: translateY(0); }
+      opacity: 1; visibility: visible; }
     .nav-mega-col { flex: 1; min-width: 0; }
     .nav-mega-col--right { border-left: 1px solid var(--border); padding-left: 1.75rem;
       min-width: 195px; flex: 0 0 195px; }
@@ -96,12 +96,14 @@
       font-weight: 500; color: var(--text-body); background: none; border: none;
       font-family: var(--font-body); cursor: pointer; transition: background 0.14s, color 0.14s;
       letter-spacing: 0.01em; }
-    .nav-sub-trigger:hover { background: var(--off-white); color: var(--accent-green); }
+    .nav-sub-trigger:hover,
+    .nav-sub-dd:hover .nav-sub-trigger { background: var(--off-white); color: var(--accent-green); }
     .nav-sub-trigger svg { width: 8px; height: 8px; opacity: 0.5; flex-shrink: 0; }
-    .nav-sub-menu { position: absolute; top: -0.5rem; left: calc(100% + 6px);
+    .nav-sub-menu { position: absolute; top: 0; left: 100%;
       background: var(--white); border: 1px solid var(--border); border-radius: 8px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.10); padding: 0.5rem; min-width: 230px;
       list-style: none; opacity: 0; visibility: hidden; transition: opacity 0.14s; z-index: 300; }
+    .nav-sub-menu::before { content: ''; position: absolute; top: 0; left: -8px; width: 8px; height: 100%; }
     .nav-sub-dd:hover .nav-sub-menu, .nav-sub-dd.open .nav-sub-menu { opacity: 1; visibility: visible; }
     .nav-sub-menu a { display: block; padding: 0.5rem 0.85rem; border-radius: 6px;
       font-size: 0.83rem; color: var(--text-body); transition: background 0.14s, color 0.14s; }
