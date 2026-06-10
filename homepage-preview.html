@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage — Redesign Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white: #ffffff;
+      --off-white: #f8f8f6;
+      --mid-grey: #e2e0dc;
+      --text-muted: #8a8780;
+      --text-body: #3d3c3a;
+      --text-dark: #1a1917;
+      --accent-green: #2d6a4f;
+      --accent-green-light: #e8f4ef;
+      --accent-green-mid: #b7dac9;
+      --border: #e2e0dc;
+      --font-display: 'DM Serif Display', serif;
+      --font-body: 'DM Sans', sans-serif;
+      --max-w: 1160px;
+      --radius: 4px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--text-body);
+      background: var(--white);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── PREVIEW BANNER ── */
+    .preview-banner {
+      background: var(--accent-green);
+      color: var(--white);
+      text-align: center;
+      padding: 0.65rem 2rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+    .preview-banner span {
+      opacity: 0.65; font-weight: 400;
+      text-transform: none; letter-spacing: 0;
+      margin-left: 1.5rem;
+    }
+
+    /* ── SHARED ── */
+    .section-label {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent-green); margin-bottom: 1rem;
+    }
+    .section-label::before {
+      content: ''; display: block;
+      width: 20px; height: 1px; background: currentColor;
+    }
+    .btn-primary {
+      background: var(--text-dark); color: var(--white);
+      padding: 0.85rem 1.75rem; border-radius: var(--radius);
+      font-size: 0.9rem; font-weight: 600; text-decoration: none;
+      transition: background 0.2s, transform 0.15s; display: inline-block;
+    }
+    .btn-primary:hover { background: var(--accent-green); transform: translateY(-1px); }
+    .btn-guide {
+      color: var(--text-body); font-size: 0.9rem; font-weight: 500;
+      text-decoration: none; display: inline-flex;
+      align-items: center; gap: 0.4rem; transition: color 0.2s;
+      border-bottom: 1px solid var(--border); padding-bottom: 1px;
+    }
+    .btn-guide:hover { color: var(--accent-green); border-color: var(--accent-green); }
+
+    /* ── HERO ── */
+    .sp-hero {
+      background: var(--white);
+      padding: 100px 2rem 90px;
+    }
+    .sp-hero-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 0.9fr;
+      gap: 5rem; align-items: center;
+    }
+    .sp-hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent-green); margin-bottom: 1.5rem;
+    }
+    .sp-hero-eyebrow::before {
+      content: ''; display: block;
+      width: 20px; height: 1px; background: var(--accent-green);
+    }
+    .sp-hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 5.5vw, 4.5rem);
+      line-height: 1.06; letter-spacing: -0.025em;
+      color: var(--text-dark); margin-bottom: 1.25rem;
+    }
+    .sp-hero-title em { font-style: italic; color: var(--accent-green); }
+    .sp-hero-sub {
+      font-size: 1.05rem; color: var(--text-body);
+      line-height: 1.75; max-width: 480px; margin-bottom: 2.25rem;
+    }
+    .sp-hero-actions {
+      display: flex; gap: 1.25rem;
+      flex-wrap: wrap; align-items: center;
+      margin-bottom: 2rem;
+    }
+    .sp-hero-trust {
+      display: flex; align-items: center; gap: 0.75rem;
+      font-size: 0.78rem; color: var(--text-muted);
+    }
+    .sp-hero-trust span { opacity: 0.6; }
+
+    /* Hero right — stat cards */
+    .hero-stats {
+      display: flex; flex-direction: column; gap: 1.1rem;
+    }
+    .hero-stat-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.6rem 1.75rem;
+      transition: box-shadow 0.2s;
+    }
+    .hero-stat-card:hover {
+      box-shadow: 0 8px 28px rgba(0,0,0,0.07);
+    }
+    .hero-stat-card:nth-child(2) {
+      margin-left: 1.75rem;
+    }
+    .hero-stat-num {
+      font-family: var(--font-display);
+      font-size: 2.6rem; color: var(--text-dark);
+      line-height: 1; margin-bottom: 0.4rem;
+    }
+    .hero-stat-num span { color: var(--accent-green); }
+    .hero-stat-label {
+      font-size: 0.85rem; color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ── TRUST BAR ── */
+    .trust-bar {
+      background: var(--text-dark);
+      padding: 1.1rem 2rem;
+    }
+    .trust-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: flex; align-items: center;
+      justify-content: center;
+      gap: 2.5rem; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.72rem; font-weight: 600;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.07em; text-transform: uppercase;
+    }
+    .trust-item svg {
+      opacity: 0.45; flex-shrink: 0;
+    }
+
+    /* ── STAKES ── */
+    .sp-stakes {
+      background: var(--text-dark);
+      padding: 100px 2rem 90px;
+    }
+    .sp-stakes-inner { max-width: var(--max-w); margin: 0 auto; }
+    .sp-stakes .section-label {
+      color: var(--accent-green-mid);
+    }
+    .sp-stakes .section-label::before {
+      background: var(--accent-green-mid);
+    }
+    .sp-stakes-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4vw, 3.1rem);
+      line-height: 1.12; letter-spacing: -0.02em;
+      color: var(--white); margin-bottom: 1.25rem;
+    }
+    .sp-stakes-lead {
+      font-size: 1.12rem; line-height: 1.75;
+      color: rgba(255,255,255,0.68);
+      max-width: 600px; margin-bottom: 3.5rem;
+    }
+
+    /* Stake cards with embedded stats */
+    .sp-stakes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0; border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px; overflow: hidden;
+    }
+    .sp-stake {
+      padding: 2.25rem 2rem;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    .sp-stake:last-child { border-right: none; }
+
+    /* Big stat number replacing 01/02/03 */
+    .sp-stake-stat {
+      font-family: var(--font-display);
+      font-size: 3rem; line-height: 1;
+      color: var(--white); margin-bottom: 0.25rem;
+    }
+    .sp-stake-stat span { color: var(--accent-green-mid); }
+    .sp-stake-qualifier {
+      font-size: 0.78rem; color: rgba(255,255,255,0.38);
+      margin-bottom: 1.5rem; line-height: 1.4;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding-bottom: 1.25rem;
+    }
+    .sp-stake h4 {
+      font-size: 1.05rem; font-weight: 600;
+      color: var(--white); margin-bottom: 0.6rem;
+    }
+    .sp-stake p {
+      font-size: 0.9rem; line-height: 1.72;
+      color: rgba(255,255,255,0.58);
+    }
+
+    /* Closing pivot */
+    .sp-stakes-pivot {
+      margin-top: 3rem;
+      padding-top: 2.25rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-family: var(--font-display);
+      font-size: 1.35rem; font-style: italic;
+      color: var(--white); max-width: 640px;
+      line-height: 1.45;
+    }
+
+    /* ── THE TURN ── */
+    .sp-turn {
+      background: var(--off-white);
+      padding: 100px 2rem;
+    }
+    .sp-turn-inner {
+      max-width: 760px; margin: 0 auto;
+      text-align: center;
+    }
+    .sp-turn-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15; letter-spacing: -0.02em;
+      color: var(--text-dark); margin: 1rem 0 2.5rem;
+    }
+    .sp-turn-body { text-align: left; max-width: 660px; margin: 0 auto; }
+    .sp-turn-body p {
+      font-size: 1.08rem; line-height: 1.85;
+      color: var(--text-body); margin-bottom: 1.5rem;
+    }
+    .sp-turn-body strong { color: var(--text-dark); }
+    .sp-turn-emphasis {
+      font-size: 1.15rem !important;
+      color: var(--text-dark) !important;
+      padding: 1.5rem 0 0; margin-top: 0.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .sp-turn-emphasis em { color: var(--accent-green); font-style: italic; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .sp-hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .hero-stat-card:nth-child(2) { margin-left: 0; }
+      .sp-stakes-grid { grid-template-columns: 1fr; }
+      .sp-stake { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .sp-stake:last-child { border-bottom: none; }
+      .trust-inner { gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="preview-banner">
+  Homepage Redesign Preview
+  <span>Hero (two-column + stats) · Trust bar · Stakes (stats embedded in cards)</span>
+</div>
+
+<!-- ══════════════════════════════════
+     1. HERO — two column with stat cards
+═══════════════════════════════════════ -->
+<section class="sp-hero">
+  <div class="sp-hero-inner">
+
+    <!-- Left: copy -->
+    <div class="sp-hero-left">
+      <div class="sp-hero-eyebrow">Outsourced Cybersecurity &amp; IT · Ireland</div>
+      <h1 class="sp-hero-title">You built the business.<br>It shouldn't <em>own</em> you.</h1>
+      <p class="sp-hero-sub">Dividend IT manages your outsourced cybersecurity and IT — so your business runs faster, stays protected, and becomes more valuable. From first hire to exit, no jargon, no surprises.</p>
+      <div class="sp-hero-actions">
+        <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary">Book a Free 20-Min Call</a>
+        <a href="#" class="btn-guide">Get the Free Guide →</a>
+      </div>
+      <div class="sp-hero-trust">
+        <span>No lock-in</span>
+        <span>·</span>
+        <span>No jargon</span>
+        <span>·</span>
+        <span>No surprises</span>
+      </div>
+    </div>
+
+    <!-- Right: stat cards -->
+    <div class="sp-hero-right">
+      <div class="hero-stats">
+        <div class="hero-stat-card">
+          <div class="hero-stat-num"><span>50</span>%</div>
+          <div class="hero-stat-label">of Irish SMBs experienced a cyber attack in the past 12 months</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-num"><span>70</span>%</div>
+          <div class="hero-stat-label">of business owners who want to exit will never successfully do so</div>
+        </div>
+        <div class="hero-stat-card">
+          <div class="hero-stat-num">€<span>21</span>k</div>
+          <div class="hero-stat-label">average cost to fully remediate a cyber attack on an Irish business</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     TRUST BAR
+═══════════════════════════════════════ -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Seamlessly Secure
+    </div>
+    <div class="trust-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+      24/7 Monitoring &amp; Response
+    </div>
+    <div class="trust-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+      Business-First Thinking
+    </div>
+    <div class="trust-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      EBITDA Aligned
+    </div>
+    <div class="trust-item">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      Ireland &amp; UK
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     2. STAKES — stats embedded in cards
+═══════════════════════════════════════ -->
+<section class="sp-stakes">
+  <div class="sp-stakes-inner">
+    <div class="section-label">The real cost</div>
+    <h2 class="sp-stakes-title">The invoice is the smallest part<br>of what bad IT costs you.</h2>
+    <p class="sp-stakes-lead">Most owners treat IT as a line item. It isn't. It's the thing quietly deciding how fast you can grow, how exposed you are, and whether what you're building is worth anything to anyone else.</p>
+
+    <div class="sp-stakes-grid">
+
+      <div class="sp-stake">
+        <div class="sp-stake-stat">€<span>21</span>k</div>
+        <div class="sp-stake-qualifier">average cost to remediate a single cyber attack on an Irish business</div>
+        <h4>You're the IT manager</h4>
+        <p>You didn't hire yourself to wrangle vendors, chase tickets, and explain to your team why the VPN keeps dropping. But every week, that's exactly what's happening — and the exposure it creates costs far more than your monthly IT bill.</p>
+      </div>
+
+      <div class="sp-stake">
+        <div class="sp-stake-stat"><span>50</span>%</div>
+        <div class="sp-stake-qualifier">of Irish SMBs experienced a cyber attack in the past 12 months</div>
+        <h4>You're exposed and you know it</h4>
+        <p>You probably know your setup isn't airtight. Most providers are reactive — by the time they find the gap, the damage is done. The question isn't whether you're a target. It's whether you're ready.</p>
+      </div>
+
+      <div class="sp-stake">
+        <div class="sp-stake-stat"><span>70</span>%</div>
+        <div class="sp-stake-qualifier">of business owners who want to exit will never successfully do so</div>
+        <h4>Your IT has no return on it</h4>
+        <p>It keeps the lights on. It doesn't make you faster, safer, or more valuable. When a buyer or investor looks under the hood one day, that will show — and it will cost you more than any annual IT spend ever did.</p>
+      </div>
+
+    </div>
+
+    <p class="sp-stakes-pivot">These aren't IT problems. They're business problems — and they compound every quarter you leave them alone.</p>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     3. THE TURN — unchanged for flow
+═══════════════════════════════════════ -->
+<section class="sp-turn">
+  <div class="sp-turn-inner">
+    <div class="section-label" style="justify-content:center;">The shift</div>
+    <h2 class="sp-turn-title">Your business can be an asset —<br>not a job you can never leave.</h2>
+    <div class="sp-turn-body">
+      <p>Here's what almost no one tells an owner: it doesn't have to be this way. A business becomes <strong>valuable</strong> the moment it can run on systems instead of heroics — when culture, people, process and technology are good enough that it delivers without you holding every piece in your head.</p>
+      <p>Get that right and three things happen at once. You get your <strong>time</strong> back. You build something genuinely <strong>competitive</strong>. And you create real, transferable <strong>value</strong> — a business you could one day pass on, sell, or simply enjoy owning.</p>
+      <p class="sp-turn-emphasis">Most owners never reach for that — many don't know it's possible. We think every shareholder deserves to. Technology is one of the foundations that gets you there. That's what we mean by <em>IT that pays back</em>.</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

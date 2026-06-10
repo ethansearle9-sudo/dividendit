@@ -12,6 +12,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Co-Managed IT Support for Irish Business | Dividend IT</title>
   <meta name="description" content="Already have an internal IT person or team? Dividend IT plugs in as your expert IT layer — boosting capability without replacing your team." />
+  <meta property="og:title" content="Co-Managed IT Support for Irish Business — Dividend IT" />
+  <meta property="og:description" content="Already have an internal IT person or team? Dividend IT plugs in as your expert IT layer — boosting capability without replacing your team." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dividendit.com/co-managed-it" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
@@ -152,10 +156,20 @@
       padding: 0.75rem 1.75rem; border-radius: var(--radius); font-weight: 600;
       font-size: 0.9rem; text-decoration: none; transition: opacity 0.2s; white-space: nowrap; }
     .btn-primary:hover { opacity: 0.88; }
-    footer { border-top: 1px solid var(--border); padding: 2.5rem 2rem;
-      font-size: 0.82rem; color: var(--text-muted); text-align: center; }
-    footer a { color: var(--text-muted); text-decoration: none; }
-    footer a:hover { color: var(--accent-green); }
+    /* ── FOOTER ── */
+    footer { background: var(--text-dark); border-top: 1px solid rgba(255,255,255,0.07); padding: 3rem 2rem; }
+    .footer-inner {
+      max-width: var(--max-w); margin: 0 auto;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 1.5rem;
+    }
+    .footer-logo { font-family: var(--font-display); font-size: 1.15rem; color: var(--white); text-decoration: none; }
+    .footer-logo span { color: var(--accent-green); }
+    .footer-tagline { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-top: 0.25rem; }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.825rem; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(255,255,255,0.8); }
+    .footer-copy { font-size: 0.775rem; color: rgba(255,255,255,0.25); }
     @media (max-width: 960px) {
       .cta-strip { flex-direction: column; gap: 1.25rem; }
     }
@@ -219,6 +233,7 @@
             <div class="nav-mega-divider"></div>
             <span class="nav-mega-sublabel">Advisory</span>
             <ul>
+              <li><a href="/it-strategy">IT Strategy</a></li>
               <li><a href="/cio-as-a-service">CIO as a Service</a></li>
               <li><a href="/ma-it-strategy">M&amp;A IT Strategy</a></li>
               <li><a href="/ma-it-due-diligence">M&amp;A Due Diligence</a></li>
@@ -247,6 +262,7 @@
       <li class="nav-dd">
         <button class="nav-dd-trigger" aria-haspopup="true">Insights <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
         <ul class="nav-dd-menu">
+          <li><a href="/guide">5 Ways Guide</a></li>
           <li><a href="/#tools">Calculators</a></li>
           <li><a href="/#about">About</a></li>
         </ul>
@@ -356,7 +372,19 @@
 </div>
 </main>
 <footer>
-  <p>© 2025 Dividend IT · <a href="/">Home</a> · <a href="mailto:hello@dividendit.com">hello@dividendit.com</a></p>
+  <div class="footer-inner">
+    <div><a href="/" class="footer-logo">Dividend<span>IT</span></a>
+    <div class="footer-tagline">Outsourced Cybersecurity &amp; IT — Ireland</div></div>
+    <div class="footer-links">
+      <a href="/#journey">Who We Serve</a>
+      <a href="/#solution">Services</a>
+      <a href="/cost-calculator">Cost Calculator</a>
+      <a href="/value-calculator">Value Calculator</a>
+      <a href="/#about">About</a>
+      <a href="mailto:hello@dividendit.com">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 Dividend IT. All rights reserved.</div>
+  </div>
 </footer>
 </body>
 </html>
