@@ -14,9 +14,10 @@
     function trackEvent(name, params){ try { gtag('event', name, params || {}); } catch(e){} }
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dividend IT — Outsourced Cybersecurity & IT Ireland &amp; UK</title>
-  <meta name="description" content="Outsourced IT and cybersecurity for Irish business owners. Dividend IT protects your business, drives efficiency and builds long-term value. IT that pays back." />
-  <meta property="og:title" content="Dividend IT — Outsourced Cybersecurity & IT Ireland &amp; UK" />
+  <title>Outsourced IT &amp; Cybersecurity for Business Owners | Dividend IT</title>
+  <meta name="description" content="Outsourced IT & cybersecurity that pays back. Dividend IT protects Irish & UK businesses, drives efficiency and builds enterprise value — EBITDA-aligned, plain English, no lock-in." />
+  <link rel="canonical" href="https://dividendit.com/" />
+  <meta property="og:title" content="Outsourced IT &amp; Cybersecurity for Business Owners | Dividend IT" />
   <meta property="og:description" content="Ireland &amp; UK's outsourced cybersecurity & IT partner for business owners. IT that pays back — protecting your business, driving efficiency, building long-term value." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dividendit.com/" />
@@ -1023,6 +1024,25 @@
     .journey-cta strong { color: var(--text-dark); }
     .btn-green { display: inline-block; background: var(--accent-green); color: var(--white); padding: 0.7rem 1.35rem; border-radius: 4px; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
     .btn-green:hover { opacity: 0.88; }
+    /* FAQ */
+    .sp-faq { background: var(--off-white); padding: 90px 2rem; }
+    .sp-faq-inner { max-width: 860px; margin: 0 auto; }
+    .sp-faq .section-label { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 1rem; }
+    .sp-faq .section-label::before { content: ''; display: block; width: 20px; height: 1px; background: var(--accent-green); }
+    .faq-list { margin-top: 2.5rem; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-q { width: 100%; background: none; border: none; text-align: left; padding: 1.4rem 0; font-family: var(--font-body); font-size: 1rem; font-weight: 600; color: var(--text-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-q:hover { color: var(--accent-green); }
+    .faq-icon { flex-shrink: 0; font-size: 1.25rem; transition: transform 0.3s; color: var(--text-muted); }
+    .faq-item.open .faq-icon { transform: rotate(45deg); color: var(--accent-green); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-item.open .faq-a { max-height: 400px; padding-bottom: 1.4rem; }
+    .faq-a p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.75; }
+    .faq-a a { color: var(--accent-green); text-decoration: underline; text-underline-offset: 3px; }
+    .faq-a strong { color: var(--text-dark); }
+    @media (max-width: 860px) { .sp-faq { padding: 70px 1.25rem; } }
+
     @media (max-width: 860px) {
       .journey-panel.active { grid-template-columns: 1fr; gap: 2.5rem; }
       .journey-tabs { width: 100%; }
@@ -1127,6 +1147,76 @@
     }
 
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://dividendit.com/#org",
+        "name": "Dividend IT",
+        "url": "https://dividendit.com/",
+        "description": "Outsourced IT & cybersecurity for business owners in Ireland & UK. EBITDA-aligned technology that protects, sharpens and builds enterprise value.",
+        "email": "hello@dividendit.com",
+        "areaServed": ["IE", "GB"],
+        "founder": { "@type": "Person", "name": "Ethan Searle" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://dividendit.com/#website",
+        "url": "https://dividendit.com/",
+        "name": "Dividend IT",
+        "publisher": { "@id": "https://dividendit.com/#org" }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://dividendit.com/#service",
+        "serviceType": "Outsourced IT & Cybersecurity",
+        "provider": { "@id": "https://dividendit.com/#org" },
+        "areaServed": ["IE", "GB"],
+        "audience": { "@type": "BusinessAudience", "name": "Business owners and shareholders, 10–150 users" },
+        "description": "Fully managed and co-managed outsourced IT support and cybersecurity: 24/7 monitoring, remediation and support, EDR/MDR, backup & disaster recovery, IT strategy and vCIO — aligned to EBITDA and enterprise value.",
+        "offers": { "@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "75", "highPrice": "120", "offerCount": "3", "description": "Per user per month, all-inclusive, monthly rolling" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://dividendit.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does it cost to outsource IT support and cybersecurity?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Dividend IT packages start at €75 per user per month, fully inclusive — support, security, backup and monitoring with no hidden fees. A 25-person business on our most popular Operate package (€100/user/month) pays €2,500 per month. Compare that to the average €21k cost of remediating a single cyber attack, or the cost of one hour of downtime, and the maths tends to take care of itself." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is outsourced IT & cybersecurity?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Outsourced IT & cybersecurity means a specialist partner runs your technology for you: helpdesk support, infrastructure, security monitoring, threat detection and response, backup and disaster recovery, and technology strategy. Instead of hiring an internal team, you get a full IT department for a fixed monthly fee per user — with enterprise-grade security tooling most SMBs couldn't justify buying alone." }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to switch IT providers?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Most businesses are fully onboarded within 30 days. Dividend IT manages the migration end-to-end, including the handover from your current provider, so your team experiences minimal disruption — most barely notice the change, except that things start working better." }
+          },
+          {
+            "@type": "Question",
+            "name": "Are there long-term contracts?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No lock-in beyond a 3-month onboarding period. Dividend IT keeps clients because the service is good — not because they're contractually trapped. Annual contracts are available with a discount if you prefer that structure." }
+          },
+          {
+            "@type": "Question",
+            "name": "How is Dividend IT different from a typical IT provider?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Most IT providers focus on keeping the lights on. Dividend IT works directly with business owners and shareholders — not just IT managers — and aligns every technology decision to EBITDA, valuation and long-term business value. If your current provider has never talked to you about your exit plans or how IT spend affects your multiple, that's the difference." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my business big enough for outsourced IT?",
+            "acceptedAnswer": { "@type": "Answer", "text": "If you have between 10 and 150 people and your business depends on technology working, you're exactly the right size. The businesses that benefit most are those that have outgrown their current IT setup but haven't yet justified a full internal team." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 <nav>
@@ -1204,7 +1294,7 @@
         </div>
       </li>
 
-      <li><a href="/#journey">Who We Serve</a></li>
+      <li><a href="/#who-we-serve">Who We Serve</a></li>
       <li class="nav-dd">
         <button class="nav-dd-trigger" aria-haspopup="true">Tools <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
         <ul class="nav-dd-menu">
@@ -1408,6 +1498,7 @@
           <div class="journey-cta">
             <p><strong>Recommended package:</strong> Secure — The foundation. Seamlessly secure IT and reliable support at an accessible price point.</p>
             <a href="/services" class="btn-green">View the Secure Package →</a>
+            <p style="margin-top:1rem;margin-bottom:0;"><a href="/leo-grant" class="sp-step-link" style="font-size:0.85rem;">Using a LEO grant to fund your IT foundation →</a></p>
           </div>
         </div>
       </div>
@@ -1460,7 +1551,7 @@
   <div class="sp-journey-inner">
     <div class="section-label">The path we walk with you</div>
     <h2 class="section-title">Secure. Compete. Build value.<br>In that order.</h2>
-    <p class="section-sub">Every business we work with moves along the same path. We meet you where you are — and take you forward.</p>
+    <p class="section-sub">Every business we work with moves along the same path. Outsourced IT &amp; cybersecurity is the vehicle — building your business's value is the destination. We meet you where you are, and take you forward.</p>
     <div class="sp-journey-steps">
       <a href="/outsourced-it" class="sp-step-card">
         <div class="sp-step-stage">Step One</div>
@@ -1523,8 +1614,8 @@
   <div class="mid-guide-inner">
     <div class="mid-guide-text">
       <div class="section-label">Free resource</div>
-      <h2>5 ways your IT should be paying you back</h2>
-      <p>Most owners don't know what good IT looks like — let alone how to make it work for the business. The guide covers the five foundations every Irish SMB should have in place.</p>
+      <h2>Drive business value with your outsourced IT</h2>
+      <p>Most owners don't know what good outsourced IT &amp; cybersecurity looks like — let alone how to make it pay back. The guide covers the five foundations every growing business should have in place.</p>
       <ul class="mid-guide-points">
         <li>How to build a security foundation without a full-time IT hire</li>
         <li>What a proper IT setup actually costs vs. what you're probably spending</li>
@@ -1563,36 +1654,6 @@
         <p>See what your IT decisions are actually worth at exit — using real EBITDA multiples. The number behind "IT that pays back."</p>
         <span class="sp-step-link">See your value impact →</span>
       </a>
-    </div>
-  </div>
-</section>
-
-<!-- 7. WHO THIS IS FOR -->
-<section id="journey" class="sp-segments">
-  <div class="sp-segments-inner">
-    <div class="section-label">Wherever you are on the journey</div>
-    <h2 class="section-title">Built for owners at every stage.</h2>
-    <p class="section-sub">The pressures are different depending on where you are. We meet you there.</p>
-    <div class="sp-seg-tabs">
-      <button class="sp-seg-tab active" data-seg="creator">Value Creator</button>
-      <button class="sp-seg-tab" data-seg="entrepreneur">Entrepreneur</button>
-      <button class="sp-seg-tab" data-seg="startup">Startup</button>
-    </div>
-    <div class="sp-seg-panel active" data-panel="creator">
-      <h3>You've built something genuinely valuable. Don't let it slip away.</h3>
-      <p>You understand EBITDA as a mechanism to build value. You're thinking about acquisition, succession, or exit — and you know every decision now either protects or erodes what you've created. At this stage, IT isn't infrastructure. It's a line in your valuation and a risk in your due diligence. We make sure it holds up under any level of scrutiny.</p>
-      <a href="/exit-value" class="sp-step-link">How IT affects your exit value →</a>
-    </div>
-    <div class="sp-seg-panel" data-panel="entrepreneur">
-      <h3>You're scaling — and outgrowing how you've always done IT.</h3>
-      <p>The informal setup that got you here is starting to creak. You're hiring, winning bigger clients, and the cost of things breaking — or a security gap being exposed — is climbing fast. You need technology that scales with you and a partner who thinks ahead, not one you have to chase.</p>
-      <a href="/outsourced-it" class="sp-step-link">How outsourced IT supports growth →</a>
-    </div>
-    <div class="sp-seg-panel" data-panel="startup">
-      <h3>You're building. Get the foundations right from day one.</h3>
-      <p>The decisions you make now shape what's possible later. Getting security, systems and structure right early means you scale on solid ground — not technical debt and exposure you'll have to unpick when you can least afford the distraction.</p>
-      <a href="/startup-survival" class="sp-step-link">Why foundations matter early →</a>
-      <a href="/leo-grant" class="sp-step-link" style="margin-top:0.5rem;">Using a LEO grant to fund your IT foundation →</a>
     </div>
   </div>
 </section>
@@ -1668,6 +1729,40 @@
   </div>
 </section>
 
+<!-- FAQ — mirrors FAQPage structured data -->
+<section id="faq" class="sp-faq">
+  <div class="sp-faq-inner">
+    <div class="section-label reveal">Common questions</div>
+    <h2 class="section-title reveal">Everything you want to know<br>before you call.</h2>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this,'cost')">What does it cost to outsource IT support and cybersecurity? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Our packages start at <strong>€75 per user per month</strong> — fully inclusive: support, security, backup and monitoring, no hidden fees. A 25-person business on our most popular Operate package pays €2,500 per month. Compare that to the average €21k cost of remediating a single cyber attack — <a href="/true-cost">the maths tends to take care of itself</a>. Run your own numbers with the <a href="/cost-calculator">cost calculator</a>.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this,'what-is')">What is outsourced IT &amp; cybersecurity? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>A specialist partner runs your technology for you — helpdesk, infrastructure, security monitoring, threat detection and response, backup and disaster recovery, and technology strategy. Instead of hiring an internal team, you get a full IT department for a fixed monthly fee per user, with enterprise-grade security most SMBs couldn't justify buying alone. <a href="/outsourced-it">See what's included</a>.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this,'switching')">How long does it take to switch IT providers? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Most businesses are fully onboarded within 30 days. We manage the migration end-to-end, including the handover from your current provider, so your team barely notices the change — except that things start working better.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this,'contracts')">Are there long-term contracts? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>No lock-in beyond a 3-month onboarding period. We keep clients because the service is good — not because they're contractually trapped. Annual contracts are available with a discount if you prefer that structure.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this,'different')">How is Dividend IT different from our current IT provider? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Most IT providers keep the lights on. We work directly with business owners and shareholders — not just your IT admin — and align every technology decision to EBITDA, valuation, and long-term value. If your current provider has never talked to you about your exit plans or how IT spend affects your multiple, <a href="/guide">that's the difference</a>.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this,'size')">We're not sure we're big enough for this. <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>If you have between 10 and 150 people and your business depends on technology working — you're exactly the right size. The businesses that benefit most have outgrown their current IT setup but haven't yet justified a full internal team.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 8. THE INVITATION -->
 <section id="cta" class="sp-cta">
   <div class="sp-cta-inner">
@@ -1700,6 +1795,19 @@
 </footer>
 <script>
   trackEvent('page_view', { page_title: 'Home — IT That Pays Back', page_location: location.href, page_path: location.pathname });
+  /* FAQ accordion */
+  function toggleFaq(btn, id) {
+    var item = btn.parentElement;
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
+    if (!wasOpen) { item.classList.add('open'); trackEvent('faq_open', { question: id }); }
+  }
+  /* Dividend Index card tracking */
+  document.querySelectorAll('#dividend-index .index-card').forEach(function(card){
+    card.addEventListener('click', function(){
+      trackEvent('index_card_click', { target: card.getAttribute('href') });
+    });
+  });
   /* Journey tabs on Who We Serve */
   function switchTab(name) {
     document.querySelectorAll('.journey-tab').forEach(function(t){ t.classList.remove('active'); });
