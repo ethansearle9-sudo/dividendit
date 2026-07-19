@@ -986,6 +986,50 @@
     .sp-trust-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 2.25rem; flex-wrap: wrap; }
     .sp-trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.78); letter-spacing: 0.04em; text-transform: uppercase; }
 
+    /* WHO WE SERVE — Journey tabs */
+    #who-we-serve { background: var(--off-white); padding: 90px 2rem; }
+    #who-we-serve .section-inner { max-width: var(--max-w); margin: 0 auto; }
+    #who-we-serve .section-label { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 1rem; }
+    #who-we-serve .section-label::before { content: ''; display: block; width: 20px; height: 1px; background: var(--accent-green); }
+    #who-we-serve .section-title { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 2.8rem); line-height: 1.15; letter-spacing: -0.02em; color: var(--text-dark); margin-bottom: 1.25rem; }
+    #who-we-serve .section-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 640px; line-height: 1.7; }
+    .journey-tabs { display: flex; gap: 0; border: 1.5px solid var(--border); border-radius: 10px; overflow: hidden; margin: 3rem 0 0; width: fit-content; background: var(--white); }
+    .journey-tab { padding: 0.85rem 2rem; font-size: 0.875rem; font-weight: 600; color: var(--text-muted); cursor: pointer; background: var(--white); border: none; border-right: 1px solid var(--border); transition: all 0.2s; font-family: var(--font-body); letter-spacing: 0.02em; }
+    .journey-tab:last-child { border-right: none; }
+    .journey-tab.active { background: var(--text-dark); color: var(--white); }
+    .journey-tab:not(.active):hover { background: var(--off-white); color: var(--text-dark); }
+    .journey-panels { margin-top: 2.5rem; }
+    .journey-panel { display: none; }
+    .journey-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .journey-panel-left h3 { font-family: var(--font-display); font-size: 1.9rem; line-height: 1.2; color: var(--text-dark); margin-bottom: 1.25rem; letter-spacing: -0.02em; }
+    .journey-panel-left h3 em { font-style: italic; color: var(--accent-green); }
+    .journey-panel-left p { font-size: 1rem; color: var(--text-body); line-height: 1.8; margin-bottom: 1.25rem; }
+    .journey-panel-left p:last-of-type { margin-bottom: 1.75rem; }
+    .journey-pain-list { display: flex; flex-direction: column; gap: 0.65rem; margin-bottom: 2rem; }
+    .journey-pain-item { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 0.9rem; color: var(--text-body); line-height: 1.5; }
+    .journey-pain-item::before { content: '—'; color: var(--accent-green); font-weight: 700; flex-shrink: 0; margin-top: 0.1rem; }
+    .journey-panel-right { display: flex; flex-direction: column; gap: 1.25rem; }
+    .journey-promise { background: var(--text-dark); color: var(--white); border-radius: 12px; padding: 2rem; }
+    .journey-promise h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.85rem; }
+    .journey-promise p { font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.75; }
+    .journey-promise strong { color: var(--white); }
+    .journey-stat { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; transition: border-color 0.2s; }
+    .journey-stat:hover { border-color: var(--accent-green); }
+    .journey-stat-num { font-family: var(--font-display); font-size: 2.8rem; color: var(--text-dark); line-height: 1; margin-bottom: 0.35rem; }
+    .journey-stat-num span { color: var(--accent-green); }
+    .journey-stat-label { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; }
+    .journey-cta { background: var(--accent-green-light); border: 1px solid #b7dac9; border-radius: 10px; padding: 1.5rem; }
+    .journey-cta p { font-size: 0.9rem; color: var(--text-body); margin-bottom: 1rem; line-height: 1.6; }
+    .journey-cta strong { color: var(--text-dark); }
+    .btn-green { display: inline-block; background: var(--accent-green); color: var(--white); padding: 0.7rem 1.35rem; border-radius: 4px; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+    .btn-green:hover { opacity: 0.88; }
+    @media (max-width: 860px) {
+      .journey-panel.active { grid-template-columns: 1fr; gap: 2.5rem; }
+      .journey-tabs { width: 100%; }
+      .journey-tab { flex: 1; padding: 0.75rem 0.5rem; }
+      #who-we-serve { padding: 70px 1.25rem; }
+    }
+
     /* 2. STAKES */
     .sp-stakes { background: var(--text-dark); padding-bottom: 90px; }
     .sp-stakes .section-label { color: var(--accent-green-mid); }
@@ -1255,6 +1299,122 @@
     <div class="sp-trust-item">🌍 Ireland &amp; UK</div>
   </div>
 </div>
+
+<!-- WHO WE SERVE — 3 audience journey -->
+<section id="who-we-serve">
+  <div class="section-inner">
+    <div class="section-label reveal">Who We Serve</div>
+    <h2 class="section-title reveal">One Partner.<br>Every Stage of the Journey.</h2>
+    <p class="section-sub reveal">Whether you're building from scratch, scaling through the chaos, or protecting what you've created — Dividend IT is built for where you are right now.</p>
+
+    <div class="journey-tabs reveal">
+      <button class="journey-tab active" onclick="switchTab('value-creator')">Value Creator</button>
+      <button class="journey-tab" onclick="switchTab('entrepreneur')">Entrepreneur</button>
+      <button class="journey-tab" onclick="switchTab('startup')">Startup</button>
+    </div>
+
+    <div class="journey-panels">
+
+      <div class="journey-panel active" id="panel-value-creator">
+        <div class="journey-panel-left">
+          <h3>You've built something<br><em>genuinely valuable.</em><br>Don't let it slip away.</h3>
+          <p>You've figured out the game. You've built a brand, a platform, a team that executes without you. You understand <a href="/guide" style="color:var(--accent-green);text-decoration:underline;text-underline-offset:3px;">EBITDA</a> as a mechanism to build value. You're thinking about acquisition, succession, or exit — and you know that every decision you make now either protects or erodes the value of what you've created.</p>
+          <p>At this stage, IT isn't just infrastructure. It's a risk factor in your due diligence. It's a line item in your valuation. It's the thing that could be exploited to compromise everything you've built — if it isn't properly managed.</p>
+          <div class="journey-pain-list">
+            <div class="journey-pain-item">Acquisition due diligence exposing IT vulnerabilities</div>
+            <div class="journey-pain-item">Theft of IP, sensitive data, or client information</div>
+            <div class="journey-pain-item">Cyber breach causing reputational damage at the worst possible time</div>
+            <div class="journey-pain-item">Payment fraud at operating entity level</div>
+            <div class="journey-pain-item">Technology misaligned to EBITDA and exit valuation</div>
+            <div class="journey-pain-item">Roll-up acquisitions eroding EBITDA through duplication of costs</div>
+          </div>
+          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'who-we-serve-value-creator'})">Protect What You've Built →</a>
+        </div>
+        <div class="journey-panel-right">
+          <div class="journey-promise">
+            <h4>The Dividend IT Promise — Value Creator</h4>
+            <p>We've seen what happens when a business gets to the finish line and loses it. Not because the business wasn't good. Because the technology wasn't protected. <strong>We make sure that never happens to yours.</strong></p>
+            <p style="margin-top:0.85rem; font-size:0.875rem; color:rgba(255,255,255,0.65);">Seamlessly secure IT, EBITDA-aligned spend, and a technology posture that holds up under any level of due diligence.</p>
+          </div>
+          <a class="journey-stat" href="/exit-value" style="text-decoration:none;display:block;color:inherit;">
+            <div class="journey-stat-num"><span>78%</span></div>
+            <div class="journey-stat-label">of business owners lack a formal transition team — leaving their exit exposed at the most critical stage</div>
+            <div style="font-size:0.72rem;font-weight:600;color:var(--accent-green);margin-top:0.5rem;">Read the full research →</div>
+          </a>
+          <div class="journey-cta">
+            <p><strong>Recommended package:</strong> Grow — Strategic technology partnership with vCTO, EBITDA reporting, exit planning support, and 24/7 security.</p>
+            <a href="/services" class="btn-green">View the Grow Package →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="journey-panel" id="panel-entrepreneur">
+        <div class="journey-panel-left">
+          <h3>You're in the trenches.<br><em>We know exactly</em><br>how that feels.</h3>
+          <p>You took the risk. You breathed an idea into a business. You're hiring, firing, chasing payments, managing cash flow, dealing with every crisis that lands on your desk — and somewhere in between, trying to figure out how to get yourself out of the day-to-day.</p>
+          <p>You know what needs to happen. You need to build the processes, the people, and the systems that lets your business run without you in the middle of everything. But right now, every day is a battle just to keep moving forward.</p>
+          <p>The last thing you need is IT adding to the list.</p>
+          <div class="journey-pain-list">
+            <div class="journey-pain-item">Slow or unreliable systems killing team productivity</div>
+            <div class="journey-pain-item">Email compromise and payment fraud exposure</div>
+            <div class="journey-pain-item">No technology strategy — just firefighting</div>
+            <div class="journey-pain-item">IT provider that doesn't understand your business</div>
+            <div class="journey-pain-item">No time to think about where technology should be taking you</div>
+          </div>
+          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'who-we-serve-entrepreneur'})">Get IT Off Your Plate →</a>
+        </div>
+        <div class="journey-panel-right">
+          <div class="journey-promise">
+            <h4>The Dividend IT Promise — Entrepreneur</h4>
+            <p>We've got the scar tissue to show for it. We know this journey. <strong>Our promise is simple — IT and cybersecurity will never add to your list of headaches.</strong></p>
+            <p style="margin-top:0.85rem; font-size:0.875rem; color:rgba(255,255,255,0.65);">We take it completely off your plate — and we act as your strategic technology advisor, keeping one eye on where your business needs to go, not just where it is today.</p>
+          </div>
+          <a class="journey-stat" href="/exit-value" style="text-decoration:none;display:block;color:inherit;">
+            <div class="journey-stat-num"><span>70%</span></div>
+            <div class="journey-stat-label">of business owners who want to exit never successfully do — most because they were never set up to scale without the founder at the centre</div>
+            <div style="font-size:0.72rem;font-weight:600;color:var(--accent-green);margin-top:0.5rem;">Read the full research →</div>
+          </a>
+          <div class="journey-cta">
+            <p><strong>Recommended package:</strong> Operate — Your complete outsourced IT department. Everything managed, everything included.</p>
+            <a href="/services" class="btn-green">View the Operate Package →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="journey-panel" id="panel-startup">
+        <div class="journey-panel-left">
+          <h3>You've backed yourself.<br><em>Build on the right</em><br>foundation.</h3>
+          <p>You've taken the leap. You're hustling at every level — bringing your idea to life, landing your first clients, building something from nothing. Every decision matters and every euro counts.</p>
+          <p>You don't need complexity. You need the basics done right — secure email, reliable systems, file storage, and the right applications to run your business — set up properly from day one so you never have to undo bad habits later.</p>
+          <div class="journey-pain-list">
+            <div class="journey-pain-item">Getting the basics set up quickly and correctly</div>
+            <div class="journey-pain-item">Email security and data protection from day one</div>
+            <div class="journey-pain-item">Reliable systems that support growth, not limit it</div>
+            <div class="journey-pain-item">Affordable, all-inclusive pricing with no surprises</div>
+          </div>
+          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'who-we-serve-startup'})">Start on the Right Foot →</a>
+        </div>
+        <div class="journey-panel-right">
+          <div class="journey-promise">
+            <h4>The Dividend IT Promise — Startup</h4>
+            <p>A startup package built for where you are right now. <strong>Simple, secure, and priced fairly.</strong></p>
+            <p style="margin-top:0.85rem; font-size:0.875rem; color:rgba(255,255,255,0.65);">We set you up right from day one — and when you're ready to scale, we grow with you. The businesses we work with at startup become our most loyal partners at entrepreneur and value creator stage.</p>
+          </div>
+          <a class="journey-stat" href="/startup-survival" style="text-decoration:none;display:block;color:inherit;">
+            <div class="journey-stat-num"><span>49%</span></div>
+            <div class="journey-stat-label">of businesses don't make it past year five — getting the foundations right from day one dramatically improves your odds</div>
+            <div style="font-size:0.72rem;font-weight:600;color:var(--accent-green);margin-top:0.5rem;">Read the full research →</div>
+          </a>
+          <div class="journey-cta">
+            <p><strong>Recommended package:</strong> Secure — The foundation. Seamlessly secure IT and reliable support at an accessible price point.</p>
+            <a href="/services" class="btn-green">View the Secure Package →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- 2. THE STAKES -->
 <section id="stakes" class="sp-stakes">
@@ -1540,6 +1700,16 @@
 </footer>
 <script>
   trackEvent('page_view', { page_title: 'Home — IT That Pays Back', page_location: location.href, page_path: location.pathname });
+  /* Journey tabs on Who We Serve */
+  function switchTab(name) {
+    document.querySelectorAll('.journey-tab').forEach(function(t){ t.classList.remove('active'); });
+    document.querySelectorAll('.journey-panel').forEach(function(p){ p.classList.remove('active'); });
+    var btnIndex = { 'value-creator': 0, 'entrepreneur': 1, 'startup': 2 }[name];
+    if (btnIndex != null) document.querySelectorAll('.journey-tab')[btnIndex].classList.add('active');
+    var panel = document.getElementById('panel-' + name);
+    if (panel) panel.classList.add('active');
+    trackEvent('who_we_serve_tab', { audience: name });
+  }
   /* Reveal on scroll — makes .reveal elements visible as they enter the viewport */
   (function(){
     var reveals = document.querySelectorAll('.reveal');
