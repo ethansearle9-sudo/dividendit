@@ -14,10 +14,10 @@
     function trackEvent(name, params){ try { gtag('event', name, params || {}); } catch(e){} }
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dividend IT — Outsourced Cybersecurity & IT Ireland</title>
+  <title>Dividend IT — Outsourced Cybersecurity & IT Ireland &amp; UK</title>
   <meta name="description" content="Outsourced IT and cybersecurity for Irish business owners. Dividend IT protects your business, drives efficiency and builds long-term value. IT that pays back." />
-  <meta property="og:title" content="Dividend IT — Outsourced Cybersecurity & IT Ireland" />
-  <meta property="og:description" content="Ireland's outsourced cybersecurity & IT partner for business owners. IT that pays back — protecting your business, driving efficiency, building long-term value." />
+  <meta property="og:title" content="Dividend IT — Outsourced Cybersecurity & IT Ireland &amp; UK" />
+  <meta property="og:description" content="Ireland &amp; UK's outsourced cybersecurity & IT partner for business owners. IT that pays back — protecting your business, driving efficiency, building long-term value." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dividendit.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -953,36 +953,14 @@
     .sp-hero-inner, .sp-stakes-inner, .sp-turn-inner, .sp-journey-inner, .sp-proof-inner, .sp-tools-inner, .sp-segments-inner, .sp-about-inner, .sp-cta-inner { max-width: var(--max-w); margin: 0 auto; }
 
     /* 1. HOOK */
-    .sp-hero { padding-top: 130px; padding-bottom: 90px; background: var(--white); position: relative; overflow: hidden; }
-    .sp-hero-inner { max-width: var(--max-w); display: grid; grid-template-columns: 1.15fr 1fr; gap: 4rem; align-items: center; }
-    .sp-hero-content { position: relative; z-index: 1; }
-    .sp-hero-eyebrow { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 1.5rem; }
-    .sp-hero-title { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.08; letter-spacing: -0.02em; color: var(--text-dark); margin-bottom: 1.5rem; }
+    .sp-hero { padding-top: 150px; padding-bottom: 120px; text-align: center; background: var(--white); }
+    .sp-hero-inner { max-width: 860px; }
+    .sp-hero-eyebrow { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 1.75rem; }
+    .sp-hero-title { font-family: var(--font-display); font-size: clamp(2.8rem, 6vw, 4.8rem); line-height: 1.08; letter-spacing: -0.02em; color: var(--text-dark); margin-bottom: 1.75rem; }
     .sp-hero-title em { font-style: italic; color: var(--accent-green); }
-    .sp-hero-sub { font-size: 1.1rem; line-height: 1.65; color: var(--text-body); max-width: 520px; margin-bottom: 2rem; }
-    .sp-hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-    .sp-hero-trust { display: flex; gap: 0.75rem; font-size: 0.85rem; color: var(--text-muted); font-weight: 500; flex-wrap: wrap; }
-
-    /* Hero stat cards */
-    .sp-hero-stats { display: flex; flex-direction: column; gap: 1rem; }
-    .sp-hero-stat {
-      background: var(--white); border: 1px solid var(--border); border-radius: 8px;
-      padding: 1.5rem 1.75rem; text-decoration: none; color: inherit; display: block;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-      position: relative;
-    }
-    .sp-hero-stat:nth-child(2) { margin-left: 1.5rem; }
-    .sp-hero-stat:hover { border-color: var(--accent-green); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(45,106,79,0.08); }
-    .sp-hero-stat-num { font-family: var(--font-display); font-size: 2.4rem; line-height: 1; color: var(--text-dark); margin-bottom: 0.4rem; }
-    .sp-hero-stat-num span { color: var(--accent-green); }
-    .sp-hero-stat-label { font-size: 0.9rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.6rem; }
-    .sp-hero-stat-source { font-size: 0.72rem; font-weight: 600; color: var(--accent-green); opacity: 0; transition: opacity 0.2s; letter-spacing: 0.02em; }
-    .sp-hero-stat:hover .sp-hero-stat-source { opacity: 1; }
-
-    /* Trust bar under hero */
-    .sp-trust-bar { background: var(--text-dark); padding: 1.15rem 2rem; }
-    .sp-trust-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 2.75rem; flex-wrap: wrap; }
-    .sp-trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; font-weight: 500; color: rgba(255,255,255,0.75); letter-spacing: 0.04em; text-transform: uppercase; }
+    .sp-hero-sub { font-size: 1.2rem; line-height: 1.65; color: var(--text-body); max-width: 640px; margin: 0 auto 2.5rem; }
+    .sp-hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+    .sp-hero-trust { display: flex; gap: 0.75rem; justify-content: center; font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
 
     /* 2. STAKES */
     .sp-stakes { background: var(--text-dark); padding-bottom: 90px; }
@@ -1074,10 +1052,6 @@
       .sp-about-inner { grid-template-columns: 1fr; gap: 2rem; }
       .sp-hero, .sp-stakes, .sp-turn, .sp-journey, .sp-proof, .sp-tools, .sp-segments, .sp-about, .sp-cta { padding: 70px 1.25rem; }
       .sp-hero { padding-top: 120px; }
-      .sp-hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-      .sp-hero-stat:nth-child(2) { margin-left: 0; }
-      .sp-trust-inner { gap: 1.25rem; }
-      .sp-trust-item { font-size: 0.72rem; }
     }
 
   </style>
@@ -1211,48 +1185,18 @@
 <!-- 1. HOOK -->
 <section id="hero" class="sp-hero">
   <div class="sp-hero-inner">
-    <div class="sp-hero-content">
-      <div class="sp-hero-eyebrow">Outsourced Cybersecurity &amp; IT · Ireland</div>
-      <h1 class="sp-hero-title">You built the business.<br>It shouldn't <em>own</em> you.</h1>
-      <p class="sp-hero-sub">Most owners are trapped in the day-to-day — with technology that's a cost and a risk instead of an engine. We change that: seamlessly secure IT that frees your time, sharpens your edge, and builds what your business is worth.</p>
-      <div class="sp-hero-actions">
-        <a href="/guide" class="btn-primary" onclick="trackEvent('guide_open',{location:'hero'})">Drive Business Value</a>
-        <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'hero'})">Book a Free 20-Min Call</a>
-      </div>
-      <div class="sp-hero-trust">
-        <span>No jargon</span><span>·</span><span>No lock-in</span><span>·</span><span>No surprises</span>
-      </div>
+    <div class="sp-hero-eyebrow">Outsourced Cybersecurity &amp; IT · Ireland &amp; UK</div>
+    <h1 class="sp-hero-title">You built the business.<br>It shouldn't <em>own</em> you.</h1>
+    <p class="sp-hero-sub">Most owners are trapped in the day-to-day — with technology that's a cost and a risk instead of an engine. We change that: seamlessly secure IT that frees your time, sharpens your edge, and builds what your business is worth.</p>
+    <div class="sp-hero-actions">
+      <a href="/guide" class="btn-primary" onclick="trackEvent('guide_open',{location:'hero'})">Drive Business Value</a>
+      <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'hero'})">Book a Free 20-Min Call</a>
     </div>
-    <div class="sp-hero-stats">
-      <a class="sp-hero-stat" href="/cyber-risk" onclick="trackEvent('hero_stat_click',{stat:'cyber-attack-rate'})">
-        <div class="sp-hero-stat-num"><span>50%</span></div>
-        <div class="sp-hero-stat-label">of Irish SMBs experienced a cyber attack in the past 12 months</div>
-        <div class="sp-hero-stat-source">See the research →</div>
-      </a>
-      <a class="sp-hero-stat" href="/exit-value" onclick="trackEvent('hero_stat_click',{stat:'exit-failure-rate'})">
-        <div class="sp-hero-stat-num"><span>70%</span></div>
-        <div class="sp-hero-stat-label">of business owners who want to exit will never successfully do so</div>
-        <div class="sp-hero-stat-source">See the research →</div>
-      </a>
-      <a class="sp-hero-stat" href="/true-cost" onclick="trackEvent('hero_stat_click',{stat:'avg-remediation-cost'})">
-        <div class="sp-hero-stat-num">€<span>21k</span></div>
-        <div class="sp-hero-stat-label">average cost to fully remediate a cyber attack on an Irish business</div>
-        <div class="sp-hero-stat-source">See the research →</div>
-      </a>
+    <div class="sp-hero-trust">
+      <span>No jargon</span><span>·</span><span>No lock-in</span><span>·</span><span>No surprises</span>
     </div>
   </div>
 </section>
-
-<!-- TRUST BAR -->
-<div class="sp-trust-bar">
-  <div class="sp-trust-inner">
-    <div class="sp-trust-item">🔒 Seamlessly Secure</div>
-    <div class="sp-trust-item">⏱ 24/7 Monitoring, Remediation &amp; Support</div>
-    <div class="sp-trust-item">💼 Business-First Thinking</div>
-    <div class="sp-trust-item">📊 EBITDA Aligned</div>
-    <div class="sp-trust-item">🌍 Ireland &amp; UK</div>
-  </div>
-</div>
 
 <!-- 2. THE STAKES -->
 <section id="stakes" class="sp-stakes">
@@ -1524,7 +1468,7 @@
 <footer>
   <div class="footer-inner">
     <div><a href="/" class="footer-logo">Dividend<span>IT</span></a>
-    <div class="footer-tagline">Outsourced Cybersecurity &amp; IT — Ireland</div></div>
+    <div class="footer-tagline">Outsourced Cybersecurity &amp; IT — Ireland &amp; UK</div></div>
     <div class="footer-links">
       <a href="/#journey">Who We Serve</a>
       <a href="/services">Services</a>
