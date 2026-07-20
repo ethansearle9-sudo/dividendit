@@ -2,29 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- Google tag (gtag.js) — Dividend IT GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRJXMHZ0N7"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    // send_page_view:false — we fire page_view manually per in-app page so each article reports separately
-    gtag('config', 'G-NRJXMHZ0N7', { send_page_view: false });
-    // Helper used throughout the site to log funnel events
-    function trackEvent(name, params){ try { gtag('event', name, params || {}); } catch(e){} }
-  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Outsourced IT &amp; Cybersecurity for Business Owners | Dividend IT</title>
   <meta name="description" content="Outsourced IT & cybersecurity that pays back. Dividend IT protects Irish & UK businesses, drives efficiency and builds enterprise value — EBITDA-aligned, plain English, no lock-in." />
   <link rel="canonical" href="https://dividendit.com/" />
   <meta property="og:title" content="Outsourced IT &amp; Cybersecurity for Business Owners | Dividend IT" />
-  <meta property="og:description" content="Ireland &amp; UK's outsourced cybersecurity & IT partner for business owners. IT that pays back — protecting your business, driving efficiency, building long-term value." />
+  <meta property="og:description" content="Two risks face every owner: a cyber incident destroying what you've built, and never realising the value you've created. We exist to remove both." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dividendit.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
-  <link rel="canonical" href="https://dividendit.com/" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRJXMHZ0N7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NRJXMHZ0N7');
+    function trackEvent(name, params) { try { gtag('event', name, params||{}); } catch(e){} }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://dividendit.com/#org",
+        "name": "Dividend IT",
+        "url": "https://dividendit.com/",
+        "description": "Outsourced IT & cybersecurity for business owners in Ireland & UK. EBITDA-aligned technology that protects, sharpens and builds enterprise value.",
+        "email": "hello@dividendit.com",
+        "areaServed": ["IE", "GB"],
+        "founder": { "@type": "Person", "name": "Ethan Searle" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://dividendit.com/#website",
+        "url": "https://dividendit.com/",
+        "name": "Dividend IT",
+        "publisher": { "@id": "https://dividendit.com/#org" }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://dividendit.com/#service",
+        "serviceType": "Outsourced IT & Cybersecurity",
+        "provider": { "@id": "https://dividendit.com/#org" },
+        "areaServed": ["IE", "GB"],
+        "audience": { "@type": "BusinessAudience", "name": "Business owners and shareholders, 10–150 users" },
+        "description": "Fully managed and co-managed outsourced IT support and cybersecurity: 24/7 monitoring, remediation and support, EDR/MDR, backup & disaster recovery, IT strategy and vCIO — aligned to EBITDA and enterprise value.",
+        "offers": { "@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "75", "highPrice": "120", "offerCount": "3", "description": "Per user per month, all-inclusive, monthly rolling" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://dividendit.com/#faq",
+        "mainEntity": [
+          { "@type": "Question", "name": "What does it cost to outsource IT support and cybersecurity?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Dividend IT packages start at €75 per user per month, fully inclusive — support, security, backup and monitoring with no hidden fees. A 25-person business on the Operate package (€100/user/month) pays €2,500 per month. Compare that to the average €21k cost of remediating a single cyber attack and the maths tends to take care of itself." } },
+          { "@type": "Question", "name": "What is outsourced IT & cybersecurity?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Outsourced IT & cybersecurity means a specialist partner runs your technology for you: helpdesk support, infrastructure, security monitoring, threat detection and response, backup and disaster recovery, and technology strategy. Instead of hiring an internal team, you get a full IT department for a fixed monthly fee per user — with enterprise-grade security tooling most SMBs couldn't justify buying alone." } },
+          { "@type": "Question", "name": "How long does it take to switch IT providers?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Most businesses are fully onboarded within 30 days. Dividend IT manages the migration end-to-end, including the handover from your current provider, so your team experiences minimal disruption." } },
+          { "@type": "Question", "name": "Are there long-term contracts?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No lock-in beyond a 3-month onboarding period. Annual contracts are available with a discount if preferred." } },
+          { "@type": "Question", "name": "How is Dividend IT different from a typical IT provider?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Most IT providers focus on keeping the lights on. Dividend IT works directly with business owners and shareholders — not just IT managers — and aligns every technology decision to EBITDA, valuation and long-term business value." } },
+          { "@type": "Question", "name": "Is my business big enough for outsourced IT?",
+            "acceptedAnswer": { "@type": "Answer", "text": "If you have between 10 and 150 people and your business depends on technology working, you're exactly the right size — big enough to have outgrown informal IT, not yet big enough to justify a full internal team." } }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -36,27 +88,23 @@
       --text-muted: #8a8780;
       --text-body: #3d3c3a;
       --text-dark: #1a1917;
+      --accent: #1a1917;
       --accent-green: #2d6a4f;
-      --accent-green-light: #e8f4ef;
+      --accent-green-deep: #1f4c37;
       --accent-green-mid: #b7dac9;
+      --accent-green-light: #e8f4ef;
       --border: #e2e0dc;
       --font-display: 'DM Serif Display', serif;
       --font-body: 'DM Sans', sans-serif;
-      --max-w: 1160px;
+      --max-w: 1120px;
       --radius: 4px;
     }
 
     html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--font-body);
-      color: var(--text-body);
-      background: var(--white);
-      font-size: 16px;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
+    body { font-family: var(--font-body); color: var(--text-body); background: var(--white); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
 
-    /* ── NAV ── */
+    .num { font-family: var(--font-display); font-variant-numeric: tabular-nums; }
+
     /* ── NAV (grouped dropdowns + mobile hamburger) ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0;
@@ -213,580 +261,293 @@
     }
     .hero-eyebrow::before {
       content: ''; display: block;
-      width: 24px; height: 1px; background: var(--accent-green);
-    }
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.8rem, 5vw, 4.2rem);
-      line-height: 1.08; letter-spacing: -0.02em;
-      color: var(--text-dark); margin-bottom: 1.25rem;
-    }
-    .hero-title em { font-style: italic; color: var(--accent-green); }
-    .hero-sub {
-      font-size: 1.1rem; color: var(--text-body);
-      line-height: 1.7; max-width: 460px; margin-bottom: 2.5rem;
-    }
-    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
-    .btn-primary {
-      background: var(--text-dark); color: var(--white);
-      padding: 0.85rem 1.75rem; border-radius: var(--radius);
-      font-size: 0.9rem; font-weight: 600; text-decoration: none;
-      transition: background 0.2s, transform 0.15s; display: inline-block;
-    }
+
+
+    /* ── SHARED ── */
+    section { padding: 96px 2rem; }
+    .inner { max-width: var(--max-w); margin: 0 auto; }
+    .inner-narrow { max-width: 820px; margin: 0 auto; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 1.1rem; }
+    .eyebrow::before { content: ''; display: block; width: 22px; height: 1px; background: var(--accent-green); }
+    .eyebrow.on-dark { color: var(--accent-green-mid); }
+    .eyebrow.on-dark::before { background: var(--accent-green-mid); }
+    h2.title { font-family: var(--font-display); font-size: clamp(1.9rem, 3.4vw, 2.7rem); line-height: 1.15; letter-spacing: -0.02em; color: var(--text-dark); margin-bottom: 1.1rem; }
+    .sub { font-size: 1.05rem; color: var(--text-muted); max-width: 620px; line-height: 1.7; }
+    .btn-primary { background: var(--text-dark); color: var(--white); padding: 0.85rem 1.7rem; border-radius: var(--radius); font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; display: inline-block; }
     .btn-primary:hover { background: var(--accent-green); transform: translateY(-1px); }
-    .btn-secondary {
-      color: var(--text-body); font-size: 0.9rem; font-weight: 500;
-      text-decoration: none; display: inline-flex;
-      align-items: center; gap: 0.4rem; transition: color 0.2s;
-    }
-    .btn-secondary:hover { color: var(--text-dark); }
-    .btn-secondary::after { content: '→'; transition: transform 0.2s; }
-    .btn-secondary:hover::after { transform: translateX(3px); }
-    .hero-stats { display: flex; flex-direction: column; gap: 1.5rem; }
-    .hero-stat-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 8px; padding: 1.5rem;
-      animation: fadeUp 0.6s ease both;
-    }
-    .hero-stat-card:nth-child(2) { animation-delay: 0.1s; margin-left: 2rem; }
-    .hero-stat-card:nth-child(3) { animation-delay: 0.2s; }
-    .stat-number {
-      font-family: var(--font-display); font-size: 2.5rem;
-      color: var(--text-dark); line-height: 1; margin-bottom: 0.35rem;
-    }
-    .stat-number span { color: var(--accent-green); }
-    .stat-label { font-size: 0.875rem; color: var(--text-muted); line-height: 1.4; }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    .btn-outline { border: 1.5px solid var(--text-dark); color: var(--text-dark); padding: 0.8rem 1.6rem; border-radius: var(--radius); font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.2s; display: inline-block; }
+    .btn-outline:hover { background: var(--text-dark); color: var(--white); }
+    .btn-green { display: inline-block; background: var(--accent-green); color: var(--white); padding: 0.7rem 1.35rem; border-radius: var(--radius); font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+    .btn-green:hover { opacity: 0.88; }
+    .btn-light { background: var(--white); color: var(--text-dark); padding: 0.9rem 2rem; border-radius: var(--radius); font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; display: inline-block; }
+    .btn-light:hover { background: var(--off-white); transform: translateY(-1px); }
+    .btn-outline-light { border: 1.5px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.85); padding: 0.9rem 2rem; border-radius: var(--radius); font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: all 0.2s; display: inline-block; }
+    .btn-outline-light:hover { border-color: rgba(255,255,255,0.7); color: var(--white); }
+    .link-arrow { font-size: 0.85rem; font-weight: 600; color: var(--accent-green); text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem; }
+    .link-arrow::after { content: '→'; transition: transform 0.2s; }
+    .link-arrow:hover::after { transform: translateX(3px); }
 
-    /* ── TRUST BAR ── */
-    .trust-bar { background: var(--text-dark); padding: 1.25rem 2rem; }
-    .trust-inner {
-      max-width: var(--max-w); margin: 0 auto;
-      display: flex; align-items: center;
-      justify-content: center; gap: 3rem; flex-wrap: wrap;
-    }
-    .trust-item {
-      display: flex; align-items: center; gap: 0.6rem;
-      font-size: 0.8rem; font-weight: 500;
-      color: rgba(255,255,255,0.75);
-      letter-spacing: 0.04em; text-transform: uppercase;
-    }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
 
-    /* ── SECTIONS ── */
-    section { padding: 100px 2rem; scroll-margin-top: 80px; }
-    .section-inner { max-width: var(--max-w); margin: 0 auto; }
-    .section-label {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      font-size: 0.75rem; font-weight: 600;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--accent-green); margin-bottom: 1rem;
-    }
-    .section-label::before {
-      content: ''; display: block;
-      width: 20px; height: 1px; background: var(--accent-green);
-    }
-    .section-title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
-      line-height: 1.15; letter-spacing: -0.02em;
-      color: var(--text-dark); margin-bottom: 1.25rem;
-    }
-    .section-sub {
-      font-size: 1.05rem; color: var(--text-muted);
-      max-width: 560px; line-height: 1.7;
-    }
+    /* Ledger signature: double-rule bottom line */
+    .bottom-line { position: relative; padding-top: 0.85rem; }
+    .bottom-line::before { content: ''; position: absolute; top: 0; left: 0; right: 0; border-top: 1px solid var(--text-dark); }
+    .bottom-line::after { content: ''; position: absolute; top: 3px; left: 0; right: 0; border-top: 1px solid var(--text-dark); }
+    .on-dark .bottom-line::before, .on-dark .bottom-line::after { border-color: rgba(255,255,255,0.55); }
 
-    /* ── JOURNEY SECTION ── */
-    #journey { background: var(--off-white); }
-    .journey-tabs {
-      display: flex; gap: 0;
-      border: 1.5px solid var(--border);
-      border-radius: 10px; overflow: hidden;
-      margin: 3rem 0 0; width: fit-content;
-    }
-    .journey-tab {
-      padding: 0.75rem 2rem;
-      font-size: 0.875rem; font-weight: 600;
-      color: var(--text-muted); cursor: pointer;
-      background: var(--white);
-      border: none; border-right: 1px solid var(--border);
-      transition: all 0.2s; font-family: var(--font-body);
-      letter-spacing: 0.02em;
-    }
+    /* ── HERO ── */
+    .hero { padding: 150px 2rem 70px; background: var(--white); }
+    .hero-grid { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 4.5rem; align-items: center; }
+    .hero-title { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 4.1rem); line-height: 1.06; letter-spacing: -0.02em; color: var(--text-dark); margin-bottom: 1.4rem; }
+    .hero-title em { font-style: italic; color: var(--accent-green); }
+    .hero-sub { font-size: 1.1rem; line-height: 1.7; color: var(--text-body); max-width: 540px; margin-bottom: 2rem; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.35rem; }
+    .hero-trust { display: flex; gap: 0.6rem; font-size: 0.85rem; color: var(--text-dark); font-weight: 500; flex-wrap: wrap; }
+    .hero-trust .dot { color: var(--accent-green); }
+
+    /* Hero ledger — what's at stake */
+    .hero-ledger { border: 1px solid var(--border); border-radius: 10px; background: var(--off-white); padding: 1.9rem 1.9rem 1.4rem; }
+    .hero-ledger-title { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.1rem; }
+    .hl-row { display: grid; grid-template-columns: auto 1fr; gap: 1.1rem; align-items: baseline; padding: 0.85rem 0; border-top: 1px solid var(--border); text-decoration: none; color: inherit; transition: background 0.15s; }
+    .hl-row:hover { background: var(--white); }
+    .hl-row:hover .hl-src { opacity: 1; }
+    .hl-num { font-family: var(--font-display); font-variant-numeric: tabular-nums; font-size: 1.9rem; color: var(--accent-green); line-height: 1; min-width: 96px; }
+    .hl-label { font-size: 0.86rem; color: var(--text-body); line-height: 1.45; }
+    .hl-src { display: block; font-size: 0.72rem; font-weight: 600; color: var(--accent-green); margin-top: 0.3rem; opacity: 0; transition: opacity 0.2s; }
+    .hero-ledger-foot { font-size: 0.75rem; color: var(--text-muted); padding-top: 0.9rem; margin-top: 0.2rem; border-top: 1px solid var(--border); font-style: italic; }
+
+    /* Trust strip */
+    .trust-strip { background: var(--text-dark); padding: 0.8rem 2rem; }
+    .trust-strip-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 2.4rem; flex-wrap: wrap; }
+    .trust-strip span { font-size: 0.74rem; font-weight: 500; color: rgba(255,255,255,0.78); letter-spacing: 0.05em; text-transform: uppercase; }
+
+    /* ── TWO RISKS ── */
+    .risks { background: var(--off-white); }
+    .risks-lead { max-width: 780px; margin: 0 auto 3rem; text-align: center; }
+    .risks-lead .title { margin-bottom: 1.2rem; }
+    .risks-lead p { font-size: 1.1rem; color: var(--text-body); line-height: 1.75; }
+    .risks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; max-width: var(--max-w); margin: 0 auto; }
+    .risk-panel { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2.4rem 2.4rem 2rem; display: flex; flex-direction: column; }
+    .risk-tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.9rem; }
+    .risk-panel h3 { font-family: var(--font-display); font-size: 1.55rem; line-height: 1.2; color: var(--text-dark); margin-bottom: 1rem; letter-spacing: -0.01em; }
+    .risk-panel > p { font-size: 0.98rem; color: var(--text-body); line-height: 1.7; margin-bottom: 1.6rem; }
+    .risk-rows { margin-top: auto; }
+    .risk-row { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: baseline; padding: 0.8rem 0; border-top: 1px solid var(--border); text-decoration: none; color: inherit; }
+    .risk-row:hover .rr-link { opacity: 1; }
+    .rr-num { font-family: var(--font-display); font-variant-numeric: tabular-nums; font-size: 1.5rem; color: var(--text-dark); min-width: 78px; }
+    .rr-num span { color: var(--accent-green); }
+    .rr-label { font-size: 0.84rem; color: var(--text-muted); line-height: 1.45; }
+    .rr-link { font-size: 0.95rem; color: var(--accent-green); opacity: 0.25; transition: opacity 0.2s; }
+    .risk-foot { margin-top: 1.5rem; }
+    .risk-foot .bottom-line { font-size: 0.9rem; color: var(--text-dark); font-weight: 600; }
+
+    /* ── EQUATION ── */
+    .equation { background: var(--text-dark); }
+    .equation .title { color: var(--white); }
+    .equation-lead { max-width: 760px; }
+    .equation-lead p { font-size: 1.05rem; color: rgba(255,255,255,0.75); line-height: 1.75; margin-top: 0.4rem; }
+    .eq-display { display: flex; align-items: stretch; justify-content: center; gap: 0; margin: 3.2rem auto 0.6rem; max-width: 900px; flex-wrap: wrap; }
+    .eq-term { flex: 1; min-width: 200px; padding: 2rem 1.8rem; text-align: center; }
+    .eq-term-figure { font-family: var(--font-display); font-size: 2rem; color: var(--white); line-height: 1.15; margin-bottom: 0.45rem; }
+    .eq-term-label { font-size: 0.8rem; color: rgba(255,255,255,0.55); line-height: 1.5; max-width: 240px; margin: 0 auto; }
+    .eq-op { display: flex; align-items: center; font-family: var(--font-display); font-size: 2.4rem; color: var(--accent-green-mid); padding: 0 0.6rem; }
+    .eq-result { border-left: 1px solid rgba(255,255,255,0.15); }
+    .eq-result .eq-term-figure { color: var(--accent-green-mid); }
+    .eq-levers { max-width: 900px; margin: 2.6rem auto 0; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 2rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.6rem; }
+    .eq-lever h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase; color: var(--accent-green-mid); margin-bottom: 0.5rem; }
+    .eq-lever p { font-size: 0.85rem; color: rgba(255,255,255,0.65); line-height: 1.6; }
+    .eq-note { text-align: center; margin-top: 2.6rem; }
+    .eq-note p { display: inline-block; font-family: var(--font-display); font-style: italic; font-size: 1.15rem; color: rgba(255,255,255,0.85); }
+
+    /* ── FIELD NOTES (case ledger) ── */
+    .field { background: var(--white); }
+    .field-intro { max-width: 720px; margin-bottom: 3rem; }
+    .ledger-entries { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--text-dark); }
+    .ledger-entry { display: grid; grid-template-columns: 200px 1fr 250px; gap: 2.6rem; padding: 2.6rem 0; border-bottom: 1px solid var(--border); }
+    .le-meta { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-muted); line-height: 1.8; }
+    .le-meta .le-sector { color: var(--accent-green); display: block; }
+    .le-body h3 { font-family: var(--font-display); font-size: 1.35rem; line-height: 1.25; color: var(--text-dark); margin-bottom: 0.8rem; letter-spacing: -0.01em; }
+    .le-body p { font-size: 0.95rem; color: var(--text-body); line-height: 1.72; margin-bottom: 0.85rem; }
+    .le-body p:last-child { margin-bottom: 0; }
+    .le-body em { color: var(--text-dark); }
+    .le-figure { align-self: center; }
+    .le-figure-num { font-family: var(--font-display); font-variant-numeric: tabular-nums; font-size: 2rem; color: var(--accent-green); line-height: 1.1; }
+    .le-figure-label { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; margin-top: 0.45rem; }
+    .field-close { max-width: 720px; margin: 3rem auto 0; text-align: center; }
+    .field-close p { font-size: 1.02rem; color: var(--text-body); line-height: 1.75; }
+    .field-close strong { color: var(--text-dark); }
+
+    /* ── DOCTRINE ── */
+    .doctrine { background: var(--accent-green-light); padding: 80px 2rem; }
+    .doctrine-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+    .doctrine-line { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1.3; color: var(--text-dark); letter-spacing: -0.01em; }
+    .doctrine-line em { font-style: italic; color: var(--accent-green); }
+    .doctrine-sub { margin-top: 1.4rem; font-size: 0.98rem; color: var(--text-body); line-height: 1.75; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+    /* ── WHO WE SERVE (journey tabs) ── */
+    .serve { background: var(--off-white); }
+    .journey-tabs { display: flex; gap: 0; border: 1.5px solid var(--border); border-radius: 10px; overflow: hidden; margin: 2.6rem 0 0; width: fit-content; background: var(--white); }
+    .journey-tab { padding: 0.85rem 2rem; font-size: 0.875rem; font-weight: 600; color: var(--text-muted); cursor: pointer; background: var(--white); border: none; border-right: 1px solid var(--border); transition: all 0.2s; font-family: var(--font-body); letter-spacing: 0.02em; }
     .journey-tab:last-child { border-right: none; }
-    .journey-tab.active {
-      background: var(--text-dark); color: var(--white);
-    }
+    .journey-tab.active { background: var(--text-dark); color: var(--white); }
     .journey-tab:not(.active):hover { background: var(--off-white); color: var(--text-dark); }
     .journey-panels { margin-top: 2.5rem; }
     .journey-panel { display: none; }
-    .journey-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-    .journey-panel-left h3 {
-      font-family: var(--font-display);
-      font-size: 1.8rem; line-height: 1.2;
-      color: var(--text-dark); margin-bottom: 1rem;
-      letter-spacing: -0.02em;
-    }
+    .journey-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 4.5rem; align-items: start; }
+    .journey-panel-left h3 { font-family: var(--font-display); font-size: 1.85rem; line-height: 1.2; color: var(--text-dark); margin-bottom: 1.2rem; letter-spacing: -0.02em; }
     .journey-panel-left h3 em { font-style: italic; color: var(--accent-green); }
-    .journey-panel-left p {
-      font-size: 1rem; color: var(--text-body);
-      line-height: 1.8; margin-bottom: 1.25rem;
-    }
+    .journey-panel-left p { font-size: 1rem; color: var(--text-body); line-height: 1.8; margin-bottom: 1.25rem; }
     .journey-panel-left p:last-of-type { margin-bottom: 1.75rem; }
-    .journey-pain-list {
-      display: flex; flex-direction: column; gap: 0.65rem;
-      margin-bottom: 2rem;
-    }
-    .journey-pain-item {
-      display: flex; gap: 0.75rem; align-items: flex-start;
-      font-size: 0.875rem; color: var(--text-body); line-height: 1.5;
-    }
-    .journey-pain-item::before {
-      content: '—'; color: var(--accent-green);
-      font-weight: 700; flex-shrink: 0; margin-top: 0.1rem;
-    }
-    .journey-panel-right {
-      display: flex; flex-direction: column; gap: 1.25rem;
-    }
-    .journey-promise {
-      background: var(--text-dark); color: var(--white);
-      border-radius: 12px; padding: 2rem;
-    }
-    .journey-promise h4 {
-      font-size: 0.75rem; font-weight: 600;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: rgba(255,255,255,0.5); margin-bottom: 0.85rem;
-    }
-    .journey-promise p {
-      font-size: 0.95rem; color: rgba(255,255,255,0.85);
-      line-height: 1.75;
-    }
+    .journey-pain-list { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 2rem; }
+    .journey-pain-item { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 0.9rem; color: var(--text-body); line-height: 1.5; }
+    .journey-pain-item::before { content: '—'; color: var(--accent-green); font-weight: 700; flex-shrink: 0; margin-top: 0.1rem; }
+    .journey-panel-right { display: flex; flex-direction: column; gap: 1.2rem; }
+    .journey-promise { background: var(--text-dark); color: var(--white); border-radius: 12px; padding: 2rem; }
+    .journey-promise h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.85rem; }
+    .journey-promise p { font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.75; }
     .journey-promise strong { color: var(--white); }
-    .journey-stat {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 10px; padding: 1.5rem;
-    }
-    .journey-stat-num {
-      font-family: var(--font-display); font-size: 2.8rem;
-      color: var(--text-dark); line-height: 1; margin-bottom: 0.35rem;
-    }
+    .journey-stat { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; transition: border-color 0.2s; text-decoration: none; display: block; color: inherit; }
+    .journey-stat:hover { border-color: var(--accent-green); }
+    .journey-stat-num { font-family: var(--font-display); font-variant-numeric: tabular-nums; font-size: 2.7rem; color: var(--text-dark); line-height: 1; margin-bottom: 0.35rem; }
     .journey-stat-num span { color: var(--accent-green); }
-    .journey-stat-label { font-size: 0.825rem; color: var(--text-muted); line-height: 1.5; }
-    .journey-cta {
-      background: var(--accent-green-light);
-      border: 1px solid var(--accent-green-mid);
-      border-radius: 10px; padding: 1.5rem;
-    }
-    .journey-cta p {
-      font-size: 0.875rem; color: var(--text-body);
-      margin-bottom: 1rem; line-height: 1.6;
-    }
+    .journey-stat-label { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; }
+    .journey-stat-more { font-size: 0.72rem; font-weight: 600; color: var(--accent-green); margin-top: 0.5rem; display: block; }
+    .journey-cta { background: var(--accent-green-light); border: 1px solid var(--accent-green-mid); border-radius: 10px; padding: 1.5rem; }
+    .journey-cta p { font-size: 0.9rem; color: var(--text-body); margin-bottom: 1rem; line-height: 1.6; }
     .journey-cta strong { color: var(--text-dark); }
 
-    /* ── CORE STORY ── */
-    
-    .story-inner {
-      max-width: var(--max-w); margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 6rem; align-items: center;
-    }
-    .story-left .section-label { color: rgba(255,255,255,0.4); }
-    .story-left .section-label::before { background: rgba(255,255,255,0.3); }
-    .story-left .section-title { color: var(--white); }
-    .story-text p {
-      font-size: 1rem; color: rgba(255,255,255,0.7);
-      line-height: 1.85; margin-bottom: 1.25rem;
-    }
-    .story-text p:last-child { margin-bottom: 0; }
-    .story-text strong { color: var(--white); font-weight: 600; }
-    .story-text em { color: rgba(255,255,255,0.9); font-style: italic; }
-    .story-right { display: flex; flex-direction: column; gap: 1.25rem; }
-    .story-card {
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 10px; padding: 1.75rem;
-    }
-    .story-card-icon { font-size: 1.5rem; margin-bottom: 0.85rem; }
-    .story-card h4 {
-      font-size: 0.875rem; font-weight: 600;
-      color: var(--white); margin-bottom: 0.5rem;
-    }
-    .story-card p { font-size: 0.825rem; color: rgba(255,255,255,0.55); line-height: 1.65; }
-    .story-promise {
-      background: var(--accent-green);
-      border-radius: 10px; padding: 1.75rem;
-      border: none;
-    }
-    .story-promise h4 { color: rgba(255,255,255,0.8); }
-    .story-promise p { color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.7; }
-
-    /* ── PROBLEM ── */
-    #problem { background: var(--off-white); }
-    .problem-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 5rem; align-items: center; margin-top: 4rem;
-    }
-    .problem-points { display: flex; flex-direction: column; gap: 1.5rem; }
-    .problem-point { display: flex; gap: 1rem; align-items: flex-start; }
-    .problem-icon {
-      width: 40px; height: 40px;
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 8px; display: flex;
-      align-items: center; justify-content: center;
-      flex-shrink: 0; font-size: 1.1rem;
-    }
-    .problem-point h4 { font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem; }
-    .problem-point p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
-    .problem-callout {
-      background: var(--text-dark); color: var(--white);
-      border-radius: 12px; padding: 2.5rem;
-    }
-    .problem-callout h3 {
-      font-family: var(--font-display); font-size: 1.6rem;
-      line-height: 1.25; margin-bottom: 1rem;
-    }
-    .problem-callout p { font-size: 0.9rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 1.5rem; }
-    .callout-tag {
-      display: inline-block; background: var(--accent-green);
-      color: var(--white); font-size: 0.75rem; font-weight: 600;
-      letter-spacing: 0.06em; text-transform: uppercase;
-      padding: 0.35rem 0.85rem; border-radius: 2rem;
-    }
-
-    /* ── SMOKING GUN ── */
-    #smoking-gun { background: var(--white); }
-    .stats-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1.5px; background: var(--border);
-      border: 1.5px solid var(--border);
-      border-radius: 12px; overflow: hidden; margin-top: 3.5rem;
-    }
-    .stat-block {
-      background: var(--white); padding: 2.25rem 2rem;
-      transition: background 0.2s;
-    }
-    .stat-block:hover { background: var(--off-white); }
-    .stat-block-number {
-      font-family: var(--font-display); font-size: 3rem;
-      color: var(--text-dark); line-height: 1; margin-bottom: 0.5rem;
-    }
-    .stat-block-number span { color: var(--accent-green); }
-    .stat-block-label { font-size: 0.875rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.4rem; }
-    .stat-block-desc { font-size: 0.825rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 0.75rem; }
-    .stat-block-source {
-      display: inline-flex; align-items: center; gap: 0.3rem;
-      font-size: 0.72rem; font-weight: 500;
-      color: var(--text-muted); text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: color 0.2s;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 1px;
-    }
-    .stat-block-source::after { content: "\2192"; font-size: 0.7rem; margin-left: 0.25rem; display: inline-block; transition: transform 0.2s; }
-    .stat-block-source:hover { color: var(--accent-green); border-bottom-color: var(--accent-green); }
-    .stat-block-source:hover::after { transform: translateX(3px); }
-    .stat-block-cost-breakdown {
-      display: flex; flex-direction: column; gap: 0.5rem;
-      margin: 0.65rem 0 0.75rem; padding: 0.85rem;
-      background: var(--off-white); border-radius: 6px;
-      border-left: 2px solid var(--accent-green);
-    }
-    .cost-item {
-      display: flex; justify-content: space-between; align-items: baseline;
-      font-size: 0.775rem; line-height: 1.4;
-    }
-    .cost-item-label { color: var(--text-muted); max-width: 160px; }
-    .cost-item-value { font-weight: 600; color: var(--text-dark); white-space: nowrap; margin-left: 0.5rem; }
-    .stat-pivot {
-      margin-top: 3.5rem;
-      background: var(--off-white);
-      border-left: 3px solid var(--accent-green);
-      padding: 2rem 2.5rem;
-      border-radius: 0 8px 8px 0;
-    }
-    .stat-pivot p { font-size: 1.05rem; color: var(--text-body); line-height: 1.75; }
-    .stat-pivot strong { color: var(--text-dark); }
-
-    /* ── SECTORS ── */
-    #sectors { background: var(--off-white); }
-    .sectors-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem; margin-top: 3.5rem;
-    }
-    .sector-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 12px; padding: 2rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-      position: relative; overflow: hidden;
-    }
-    .sector-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.07); }
-    .sector-icon { font-size: 2rem; margin-bottom: 1.25rem; display: block; }
-    .sector-card h3 {
-      font-size: 1.05rem; font-weight: 600;
-      color: var(--text-dark); margin-bottom: 0.5rem;
-    }
-    .sector-card .sector-dependency {
-      font-size: 0.75rem; font-weight: 600;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--accent-green); margin-bottom: 0.85rem;
-    }
-    .sector-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.25rem; }
-    .sector-promise {
-      background: var(--off-white); border-radius: 6px;
-      padding: 0.85rem 1rem;
-      font-size: 0.8rem; color: var(--text-body);
-      line-height: 1.55; border-left: 2px solid var(--accent-green);
-    }
-    .sector-promise strong { color: var(--text-dark); font-weight: 600; }
-
-    /* ── SOLUTION ── */
-    #solution { background: var(--white); }
-    .pillars-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem; margin-top: 3.5rem;
-    }
-    .pillar {
-      background: var(--off-white); border: 1px solid var(--border);
-      border-radius: 10px; padding: 2rem;
-      position: relative; overflow: hidden;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .pillar:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.07); }
-    .pillar-num {
-      font-family: var(--font-display); font-size: 3.5rem;
-      color: var(--mid-grey); line-height: 1;
-      position: absolute; top: 1.25rem; right: 1.5rem;
-    }
-    .pillar-icon {
-      width: 44px; height: 44px; background: var(--accent-green-light);
-      border-radius: 10px; display: flex;
-      align-items: center; justify-content: center;
-      font-size: 1.25rem; margin-bottom: 1.25rem;
-    }
-    .pillar h3 { font-size: 1.05rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.6rem; }
-    .pillar p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.65; }
-
     /* ── HOW IT WORKS ── */
-    #how-it-works { background: var(--off-white); }
-    .steps { display: flex; flex-direction: column; margin-top: 3.5rem; }
-    .step {
-      display: grid; grid-template-columns: 80px 1fr;
-      gap: 2.5rem; padding: 2.5rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .step:last-child { border-bottom: none; }
-    .step-num {
-      font-family: var(--font-display); font-size: 3.5rem;
-      color: var(--mid-grey); line-height: 1; padding-top: 0.2rem;
-    }
-    .step-content h3 { font-size: 1.2rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem; }
-    .step-content p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; max-width: 600px; }
-    .step-tag {
-      display: inline-block; font-size: 0.75rem; font-weight: 600;
-      letter-spacing: 0.06em; text-transform: uppercase;
-      color: var(--accent-green); margin-bottom: 0.5rem;
-    }
+    .how { background: var(--white); }
+    .how-steps { margin-top: 2.6rem; border-top: 1px solid var(--text-dark); }
+    .how-step { display: grid; grid-template-columns: 90px 1fr; gap: 2.4rem; padding: 2.2rem 0; border-bottom: 1px solid var(--border); }
+    .how-num { font-family: var(--font-display); font-size: 2.6rem; color: var(--mid-grey); line-height: 1; }
+    .how-step h3 { font-size: 1.15rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.4rem; }
+    .how-tag { display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 0.45rem; }
+    .how-step p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; max-width: 680px; }
 
-    /* ── PACKAGES ── */
-    #packages { background: var(--white); }
-    .packages-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem; margin-top: 3.5rem; align-items: stretch;
-    }
-    .package { display: flex; flex-direction: column; }
-    .package-features { flex: 1; }
-    .package {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 12px; overflow: hidden;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .package:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
-    .package.featured { border: 2px solid var(--text-dark); position: relative; }
-    .featured-badge {
-      position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
-      background: var(--text-dark); color: var(--white);
-      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em;
-      text-transform: uppercase; padding: 0.3rem 1rem;
-      border-radius: 0 0 6px 6px;
-    }
-    .package-header { padding: 2rem 2rem 1.5rem; border-bottom: 1px solid var(--border); }
-    .package-name { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 0.5rem; }
-    .package-price { font-family: var(--font-display); font-size: 2.5rem; color: var(--text-dark); line-height: 1; margin-bottom: 0.25rem; }
-    .package-price sub { font-family: var(--font-body); font-size: 0.875rem; font-weight: 400; color: var(--text-muted); vertical-align: baseline; }
-    .package-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; margin-top: 0.75rem; }
-    .package-features { padding: 1.5rem 2rem 2rem; }
-    .package-features ul { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
-    .package-features li { font-size: 0.875rem; color: var(--text-body); display: flex; gap: 0.65rem; align-items: flex-start; line-height: 1.45; }
-    .package-features li::before { content: '✓'; color: var(--accent-green); font-weight: 700; flex-shrink: 0; margin-top: 0.05rem; }
-    .package-cta { padding: 0 2rem 2rem; }
-    .btn-package {
-      display: block; text-align: center; padding: 0.85rem;
-      border-radius: var(--radius); font-size: 0.875rem; font-weight: 600;
-      text-decoration: none; transition: all 0.2s;
-      border: 1.5px solid var(--text-dark); color: var(--text-dark);
-    }
-    .btn-package:hover { background: var(--text-dark); color: var(--white); }
-    .package.featured .btn-package { background: var(--text-dark); color: var(--white); }
-    .package.featured .btn-package:hover { background: var(--accent-green); border-color: var(--accent-green); }
+    /* ── PRICING STRIP ── */
+    .pricing { background: var(--off-white); padding: 80px 2rem; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2.6rem; }
+    .price-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.9rem; transition: transform 0.2s, box-shadow 0.2s; }
+    .price-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.06); }
+    .price-card.featured { border: 2px solid var(--text-dark); }
+    .price-name { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 0.55rem; }
+    .price-amount { font-family: var(--font-display); font-variant-numeric: tabular-nums; font-size: 2.2rem; color: var(--text-dark); line-height: 1; }
+    .price-amount sub { font-family: var(--font-body); font-size: 0.8rem; font-weight: 400; color: var(--text-muted); vertical-align: baseline; }
+    .price-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-top: 0.8rem; }
+    .pricing-foot { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
+    .pricing-foot p { font-size: 0.9rem; color: var(--text-body); }
+    .pricing-foot strong { color: var(--text-dark); }
+
+    /* ── GUIDE CAPTURE ── */
+    .capture { background: var(--text-dark); }
+    .capture-grid { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1.15fr 1fr; gap: 4.5rem; align-items: center; }
+    .capture .title { color: var(--white); }
+    .capture-points { list-style: none; margin-top: 1.6rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .capture-points li { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 0.94rem; color: rgba(255,255,255,0.78); line-height: 1.6; }
+    .capture-points li::before { content: '—'; color: var(--accent-green-mid); font-weight: 700; flex-shrink: 0; }
+    .capture-form-wrap { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 2.4rem; }
+    .capture-form-wrap h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--white); margin-bottom: 0.45rem; }
+    .capture-form-wrap > p { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1.4rem; }
+    .capture-form { display: flex; flex-direction: column; gap: 0.75rem; }
+    .capture-input { padding: 0.9rem 1.1rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.07); color: var(--white); font-family: var(--font-body); font-size: 0.95rem; }
+    .capture-input::placeholder { color: rgba(255,255,255,0.4); }
+    .capture-input:focus { outline: 2px solid var(--accent-green-mid); border-color: transparent; }
+    .capture-submit { padding: 0.95rem; border-radius: 6px; border: none; background: var(--accent-green); color: var(--white); font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: opacity 0.2s; }
+    .capture-submit:hover { opacity: 0.9; }
+    .capture-note { font-size: 0.75rem; color: rgba(255,255,255,0.35); margin-top: 0.9rem; }
+    .capture-success { display: none; text-align: center; padding: 1.5rem 0; }
+    .capture-success p { color: var(--accent-green-mid); font-size: 1rem; line-height: 1.6; }
+
+    /* ── TOOLS ── */
+    .tools { background: var(--white); }
+    .tools-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.6rem; }
+    .tool-card { background: var(--off-white); border: 1px solid var(--border); border-radius: 12px; padding: 2.2rem; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; display: block; }
+    .tool-card:hover { transform: translateY(-3px); border-color: var(--accent-green); box-shadow: 0 12px 32px rgba(0,0,0,0.06); }
+    .tool-card h3 { font-family: var(--font-display); font-size: 1.35rem; color: var(--text-dark); margin-bottom: 0.6rem; }
+    .tool-card p { font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.1rem; }
 
     /* ── DIVIDEND INDEX ── */
-    #dividend-index { background: var(--off-white); }
-    .index-header {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 4rem; align-items: end; margin-bottom: 3.5rem;
-    }
-    .index-header-right {
-      display: flex; flex-direction: column;
-      align-items: flex-end; gap: 1rem;
-    }
-    .index-badge {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: var(--text-dark); color: var(--white);
-      font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em;
-      text-transform: uppercase; padding: 0.4rem 1rem;
-      border-radius: 2rem;
-    }
-    .index-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .index-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: 10px; padding: 2rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-      cursor: pointer;
-    }
+    .index { background: var(--off-white); }
+    .index-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; }
+    .index-header-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.75rem; }
+    .index-badge { display: inline-block; background: var(--text-dark); color: var(--white); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; padding: 0.5rem 1.1rem; border-radius: 2rem; white-space: nowrap; }
+    .index-note { font-size: 0.82rem; color: var(--text-muted); text-align: right; max-width: 280px; line-height: 1.6; }
+    .index-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2.6rem; }
+    .index-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.9rem; transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: inherit; display: block; }
     .index-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.07); }
-    .index-card-tag {
-      font-size: 0.7rem; font-weight: 600;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--accent-green); margin-bottom: 0.85rem;
-    }
-    .index-card h3 { font-family: var(--font-display); font-size: 1.2rem; line-height: 1.3; color: var(--text-dark); margin-bottom: 0.75rem; letter-spacing: -0.01em; }
-    .index-card p { font-size: 0.825rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.25rem; }
-    .index-card-link {
-      font-size: 0.8rem; font-weight: 600;
-      color: var(--text-dark); text-decoration: none;
-      display: inline-flex; align-items: center; gap: 0.35rem;
-      transition: color 0.2s;
-    }
-    .index-card-link:hover { color: var(--accent-green); }
-    .index-card-link::after { content: '→'; transition: transform 0.2s; }
-    .index-card-link:hover::after { transform: translateX(3px); }
-    .index-featured {
-      background: var(--text-dark); color: var(--white);
-      border-color: var(--text-dark);
-    }
-    .index-featured .index-card-tag { color: rgba(255,255,255,0.5); }
+    .index-card-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 0.8rem; }
+    .index-card h3 { font-family: var(--font-display); font-size: 1.18rem; line-height: 1.3; color: var(--text-dark); margin-bottom: 0.7rem; letter-spacing: -0.01em; }
+    .index-card p { font-size: 0.83rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.2rem; }
+    .index-featured { background: var(--text-dark); border-color: var(--text-dark); }
+    .index-featured .index-card-tag { color: var(--accent-green-mid); }
     .index-featured h3 { color: var(--white); }
-    .index-featured p { color: rgba(255,255,255,0.65); }
-    .index-featured .index-card-link { color: rgba(255,255,255,0.8); }
-    .index-featured .index-card-link:hover { color: var(--white); }
+    .index-featured p { color: rgba(255,255,255,0.6); }
+    .index-featured .link-arrow { color: var(--accent-green-mid); }
 
     /* ── ABOUT ── */
-    #about { background: var(--white); }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; margin-top: 4rem; }
-    .about-text p { font-size: 1rem; color: var(--text-body); line-height: 1.8; margin-bottom: 1.25rem; }
-    .about-text p:last-child { margin-bottom: 0; }
-    .about-text strong { color: var(--text-dark); font-weight: 600; }
-    .about-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
-    .promise-card { background: var(--off-white); border-radius: 10px; padding: 1.75rem; }
-    .promise-card h4 { font-size: 0.85rem; font-weight: 600; color: var(--text-dark); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 1rem; }
-    .promise-list { display: flex; flex-direction: column; gap: 0.75rem; }
-    .promise-item { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 0.875rem; color: var(--text-body); line-height: 1.5; }
-    .promise-item::before { content: '—'; color: var(--accent-green); font-weight: 700; flex-shrink: 0; }
-    .credentials { display: flex; flex-direction: column; gap: 0.75rem; }
-    .credential { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: var(--off-white); border-radius: 8px; }
-    .credential-num { font-family: var(--font-display); font-size: 1.6rem; color: var(--text-dark); line-height: 1; min-width: 60px; }
-    .credential-label { font-size: 0.825rem; color: var(--text-muted); line-height: 1.4; }
+    .about { background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4.5rem; align-items: start; }
+    .about-right p { font-size: 1rem; color: var(--text-body); line-height: 1.8; margin-bottom: 1.2rem; }
+    .about-right strong { color: var(--text-dark); }
+    .about-promise { border-left: 3px solid var(--accent-green); padding: 0.4rem 0 0.4rem 1.4rem; font-size: 0.95rem; color: var(--text-dark); font-weight: 500; line-height: 1.7; }
 
-    /* ── OBJECTIONS ── */
-    #objections { background: var(--off-white); }
-    .faq-list { margin-top: 3rem; }
+    /* ── FAQ ── */
+    .faq { background: var(--off-white); }
+    .faq-list { margin-top: 2.4rem; max-width: 860px; }
     .faq-item { border-bottom: 1px solid var(--border); }
     .faq-item:first-child { border-top: 1px solid var(--border); }
-    .faq-q {
-      width: 100%; background: none; border: none; text-align: left;
-      padding: 1.5rem 0; font-family: var(--font-body); font-size: 1rem;
-      font-weight: 600; color: var(--text-dark); cursor: pointer;
-      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
-    }
+    .faq-q { width: 100%; background: none; border: none; text-align: left; padding: 1.4rem 0; font-family: var(--font-body); font-size: 1rem; font-weight: 600; color: var(--text-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
     .faq-q:hover { color: var(--accent-green); }
     .faq-icon { flex-shrink: 0; font-size: 1.25rem; transition: transform 0.3s; color: var(--text-muted); }
     .faq-item.open .faq-icon { transform: rotate(45deg); color: var(--accent-green); }
     .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-    .faq-item.open .faq-a { max-height: 300px; padding-bottom: 1.5rem; }
+    .faq-item.open .faq-a { max-height: 420px; padding-bottom: 1.4rem; }
     .faq-a p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.75; }
+    .faq-a a { color: var(--accent-green); text-decoration: underline; text-underline-offset: 3px; }
+    .faq-a strong { color: var(--text-dark); }
 
-    /* ── LEAD BANNER ── */
-    .lead-banner {
-      background: var(--accent-green-light); border: 1px solid var(--accent-green-mid);
-      border-radius: 10px; padding: 2rem 2.5rem;
-      display: flex; align-items: center;
-      justify-content: space-between; gap: 2rem;
-      flex-wrap: wrap; margin-top: 4rem;
-    }
-    .lead-banner-text h4 { font-size: 1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.25rem; }
-    .lead-banner-text p { font-size: 0.875rem; color: var(--text-muted); }
-    .btn-green {
-      background: var(--accent-green); color: var(--white);
-      padding: 0.75rem 1.5rem; border-radius: var(--radius);
-      font-size: 0.875rem; font-weight: 600; text-decoration: none;
-      white-space: nowrap; transition: opacity 0.2s; flex-shrink: 0;
-    }
-    .btn-green:hover { opacity: 0.88; }
-
-    /* ── CTA ── */
-    #cta { background: var(--text-dark); padding: 100px 2rem; }
-    .cta-inner { max-width: 700px; margin: 0 auto; text-align: center; }
-    .cta-inner .section-label { justify-content: center; color: rgba(255,255,255,0.5); }
-    .cta-inner .section-label::before { background: rgba(255,255,255,0.3); }
-    .cta-inner .section-title { color: var(--white); }
-    .cta-inner p { color: rgba(255,255,255,0.65); font-size: 1.05rem; line-height: 1.7; margin: 1.25rem 0 2.5rem; }
-    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn-light {
-      background: var(--white); color: var(--text-dark);
-      padding: 0.9rem 2rem; border-radius: var(--radius);
-      font-size: 0.9rem; font-weight: 600; text-decoration: none;
-      transition: background 0.2s, transform 0.15s; display: inline-block;
-    }
-    .btn-light:hover { background: var(--accent-green); color: var(--white); transform: translateY(-1px); }
-    .btn-outline-light {
-      border: 1.5px solid rgba(255,255,255,0.3);
-      color: rgba(255,255,255,0.8); padding: 0.9rem 2rem;
-      border-radius: var(--radius); font-size: 0.9rem; font-weight: 500;
-      text-decoration: none; transition: all 0.2s; display: inline-block;
-    }
-    .btn-outline-light:hover { border-color: var(--accent-green); background: var(--accent-green); color: var(--white); }
-    .cta-note { margin-top: 1.5rem; font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+    /* ── FINAL CTA ── */
+    .final { background: var(--text-dark); text-align: center; }
+    .final .title { color: var(--white); }
+    .final-inner { max-width: 720px; margin: 0 auto; }
+    .final p.lead { color: rgba(255,255,255,0.7); font-size: 1.05rem; line-height: 1.75; margin: 1.2rem 0 2.4rem; }
+    .final-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .final-note { margin-top: 1.4rem; font-size: 0.8rem; color: rgba(255,255,255,0.35); }
 
     /* ── FOOTER ── */
-    footer { background: var(--text-dark); border-top: 1px solid rgba(255,255,255,0.07); padding: 3rem 2rem; }
-    .footer-inner {
-      max-width: var(--max-w); margin: 0 auto;
-      display: flex; justify-content: space-between;
-      align-items: center; flex-wrap: wrap; gap: 1.5rem;
-    }
+    footer { background: var(--text-dark); border-top: 1px solid rgba(255,255,255,0.08); padding: 3rem 2rem; }
+    .footer-inner { max-width: var(--max-w); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem; }
     .footer-logo { font-family: var(--font-display); font-size: 1.15rem; color: var(--white); text-decoration: none; }
     .footer-logo span { color: var(--accent-green); }
     .footer-tagline { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-top: 0.25rem; }
-    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-links { display: flex; gap: 1.8rem; flex-wrap: wrap; }
     .footer-links a { font-size: 0.825rem; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
-    .footer-links a:hover { color: rgba(255,255,255,0.8); }
+    .footer-links a:hover { color: rgba(255,255,255,0.85); }
     .footer-copy { font-size: 0.775rem; color: rgba(255,255,255,0.25); }
 
-    /* ── SCROLL REVEAL ── */
-    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
-
     /* ── RESPONSIVE ── */
-    @media (max-width: 960px) {
-      .hero-inner, .problem-grid, .story-inner, .about-grid, .index-header { grid-template-columns: 1fr; gap: 3rem; }
-      .hero-bg { display: none; }
-      .pillars-grid, .packages-grid, .stats-grid, .sectors-grid, .index-grid { grid-template-columns: 1fr; }
+    @media (max-width: 900px) {
+      section { padding: 68px 1.4rem; }
+      .hero { padding: 120px 1.4rem 56px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 2.8rem; }
+      .risks-grid { grid-template-columns: 1fr; }
+      .eq-levers { grid-template-columns: 1fr 1fr; }
+      .eq-display { flex-direction: column; }
+      .eq-op { justify-content: center; padding: 0.4rem 0; }
+      .eq-result { border-left: none; border-top: 1px solid rgba(255,255,255,0.15); }
+      .ledger-entry { grid-template-columns: 1fr; gap: 1.2rem; }
+      .le-figure { align-self: start; }
       .journey-panel.active { grid-template-columns: 1fr; gap: 2.5rem; }
+      .journey-tabs { width: 100%; }
+      .journey-tab { flex: 1; text-align: center; padding: 0.75rem 0.6rem; }
+      .capture-grid { grid-template-columns: 1fr; gap: 2.8rem; }
+      .tools-grid { grid-template-columns: 1fr; }
+      .index-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .how-step { grid-template-columns: 56px 1fr; gap: 1.4rem; }
       /* Mobile nav */
       .nav-toggle { display: flex; }
       .nav-links {
@@ -829,396 +590,15 @@
       }
       .nav-sub-trigger { padding-left: 0; font-weight: 600; color: var(--text-muted); font-size: 0.8rem; }
       .nav-cta { display: inline-block; text-align: center; margin-top: 0.25rem; }
-      .journey-tabs { width: 100%; }
-      .journey-tab { flex: 1; text-align: center; padding: 0.75rem 1rem; }
-      .index-header-right { align-items: flex-start; }
     }
-    @media (max-width: 600px) {
-      section { padding: 70px 1.25rem; }
-      .trust-inner { gap: 1.5rem; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
     }
-
-    /* PAGE ROUTING */
-    .page { display: none; }
-    .page.active { display: block; }
-    /* Non-home pages start below the fixed 68px nav so the sticky breadcrumb sits flush and no gap appears on scroll */
-    .page:not(#page-home) { padding-top: 68px; }
-
-    /* INSIGHTS NAV */
-    .insights-nav { background: var(--off-white); border-bottom: 1px solid var(--border); padding: 0.75rem 2rem; position: sticky; top: 68px; z-index: 90; }
-    .insights-nav-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; gap: 1rem; font-size: 0.8rem; color: var(--text-muted); }
-    .insights-nav-inner a { color: var(--text-muted); text-decoration: none; cursor: pointer; transition: color 0.2s; }
-    .insights-nav-inner a:hover { color: var(--accent-green); }
-    .insights-nav-inner span { color: var(--text-dark); font-weight: 500; }
-
-    /* WHITE PAPER STYLES */
-    .wp-hero { background: var(--text-dark); padding: 100px 2rem 80px; }
-    .wp-hero-inner { max-width: 860px; margin: 0 auto; }
-    .wp-tag { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 1.25rem; }
-    .wp-tag::before { content: ''; display: block; width: 20px; height: 1px; background: var(--accent-green); }
-    .wp-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; letter-spacing: -0.02em; color: var(--white); margin-bottom: 1.5rem; }
-    .wp-intro { font-size: 1.1rem; color: rgba(255,255,255,0.7); line-height: 1.75; max-width: 700px; margin-bottom: 2.5rem; }
-    .wp-meta { display: flex; gap: 2rem; flex-wrap: wrap; }
-    .wp-meta-item { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
-    .wp-meta-item strong { color: rgba(255,255,255,0.7); }
-    .wp-body { padding: 80px 2rem; }
-    .wp-body-inner { max-width: 860px; margin: 0 auto; }
-    .wp-body-inner h2 { font-family: var(--font-display); font-size: 1.8rem; color: var(--text-dark); margin: 3rem 0 1rem; letter-spacing: -0.02em; line-height: 1.2; }
-    .wp-body-inner h2:first-child { margin-top: 0; }
-    .wp-body-inner h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin: 2rem 0 0.75rem; }
-    .wp-body-inner p { font-size: 1rem; color: var(--text-body); line-height: 1.85; margin-bottom: 1.25rem; }
-    .wp-body-inner strong { color: var(--text-dark); }
-    .wp-body-inner a { color: var(--accent-green); text-decoration: underline; text-underline-offset: 3px; }
-    .wp-stat-callout { background: var(--off-white); border-left: 3px solid var(--accent-green); padding: 1.75rem 2rem; border-radius: 0 8px 8px 0; margin: 2rem 0; }
-    .wp-stat-callout .wp-stat-num { font-family: var(--font-display); font-size: 2.8rem; color: var(--text-dark); line-height: 1; margin-bottom: 0.35rem; }
-    .wp-stat-callout .wp-stat-num span { color: var(--accent-green); }
-    .wp-stat-callout p { font-size: 0.925rem; color: var(--text-muted); line-height: 1.65; margin: 0; }
-    .wp-data-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.875rem; }
-    .wp-data-table th { text-align: left; padding: 0.75rem 1rem; background: var(--text-dark); color: var(--white); font-weight: 600; font-size: 0.75rem; letter-spacing: 0.04em; }
-    .wp-data-table td { padding: 0.85rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-body); line-height: 1.5; }
-    .wp-data-table tr:last-child td { border-bottom: none; }
-    .wp-data-table tr:nth-child(even) td { background: var(--off-white); }
-    .wp-data-table td strong { color: var(--text-dark); }
-    .wp-source-block { background: var(--light-grey); border-radius: 8px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
-    .wp-source-block h4 { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem; }
-    .wp-source-block ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
-    .wp-source-block li { font-size: 0.8rem; color: var(--text-muted); display: flex; gap: 0.5rem; }
-    .wp-source-block li::before { content: '—'; color: var(--accent-green); flex-shrink: 0; }
-    .wp-source-block a { color: var(--accent-green); text-decoration: none; }
-    .wp-source-block a:hover { text-decoration: underline; }
-    .wp-cta { background: var(--text-dark); border-radius: 12px; padding: 2.5rem; margin: 3rem 0; text-align: center; }
-    .wp-cta h3 { font-family: var(--font-display); font-size: 1.6rem; color: var(--white); margin-bottom: 0.75rem; }
-    .wp-cta p { font-size: 0.95rem; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 1.75rem; max-width: 500px; margin-left: auto; margin-right: auto; }
-    .wp-cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .wp-related { background: var(--off-white); padding: 60px 2rem; border-top: 1px solid var(--border); }
-    .wp-related-inner { max-width: 860px; margin: 0 auto; }
-    .wp-related h3 { font-family: var(--font-display); font-size: 1.4rem; color: var(--text-dark); margin-bottom: 2rem; }
-    .wp-related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
-    .wp-related-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
-    .wp-related-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
-    .wp-related-tag { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 0.5rem; }
-    .wp-related-card h4 { font-size: 0.95rem; font-weight: 600; color: var(--text-dark); line-height: 1.4; margin-bottom: 0.5rem; }
-    .wp-related-card p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.55; }
-    @media (max-width: 600px) { .wp-related-grid { grid-template-columns: 1fr; } .wp-hero { padding: 80px 1.25rem 60px; } .wp-body { padding: 60px 1.25rem; } }
-
-
-    .lm-point { display: flex; gap: 0.65rem; align-items: flex-start; font-size: 0.875rem; color: var(--text-body); line-height: 1.5; }
-    .lm-point::before { content: '✓'; color: var(--accent-green); font-weight: 700; flex-shrink: 0; }
-
-
-    /* GUIDE & LEAD GATE PAGES */
-    .guide-hero { background: var(--text-dark); padding: 100px 2rem 80px; }
-    .guide-hero-inner { max-width: 860px; margin: 0 auto; }
-    .guide-body { padding: 80px 2rem; }
-    .guide-body-inner { max-width: 860px; margin: 0 auto; }
-    .guide-tip { border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; margin-bottom: 2rem; position: relative; overflow: hidden; transition: box-shadow 0.2s; background: var(--white); }
-    .guide-tip:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.07); }
-    .guide-tip-num { font-family: var(--font-display); font-size: 4rem; color: var(--mid-grey); line-height: 1; position: absolute; top: 1.5rem; right: 2rem; }
-    .guide-tip-tag { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 0.75rem; }
-    .guide-tip h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--text-dark); margin-bottom: 0.75rem; letter-spacing: -0.02em; line-height: 1.2; }
-    .guide-tip p { font-size: 0.95rem; color: var(--text-body); line-height: 1.8; margin-bottom: 1rem; }
-    .guide-tip p:last-child { margin-bottom: 0; }
-    .guide-tip strong { color: var(--text-dark); }
-    .guide-action { background: var(--accent-green-light); border-left: 3px solid var(--accent-green); padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin-top: 1.25rem; font-size: 0.875rem; color: var(--text-body); line-height: 1.6; }
-    .guide-action strong { color: var(--accent-green); }
-    .lead-gate-wrap { max-width: 560px; margin: 0 auto; text-align: center; }
-    .lead-gate-form { display: flex; flex-direction: column; gap: 0.75rem; max-width: 400px; margin: 0 auto; }
-    .lead-gate-input { width: 100%; padding: 0.875rem 1rem; border: 1.5px solid var(--border); border-radius: var(--radius); font-family: var(--font-body); font-size: 0.925rem; color: var(--text-dark); outline: none; transition: border-color 0.2s; }
-    .lead-gate-input:focus { border-color: var(--accent-green); }
-    .lead-gate-submit { width: 100%; background: var(--text-dark); color: var(--white); padding: 0.9rem; border: none; border-radius: var(--radius); font-family: var(--font-body); font-size: 0.925rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
-    .lead-gate-submit:hover { background: var(--accent-green); }
-
-    /* MID-PAGE GUIDE CTA */
-    .mid-guide-cta { background: var(--text-dark); padding: 80px 2rem; }
-    .mid-guide-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-    .mid-guide-text .section-label { color: var(--accent-green); }
-    .mid-guide-text h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: var(--white); line-height: 1.15; letter-spacing: -0.02em; margin: 0.75rem 0 1rem; }
-    .mid-guide-text p { font-size: 0.975rem; color: rgba(255,255,255,0.65); line-height: 1.8; }
-    .mid-guide-points { list-style: none; margin: 1.25rem 0 0; display: flex; flex-direction: column; gap: 0.6rem; }
-    .mid-guide-points li { font-size: 0.875rem; color: rgba(255,255,255,0.7); display: flex; gap: 0.65rem; align-items: flex-start; line-height: 1.5; }
-    .mid-guide-points li::before { content: '✓'; color: var(--accent-green); font-weight: 700; flex-shrink: 0; }
-    .mid-guide-form-wrap { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 2.5rem; }
-    .mid-guide-form-wrap h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--white); margin-bottom: 0.5rem; }
-    .mid-guide-form-wrap p { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 1.5rem; }
-    .mid-guide-form { display: flex; flex-direction: column; gap: 0.75rem; }
-    .mid-guide-input { width: 100%; padding: 0.875rem 1rem; border: 1.5px solid rgba(255,255,255,0.15); border-radius: var(--radius); background: rgba(255,255,255,0.07); font-family: var(--font-body); font-size: 0.925rem; color: var(--white); outline: none; transition: border-color 0.2s; box-sizing: border-box; }
-    .mid-guide-input::placeholder { color: rgba(255,255,255,0.35); }
-    .mid-guide-input:focus { border-color: var(--accent-green); }
-    .mid-guide-submit { width: 100%; background: var(--accent-green); color: var(--white); padding: 0.9rem; border: none; border-radius: var(--radius); font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; }
-    .mid-guide-submit:hover { background: #235c42; }
-    .mid-guide-note { font-size: 0.75rem; color: rgba(255,255,255,0.35); text-align: center; margin-top: 0.5rem; }
-    @media (max-width: 860px) { .mid-guide-inner { grid-template-columns: 1fr; gap: 2.5rem; } }
-
-    /* ═══ STORY-SPINE HOMEPAGE ═══ */
-    .sp-hero, .sp-stakes, .sp-turn, .sp-journey, .sp-proof, .sp-tools, .sp-segments, .sp-about, .sp-cta { padding: 110px 2rem; }
-    .sp-hero-inner, .sp-stakes-inner, .sp-turn-inner, .sp-journey-inner, .sp-proof-inner, .sp-tools-inner, .sp-segments-inner, .sp-about-inner, .sp-cta-inner { max-width: var(--max-w); margin: 0 auto; }
-
-    /* 1. HOOK */
-    .sp-hero { padding-top: 130px; padding-bottom: 60px; background: var(--white); position: relative; overflow: hidden; }
-    .sp-hero-inner { max-width: var(--max-w); display: grid; grid-template-columns: 1.15fr 1fr; gap: 4rem; align-items: center; }
-    .sp-hero-content { position: relative; z-index: 1; }
-    .sp-hero-eyebrow { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 1.5rem; }
-    .sp-hero-title { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.08; letter-spacing: -0.02em; color: var(--text-dark); margin-bottom: 1.5rem; }
-    .sp-hero-title em { font-style: italic; color: var(--accent-green); }
-    .sp-hero-sub { font-size: 1.1rem; line-height: 1.65; color: var(--text-body); max-width: 520px; margin-bottom: 2rem; }
-    .sp-hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
-    .sp-hero-trust { display: flex; gap: 0.6rem; font-size: 0.85rem; color: var(--text-dark); font-weight: 500; flex-wrap: wrap; align-items: center; }
-    .sp-hero-trust span:nth-child(odd) { letter-spacing: 0.01em; }
-    .sp-hero-trust span:nth-child(even) { color: var(--accent-green); }
-
-    /* Hero stat cards */
-    .sp-hero-stats { display: flex; flex-direction: column; gap: 1rem; }
-    .sp-hero-stat {
-      background: var(--white); border: 1px solid var(--border); border-radius: 8px;
-      padding: 1.4rem 1.6rem; text-decoration: none; color: inherit; display: block;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-      position: relative;
-    }
-    .sp-hero-stat:nth-child(2) { margin-left: 1.5rem; }
-    .sp-hero-stat:hover { border-color: var(--accent-green); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(45,106,79,0.08); }
-    .sp-hero-stat-num { font-family: var(--font-display); font-size: 2.4rem; line-height: 1; color: var(--text-dark); margin-bottom: 0.4rem; }
-    .sp-hero-stat-num span { color: var(--accent-green); }
-    .sp-hero-stat-label { font-size: 0.9rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 0.5rem; }
-    .sp-hero-stat-source { font-size: 0.72rem; font-weight: 600; color: var(--accent-green); opacity: 0; transition: opacity 0.2s; letter-spacing: 0.02em; }
-    .sp-hero-stat:hover .sp-hero-stat-source { opacity: 1; }
-
-    /* Trust bar under hero — tight */
-    .sp-trust-bar { background: var(--text-dark); padding: 0.75rem 2rem; }
-    .sp-trust-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 2.25rem; flex-wrap: wrap; }
-    .sp-trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.78); letter-spacing: 0.04em; text-transform: uppercase; }
-
-    /* WHO WE SERVE — Journey tabs */
-    #who-we-serve { background: var(--off-white); padding: 90px 2rem; }
-    #who-we-serve .section-inner { max-width: var(--max-w); margin: 0 auto; }
-    #who-we-serve .section-label { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 1rem; }
-    #who-we-serve .section-label::before { content: ''; display: block; width: 20px; height: 1px; background: var(--accent-green); }
-    #who-we-serve .section-title { font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 2.8rem); line-height: 1.15; letter-spacing: -0.02em; color: var(--text-dark); margin-bottom: 1.25rem; }
-    #who-we-serve .section-sub { font-size: 1.05rem; color: var(--text-muted); max-width: 640px; line-height: 1.7; }
-    .journey-tabs { display: flex; gap: 0; border: 1.5px solid var(--border); border-radius: 10px; overflow: hidden; margin: 3rem 0 0; width: fit-content; background: var(--white); }
-    .journey-tab { padding: 0.85rem 2rem; font-size: 0.875rem; font-weight: 600; color: var(--text-muted); cursor: pointer; background: var(--white); border: none; border-right: 1px solid var(--border); transition: all 0.2s; font-family: var(--font-body); letter-spacing: 0.02em; }
-    .journey-tab:last-child { border-right: none; }
-    .journey-tab.active { background: var(--text-dark); color: var(--white); }
-    .journey-tab:not(.active):hover { background: var(--off-white); color: var(--text-dark); }
-    .journey-panels { margin-top: 2.5rem; }
-    .journey-panel { display: none; }
-    .journey-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-    .journey-panel-left h3 { font-family: var(--font-display); font-size: 1.9rem; line-height: 1.2; color: var(--text-dark); margin-bottom: 1.25rem; letter-spacing: -0.02em; }
-    .journey-panel-left h3 em { font-style: italic; color: var(--accent-green); }
-    .journey-panel-left p { font-size: 1rem; color: var(--text-body); line-height: 1.8; margin-bottom: 1.25rem; }
-    .journey-panel-left p:last-of-type { margin-bottom: 1.75rem; }
-    .journey-pain-list { display: flex; flex-direction: column; gap: 0.65rem; margin-bottom: 2rem; }
-    .journey-pain-item { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 0.9rem; color: var(--text-body); line-height: 1.5; }
-    .journey-pain-item::before { content: '—'; color: var(--accent-green); font-weight: 700; flex-shrink: 0; margin-top: 0.1rem; }
-    .journey-panel-right { display: flex; flex-direction: column; gap: 1.25rem; }
-    .journey-promise { background: var(--text-dark); color: var(--white); border-radius: 12px; padding: 2rem; }
-    .journey-promise h4 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.85rem; }
-    .journey-promise p { font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.75; }
-    .journey-promise strong { color: var(--white); }
-    .journey-stat { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; transition: border-color 0.2s; }
-    .journey-stat:hover { border-color: var(--accent-green); }
-    .journey-stat-num { font-family: var(--font-display); font-size: 2.8rem; color: var(--text-dark); line-height: 1; margin-bottom: 0.35rem; }
-    .journey-stat-num span { color: var(--accent-green); }
-    .journey-stat-label { font-size: 0.85rem; color: var(--text-muted); line-height: 1.55; }
-    .journey-cta { background: var(--accent-green-light); border: 1px solid #b7dac9; border-radius: 10px; padding: 1.5rem; }
-    .journey-cta p { font-size: 0.9rem; color: var(--text-body); margin-bottom: 1rem; line-height: 1.6; }
-    .journey-cta strong { color: var(--text-dark); }
-    .btn-green { display: inline-block; background: var(--accent-green); color: var(--white); padding: 0.7rem 1.35rem; border-radius: 4px; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
-    .btn-green:hover { opacity: 0.88; }
-    /* FAQ */
-    .sp-faq { background: var(--off-white); padding: 90px 2rem; }
-    .sp-faq-inner { max-width: 860px; margin: 0 auto; }
-    .sp-faq .section-label { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 1rem; }
-    .sp-faq .section-label::before { content: ''; display: block; width: 20px; height: 1px; background: var(--accent-green); }
-    .faq-list { margin-top: 2.5rem; }
-    .faq-item { border-bottom: 1px solid var(--border); }
-    .faq-item:first-child { border-top: 1px solid var(--border); }
-    .faq-q { width: 100%; background: none; border: none; text-align: left; padding: 1.4rem 0; font-family: var(--font-body); font-size: 1rem; font-weight: 600; color: var(--text-dark); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
-    .faq-q:hover { color: var(--accent-green); }
-    .faq-icon { flex-shrink: 0; font-size: 1.25rem; transition: transform 0.3s; color: var(--text-muted); }
-    .faq-item.open .faq-icon { transform: rotate(45deg); color: var(--accent-green); }
-    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-    .faq-item.open .faq-a { max-height: 400px; padding-bottom: 1.4rem; }
-    .faq-a p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.75; }
-    .faq-a a { color: var(--accent-green); text-decoration: underline; text-underline-offset: 3px; }
-    .faq-a strong { color: var(--text-dark); }
-    @media (max-width: 860px) { .sp-faq { padding: 70px 1.25rem; } }
-
-    @media (max-width: 860px) {
-      .journey-panel.active { grid-template-columns: 1fr; gap: 2.5rem; }
-      .journey-tabs { width: 100%; }
-      .journey-tab { flex: 1; padding: 0.75rem 0.5rem; }
-      #who-we-serve { padding: 70px 1.25rem; }
-    }
-
-    /* 2. STAKES */
-    .sp-stakes { background: var(--text-dark); padding-bottom: 90px; }
-    .sp-stakes .section-label { color: var(--accent-green-mid); }
-    .sp-stakes .section-label::before { background: var(--accent-green-mid); }
-    .sp-stakes-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; letter-spacing: -0.02em; color: var(--white); margin-bottom: 1.25rem; }
-    .sp-stakes-lead { font-size: 1.15rem; line-height: 1.7; color: rgba(255,255,255,0.72); max-width: 620px; margin-bottom: 3.5rem; }
-    .sp-stakes-lead em { color: var(--white); font-style: italic; }
-    .sp-stakes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
-    .sp-stake-num { font-family: var(--font-display); font-size: 2rem; color: var(--accent-green-mid); margin-bottom: 0.75rem; }
-    .sp-stake h4 { font-size: 1.1rem; font-weight: 600; color: var(--white); margin-bottom: 0.6rem; }
-    .sp-stake p { font-size: 0.92rem; line-height: 1.7; color: rgba(255,255,255,0.65); }
-
-    /* 3. TURN */
-    .sp-turn { background: var(--off-white); }
-    .sp-turn-inner { max-width: 760px; text-align: center; }
-    .sp-turn-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); line-height: 1.15; letter-spacing: -0.02em; color: var(--text-dark); margin: 1rem 0 2.5rem; }
-    .sp-turn-body { text-align: left; max-width: 660px; margin: 0 auto; }
-    .sp-turn-body p { font-size: 1.1rem; line-height: 1.85; color: var(--text-body); margin-bottom: 1.5rem; }
-    .sp-turn-body strong { color: var(--text-dark); }
-    .sp-turn-emphasis { font-size: 1.18rem !important; color: var(--text-dark) !important; padding: 1.5rem 0 0; margin-top: 0.5rem; border-top: 1px solid var(--border); }
-    .sp-turn-emphasis em { color: var(--accent-green); font-style: italic; }
-
-    /* 4. JOURNEY */
-    .sp-journey { background: var(--white); }
-    .sp-journey-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
-    .sp-step-card { display: block; text-decoration: none; color: inherit; background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2.25rem 2rem; transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; position: relative; }
-    .sp-step-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); border-color: var(--accent-green-mid); }
-    .sp-step-stage { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-green); margin-bottom: 1.25rem; }
-    .sp-step-icon { font-size: 2rem; margin-bottom: 1rem; }
-    .sp-step-card h3 { font-family: var(--font-display); font-size: 1.6rem; color: var(--text-dark); margin-bottom: 0.35rem; }
-    .sp-step-tag { font-size: 0.92rem; font-weight: 600; color: var(--text-dark); margin-bottom: 0.85rem; }
-    .sp-step-card > p:not(.sp-step-tag) { font-size: 0.92rem; line-height: 1.65; color: var(--text-muted); margin-bottom: 1.5rem; }
-    .sp-step-link { font-size: 0.85rem; font-weight: 600; color: var(--accent-green); }
-
-    /* 5. PROOF */
-    .sp-proof { background: var(--off-white); }
-    .sp-proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
-    .sp-proof-stat { display: block; text-decoration: none; color: inherit; background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2.25rem 2rem; transition: transform 0.2s, box-shadow 0.2s; }
-    .sp-proof-stat:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.07); }
-    .sp-proof-stat:hover .sp-proof-hint { opacity: 1; }
-    .sp-proof-num { font-family: var(--font-display); font-size: 3.25rem; color: var(--text-dark); line-height: 1; margin-bottom: 0.65rem; }
-    .sp-proof-num span { color: var(--accent-green); }
-    .sp-proof-label { font-size: 0.95rem; color: var(--text-body); line-height: 1.5; font-weight: 500; }
-    .sp-proof-hint { display: inline-block; margin-top: 0.85rem; font-size: 0.78rem; font-weight: 600; color: var(--accent-green); opacity: 0; transition: opacity 0.2s; }
-    .sp-proof-pivot { margin-top: 3rem; background: var(--white); border-left: 3px solid var(--accent-green); padding: 2rem 2.5rem; border-radius: 0 8px 8px 0; }
-    .sp-proof-pivot p { font-size: 1.08rem; line-height: 1.75; color: var(--text-body); }
-    .sp-proof-pivot strong { color: var(--text-dark); }
-
-    /* 6. TOOLS */
-    .sp-tools { background: var(--white); }
-    .sp-tools-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
-    .sp-tool-card { display: block; text-decoration: none; color: inherit; background: var(--accent-green-light); border: 1px solid var(--accent-green-mid); border-radius: 12px; padding: 2.5rem; transition: transform 0.2s, box-shadow 0.2s; }
-    .sp-tool-card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(45,106,79,0.12); }
-    .sp-tool-icon { font-size: 2.25rem; margin-bottom: 1rem; }
-    .sp-tool-card h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--text-dark); margin-bottom: 0.6rem; }
-    .sp-tool-card p { font-size: 0.95rem; line-height: 1.65; color: var(--text-body); margin-bottom: 1.25rem; }
-
-    /* 7. SEGMENTS */
-    .sp-segments { background: var(--off-white); }
-    .sp-seg-tabs { display: inline-flex; gap: 0.5rem; margin: 2.5rem 0 0; background: var(--white); padding: 0.4rem; border-radius: 10px; border: 1px solid var(--border); flex-wrap: wrap; }
-    .sp-seg-tab { font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; padding: 0.65rem 1.4rem; border: none; background: none; color: var(--text-muted); border-radius: 7px; cursor: pointer; transition: all 0.2s; }
-    .sp-seg-tab.active { background: var(--text-dark); color: var(--white); }
-    .sp-seg-panel { display: none; margin-top: 2.5rem; background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; max-width: 820px; }
-    .sp-seg-panel.active { display: block; animation: fadeUp 0.4s ease both; }
-    .sp-seg-panel h3 { font-family: var(--font-display); font-size: 1.6rem; color: var(--text-dark); line-height: 1.2; margin-bottom: 1rem; }
-    .sp-seg-panel p { font-size: 1rem; line-height: 1.75; color: var(--text-body); margin-bottom: 1.25rem; }
-
-    /* ABOUT */
-    .sp-about { background: var(--white); }
-    .sp-about-inner { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 4rem; align-items: start; }
-    .sp-about-right p { font-size: 1.02rem; line-height: 1.8; color: var(--text-body); margin-bottom: 1.25rem; }
-    .sp-about-right strong { color: var(--text-dark); }
-    .sp-about-promise { padding: 1.25rem 1.5rem; background: var(--accent-green-light); border-radius: 8px; font-size: 0.95rem !important; color: var(--text-dark) !important; border-left: 3px solid var(--accent-green); }
-
-    /* 8. CTA */
-    .sp-cta { background: var(--text-dark); text-align: center; }
-    .sp-cta-inner { max-width: 700px; }
-    .sp-cta .section-label { color: rgba(255,255,255,0.5); }
-    .sp-cta .section-label::before { background: rgba(255,255,255,0.3); }
-    .sp-cta-title { font-family: var(--font-display); font-size: clamp(2.2rem, 4vw, 3.2rem); line-height: 1.1; color: var(--white); margin: 1rem 0 1.5rem; }
-    .sp-cta p { color: rgba(255,255,255,0.7); font-size: 1.08rem; line-height: 1.7; margin-bottom: 2.5rem; }
-    .sp-cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .sp-cta-note { margin-top: 1.5rem; font-size: 0.82rem; color: rgba(255,255,255,0.4) !important; }
-
-    /* responsive */
-    @media (max-width: 860px) {
-      .sp-stakes-grid, .sp-journey-steps, .sp-proof-grid, .sp-tools-grid { grid-template-columns: 1fr; }
-      .sp-about-inner { grid-template-columns: 1fr; gap: 2rem; }
-      .sp-hero, .sp-stakes, .sp-turn, .sp-journey, .sp-proof, .sp-tools, .sp-segments, .sp-about, .sp-cta { padding: 70px 1.25rem; }
-      .sp-hero { padding-top: 120px; padding-bottom: 40px; }
-      .sp-hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-      .sp-hero-stat:nth-child(2) { margin-left: 0; }
-      .sp-trust-inner { gap: 1.25rem; }
-      .sp-trust-item { font-size: 0.68rem; }
-    }
-
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://dividendit.com/#org",
-        "name": "Dividend IT",
-        "url": "https://dividendit.com/",
-        "description": "Outsourced IT & cybersecurity for business owners in Ireland & UK. EBITDA-aligned technology that protects, sharpens and builds enterprise value.",
-        "email": "hello@dividendit.com",
-        "areaServed": ["IE", "GB"],
-        "founder": { "@type": "Person", "name": "Ethan Searle" }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://dividendit.com/#website",
-        "url": "https://dividendit.com/",
-        "name": "Dividend IT",
-        "publisher": { "@id": "https://dividendit.com/#org" }
-      },
-      {
-        "@type": "Service",
-        "@id": "https://dividendit.com/#service",
-        "serviceType": "Outsourced IT & Cybersecurity",
-        "provider": { "@id": "https://dividendit.com/#org" },
-        "areaServed": ["IE", "GB"],
-        "audience": { "@type": "BusinessAudience", "name": "Business owners and shareholders, 10–150 users" },
-        "description": "Fully managed and co-managed outsourced IT support and cybersecurity: 24/7 monitoring, remediation and support, EDR/MDR, backup & disaster recovery, IT strategy and vCIO — aligned to EBITDA and enterprise value.",
-        "offers": { "@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "75", "highPrice": "120", "offerCount": "3", "description": "Per user per month, all-inclusive, monthly rolling" }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://dividendit.com/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What does it cost to outsource IT support and cybersecurity?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Dividend IT packages start at €75 per user per month, fully inclusive — support, security, backup and monitoring with no hidden fees. A 25-person business on our most popular Operate package (€100/user/month) pays €2,500 per month. Compare that to the average €21k cost of remediating a single cyber attack, or the cost of one hour of downtime, and the maths tends to take care of itself." }
-          },
-          {
-            "@type": "Question",
-            "name": "What is outsourced IT & cybersecurity?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Outsourced IT & cybersecurity means a specialist partner runs your technology for you: helpdesk support, infrastructure, security monitoring, threat detection and response, backup and disaster recovery, and technology strategy. Instead of hiring an internal team, you get a full IT department for a fixed monthly fee per user — with enterprise-grade security tooling most SMBs couldn't justify buying alone." }
-          },
-          {
-            "@type": "Question",
-            "name": "How long does it take to switch IT providers?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Most businesses are fully onboarded within 30 days. Dividend IT manages the migration end-to-end, including the handover from your current provider, so your team experiences minimal disruption — most barely notice the change, except that things start working better." }
-          },
-          {
-            "@type": "Question",
-            "name": "Are there long-term contracts?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No lock-in beyond a 3-month onboarding period. Dividend IT keeps clients because the service is good — not because they're contractually trapped. Annual contracts are available with a discount if you prefer that structure." }
-          },
-          {
-            "@type": "Question",
-            "name": "How is Dividend IT different from a typical IT provider?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Most IT providers focus on keeping the lights on. Dividend IT works directly with business owners and shareholders — not just IT managers — and aligns every technology decision to EBITDA, valuation and long-term business value. If your current provider has never talked to you about your exit plans or how IT spend affects your multiple, that's the difference." }
-          },
-          {
-            "@type": "Question",
-            "name": "Is my business big enough for outsourced IT?",
-            "acceptedAnswer": { "@type": "Answer", "text": "If you have between 10 and 150 people and your business depends on technology working, you're exactly the right size. The businesses that benefit most are those that have outgrown their current IT setup but haven't yet justified a full internal team." }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
+
 <nav>
   <div class="nav-inner">
     <div style="display:flex;flex-direction:column;gap:2px;"><a href="/" class="nav-logo">Dividend<span>IT</span></a><div style="font-size:0.65rem;color:var(--text-muted);letter-spacing:0.02em;font-family:var(--font-body);font-weight:400;line-height:1;">Outsourced Cybersecurity &amp; IT</div></div>
@@ -1314,88 +694,179 @@
     </ul>
   </div>
 </nav>
-<script>
-(function(){
-  /* Clean up nav-closing on page restore (back/forward cache) */
-  window.addEventListener('pageshow', function(){
-    document.querySelectorAll('.nav-dd.nav-closing').forEach(function(el){
-      el.classList.remove('nav-closing');
-    });
-  });
-  /* Close mega menu when a link inside it is clicked */
-  document.querySelectorAll('.nav-mega-menu a').forEach(function(a){
-    a.addEventListener('click', function(){
-      var dd = this.closest('.nav-dd');
-      if(dd){
-        dd.classList.add('nav-closing');
-        setTimeout(function(){ dd.classList.remove('nav-closing'); }, 800);
-      }
-    });
-  });
-  /* Hamburger toggle */
-  var toggle = document.querySelector('.nav-toggle');
-  var links  = document.querySelector('.nav-links');
-  if(toggle) toggle.addEventListener('click', function(){
-    toggle.classList.toggle('open');
-    links.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', links.classList.contains('open'));
-  });
-})();
-</script>
+
+
 <main>
 
-<!-- 1. HOOK -->
-<section id="hero" class="sp-hero">
-  <div class="sp-hero-inner">
-    <div class="sp-hero-content">
-      <div class="sp-hero-eyebrow">Outsourced Cybersecurity &amp; IT · Ireland &amp; UK</div>
-      <h1 class="sp-hero-title">You built the business.<br>It shouldn't <em>own</em> you.</h1>
-      <p class="sp-hero-sub">Most owners are trapped in the day-to-day — with technology that's a cost and a risk instead of an engine. We change that: seamlessly secure IT that frees your time, sharpens your edge, and builds what your business is worth.</p>
-      <div class="sp-hero-actions">
+<!-- 1. HERO -->
+<section class="hero" id="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">Outsourced IT &amp; Cybersecurity · Ireland &amp; UK</div>
+      <h1 class="hero-title">You built the business.<br>It shouldn't <em>own</em> you.</h1>
+      <p class="hero-sub">Most owners are trapped in the day-to-day — with technology that's a cost and a risk instead of an engine. We change that: seamlessly secure IT that frees your time, sharpens your edge, and builds what your business is worth.</p>
+      <div class="hero-actions">
         <a href="/guide" class="btn-primary" onclick="trackEvent('guide_open',{location:'hero'})">Drive Business Value</a>
-        <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'hero'})">Book a Free 20-Min Call</a>
+        <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-outline" onclick="trackEvent('book_call_click',{location:'hero'})">Book a Free 20-Min Call</a>
       </div>
-      <div class="sp-hero-trust">
-        <span>No jargon</span><span>·</span><span>No lock-in</span><span>·</span><span>No surprises</span>
-      </div>
+      <div class="hero-trust"><span>No jargon</span><span class="dot">·</span><span>No lock-in</span><span class="dot">·</span><span>No surprises</span></div>
     </div>
-    <div class="sp-hero-stats">
-      <a class="sp-hero-stat" href="/cyber-risk" onclick="trackEvent('hero_stat_click',{stat:'cyber-attack-rate'})">
-        <div class="sp-hero-stat-num"><span>50%</span></div>
-        <div class="sp-hero-stat-label">of Irish SMBs experienced a cyber attack in the past 12 months</div>
-        <div class="sp-hero-stat-source">See the research →</div>
+    <div class="hero-ledger" aria-label="What's at stake for Irish business owners">
+      <div class="hero-ledger-title">What's at stake — the owner's ledger</div>
+      <a class="hl-row" href="/cyber-risk" onclick="trackEvent('hero_stat_click',{stat:'cyber-attack-rate'})">
+        <span class="hl-num">50%</span>
+        <span class="hl-label">of Irish SMBs experienced a cyber attack in the past 12 months<span class="hl-src">See the research →</span></span>
       </a>
-      <a class="sp-hero-stat" href="/exit-value" onclick="trackEvent('hero_stat_click',{stat:'exit-failure-rate'})">
-        <div class="sp-hero-stat-num"><span>70%</span></div>
-        <div class="sp-hero-stat-label">of business owners who want to exit will never successfully do so</div>
-        <div class="sp-hero-stat-source">See the research →</div>
+      <a class="hl-row" href="/true-cost" onclick="trackEvent('hero_stat_click',{stat:'avg-remediation-cost'})">
+        <span class="hl-num">€21k</span>
+        <span class="hl-label">average cost to fully remediate a cyber attack on an Irish business<span class="hl-src">See the research →</span></span>
       </a>
-      <a class="sp-hero-stat" href="/true-cost" onclick="trackEvent('hero_stat_click',{stat:'avg-remediation-cost'})">
-        <div class="sp-hero-stat-num">€<span>21k</span></div>
-        <div class="sp-hero-stat-label">average cost to fully remediate a cyber attack on an Irish business</div>
-        <div class="sp-hero-stat-source">See the research →</div>
+      <a class="hl-row" href="/exit-value" onclick="trackEvent('hero_stat_click',{stat:'exit-failure-rate'})">
+        <span class="hl-num">70%</span>
+        <span class="hl-label">of business owners who want to exit will never successfully do so<span class="hl-src">See the research →</span></span>
       </a>
+      <div class="hero-ledger-foot">Every figure links to the source data. We don't do scare tactics — we do arithmetic.</div>
     </div>
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<div class="sp-trust-bar">
-  <div class="sp-trust-inner">
-    <div class="sp-trust-item">🔒 Seamlessly Secure</div>
-    <div class="sp-trust-item">⏱ 24/7 Monitoring, Remediation &amp; Support</div>
-    <div class="sp-trust-item">💼 Business-First Thinking</div>
-    <div class="sp-trust-item">📊 EBITDA Aligned</div>
-    <div class="sp-trust-item">🌍 Ireland &amp; UK</div>
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-strip-inner">
+    <span>Seamlessly Secure</span>
+    <span>24/7 Monitoring, Remediation &amp; Support</span>
+    <span>Business-First Thinking</span>
+    <span>EBITDA Aligned</span>
+    <span>Ireland &amp; UK</span>
   </div>
 </div>
 
-<!-- WHO WE SERVE — 3 audience journey -->
-<section id="who-we-serve">
-  <div class="section-inner">
-    <div class="section-label reveal">Who We Serve</div>
-    <h2 class="section-title reveal">One Partner.<br>Every Stage of the Journey.</h2>
-    <p class="section-sub reveal">Whether you're building from scratch, scaling through the chaos, or protecting what you've created — Dividend IT is built for where you are right now.</p>
+<!-- 2. THE TWO RISKS -->
+<section class="risks" id="two-risks">
+  <div class="inner">
+    <div class="risks-lead reveal">
+      <div class="eyebrow" style="justify-content:center;">The two risks</div>
+      <h2 class="title">Every owner faces the same two risks.<br>Most providers only talk about one.</h2>
+      <p>The risk of a cyber incident destroying what you've built today. And the risk of never realising the value of what you've spent years creating. Outsourced IT &amp; cybersecurity, done properly, removes both.</p>
+    </div>
+    <div class="risks-grid">
+      <div class="risk-panel reveal">
+        <div class="risk-tag">Risk one · Today's value</div>
+        <h3>A breach, a fraud, or a failure takes it all down.</h3>
+        <p>Your systems hold the intellectual capital that makes you competitive — customer data, operational know-how, financial workflows. When they fail, the cost is immediate. When they're breached, it can be terminal.</p>
+        <div class="risk-rows">
+          <a class="risk-row" href="/cyber-risk"><span class="rr-num"><span>17%</span></span><span class="rr-label">of businesses hit by a cyber attack are no longer operating</span><span class="rr-link">→</span></a>
+          <a class="risk-row" href="/true-cost"><span class="rr-num">€<span>5.6k</span></span><span class="rr-label">lost per hour of IT downtime for the average Irish business</span><span class="rr-link">→</span></a>
+          <a class="risk-row" href="/cyber-risk"><span class="rr-num"><span>3×</span></span><span class="rr-label">more likely to be targeted than large firms — criminals know SMB defences are weaker</span><span class="rr-link">→</span></a>
+        </div>
+        <div class="risk-foot"><div class="bottom-line">Protection is the floor. It isn't the point.</div></div>
+      </div>
+      <div class="risk-panel reveal">
+        <div class="risk-tag">Risk two · Tomorrow's value</div>
+        <h3>You build for decades — and never realise the value.</h3>
+        <p>Most owners are never taught how value is realised or passed on. Technology quietly decides part of the answer: every euro of recurring IT cost erodes EBITDA, and every euro of EBITDA is multiplied at exit.</p>
+        <div class="risk-rows">
+          <a class="risk-row" href="/exit-value"><span class="rr-num"><span>70%</span></span><span class="rr-label">of owners who want to exit will never successfully do so</span><span class="rr-link">→</span></a>
+          <a class="risk-row" href="/exit-value"><span class="rr-num"><span>78%</span></span><span class="rr-label">have no formal transition team — exposed at the most critical stage</span><span class="rr-link">→</span></a>
+          <a class="risk-row" href="/startup-survival"><span class="rr-num"><span>49%</span></span><span class="rr-label">of businesses fail before year five — foundations decide the odds early</span><span class="rr-link">→</span></a>
+        </div>
+        <div class="risk-foot"><div class="bottom-line">The value you create deserves to be realised.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. THE EQUATION -->
+<section class="equation" id="the-equation">
+  <div class="inner">
+    <div class="equation-lead reveal">
+      <div class="eyebrow on-dark">How value is actually built</div>
+      <h2 class="title">Your business is worth a multiple of its earnings.<br>Your IT sits inside that equation.</h2>
+      <p>This is the mechanic every trade sale, succession and management buyout runs on. It isn't complicated — it's just rarely explained to the person it matters most to: the shareholder.</p>
+    </div>
+    <div class="eq-display reveal">
+      <div class="eq-term">
+        <div class="eq-term-figure">EBITDA</div>
+        <div class="eq-term-label">What your business earns — after every recurring technology cost has taken its bite</div>
+      </div>
+      <div class="eq-op">×</div>
+      <div class="eq-term">
+        <div class="eq-term-figure">Multiple</div>
+        <div class="eq-term-label">Set by your market, growth and risk profile — including the technology risk a buyer inherits</div>
+      </div>
+      <div class="eq-op">=</div>
+      <div class="eq-term eq-result">
+        <div class="eq-term-figure">Enterprise Value</div>
+        <div class="eq-term-label">What your life's work is actually worth on the day it matters</div>
+      </div>
+    </div>
+    <div class="eq-levers reveal">
+      <div class="eq-lever"><h4>Workloads</h4><p>Where your business systems run is a capital allocation decision — owned or rented, on the balance sheet or off it.</p></div>
+      <div class="eq-lever"><h4>Security</h4><p>The risk profile a buyer inherits. A breach in the year before an exit can take the deal off the table.</p></div>
+      <div class="eq-lever"><h4>Cost</h4><p>Every euro of recurring spend removed is a euro of EBITDA — multiplied at exit.</p></div>
+      <div class="eq-lever"><h4>People</h4><p>Technology friction taxes the humans doing the actual value creation. Time back is capacity back.</p></div>
+    </div>
+    <div class="eq-note reveal"><p>"Every cost decision is two numbers: the saving — and the saving times your multiple."</p></div>
+  </div>
+</section>
+
+<!-- 4. FIELD NOTES -->
+<section class="field" id="field-notes">
+  <div class="inner">
+    <div class="field-intro reveal">
+      <div class="eyebrow">From the field</div>
+      <h2 class="title">Three deals that taught us the doctrine.</h2>
+      <p class="sub">A decade inside an outsourced IT &amp; cybersecurity business, sitting across the table from CFOs and owners. Names withheld — the numbers and the lessons are real.</p>
+    </div>
+    <div class="ledger-entries reveal">
+      <article class="ledger-entry">
+        <div class="le-meta"><span class="le-sector">Distribution &amp; Manufacturing</span>Post management buyout<br>Later exited to trade</div>
+        <div class="le-body">
+          <h3>"Move everything to the cloud — it's cheaper and I won't have to worry."</h3>
+          <p>The CFO opened with the industry-standard answer. It was wrong on both counts. We priced the core workload honestly: roughly <em>€8,000 of owned compute</em>, hosted in a Tier-III data centre, replaced <em>€1,350 a month</em> of rented cloud compute. Payback in under six months. The server ran seven years.</p>
+          <p>Email and files went to Microsoft 365 — where SaaS genuinely earns its place. Everything else was placed deliberately. Same uptime as a hyperscaler. None of the expensed-compute premium. The business later exited to a trade buyer.</p>
+        </div>
+        <div class="le-figure"><div class="bottom-line"><div class="le-figure-num">~6 mo</div><div class="le-figure-label">payback on owned compute — then every month after was EBITDA retained, not rent paid</div></div></div>
+      </article>
+      <article class="ledger-entry">
+        <div class="le-meta"><span class="le-sector">Medical Distribution</span>Positioning for exit<br>Acquired within the year</div>
+        <div class="le-body">
+          <h3>The business that priced every decision twice.</h3>
+          <p>Every recommendation we brought was assessed the same way: first the saving, then <em>the saving multiplied by their exit multiple</em>. A licence optimisation was never a €5,000 decision — at their multiple it was a €30,000 enterprise value decision.</p>
+          <p>Right-sized licensing for frontline staff and perpetual purchases where the maths favoured them added up to six figures of value that would otherwise have leaked into recurring cost. They were acquired roughly a year later.</p>
+        </div>
+        <div class="le-figure"><div class="bottom-line"><div class="le-figure-num">× multiple</div><div class="le-figure-label">the discipline: every recurring cost removed compounds into the valuation</div></div></div>
+      </article>
+      <article class="ledger-entry">
+        <div class="le-meta"><span class="le-sector">Financial Services</span>Wealth management<br>Clients worldwide</div>
+        <div class="le-body">
+          <h3>Funding idle compute while the value engine sat under-defended.</h3>
+          <p>Their value engine is people — advisers building client trust over decades. Yet every workload sat in expensed public cloud, eating budget, while the advisers themselves — working from every timezone, carrying sensitive client data — were the actual risk surface.</p>
+          <p>We rebalanced: right-sized the compute, moved the security spend to where the risk actually sat. Total IT cost went down. Risk profile improved. The regulatory audit trail got stronger.</p>
+        </div>
+        <div class="le-figure"><div class="bottom-line"><div class="le-figure-num">Rebalanced</div><div class="le-figure-label">spend moved from idle compute to protecting the people who create the value</div></div></div>
+      </article>
+    </div>
+    <div class="field-close reveal">
+      <p>The pattern across all three: <strong>nothing defaulted, everything chosen.</strong> Where a workload runs, what a licence costs, where the security budget goes — each is a capital decision that either compounds your value or quietly erodes it. Our job is to make sure it compounds. <a href="/guide" class="link-arrow" onclick="trackEvent('guide_open',{location:'field-notes'})">Read the full guide</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. DOCTRINE -->
+<section class="doctrine">
+  <div class="doctrine-inner reveal">
+    <p class="doctrine-line">People multiply money — <em>not systems and processes.</em><br>Even in the AI age.</p>
+    <p class="doctrine-sub">Good technology isn't ambiguous — it's binary. It works. Always. Our job is to make sure systems and processes never get in your people's way, and that every euro of technology spend is deliberately allocated to compound the value you're building.</p>
+  </div>
+</section>
+
+<!-- 6. WHO WE SERVE -->
+<section class="serve" id="who-we-serve">
+  <div class="inner">
+    <div class="eyebrow reveal">Who we serve</div>
+    <h2 class="title reveal">One partner.<br>Every stage of the journey.</h2>
+    <p class="sub reveal">Whether you're building from scratch, scaling through the chaos, or protecting what you've created — Dividend IT is built for where you are right now.</p>
 
     <div class="journey-tabs reveal">
       <button class="journey-tab active" onclick="switchTab('value-creator')">Value Creator</button>
@@ -1404,7 +875,6 @@
     </div>
 
     <div class="journey-panels">
-
       <div class="journey-panel active" id="panel-value-creator">
         <div class="journey-panel-left">
           <h3>You've built something<br><em>genuinely valuable.</em><br>Don't let it slip away.</h3>
@@ -1418,7 +888,7 @@
             <div class="journey-pain-item">Technology misaligned to EBITDA and exit valuation</div>
             <div class="journey-pain-item">Roll-up acquisitions eroding EBITDA through duplication of costs</div>
           </div>
-          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'who-we-serve-value-creator'})">Protect What You've Built →</a>
+          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'serve-value-creator'})">Protect What You've Built →</a>
         </div>
         <div class="journey-panel-right">
           <div class="journey-promise">
@@ -1426,10 +896,10 @@
             <p>We've seen what happens when a business gets to the finish line and loses it. Not because the business wasn't good. Because the technology wasn't protected. <strong>We make sure that never happens to yours.</strong></p>
             <p style="margin-top:0.85rem; font-size:0.875rem; color:rgba(255,255,255,0.65);">Seamlessly secure IT, EBITDA-aligned spend, and a technology posture that holds up under any level of due diligence.</p>
           </div>
-          <a class="journey-stat" href="/exit-value" style="text-decoration:none;display:block;color:inherit;">
+          <a class="journey-stat" href="/exit-value">
             <div class="journey-stat-num"><span>78%</span></div>
             <div class="journey-stat-label">of business owners lack a formal transition team — leaving their exit exposed at the most critical stage</div>
-            <div style="font-size:0.72rem;font-weight:600;color:var(--accent-green);margin-top:0.5rem;">Read the full research →</div>
+            <span class="journey-stat-more">Read the full research →</span>
           </a>
           <div class="journey-cta">
             <p><strong>Recommended package:</strong> Grow — Strategic technology partnership with vCTO, EBITDA reporting, exit planning support, and 24/7 security.</p>
@@ -1451,7 +921,7 @@
             <div class="journey-pain-item">IT provider that doesn't understand your business</div>
             <div class="journey-pain-item">No time to think about where technology should be taking you</div>
           </div>
-          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'who-we-serve-entrepreneur'})">Get IT Off Your Plate →</a>
+          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'serve-entrepreneur'})">Get IT Off Your Plate →</a>
         </div>
         <div class="journey-panel-right">
           <div class="journey-promise">
@@ -1459,10 +929,10 @@
             <p>We've got the scar tissue to show for it. We know this journey. <strong>Our promise is simple — IT and cybersecurity will never add to your list of headaches.</strong></p>
             <p style="margin-top:0.85rem; font-size:0.875rem; color:rgba(255,255,255,0.65);">We take it completely off your plate — and we act as your strategic technology advisor, keeping one eye on where your business needs to go, not just where it is today.</p>
           </div>
-          <a class="journey-stat" href="/exit-value" style="text-decoration:none;display:block;color:inherit;">
+          <a class="journey-stat" href="/exit-value">
             <div class="journey-stat-num"><span>70%</span></div>
             <div class="journey-stat-label">of business owners who want to exit never successfully do — most because they were never set up to scale without the founder at the centre</div>
-            <div style="font-size:0.72rem;font-weight:600;color:var(--accent-green);margin-top:0.5rem;">Read the full research →</div>
+            <span class="journey-stat-more">Read the full research →</span>
           </a>
           <div class="journey-cta">
             <p><strong>Recommended package:</strong> Operate — Your complete outsourced IT department. Everything managed, everything included.</p>
@@ -1482,7 +952,7 @@
             <div class="journey-pain-item">Reliable systems that support growth, not limit it</div>
             <div class="journey-pain-item">Affordable, all-inclusive pricing with no surprises</div>
           </div>
-          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'who-we-serve-startup'})">Start on the Right Foot →</a>
+          <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'serve-startup'})">Start on the Right Foot →</a>
         </div>
         <div class="journey-panel-right">
           <div class="journey-promise">
@@ -1490,250 +960,210 @@
             <p>A startup package built for where you are right now. <strong>Simple, secure, and priced fairly.</strong></p>
             <p style="margin-top:0.85rem; font-size:0.875rem; color:rgba(255,255,255,0.65);">We set you up right from day one — and when you're ready to scale, we grow with you. The businesses we work with at startup become our most loyal partners at entrepreneur and value creator stage.</p>
           </div>
-          <a class="journey-stat" href="/startup-survival" style="text-decoration:none;display:block;color:inherit;">
+          <a class="journey-stat" href="/startup-survival">
             <div class="journey-stat-num"><span>49%</span></div>
             <div class="journey-stat-label">of businesses don't make it past year five — getting the foundations right from day one dramatically improves your odds</div>
-            <div style="font-size:0.72rem;font-weight:600;color:var(--accent-green);margin-top:0.5rem;">Read the full research →</div>
+            <span class="journey-stat-more">Read the full research →</span>
           </a>
           <div class="journey-cta">
             <p><strong>Recommended package:</strong> Secure — The foundation. Seamlessly secure IT and reliable support at an accessible price point.</p>
             <a href="/services" class="btn-green">View the Secure Package →</a>
-            <p style="margin-top:1rem;margin-bottom:0;"><a href="/leo-grant" class="sp-step-link" style="font-size:0.85rem;">Using a LEO grant to fund your IT foundation →</a></p>
+            <p style="margin-top:1rem;margin-bottom:0;"><a href="/leo-grant" class="link-arrow" style="font-size:0.85rem;">Using a LEO grant to fund your IT foundation</a></p>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- 2. THE STAKES -->
-<section id="stakes" class="sp-stakes">
-  <div class="sp-stakes-inner">
-    <div class="section-label">The quiet problem</div>
-    <h2 class="sp-stakes-title">If you stepped away for a month,<br>would it hold together?</h2>
-    <p class="sp-stakes-lead">For most owners, the honest answer is no — because the business still runs through them. They <em>are</em> the system. And technology is often the heaviest part of that load.</p>
-    <div class="sp-stakes-grid">
-      <div class="sp-stake">
-        <div class="sp-stake-num">01</div>
-        <h4>You're the glue</h4>
-        <p>One supplier for connectivity, another for security, a third for your software — and you, holding it all together. That cost never shows on an invoice. It's paid in your time and attention.</p>
+<!-- 7. HOW IT WORKS -->
+<section class="how" id="how-it-works">
+  <div class="inner">
+    <div class="eyebrow reveal">The process</div>
+    <h2 class="title reveal">Getting started is easier than you think.</h2>
+    <p class="sub reveal">Most owners assume switching IT provider will be complicated and disruptive. It isn't. Here's exactly what happens.</p>
+    <div class="how-steps reveal">
+      <div class="how-step">
+        <div class="how-num">01</div>
+        <div>
+          <span class="how-tag">Free · 20 minutes · No obligation</span>
+          <h3>We listen first</h3>
+          <p>A conversation, not a sales pitch. We want to understand your business, how your team works, and where technology is holding you back or leaving value on the table. By the end of the call you'll know whether we're the right fit. If we're not, we'll tell you honestly.</p>
+        </div>
       </div>
-      <div class="sp-stake">
-        <div class="sp-stake-num">02</div>
-        <h4>You're exposed and don't know where</h4>
-        <p>Half of Irish SMBs were hit by a cyber attack last year. Most providers are reactive — by the time they find the gap, the damage is done.</p>
+      <div class="how-step">
+        <div class="how-num">02</div>
+        <div>
+          <span class="how-tag">Technology &amp; security review</span>
+          <h3>We assess your business</h3>
+          <p>A full review of your IT and cybersecurity — infrastructure, security posture, systems, spend. You receive a plain-English report with an honest picture of where you stand and a practical roadmap. That clarity is yours whether you work with us or not.</p>
+        </div>
       </div>
-      <div class="sp-stake">
-        <div class="sp-stake-num">03</div>
-        <h4>Your IT isn't building anything</h4>
-        <p>It keeps the lights on, nothing more. It isn't making you faster, safer, or more valuable — it's just a line item that quietly erodes your margins.</p>
+      <div class="how-step">
+        <div class="how-num">03</div>
+        <div>
+          <span class="how-tag">From day one</span>
+          <h3>We take it off your plate</h3>
+          <p>Infrastructure, cybersecurity, support desk, technology roadmap — handled. Your team gets IT that just works. You get a partner who proactively manages the technology and reports back in language you actually understand.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 3. THE TURN -->
-<section id="story" class="sp-turn">
-  <div class="sp-turn-inner">
-    <div class="section-label" style="justify-content:center;">The shift</div>
-    <h2 class="sp-turn-title">Your business can be an asset —<br>not a job you can never leave.</h2>
-    <div class="sp-turn-body">
-      <p>Here's what almost no one tells an owner: it doesn't have to be this way. A business becomes <strong>valuable</strong> the moment it can run on systems instead of heroics — when culture, people, process and technology are good enough that it delivers without you holding every piece in your head.</p>
-      <p>Get that right and three things happen at once. You get your <strong>time</strong> back. You build something genuinely <strong>competitive</strong>. And you create real, transferable <strong>value</strong> — a business you could one day pass on, sell, or simply enjoy owning.</p>
-      <p class="sp-turn-emphasis">Most owners never reach for that — many don't know it's possible. We think every shareholder deserves to. Technology is one of the foundations that gets you there. That's what we mean by <em>IT that pays back</em>.</p>
+<!-- 8. PRICING -->
+<section class="pricing" id="pricing">
+  <div class="inner">
+    <div class="eyebrow reveal">Clear pricing</div>
+    <h2 class="title reveal">One monthly fee per user.<br>Everything included.</h2>
+    <div class="pricing-grid reveal">
+      <div class="price-card">
+        <div class="price-name">Secure</div>
+        <div class="price-amount">€75<sub> / user / mo</sub></div>
+        <p class="price-desc">The foundation. Seamlessly secure IT and reliable support for businesses ready to stop tolerating technology that doesn't work.</p>
+      </div>
+      <div class="price-card featured">
+        <div class="price-name">Operate · Most popular</div>
+        <div class="price-amount">€100<sub> / user / mo</sub></div>
+        <p class="price-desc">Your complete outsourced IT department. Everything in Secure, plus full managed operations and an enhanced security posture.</p>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Grow</div>
+        <div class="price-amount">€120<sub> / user / mo</sub></div>
+        <p class="price-desc">Strategic technology partnership. Built for shareholders focused on growth, profitability, and building a more valuable business.</p>
+      </div>
+    </div>
+    <div class="pricing-foot reveal">
+      <p><strong>No hidden costs. No long lock-in.</strong> Monthly rolling after a 3-month onboarding period.</p>
+      <a href="/services" class="link-arrow" onclick="trackEvent('pricing_detail_click',{})">See what's included in each package</a>
     </div>
   </div>
 </section>
 
-<!-- 4. THE GUIDE — PILLARS AS JOURNEY -->
-<section id="solution" class="sp-journey">
-  <div class="sp-journey-inner">
-    <div class="section-label">The path we walk with you</div>
-    <h2 class="section-title">Secure. Compete. Build value.<br>In that order.</h2>
-    <p class="section-sub">Every business we work with moves along the same path. Outsourced IT &amp; cybersecurity is the vehicle — building your business's value is the destination. We meet you where you are, and take you forward.</p>
-    <div class="sp-journey-steps">
-      <a href="/outsourced-it" class="sp-step-card">
-        <div class="sp-step-stage">Step One</div>
-        <div class="sp-step-icon">🔒</div>
-        <h3>Secure</h3>
-        <p class="sp-step-tag">Protect what you've built</p>
-        <p>Seamlessly secure IT and cybersecurity that runs quietly in the background — so a breach, a fraud, or a failure never becomes the thing that brings it all down.</p>
-        <span class="sp-step-link">Explore outsourced IT &amp; security →</span>
-      </a>
-      <a href="/outsourced-it" class="sp-step-card">
-        <div class="sp-step-stage">Step Two</div>
-        <div class="sp-step-icon">⚡</div>
-        <h3>Compete</h3>
-        <p class="sp-step-tag">Sharpen your edge</p>
-        <p>Fast, reliable systems and the right business software, working together — so your team executes at full capacity and you win the customers who expect you to be modern and secure.</p>
-        <span class="sp-step-link">See how we drive advantage →</span>
-      </a>
-      <a href="/exit-value" class="sp-step-card">
-        <div class="sp-step-stage">Step Three</div>
-        <div class="sp-step-icon">📈</div>
-        <h3>Build Value</h3>
-        <p class="sp-step-tag">Create something worth something</p>
-        <p>A technology strategy aligned to your EBITDA and your long-term goals — because the value you create deserves to be realised, whether you sell one day or never do.</p>
-        <span class="sp-step-link">Understand the value angle →</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- 5. PROOF -->
-<section id="smoking-gun" class="sp-proof">
-  <div class="sp-proof-inner">
-    <div class="section-label">Why it matters</div>
-    <h2 class="section-title">This isn't scare tactics.<br>It's the reality of running without a partner.</h2>
-    <div class="sp-proof-grid">
-      <a class="sp-proof-stat" href="/cyber-risk">
-        <div class="sp-proof-num"><span>50%</span></div>
-        <div class="sp-proof-label">of Irish SMBs were hit by a cyber attack in the past year</div>
-        <span class="sp-proof-hint">See the data →</span>
-      </a>
-      <a class="sp-proof-stat" href="/true-cost">
-        <div class="sp-proof-num">€<span>21k</span></div>
-        <div class="sp-proof-label">average cost to fully remediate an attack on an Irish business</div>
-        <span class="sp-proof-hint">See the data →</span>
-      </a>
-      <a class="sp-proof-stat" href="/exit-value">
-        <div class="sp-proof-num"><span>70%</span></div>
-        <div class="sp-proof-label">of owners who want to exit will never successfully do so</div>
-        <span class="sp-proof-hint">See the data →</span>
-      </a>
-    </div>
-    <div class="sp-proof-pivot">
-      <p>The question is no longer <strong>"will it happen to me?"</strong> — it's <strong>"when it does, will my business survive it?"</strong> The owners who thrive treat IT and security not as a cost to minimise, but as an investment in the value of what they've built.</p>
-    </div>
-  </div>
-</section>
-
-<!-- MID-PAGE GUIDE CTA -->
-<section class="mid-guide-cta">
-  <div class="mid-guide-inner">
-    <div class="mid-guide-text">
-      <div class="section-label">Free resource</div>
-      <h2>Drive business value with your outsourced IT</h2>
-      <p>Most owners don't know what good outsourced IT &amp; cybersecurity looks like — let alone how to make it pay back. The guide covers the five foundations every growing business should have in place.</p>
-      <ul class="mid-guide-points">
+<!-- 9. GUIDE CAPTURE -->
+<section class="capture" id="get-the-guide">
+  <div class="capture-grid">
+    <div class="reveal">
+      <div class="eyebrow on-dark">Free guide</div>
+      <h2 class="title">Drive business value with your outsourced IT.</h2>
+      <ul class="capture-points">
         <li>How to build a security foundation without a full-time IT hire</li>
         <li>What a proper IT setup actually costs vs. what you're probably spending</li>
         <li>How technology decisions affect your exit multiple and EBITDA</li>
-        <li>The five systems every growing Irish business needs by year three</li>
+        <li>The five systems every growing business needs by year three</li>
         <li>What good IT governance looks like when you're scaling</li>
       </ul>
     </div>
-    <div class="mid-guide-form-wrap">
+    <div class="capture-form-wrap reveal">
       <h3>Get the free guide</h3>
       <p>Delivered to your inbox — no obligation, no hard sell.</p>
-      <form class="mid-guide-form" onsubmit="submitMidGuideForm(event)">
-        <input type="email" id="mid-guide-email" class="mid-guide-input" placeholder="Your email address" required>
-        <button type="submit" class="mid-guide-submit">Send Me the Guide →</button>
+      <form class="capture-form" id="guide-form">
+        <input type="email" id="guide-email" name="email" class="capture-input" placeholder="Your email address" required autocomplete="email">
+        <button type="submit" class="capture-submit">Send Me the Guide →</button>
       </form>
-      <p class="mid-guide-note">No spam. Unsubscribe any time.</p>
+      <div class="capture-success" id="guide-success"><p>On its way. Check your inbox — and while you wait, <a href="/guide" style="color:var(--accent-green-mid);text-decoration:underline;">read it online now →</a></p></div>
+      <p class="capture-note">No spam. Unsubscribe any time.</p>
     </div>
   </div>
 </section>
 
-<!-- 6. THE TOOLS -->
-<section id="tools" class="sp-tools">
-  <div class="sp-tools-inner">
-    <div class="section-label">See it for your own business</div>
-    <h2 class="section-title">Don't take our word for it.<br>Run the numbers.</h2>
-    <div class="sp-tools-grid">
-      <a href="/cost-calculator" class="sp-tool-card" onclick="trackEvent('tool_card_click',{tool:'cost'})">
-        <div class="sp-tool-icon">🧮</div>
+<!-- 10. TOOLS -->
+<section class="tools" id="tools">
+  <div class="inner">
+    <div class="eyebrow reveal">See it for your own business</div>
+    <h2 class="title reveal">Don't take our word for it.<br>Run the numbers.</h2>
+    <div class="tools-grid reveal">
+      <a href="/cost-calculator" class="tool-card" onclick="trackEvent('tool_card_click',{tool:'cost'})">
         <h3>Cost Calculator</h3>
         <p>Compare the true cost of an in-house IT hire against outsourcing — for your exact headcount. Most owners are surprised.</p>
-        <span class="sp-step-link">Calculate your cost →</span>
+        <span class="link-arrow">Calculate your cost</span>
       </a>
-      <a href="/value-calculator" class="sp-tool-card" onclick="trackEvent('tool_card_click',{tool:'value'})">
-        <div class="sp-tool-icon">📊</div>
+      <a href="/value-calculator" class="tool-card" onclick="trackEvent('tool_card_click',{tool:'value'})">
         <h3>Value Impact Calculator</h3>
         <p>See what your IT decisions are actually worth at exit — using real EBITDA multiples. The number behind "IT that pays back."</p>
-        <span class="sp-step-link">See your value impact →</span>
+        <span class="link-arrow">See your value impact</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- 8. THE DIVIDEND INDEX -->
-<section id="dividend-index">
-  <div class="section-inner">
+<!-- 11. DIVIDEND INDEX -->
+<section class="index" id="dividend-index">
+  <div class="inner">
     <div class="index-header reveal">
       <div>
-        <div class="section-label">The Dividend Index</div>
-        <h2 class="section-title">Technology Insights for<br>Irish Business Owners.</h2>
-        <p class="section-sub">Research, frameworks, and plain-English insights to help you use technology as a competitive advantage — at every stage of your business journey.</p>
+        <div class="eyebrow">The Dividend Index</div>
+        <h2 class="title">Technology insights for<br>business owners.</h2>
+        <p class="sub">Research, frameworks, and plain-English insights to help you use technology as a competitive advantage — at every stage of your business journey.</p>
       </div>
       <div class="index-header-right">
-        <div class="index-badge">🔬 Dividend IT Insights Hub</div>
-        <p style="font-size:0.825rem; color:var(--text-muted); text-align:right; max-width:280px; line-height:1.6;">Practical intelligence for entrepreneurs and value creators. No jargon. No vendor bias. Just insight you can act on.</p>
+        <div class="index-badge">Dividend IT Insights Hub</div>
+        <p class="index-note">Practical intelligence for entrepreneurs and value creators. No jargon. No vendor bias. Just insight you can act on.</p>
       </div>
     </div>
-
     <div class="index-grid reveal">
-      <a class="index-card index-featured" href="/get-the-guide" onclick="trackEvent('guide_open',{location:'dividend-index'})" style="text-decoration:none;display:block;color:inherit;">
+      <a class="index-card index-featured" href="/get-the-guide" onclick="trackEvent('guide_open',{location:'dividend-index'})">
         <div class="index-card-tag">Free Guide</div>
         <h3>5 Ways to Drive Business Value With Your IT</h3>
-        <p>The practical guide for Irish business owners on using technology to protect margins, prevent fraud, and build a more valuable business.</p>
-        <span class="index-card-link" style="cursor:pointer">Download Free Guide</span>
+        <p>The practical guide for business owners on using technology to protect margins, prevent fraud, and build a more valuable business.</p>
+        <span class="link-arrow">Download Free Guide</span>
       </a>
-      <a class="index-card" href="/cyber-risk" style="text-decoration:none;display:block;color:inherit;">
+      <a class="index-card" href="/cyber-risk">
         <div class="index-card-tag">Cybersecurity Research</div>
         <h3>The Cyber Risk Facing Irish SMBs — What the Data Really Tells Us</h3>
         <p>50% of Irish SMBs were attacked last year. 17% no longer exist. The full picture of the threat landscape.</p>
-        <span class="index-card-link" style="cursor:pointer">Read the Research</span>
+        <span class="link-arrow">Read the Research</span>
       </a>
-      <a class="index-card" href="/true-cost" style="text-decoration:none;display:block;color:inherit;">
+      <a class="index-card" href="/true-cost">
         <div class="index-card-tag">Financial Impact</div>
         <h3>The True Cost of a Cyber Incident — Beyond the &euro;21k Headline</h3>
         <p>Payment fraud, productivity loss, and reputational damage. The full financial impact of a cyber incident.</p>
-        <span class="index-card-link" style="cursor:pointer">Read the Research</span>
+        <span class="link-arrow">Read the Research</span>
       </a>
-      <a class="index-card" href="/exit-value" style="text-decoration:none;display:block;color:inherit;">
+      <a class="index-card" href="/exit-value">
         <div class="index-card-tag">Business Value &amp; Exit</div>
-        <h3>Why 70% of Irish Business Owners Never Realise the Value They&rsquo;ve Built</h3>
-        <p>Most business owners spend years building something valuable — and never realise it. The data behind the exit failure rate.</p>
-        <span class="index-card-link" style="cursor:pointer">Read the Research</span>
+        <h3>Why 70% of Business Owners Never Realise the Value They&rsquo;ve Built</h3>
+        <p>Most owners spend years building something valuable — and never realise it. The data behind the exit failure rate.</p>
+        <span class="link-arrow">Read the Research</span>
       </a>
-      <a class="index-card" href="/startup-survival" style="text-decoration:none;display:block;color:inherit;">
-        <div class="index-card-tag">Startup &amp; Business Survival</div>
-        <h3>Why 49% of Businesses Fail Before Year Five — And How Getting IT Right Changes the Odds</h3>
+      <a class="index-card" href="/startup-survival">
+        <div class="index-card-tag">Startup &amp; Survival</div>
+        <h3>Why 49% of Businesses Fail Before Year Five — And How IT Changes the Odds</h3>
         <p>Half of all new businesses don&rsquo;t survive past year five. The technology decisions you make in year one have a direct impact.</p>
-        <span class="index-card-link" style="cursor:pointer">Read the Research</span>
+        <span class="link-arrow">Read the Research</span>
       </a>
-      <a class="index-card" href="/cyber-risk" style="text-decoration:none;display:block;color:inherit;">
+      <a class="index-card" href="/cyber-risk">
         <div class="index-card-tag">Threat Intelligence</div>
         <h3>Why SMBs Are 3&times; More Likely to Be Targeted Than Large Firms</h3>
-        <p>Criminals target SMBs deliberately — weaker defences, faster exploitation, less likelihood of a sophisticated response. Here&rsquo;s why.</p>
-        <span class="index-card-link" style="cursor:pointer">Read the Research</span>
+        <p>Criminals target SMBs deliberately — weaker defences, faster exploitation, less likelihood of a sophisticated response.</p>
+        <span class="link-arrow">Read the Research</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ABOUT (kept, condensed) -->
-<section id="about" class="sp-about">
-  <div class="sp-about-inner">
-    <div class="sp-about-left">
-      <div class="section-label">Why we exist</div>
-      <h2 class="section-title">We started this because owners deserve better.</h2>
-    </div>
-    <div class="sp-about-right">
-      <p>For the past decade I helped scale an outsourced IT and cybersecurity business from €1 million to €4 million — ten years sitting across the table from owners, learning what they actually needed from technology. Not products. Not jargon. A partner who spoke their language.</p>
-      <p>Most IT companies weren't delivering that. They still aren't. <strong>That's why I built Dividend IT.</strong> The name is intentional: a dividend is a return on investment — something that pays you back. That's exactly what your IT should do.</p>
-      <p class="sp-about-promise">We'll never blind you with jargon, never sell you what you don't need, and always tell you the truth about where you're exposed.</p>
+<!-- 12. ABOUT -->
+<section class="about" id="about">
+  <div class="inner">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="eyebrow">Why we exist</div>
+        <h2 class="title">We started this because owners deserve better.</h2>
+      </div>
+      <div class="about-right reveal">
+        <p>For the past decade I helped scale an outsourced IT and cybersecurity business from €1 million to €4 million — ten years sitting across the table from owners, learning what they actually needed from technology. Not products. Not jargon. A partner who spoke their language.</p>
+        <p>Most IT companies weren't delivering that. They still aren't. <strong>That's why I built Dividend IT.</strong> The name is intentional: a dividend is a return on investment — something that pays you back. That's exactly what your IT should do.</p>
+        <p class="about-promise">We'll never blind you with jargon, never sell you what you don't need, and always tell you the truth about where you're exposed.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ — mirrors FAQPage structured data -->
-<section id="faq" class="sp-faq">
-  <div class="sp-faq-inner">
-    <div class="section-label reveal">Common questions</div>
-    <h2 class="section-title reveal">Everything you want to know<br>before you call.</h2>
+<!-- 13. FAQ -->
+<section class="faq" id="faq">
+  <div class="inner">
+    <div class="eyebrow reveal">Common questions</div>
+    <h2 class="title reveal">Everything you want to know<br>before you call.</h2>
     <div class="faq-list reveal">
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this,'cost')">What does it cost to outsource IT support and cybersecurity? <span class="faq-icon">+</span></button>
@@ -1763,52 +1193,97 @@
   </div>
 </section>
 
-<!-- 8. THE INVITATION -->
-<section id="cta" class="sp-cta">
-  <div class="sp-cta-inner">
-    <div class="section-label" style="justify-content:center;">Ready to start?</div>
-    <h2 class="sp-cta-title">Let's find out if<br>we're a fit.</h2>
-    <p>We don't work with everyone. We work with owners who are serious about using technology as a competitive advantage and a way to build lasting value. If that's you, let's have an honest conversation — no obligation, no hard sell.</p>
-    <div class="sp-cta-actions">
+<!-- 14. FINAL CTA -->
+<section class="final" id="cta">
+  <div class="final-inner">
+    <div class="eyebrow on-dark reveal" style="justify-content:center;">Ready to start?</div>
+    <h2 class="title reveal">Let's find out if we're a fit.</h2>
+    <p class="lead reveal">We don't work with everyone — and we're not desperate for the work. We work with owners who are serious about using technology as a competitive advantage and a way to build lasting value. If that's you, let's have an honest conversation.</p>
+    <div class="final-actions reveal">
       <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-light" onclick="trackEvent('book_call_click',{location:'final-cta'})">Book a Free 20-Min Call</a>
-      <a href="/get-the-guide" class="btn-outline-light">Get the Free Guide</a>
+      <a href="/get-the-guide" class="btn-outline-light" onclick="trackEvent('guide_open',{location:'final-cta'})">Get the Free Guide</a>
     </div>
-    <p class="sp-cta-note">No obligation · No hard sell · No jargon</p>
+    <p class="final-note">No obligation · No hard sell · No jargon</p>
   </div>
 </section>
 
 </main>
+
 <footer>
   <div class="footer-inner">
     <div><a href="/" class="footer-logo">Dividend<span>IT</span></a>
     <div class="footer-tagline">Outsourced Cybersecurity &amp; IT — Ireland &amp; UK</div></div>
     <div class="footer-links">
-      <a href="/#journey">Who We Serve</a>
+      <a href="/#who-we-serve">Who We Serve</a>
       <a href="/services">Services</a>
+      <a href="/outsourced-it">Outsourced IT</a>
+      <a href="/outsourced-cyber">Cyber Security</a>
       <a href="/cost-calculator">Cost Calculator</a>
       <a href="/value-calculator">Value Calculator</a>
+      <a href="/guide">The Guide</a>
       <a href="/#about">About</a>
       <a href="mailto:hello@dividendit.com">Contact</a>
     </div>
     <div class="footer-copy">© 2026 Dividend IT. All rights reserved.</div>
   </div>
 </footer>
+
 <script>
-  trackEvent('page_view', { page_title: 'Home — IT That Pays Back', page_location: location.href, page_path: location.pathname });
-  /* FAQ accordion */
-  function toggleFaq(btn, id) {
-    var item = btn.parentElement;
-    var wasOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
-    if (!wasOpen) { item.classList.add('open'); trackEvent('faq_open', { question: id }); }
-  }
-  /* Dividend Index card tracking */
-  document.querySelectorAll('#dividend-index .index-card').forEach(function(card){
-    card.addEventListener('click', function(){
-      trackEvent('index_card_click', { target: card.getAttribute('href') });
+(function(){
+  /* Clean up nav-closing on page restore (back/forward cache) */
+  window.addEventListener('pageshow', function(){
+    document.querySelectorAll('.nav-dd.nav-closing').forEach(function(el){
+      el.classList.remove('nav-closing');
     });
   });
-  /* Journey tabs on Who We Serve */
+  /* Close mega menu when a link inside it is clicked */
+  document.querySelectorAll('.nav-mega-menu a').forEach(function(a){
+    a.addEventListener('click', function(){
+      var dd = this.closest('.nav-dd');
+      if(dd){
+        dd.classList.add('nav-closing');
+        setTimeout(function(){ dd.classList.remove('nav-closing'); }, 800);
+      }
+    });
+  });
+  /* Hamburger toggle */
+  var toggle = document.querySelector('.nav-toggle');
+  var links  = document.querySelector('.nav-links');
+  if(toggle) toggle.addEventListener('click', function(){
+    toggle.classList.toggle('open');
+    links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', links.classList.contains('open'));
+  });
+})();
+</script>
+
+<script>
+  trackEvent('page_view', { page_title: 'Home — Outsourced IT & Cybersecurity', page_location: location.href, page_path: location.pathname });
+
+  /* Reveal on scroll */
+  (function(){
+    var reveals = document.querySelectorAll('.reveal');
+    if (!reveals.length) return;
+    if (!('IntersectionObserver' in window)) { reveals.forEach(function(el){ el.classList.add('visible'); }); return; }
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    reveals.forEach(function(el){ obs.observe(el); });
+  })();
+  setTimeout(function(){ document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){ el.classList.add('visible'); }); }, 1500);
+
+  /* Scroll depth */
+  (function(){
+    var depths = [25,50,75,100], fired = {};
+    window.addEventListener('scroll', function(){
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      if (h <= 0) return;
+      var p = Math.round((window.scrollY / h) * 100);
+      depths.forEach(function(d){ if (p >= d && !fired[d]) { fired[d] = true; trackEvent('scroll_depth', { depth: d, page: 'home' }); } });
+    });
+  })();
+
+  /* Journey tabs */
   function switchTab(name) {
     document.querySelectorAll('.journey-tab').forEach(function(t){ t.classList.remove('active'); });
     document.querySelectorAll('.journey-panel').forEach(function(p){ p.classList.remove('active'); });
@@ -1818,25 +1293,45 @@
     if (panel) panel.classList.add('active');
     trackEvent('who_we_serve_tab', { audience: name });
   }
-  /* Reveal on scroll — makes .reveal elements visible as they enter the viewport */
+
+  /* FAQ accordion */
+  function toggleFaq(btn, id) {
+    var item = btn.parentElement;
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
+    if (!wasOpen) { item.classList.add('open'); trackEvent('faq_open', { question: id }); }
+  }
+
+  /* Dividend Index card tracking */
+  document.querySelectorAll('#dividend-index .index-card').forEach(function(card){
+    card.addEventListener('click', function(){ trackEvent('index_card_click', { target: card.getAttribute('href') }); });
+  });
+
+  /* Guide capture — Formspree */
   (function(){
-    var reveals = document.querySelectorAll('.reveal');
-    if (!reveals.length) return;
-    if (!('IntersectionObserver' in window)) {
-      reveals.forEach(function(el){ el.classList.add('visible'); });
-      return;
-    }
-    var obs = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    var form = document.getElementById('guide-form');
+    if (!form) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var email = document.getElementById('guide-email').value;
+      var btn = form.querySelector('.capture-submit');
+      btn.disabled = true; btn.textContent = 'Sending…';
+      fetch('https://formspree.io/f/xlgvqpbb', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ email: email, source: 'homepage-guide-capture' })
+      }).then(function(res){
+        if (res.ok) {
+          trackEvent('generate_lead', { location: 'homepage-capture' });
+          form.style.display = 'none';
+          document.getElementById('guide-success').style.display = 'block';
+        } else { throw new Error('submit failed'); }
+      }).catch(function(){
+        btn.disabled = false; btn.textContent = 'Send Me the Guide →';
+        alert('Something went wrong — please try again, or email hello@dividendit.com');
       });
-    }, { threshold: 0.1 });
-    reveals.forEach(function(el){ obs.observe(el); });
+    });
   })();
-  /* Fallback: if anything still hidden after 1.5s, force reveal */
-  setTimeout(function(){
-    document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){ el.classList.add('visible'); });
-  }, 1500);
 </script>
 </body>
 </html>
