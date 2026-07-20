@@ -105,6 +105,7 @@
 
     .num { font-family: var(--font-display); font-variant-numeric: tabular-nums; }
 
+    /* ── NAV ── */
     /* ── NAV (grouped dropdowns + mobile hamburger) ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0;
@@ -185,7 +186,6 @@
     .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
     .nav-toggle.open span:nth-child(2) { opacity: 0; }
     .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
-
     /* ── MEGA MENU ── */
     /* No gap between nav bar and menu — use padding-top for visual breathing room */
     .nav-mega-menu {
@@ -232,35 +232,29 @@
       text-transform: uppercase; color: var(--text-muted);
       padding: 0.6rem 0.75rem 0.2rem; display: block;
     }
-    /* Flat mega menu — no nested dropdowns */
+    /* Non-home pages start below the fixed 68px nav so the sticky breadcrumb sits flush and no gap appears on scroll */
+    .page:not(#page-home) { padding-top: 68px; }
 
-    /* ── HERO ── */
-    #hero-legacy-unused {
-      padding: 140px 2rem 100px;
-      background: var(--white);
-      position: relative; overflow: hidden;
+    @media (max-width: 960px) {
+      .nav-toggle { display: flex; }
+      .nav-links { position: fixed; top: 68px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--border); flex-direction: column; align-items: stretch; gap: 0; padding: 0.5rem 1.25rem 1.25rem; box-shadow: 0 16px 32px rgba(0,0,0,0.08); max-height: calc(100vh - 68px); overflow-y: auto; display: none; }
+      .nav-links.open { display: flex; }
+      .nav-links > li { width: 100%; border-bottom: 1px solid var(--border); }
+      .nav-links > li:last-child { border-bottom: none; padding-top: 0.75rem; }
+      .nav-links a, .nav-dd-trigger { padding: 0.9rem 0; width: 100%; font-size: 0.95rem; }
+      .nav-dd-trigger { justify-content: space-between; }
+      .nav-dd-menu { position: static; transform: none; opacity: 1; visibility: visible; box-shadow: none; border: none; padding: 0 0 0.5rem 0.85rem; min-width: 0; background: none; }
+      .nav-dd:hover .nav-dd-menu { transform: none; }
+      .nav-dd-trigger svg { display: none; }
+      .nav-mega-menu { position: static; transform: none; opacity: 1; visibility: visible; box-shadow: none; border: none; padding: 0 0 0.5rem 0.85rem; flex-direction: column; gap: 0.5rem; min-width: 0; background: none; }
+      .nav-dd:hover .nav-mega-menu, .nav-dd.open .nav-mega-menu { transform: none; }
+      .nav-mega-col--right { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 0.75rem; min-width: 0; flex: 1; }
+      .nav-mega-label { padding-left: 0; }
+      .nav-mega-menu ul a { padding-left: 0; }
+      .nav-sub-menu { position: static; transform: none; opacity: 1; visibility: visible; box-shadow: none; border: none; padding: 0 0 0 0.85rem; min-width: 0; background: none; }
+      .nav-sub-trigger { padding-left: 0; font-weight: 600; color: var(--text-muted); font-size: 0.8rem; }
+      .nav-cta { display: inline-block; text-align: center; margin-top: 0.25rem; }
     }
-    .hero-bg {
-      position: absolute; top: 0; right: -10%;
-      width: 55%; height: 100%;
-      background: var(--off-white);
-      clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
-      z-index: 0;
-    }
-    .hero-inner {
-      max-width: var(--max-w); margin: 0 auto;
-      position: relative; z-index: 1;
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 4rem; align-items: center;
-    }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      font-size: 0.8rem; font-weight: 600;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--accent-green); margin-bottom: 1.25rem;
-    }
-    .hero-eyebrow::before {
-      content: ''; display: block;
 
 
     /* ── SHARED ── */
@@ -548,48 +542,7 @@
       .pricing-grid { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 2rem; }
       .how-step { grid-template-columns: 56px 1fr; gap: 1.4rem; }
-      /* Mobile nav */
-      .nav-toggle { display: flex; }
-      .nav-links {
-        position: fixed; top: 68px; left: 0; right: 0;
-        background: var(--white); border-bottom: 1px solid var(--border);
-        flex-direction: column; align-items: stretch; gap: 0;
-        padding: 0.5rem 1.25rem 1.25rem;
-        box-shadow: 0 16px 32px rgba(0,0,0,0.08);
-        max-height: calc(100vh - 68px); overflow-y: auto;
-        display: none;
-      }
-      .nav-links.open { display: flex; }
-      .nav-links > li { width: 100%; border-bottom: 1px solid var(--border); }
-      .nav-links > li:last-child { border-bottom: none; padding-top: 0.75rem; }
-      .nav-links a, .nav-dd-trigger { padding: 0.9rem 0; width: 100%; font-size: 0.95rem; }
-      .nav-dd-trigger { justify-content: space-between; }
-      /* On mobile, dropdown menus are static (always expanded under their heading) */
-      .nav-dd-menu {
-        position: static; transform: none; opacity: 1; visibility: visible;
-        box-shadow: none; border: none; padding: 0 0 0.5rem 0.85rem;
-        min-width: 0; background: none;
-      }
-      .nav-dd:hover .nav-dd-menu { transform: none; }
-      .nav-dd-trigger svg { display: none; }
-      /* Mega menu on mobile: stack columns vertically */
-      .nav-mega-menu {
-        position: static; transform: none; opacity: 1; visibility: visible;
-        box-shadow: none; border: none; padding: 0 0 0.5rem 0.85rem;
-        flex-direction: column; gap: 0.5rem; min-width: 0; background: none;
-      }
-      .nav-dd:hover .nav-mega-menu, .nav-dd.open .nav-mega-menu { transform: none; }
-      .nav-mega-col--right { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 0.75rem; min-width: 0; flex: 1; }
-      .nav-mega-label { padding-left: 0; }
-      .nav-mega-menu ul a { padding-left: 0; }
-      /* Protect sub-menu on mobile: static */
-      .nav-sub-menu {
-        position: static; transform: none; opacity: 1; visibility: visible;
-        box-shadow: none; border: none; padding: 0 0 0 0.85rem;
-        min-width: 0; background: none;
-      }
-      .nav-sub-trigger { padding-left: 0; font-weight: 600; color: var(--text-muted); font-size: 0.8rem; }
-      .nav-cta { display: inline-block; text-align: center; margin-top: 0.25rem; }
+      /* mobile nav rules ship in their own media block above */
     }
     @media (prefers-reduced-motion: reduce) {
       .reveal { opacity: 1; transform: none; transition: none; }
