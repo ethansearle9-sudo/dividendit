@@ -528,6 +528,24 @@
     .footer-links a:hover { color: rgba(255,255,255,0.85); }
     .footer-copy { font-size: 0.775rem; color: rgba(255,255,255,0.25); }
 
+
+    /* Receipts */
+    .receipts { border-top: 1px solid var(--text-dark); }
+    .receipt { display: grid; grid-template-columns: 220px 1fr 220px; gap: 2.2rem; align-items: center; padding: 1.6rem 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; transition: background 0.15s; }
+    .receipt:hover { background: var(--off-white); }
+    .receipt-sector { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-green); }
+    .receipt-line { font-size: 1rem; color: var(--text-body); line-height: 1.55; }
+    .receipt-num { font-family: var(--font-display); font-size: 1.15rem; color: var(--text-dark); text-align: right; }
+    .field-link { margin-top: 1.8rem; }
+    /* Plan strip */
+    .plan-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin: 2.2rem 0 2.6rem; }
+    .plan-step { display: flex; gap: 0.9rem; align-items: baseline; font-size: 0.95rem; color: var(--text-body); }
+    .plan-step strong { color: var(--text-dark); }
+    .plan-num { font-family: var(--font-display); font-size: 1.5rem; color: var(--mid-grey); }
+    /* Lever chips */
+    .lever-chips { display: flex; gap: 0.7rem; justify-content: center; margin-top: 2.2rem; flex-wrap: wrap; }
+    .lever-chips span { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-green-mid); border: 1px solid rgba(255,255,255,0.2); border-radius: 2rem; padding: 0.45rem 1.1rem; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       section { padding: 68px 1.4rem; }
@@ -549,6 +567,9 @@
       .pricing-grid { grid-template-columns: 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 2rem; }
       .how-step { grid-template-columns: 56px 1fr; gap: 1.4rem; }
+      .receipt { grid-template-columns: 1fr; gap: 0.5rem; }
+      .receipt-num { text-align: left; }
+      .plan-strip { grid-template-columns: 1fr; gap: 0.9rem; }
       /* mobile nav rules ship in their own media block above */
     }
     @media (prefers-reduced-motion: reduce) {
@@ -664,28 +685,28 @@
     <div>
       <div class="eyebrow">Outsourced IT &amp; Cybersecurity · Ireland &amp; UK</div>
       <h1 class="hero-title">You built the business.<br>It shouldn't <em>own</em> you.</h1>
-      <p class="hero-sub">Most owners are trapped in the day-to-day — with technology that's a cost and a risk instead of an engine. We change that: seamlessly secure IT that frees your time, sharpens your edge, and builds what your business is worth.</p>
+      <p class="hero-sub">Seamlessly secure IT that frees your time, sharpens your edge, and builds what your business is worth.</p>
       <div class="hero-actions">
         <a href="/guide" class="btn-primary" onclick="trackEvent('guide_open',{location:'hero'})">Drive Business Value</a>
-        <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-outline" onclick="trackEvent('book_call_click',{location:'hero'})">Book a Free 20-Min Call</a>
+        <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-outline" onclick="trackEvent('book_call_click',{location:'hero'})">Book a 20-Min Call</a>
       </div>
       <div class="hero-trust"><span>No jargon</span><span class="dot">·</span><span>No lock-in</span><span class="dot">·</span><span>No surprises</span></div>
     </div>
-    <div class="hero-ledger" aria-label="What's at stake for Irish business owners">
-      <div class="hero-ledger-title">What's at stake — the owner's ledger</div>
+    <div class="hero-ledger" aria-label="What's at stake">
+      <div class="hero-ledger-title">What's at stake</div>
       <a class="hl-row" href="/cyber-risk" onclick="trackEvent('hero_stat_click',{stat:'cyber-attack-rate'})">
         <span class="hl-num">50%</span>
-        <span class="hl-label">of Irish SMBs experienced a cyber attack in the past 12 months<span class="hl-src">See the research →</span></span>
+        <span class="hl-label">of Irish SMBs were hit by a cyber attack last year<span class="hl-src">Source →</span></span>
       </a>
       <a class="hl-row" href="/true-cost" onclick="trackEvent('hero_stat_click',{stat:'avg-remediation-cost'})">
         <span class="hl-num">€21k</span>
-        <span class="hl-label">average cost to fully remediate a cyber attack on an Irish business<span class="hl-src">See the research →</span></span>
+        <span class="hl-label">average cost to remediate one attack<span class="hl-src">Source →</span></span>
       </a>
       <a class="hl-row" href="/exit-value" onclick="trackEvent('hero_stat_click',{stat:'exit-failure-rate'})">
         <span class="hl-num">70%</span>
-        <span class="hl-label">of business owners who want to exit will never successfully do so<span class="hl-src">See the research →</span></span>
+        <span class="hl-label">of owners who want to exit never do<span class="hl-src">Source →</span></span>
       </a>
-      <div class="hero-ledger-foot">Every figure links to the source data. We don't do scare tactics — we do arithmetic.</div>
+      <div class="hero-ledger-foot">Every figure links to its source. Arithmetic, not scare tactics.</div>
     </div>
   </div>
 </section>
@@ -694,41 +715,36 @@
 <div class="trust-strip">
   <div class="trust-strip-inner">
     <span>Seamlessly Secure</span>
-    <span>24/7 Monitoring, Remediation &amp; Support</span>
-    <span>Business-First Thinking</span>
+    <span>24/7 Monitoring &amp; Support</span>
+    <span>Business-First</span>
     <span>EBITDA Aligned</span>
     <span>Ireland &amp; UK</span>
   </div>
 </div>
 
-<!-- 2. THE TWO RISKS -->
+<!-- 2. TWO RISKS -->
 <section class="risks" id="two-risks">
   <div class="inner">
     <div class="risks-lead reveal">
-      <div class="eyebrow" style="justify-content:center;">The two risks</div>
-      <h2 class="title">Every owner faces the same two risks.<br>Most providers only talk about one.</h2>
-      <p>The risk of a cyber incident destroying what you've built today. And the risk of never realising the value of what you've spent years creating. Outsourced IT &amp; cybersecurity, done properly, removes both.</p>
+      <h2 class="title">Two risks. Most providers<br>only talk about one.</h2>
+      <p>Losing what you've built today — and never realising its value tomorrow.</p>
     </div>
     <div class="risks-grid">
       <div class="risk-panel reveal">
-        <div class="risk-tag">Risk one · Today's value</div>
-        <h3>A breach, a fraud, or a failure takes it all down.</h3>
-        <p>Your systems hold the intellectual capital that makes you competitive — customer data, operational know-how, financial workflows. When they fail, the cost is immediate. When they're breached, it can be terminal.</p>
+        <div class="risk-tag">Risk one · Today</div>
         <div class="risk-rows">
-          <a class="risk-row" href="/cyber-risk"><span class="rr-num"><span>17%</span></span><span class="rr-label">of businesses hit by a cyber attack are no longer operating</span><span class="rr-link">→</span></a>
-          <a class="risk-row" href="/true-cost"><span class="rr-num">€<span>5.6k</span></span><span class="rr-label">lost per hour of IT downtime for the average Irish business</span><span class="rr-link">→</span></a>
-          <a class="risk-row" href="/cyber-risk"><span class="rr-num"><span>3×</span></span><span class="rr-label">more likely to be targeted than large firms — criminals know SMB defences are weaker</span><span class="rr-link">→</span></a>
+          <a class="risk-row" href="/cyber-risk"><span class="rr-num"><span>17%</span></span><span class="rr-label">of attacked businesses no longer exist</span><span class="rr-link">→</span></a>
+          <a class="risk-row" href="/true-cost"><span class="rr-num">€<span>5.6k</span></span><span class="rr-label">lost per hour of downtime</span><span class="rr-link">→</span></a>
+          <a class="risk-row" href="/cyber-risk"><span class="rr-num"><span>3×</span></span><span class="rr-label">more targeted than large firms</span><span class="rr-link">→</span></a>
         </div>
         <div class="risk-foot"><div class="bottom-line">Protection is the floor. It isn't the point.</div></div>
       </div>
       <div class="risk-panel reveal">
-        <div class="risk-tag">Risk two · Tomorrow's value</div>
-        <h3>You build for decades — and never realise the value.</h3>
-        <p>Most owners are never taught how value is realised or passed on. Technology quietly decides part of the answer: every euro of recurring IT cost erodes EBITDA, and every euro of EBITDA is multiplied at exit.</p>
+        <div class="risk-tag">Risk two · Tomorrow</div>
         <div class="risk-rows">
-          <a class="risk-row" href="/exit-value"><span class="rr-num"><span>70%</span></span><span class="rr-label">of owners who want to exit will never successfully do so</span><span class="rr-link">→</span></a>
-          <a class="risk-row" href="/exit-value"><span class="rr-num"><span>78%</span></span><span class="rr-label">have no formal transition team — exposed at the most critical stage</span><span class="rr-link">→</span></a>
-          <a class="risk-row" href="/startup-survival"><span class="rr-num"><span>49%</span></span><span class="rr-label">of businesses fail before year five — foundations decide the odds early</span><span class="rr-link">→</span></a>
+          <a class="risk-row" href="/exit-value"><span class="rr-num"><span>70%</span></span><span class="rr-label">of owners never successfully exit</span><span class="rr-link">→</span></a>
+          <a class="risk-row" href="/exit-value"><span class="rr-num"><span>78%</span></span><span class="rr-label">have no transition team in place</span><span class="rr-link">→</span></a>
+          <a class="risk-row" href="/startup-survival"><span class="rr-num"><span>49%</span></span><span class="rr-label">of businesses fail before year five</span><span class="rr-link">→</span></a>
         </div>
         <div class="risk-foot"><div class="bottom-line">The value you create deserves to be realised.</div></div>
       </div>
@@ -736,97 +752,65 @@
   </div>
 </section>
 
-<!-- 3. THE EQUATION -->
+<!-- 3. EQUATION -->
 <section class="equation" id="the-equation">
   <div class="inner">
-    <div class="equation-lead reveal">
-      <div class="eyebrow on-dark">How value is actually built</div>
-      <h2 class="title">Your business is worth a multiple of its earnings.<br>Your IT sits inside that equation.</h2>
-      <p>This is the mechanic every trade sale, succession and management buyout runs on. It isn't complicated — it's just rarely explained to the person it matters most to: the shareholder.</p>
+    <div class="equation-lead reveal" style="text-align:center;max-width:760px;margin:0 auto;">
+      <h2 class="title">Your business is worth<br>a multiple of its earnings.</h2>
     </div>
     <div class="eq-display reveal">
       <div class="eq-term">
         <div class="eq-term-figure">EBITDA</div>
-        <div class="eq-term-label">What your business earns — after every recurring technology cost has taken its bite</div>
       </div>
       <div class="eq-op">×</div>
       <div class="eq-term">
         <div class="eq-term-figure">Multiple</div>
-        <div class="eq-term-label">Set by your market, growth and risk profile — including the technology risk a buyer inherits</div>
       </div>
       <div class="eq-op">=</div>
       <div class="eq-term eq-result">
         <div class="eq-term-figure">Enterprise Value</div>
-        <div class="eq-term-label">What your life's work is actually worth on the day it matters</div>
       </div>
     </div>
-    <div class="eq-levers reveal">
-      <div class="eq-lever"><h4>Workloads</h4><p>Where your business systems run is a capital allocation decision — owned or rented, on the balance sheet or off it.</p></div>
-      <div class="eq-lever"><h4>Security</h4><p>The risk profile a buyer inherits. A breach in the year before an exit can take the deal off the table.</p></div>
-      <div class="eq-lever"><h4>Cost</h4><p>Every euro of recurring spend removed is a euro of EBITDA — multiplied at exit.</p></div>
-      <div class="eq-lever"><h4>People</h4><p>Technology friction taxes the humans doing the actual value creation. Time back is capacity back.</p></div>
+    <div class="eq-note reveal">
+      <p>Your IT sits inside that equation — every euro of recurring cost is multiplied at exit.</p>
     </div>
-    <div class="eq-note reveal"><p>"Every cost decision is two numbers: the saving — and the saving times your multiple."</p></div>
+    <div class="lever-chips reveal">
+      <span>Workloads</span><span>Security</span><span>Cost</span><span>People</span>
+    </div>
   </div>
 </section>
 
-<!-- 4. FIELD NOTES -->
+<!-- 4. RECEIPTS -->
 <section class="field" id="field-notes">
   <div class="inner">
-    <div class="field-intro reveal">
-      <div class="eyebrow">From the field</div>
-      <h2 class="title">Three deals that taught us the doctrine.</h2>
-      <p class="sub">A decade inside an outsourced IT &amp; cybersecurity business, sitting across the table from CFOs and owners. Names withheld — the numbers and the lessons are real.</p>
+    <div class="field-intro reveal" style="margin-bottom:2rem;">
+      <h2 class="title">We've run this play before.</h2>
     </div>
-    <div class="ledger-entries reveal">
-      <article class="ledger-entry">
-        <div class="le-meta"><span class="le-sector">Distribution &amp; Manufacturing</span>Post management buyout<br>Later exited to trade</div>
-        <div class="le-body">
-          <h3>"Move everything to the cloud — it's cheaper and I won't have to worry."</h3>
-          <p>The CFO opened with the industry-standard answer. It was wrong on both counts. We priced the core workload honestly: roughly <em>€8,000 of owned compute</em>, hosted in a Tier-III data centre, replaced <em>€1,350 a month</em> of rented cloud compute. Payback in under six months. The server ran seven years.</p>
-          <p>Email and files went to Microsoft 365 — where SaaS genuinely earns its place. Everything else was placed deliberately. Same uptime as a hyperscaler. None of the expensed-compute premium. The business later exited to a trade buyer.</p>
-        </div>
-        <div class="le-figure"><div class="bottom-line"><div class="le-figure-num">~6 mo</div><div class="le-figure-label">payback on owned compute — then every month after was EBITDA retained, not rent paid</div></div></div>
-      </article>
-      <article class="ledger-entry">
-        <div class="le-meta"><span class="le-sector">Medical Distribution</span>Positioning for exit<br>Acquired within the year</div>
-        <div class="le-body">
-          <h3>The business that priced every decision twice.</h3>
-          <p>Every recommendation we brought was assessed the same way: first the saving, then <em>the saving multiplied by their exit multiple</em>. A licence optimisation was never a €5,000 decision — at their multiple it was a €30,000 enterprise value decision.</p>
-          <p>Right-sized licensing for frontline staff and perpetual purchases where the maths favoured them added up to six figures of value that would otherwise have leaked into recurring cost. They were acquired roughly a year later.</p>
-        </div>
-        <div class="le-figure"><div class="bottom-line"><div class="le-figure-num">× multiple</div><div class="le-figure-label">the discipline: every recurring cost removed compounds into the valuation</div></div></div>
-      </article>
-      <article class="ledger-entry">
-        <div class="le-meta"><span class="le-sector">Financial Services</span>Wealth management<br>Clients worldwide</div>
-        <div class="le-body">
-          <h3>Funding idle compute while the value engine sat under-defended.</h3>
-          <p>Their value engine is people — advisers building client trust over decades. Yet every workload sat in expensed public cloud, eating budget, while the advisers themselves — working from every timezone, carrying sensitive client data — were the actual risk surface.</p>
-          <p>We rebalanced: right-sized the compute, moved the security spend to where the risk actually sat. Total IT cost went down. Risk profile improved. The regulatory audit trail got stronger.</p>
-        </div>
-        <div class="le-figure"><div class="bottom-line"><div class="le-figure-num">Rebalanced</div><div class="le-figure-label">spend moved from idle compute to protecting the people who create the value</div></div></div>
-      </article>
+    <div class="receipts reveal">
+      <a class="receipt" href="/guide" onclick="trackEvent('guide_open',{location:'receipt-compute'})">
+        <span class="receipt-sector">Distribution &amp; Manufacturing</span>
+        <span class="receipt-line">€1,350/month of rented cloud compute, replaced by €8k owned. Ran seven years.</span>
+        <span class="receipt-num bottom-line">6-month payback</span>
+      </a>
+      <a class="receipt" href="/guide" onclick="trackEvent('guide_open',{location:'receipt-multiple'})">
+        <span class="receipt-sector">Medical Distribution</span>
+        <span class="receipt-line">Every cost decision priced twice: the saving — then the saving × their exit multiple.</span>
+        <span class="receipt-num bottom-line">Acquired within a year</span>
+      </a>
+      <a class="receipt" href="/guide" onclick="trackEvent('guide_open',{location:'receipt-people'})">
+        <span class="receipt-sector">Financial Services</span>
+        <span class="receipt-line">Security budget moved from idle compute to the advisers who create the value.</span>
+        <span class="receipt-num bottom-line">Cost down, risk down</span>
+      </a>
     </div>
-    <div class="field-close reveal">
-      <p>The pattern across all three: <strong>nothing defaulted, everything chosen.</strong> Where a workload runs, what a licence costs, where the security budget goes — each is a capital decision that either compounds your value or quietly erodes it. Our job is to make sure it compounds. <a href="/guide" class="link-arrow" onclick="trackEvent('guide_open',{location:'field-notes'})">Read the full guide</a></p>
-    </div>
+    <p class="field-link reveal"><a href="/guide" class="link-arrow" onclick="trackEvent('guide_open',{location:'field-notes'})">Read the full field notes</a></p>
   </div>
 </section>
 
-<!-- 5. DOCTRINE -->
-<section class="doctrine">
-  <div class="doctrine-inner reveal">
-    <p class="doctrine-line">People multiply money — <em>not systems and processes.</em><br>Even in the AI age.</p>
-    <p class="doctrine-sub">Good technology isn't ambiguous — it's binary. It works. Always. Our job is to make sure systems and processes never get in your people's way, and that every euro of technology spend is deliberately allocated to compound the value you're building.</p>
-  </div>
-</section>
-
-<!-- 6. WHO WE SERVE -->
+<!-- 5. WHO WE SERVE -->
 <section class="serve" id="who-we-serve">
   <div class="inner">
-    <div class="eyebrow reveal">Who we serve</div>
-    <h2 class="title reveal">One partner.<br>Every stage of the journey.</h2>
-    <p class="sub reveal">Whether you're building from scratch, scaling through the chaos, or protecting what you've created — Dividend IT is built for where you are right now.</p>
+    <h2 class="title reveal">Built for where you are right now.</h2>
 
     <div class="journey-tabs reveal">
       <button class="journey-tab active" onclick="switchTab('value-creator')">Value Creator</button>
@@ -838,32 +822,25 @@
       <div class="journey-panel active" id="panel-value-creator">
         <div class="journey-panel-left">
           <h3>You've built something<br><em>genuinely valuable.</em><br>Don't let it slip away.</h3>
-          <p>You've figured out the game. You've built a brand, a platform, a team that executes without you. You understand <a href="/guide" style="color:var(--accent-green);text-decoration:underline;text-underline-offset:3px;">EBITDA</a> as a mechanism to build value. You're thinking about acquisition, succession, or exit — and you know that every decision you make now either protects or erodes the value of what you've created.</p>
-          <p>At this stage, IT isn't just infrastructure. It's a risk factor in your due diligence. It's a line item in your valuation. It's the thing that could be exploited to compromise everything you've built — if it isn't properly managed.</p>
           <div class="journey-pain-list">
-            <div class="journey-pain-item">Acquisition due diligence exposing IT vulnerabilities</div>
-            <div class="journey-pain-item">Theft of IP, sensitive data, or client information</div>
-            <div class="journey-pain-item">Cyber breach causing reputational damage at the worst possible time</div>
-            <div class="journey-pain-item">Payment fraud at operating entity level</div>
-            <div class="journey-pain-item">Technology misaligned to EBITDA and exit valuation</div>
-            <div class="journey-pain-item">Roll-up acquisitions eroding EBITDA through duplication of costs</div>
+            <div class="journey-pain-item">Due diligence exposing IT vulnerabilities</div>
+            <div class="journey-pain-item">A breach at the worst possible time</div>
+            <div class="journey-pain-item">Technology misaligned to your valuation</div>
           </div>
           <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'serve-value-creator'})">Protect What You've Built →</a>
         </div>
         <div class="journey-panel-right">
           <div class="journey-promise">
-            <h4>The Dividend IT Promise — Value Creator</h4>
-            <p>We've seen what happens when a business gets to the finish line and loses it. Not because the business wasn't good. Because the technology wasn't protected. <strong>We make sure that never happens to yours.</strong></p>
-            <p style="margin-top:0.85rem; font-size:0.875rem; color:rgba(255,255,255,0.65);">Seamlessly secure IT, EBITDA-aligned spend, and a technology posture that holds up under any level of due diligence.</p>
+            <p><strong>A technology posture that holds up under any level of due diligence.</strong></p>
           </div>
           <a class="journey-stat" href="/exit-value">
             <div class="journey-stat-num"><span>78%</span></div>
-            <div class="journey-stat-label">of business owners lack a formal transition team — leaving their exit exposed at the most critical stage</div>
-            <span class="journey-stat-more">Read the full research →</span>
+            <div class="journey-stat-label">of owners lack a formal transition team</div>
+            <span class="journey-stat-more">The research →</span>
           </a>
           <div class="journey-cta">
-            <p><strong>Recommended package:</strong> Grow — Strategic technology partnership with vCTO, EBITDA reporting, exit planning support, and 24/7 security.</p>
-            <a href="/services" class="btn-green">View the Grow Package →</a>
+            <p><strong>Grow</strong> — vCTO, EBITDA reporting, exit planning, 24/7 security.</p>
+            <a href="/services" class="btn-green">View Package →</a>
           </div>
         </div>
       </div>
@@ -871,32 +848,25 @@
       <div class="journey-panel" id="panel-entrepreneur">
         <div class="journey-panel-left">
           <h3>You're in the trenches.<br><em>We know exactly</em><br>how that feels.</h3>
-          <p>You took the risk. You breathed an idea into a business. You're hiring, firing, chasing payments, managing cash flow, dealing with every crisis that lands on your desk — and somewhere in between, trying to figure out how to get yourself out of the day-to-day.</p>
-          <p>You know what needs to happen. You need to build the processes, the people, and the systems that lets your business run without you in the middle of everything. But right now, every day is a battle just to keep moving forward.</p>
-          <p>The last thing you need is IT adding to the list.</p>
           <div class="journey-pain-list">
-            <div class="journey-pain-item">Slow or unreliable systems killing team productivity</div>
+            <div class="journey-pain-item">Slow systems killing productivity</div>
             <div class="journey-pain-item">Email compromise and payment fraud exposure</div>
-            <div class="journey-pain-item">No technology strategy — just firefighting</div>
-            <div class="journey-pain-item">IT provider that doesn't understand your business</div>
-            <div class="journey-pain-item">No time to think about where technology should be taking you</div>
+            <div class="journey-pain-item">Firefighting instead of strategy</div>
           </div>
           <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'serve-entrepreneur'})">Get IT Off Your Plate →</a>
         </div>
         <div class="journey-panel-right">
           <div class="journey-promise">
-            <h4>The Dividend IT Promise — Entrepreneur</h4>
-            <p>We've got the scar tissue to show for it. We know this journey. <strong>Our promise is simple — IT and cybersecurity will never add to your list of headaches.</strong></p>
-            <p style="margin-top:0.85rem; font-size:0.875rem; color:rgba(255,255,255,0.65);">We take it completely off your plate — and we act as your strategic technology advisor, keeping one eye on where your business needs to go, not just where it is today.</p>
+            <p><strong>IT and cybersecurity will never add to your list of headaches.</strong></p>
           </div>
           <a class="journey-stat" href="/exit-value">
             <div class="journey-stat-num"><span>70%</span></div>
-            <div class="journey-stat-label">of business owners who want to exit never successfully do — most because they were never set up to scale without the founder at the centre</div>
-            <span class="journey-stat-more">Read the full research →</span>
+            <div class="journey-stat-label">of owners who want to exit never do — most were never set up to run without the founder</div>
+            <span class="journey-stat-more">The research →</span>
           </a>
           <div class="journey-cta">
-            <p><strong>Recommended package:</strong> Operate — Your complete outsourced IT department. Everything managed, everything included.</p>
-            <a href="/services" class="btn-green">View the Operate Package →</a>
+            <p><strong>Operate</strong> — your complete outsourced IT department.</p>
+            <a href="/services" class="btn-green">View Package →</a>
           </div>
         </div>
       </div>
@@ -904,31 +874,25 @@
       <div class="journey-panel" id="panel-startup">
         <div class="journey-panel-left">
           <h3>You've backed yourself.<br><em>Build on the right</em><br>foundation.</h3>
-          <p>You've taken the leap. You're hustling at every level — bringing your idea to life, landing your first clients, building something from nothing. Every decision matters and every euro counts.</p>
-          <p>You don't need complexity. You need the basics done right — secure email, reliable systems, file storage, and the right applications to run your business — set up properly from day one so you never have to undo bad habits later.</p>
           <div class="journey-pain-list">
-            <div class="journey-pain-item">Getting the basics set up quickly and correctly</div>
-            <div class="journey-pain-item">Email security and data protection from day one</div>
-            <div class="journey-pain-item">Reliable systems that support growth, not limit it</div>
-            <div class="journey-pain-item">Affordable, all-inclusive pricing with no surprises</div>
+            <div class="journey-pain-item">The basics set up correctly, once</div>
+            <div class="journey-pain-item">Email security from day one</div>
+            <div class="journey-pain-item">All-inclusive pricing, no surprises</div>
           </div>
           <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'serve-startup'})">Start on the Right Foot →</a>
         </div>
         <div class="journey-panel-right">
           <div class="journey-promise">
-            <h4>The Dividend IT Promise — Startup</h4>
-            <p>A startup package built for where you are right now. <strong>Simple, secure, and priced fairly.</strong></p>
-            <p style="margin-top:0.85rem; font-size:0.875rem; color:rgba(255,255,255,0.65);">We set you up right from day one — and when you're ready to scale, we grow with you. The businesses we work with at startup become our most loyal partners at entrepreneur and value creator stage.</p>
+            <p><strong>Set up right from day one — and we grow with you.</strong></p>
           </div>
           <a class="journey-stat" href="/startup-survival">
             <div class="journey-stat-num"><span>49%</span></div>
-            <div class="journey-stat-label">of businesses don't make it past year five — getting the foundations right from day one dramatically improves your odds</div>
-            <span class="journey-stat-more">Read the full research →</span>
+            <div class="journey-stat-label">of businesses don't make it past year five</div>
+            <span class="journey-stat-more">The research →</span>
           </a>
           <div class="journey-cta">
-            <p><strong>Recommended package:</strong> Secure — The foundation. Seamlessly secure IT and reliable support at an accessible price point.</p>
-            <a href="/services" class="btn-green">View the Secure Package →</a>
-            <p style="margin-top:1rem;margin-bottom:0;"><a href="/leo-grant" class="link-arrow" style="font-size:0.85rem;">Using a LEO grant to fund your IT foundation</a></p>
+            <p><strong>Secure</strong> — the foundation, priced fairly. <a href="/leo-grant" style="color:var(--accent-green);text-decoration:underline;text-underline-offset:2px;">LEO grant eligible</a>.</p>
+            <a href="/services" class="btn-green">View Package →</a>
           </div>
         </div>
       </div>
@@ -936,229 +900,176 @@
   </div>
 </section>
 
-<!-- 7. HOW IT WORKS -->
-<section class="how" id="how-it-works">
-  <div class="inner">
-    <div class="eyebrow reveal">The process</div>
-    <h2 class="title reveal">Getting started is easier than you think.</h2>
-    <p class="sub reveal">Most owners assume switching IT provider will be complicated and disruptive. It isn't. Here's exactly what happens.</p>
-    <div class="how-steps reveal">
-      <div class="how-step">
-        <div class="how-num">01</div>
-        <div>
-          <span class="how-tag">Free · 20 minutes · No obligation</span>
-          <h3>We listen first</h3>
-          <p>A conversation, not a sales pitch. We want to understand your business, how your team works, and where technology is holding you back or leaving value on the table. By the end of the call you'll know whether we're the right fit. If we're not, we'll tell you honestly.</p>
-        </div>
-      </div>
-      <div class="how-step">
-        <div class="how-num">02</div>
-        <div>
-          <span class="how-tag">Technology &amp; security review</span>
-          <h3>We assess your business</h3>
-          <p>A full review of your IT and cybersecurity — infrastructure, security posture, systems, spend. You receive a plain-English report with an honest picture of where you stand and a practical roadmap. That clarity is yours whether you work with us or not.</p>
-        </div>
-      </div>
-      <div class="how-step">
-        <div class="how-num">03</div>
-        <div>
-          <span class="how-tag">From day one</span>
-          <h3>We take it off your plate</h3>
-          <p>Infrastructure, cybersecurity, support desk, technology roadmap — handled. Your team gets IT that just works. You get a partner who proactively manages the technology and reports back in language you actually understand.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 8. PRICING -->
+<!-- 6. PLAN + PRICE -->
 <section class="pricing" id="pricing">
   <div class="inner">
-    <div class="eyebrow reveal">Clear pricing</div>
-    <h2 class="title reveal">One monthly fee per user.<br>Everything included.</h2>
+    <h2 class="title reveal">Three steps in. One fee per user.</h2>
+    <div class="plan-strip reveal">
+      <div class="plan-step"><span class="plan-num">01</span><span><strong>We listen</strong> — 20 minutes, no pitch</span></div>
+      <div class="plan-step"><span class="plan-num">02</span><span><strong>We assess</strong> — plain-English report, yours to keep</span></div>
+      <div class="plan-step"><span class="plan-num">03</span><span><strong>We take it off your plate</strong> — from day one</span></div>
+    </div>
     <div class="pricing-grid reveal">
       <div class="price-card">
         <div class="price-name">Secure</div>
         <div class="price-amount">€75<sub> / user / mo</sub></div>
-        <p class="price-desc">The foundation. Seamlessly secure IT and reliable support for businesses ready to stop tolerating technology that doesn't work.</p>
+        <p class="price-desc">The foundation.</p>
       </div>
       <div class="price-card featured">
         <div class="price-name">Operate · Most popular</div>
         <div class="price-amount">€100<sub> / user / mo</sub></div>
-        <p class="price-desc">Your complete outsourced IT department. Everything in Secure, plus full managed operations and an enhanced security posture.</p>
+        <p class="price-desc">Your complete IT department.</p>
       </div>
       <div class="price-card">
         <div class="price-name">Grow</div>
         <div class="price-amount">€120<sub> / user / mo</sub></div>
-        <p class="price-desc">Strategic technology partnership. Built for shareholders focused on growth, profitability, and building a more valuable business.</p>
+        <p class="price-desc">Strategic technology partnership.</p>
       </div>
     </div>
     <div class="pricing-foot reveal">
-      <p><strong>No hidden costs. No long lock-in.</strong> Monthly rolling after a 3-month onboarding period.</p>
-      <a href="/services" class="link-arrow" onclick="trackEvent('pricing_detail_click',{})">See what's included in each package</a>
+      <p><strong>Everything included. No lock-in.</strong></p>
+      <a href="/services" class="link-arrow" onclick="trackEvent('pricing_detail_click',{})">Compare packages</a>
     </div>
   </div>
 </section>
 
-<!-- 9. GUIDE CAPTURE -->
+<!-- 7. GUIDE CAPTURE -->
 <section class="capture" id="get-the-guide">
   <div class="capture-grid">
     <div class="reveal">
       <div class="eyebrow on-dark">Free guide</div>
       <h2 class="title">Drive business value with your outsourced IT.</h2>
       <ul class="capture-points">
-        <li>How to build a security foundation without a full-time IT hire</li>
-        <li>What a proper IT setup actually costs vs. what you're probably spending</li>
-        <li>How technology decisions affect your exit multiple and EBITDA</li>
-        <li>The five systems every growing business needs by year three</li>
-        <li>What good IT governance looks like when you're scaling</li>
+        <li>What good IT actually costs — and what you're probably spending</li>
+        <li>How technology decisions move your EBITDA and exit multiple</li>
+        <li>The five systems every growing business needs</li>
       </ul>
     </div>
     <div class="capture-form-wrap reveal">
       <h3>Get the free guide</h3>
-      <p>Delivered to your inbox — no obligation, no hard sell.</p>
+      <p>No obligation. No hard sell.</p>
       <form class="capture-form" id="guide-form">
         <input type="email" id="guide-email" name="email" class="capture-input" placeholder="Your email address" required autocomplete="email">
         <button type="submit" class="capture-submit">Send Me the Guide →</button>
       </form>
-      <div class="capture-success" id="guide-success"><p>On its way. Check your inbox — and while you wait, <a href="/guide" style="color:var(--accent-green-mid);text-decoration:underline;">read it online now →</a></p></div>
+      <div class="capture-success" id="guide-success"><p>On its way. While you wait, <a href="/guide" style="color:var(--accent-green-mid);text-decoration:underline;">read it online →</a></p></div>
       <p class="capture-note">No spam. Unsubscribe any time.</p>
     </div>
   </div>
 </section>
 
-<!-- 10. TOOLS -->
+<!-- 8. TOOLS -->
 <section class="tools" id="tools">
   <div class="inner">
-    <div class="eyebrow reveal">See it for your own business</div>
     <h2 class="title reveal">Don't take our word for it.<br>Run the numbers.</h2>
     <div class="tools-grid reveal">
       <a href="/cost-calculator" class="tool-card" onclick="trackEvent('tool_card_click',{tool:'cost'})">
         <h3>Cost Calculator</h3>
-        <p>Compare the true cost of an in-house IT hire against outsourcing — for your exact headcount. Most owners are surprised.</p>
-        <span class="link-arrow">Calculate your cost</span>
+        <p>In-house hire vs. outsourced — for your exact headcount.</p>
+        <span class="link-arrow">Calculate</span>
       </a>
       <a href="/value-calculator" class="tool-card" onclick="trackEvent('tool_card_click',{tool:'value'})">
         <h3>Value Impact Calculator</h3>
-        <p>See what your IT decisions are actually worth at exit — using real EBITDA multiples. The number behind "IT that pays back."</p>
-        <span class="link-arrow">See your value impact</span>
+        <p>What your IT decisions are worth at exit, using real multiples.</p>
+        <span class="link-arrow">Calculate</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- 11. DIVIDEND INDEX -->
+<!-- 9. DIVIDEND INDEX -->
 <section class="index" id="dividend-index">
   <div class="inner">
     <div class="index-header reveal">
       <div>
         <div class="eyebrow">The Dividend Index</div>
-        <h2 class="title">Technology insights for<br>business owners.</h2>
-        <p class="sub">Research, frameworks, and plain-English insights to help you use technology as a competitive advantage — at every stage of your business journey.</p>
+        <h2 class="title">The research behind every number.</h2>
       </div>
       <div class="index-header-right">
-        <div class="index-badge">Dividend IT Insights Hub</div>
-        <p class="index-note">Practical intelligence for entrepreneurs and value creators. No jargon. No vendor bias. Just insight you can act on.</p>
+        <div class="index-badge">Insights Hub</div>
       </div>
     </div>
     <div class="index-grid reveal">
       <a class="index-card index-featured" href="/get-the-guide" onclick="trackEvent('guide_open',{location:'dividend-index'})">
         <div class="index-card-tag">Free Guide</div>
         <h3>5 Ways to Drive Business Value With Your IT</h3>
-        <p>The practical guide for business owners on using technology to protect margins, prevent fraud, and build a more valuable business.</p>
-        <span class="link-arrow">Download Free Guide</span>
+        <span class="link-arrow">Download</span>
       </a>
       <a class="index-card" href="/cyber-risk">
-        <div class="index-card-tag">Cybersecurity Research</div>
-        <h3>The Cyber Risk Facing Irish SMBs — What the Data Really Tells Us</h3>
-        <p>50% of Irish SMBs were attacked last year. 17% no longer exist. The full picture of the threat landscape.</p>
-        <span class="link-arrow">Read the Research</span>
+        <div class="index-card-tag">Cybersecurity</div>
+        <h3>The Cyber Risk Facing Irish SMBs</h3>
+        <span class="link-arrow">Read</span>
       </a>
       <a class="index-card" href="/true-cost">
         <div class="index-card-tag">Financial Impact</div>
-        <h3>The True Cost of a Cyber Incident — Beyond the &euro;21k Headline</h3>
-        <p>Payment fraud, productivity loss, and reputational damage. The full financial impact of a cyber incident.</p>
-        <span class="link-arrow">Read the Research</span>
+        <h3>The True Cost of a Cyber Incident</h3>
+        <span class="link-arrow">Read</span>
       </a>
       <a class="index-card" href="/exit-value">
-        <div class="index-card-tag">Business Value &amp; Exit</div>
-        <h3>Why 70% of Business Owners Never Realise the Value They&rsquo;ve Built</h3>
-        <p>Most owners spend years building something valuable — and never realise it. The data behind the exit failure rate.</p>
-        <span class="link-arrow">Read the Research</span>
+        <div class="index-card-tag">Business Value</div>
+        <h3>Why 70% of Owners Never Realise the Value They've Built</h3>
+        <span class="link-arrow">Read</span>
       </a>
       <a class="index-card" href="/startup-survival">
-        <div class="index-card-tag">Startup &amp; Survival</div>
-        <h3>Why 49% of Businesses Fail Before Year Five — And How IT Changes the Odds</h3>
-        <p>Half of all new businesses don&rsquo;t survive past year five. The technology decisions you make in year one have a direct impact.</p>
-        <span class="link-arrow">Read the Research</span>
+        <div class="index-card-tag">Survival</div>
+        <h3>Why 49% of Businesses Fail Before Year Five</h3>
+        <span class="link-arrow">Read</span>
       </a>
       <a class="index-card" href="/cyber-risk">
-        <div class="index-card-tag">Threat Intelligence</div>
-        <h3>Why SMBs Are 3&times; More Likely to Be Targeted Than Large Firms</h3>
-        <p>Criminals target SMBs deliberately — weaker defences, faster exploitation, less likelihood of a sophisticated response.</p>
-        <span class="link-arrow">Read the Research</span>
+        <div class="index-card-tag">Threat Intel</div>
+        <h3>Why SMBs Are 3× More Likely to Be Targeted</h3>
+        <span class="link-arrow">Read</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- 12. ABOUT -->
-<section class="about" id="about">
-  <div class="inner">
-    <div class="about-grid">
-      <div class="reveal">
-        <div class="eyebrow">Why we exist</div>
-        <h2 class="title">We started this because owners deserve better.</h2>
-      </div>
-      <div class="about-right reveal">
-        <p>For the past decade I helped scale an outsourced IT and cybersecurity business from €1 million to €4 million — ten years sitting across the table from owners, learning what they actually needed from technology. Not products. Not jargon. A partner who spoke their language.</p>
-        <p>Most IT companies weren't delivering that. They still aren't. <strong>That's why I built Dividend IT.</strong> The name is intentional: a dividend is a return on investment — something that pays you back. That's exactly what your IT should do.</p>
-        <p class="about-promise">We'll never blind you with jargon, never sell you what you don't need, and always tell you the truth about where you're exposed.</p>
-      </div>
-    </div>
+<!-- 10. ABOUT (one line) -->
+<section class="about" id="about" style="padding:64px 2rem;">
+  <div class="inner" style="text-align:center;max-width:760px;">
+    <p class="reveal" style="font-family:var(--font-display);font-size:1.35rem;line-height:1.5;color:var(--text-dark);">Built by an operator who scaled an outsourced IT business from €1M to €4M — on your side of the table. The name is the promise: <em style="color:var(--accent-green);">technology that pays you back.</em></p>
   </div>
 </section>
 
-<!-- 13. FAQ -->
+<!-- 11. FAQ -->
 <section class="faq" id="faq">
   <div class="inner">
-    <div class="eyebrow reveal">Common questions</div>
-    <h2 class="title reveal">Everything you want to know<br>before you call.</h2>
+    <h2 class="title reveal">Before you call.</h2>
     <div class="faq-list reveal">
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this,'cost')">What does it cost to outsource IT support and cybersecurity? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>Our packages start at <strong>€75 per user per month</strong> — fully inclusive: support, security, backup and monitoring, no hidden fees. A 25-person business on our most popular Operate package pays €2,500 per month. Compare that to the average €21k cost of remediating a single cyber attack — <a href="/true-cost">the maths tends to take care of itself</a>. Run your own numbers with the <a href="/cost-calculator">cost calculator</a>.</p></div>
+        <div class="faq-a"><p>From <strong>€75 per user per month</strong>, fully inclusive. A 25-person business on Operate pays €2,500/month — against a €21k average cost to remediate one attack, <a href="/true-cost">the maths takes care of itself</a>. Run yours on the <a href="/cost-calculator">cost calculator</a>.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this,'what-is')">What is outsourced IT &amp; cybersecurity? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>A specialist partner runs your technology for you — helpdesk, infrastructure, security monitoring, threat detection and response, backup and disaster recovery, and technology strategy. Instead of hiring an internal team, you get a full IT department for a fixed monthly fee per user, with enterprise-grade security most SMBs couldn't justify buying alone. <a href="/outsourced-it">See what's included</a>.</p></div>
+        <div class="faq-a"><p>A specialist partner runs your technology — helpdesk, infrastructure, security monitoring, backup, strategy — for a fixed monthly fee per user. Enterprise-grade security without the internal team. <a href="/outsourced-it">What's included</a>.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this,'switching')">How long does it take to switch IT providers? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>Most businesses are fully onboarded within 30 days. We manage the migration end-to-end, including the handover from your current provider, so your team barely notices the change — except that things start working better.</p></div>
+        <button class="faq-q" onclick="toggleFaq(this,'switching')">How long does switching take? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Most businesses are fully onboarded within 30 days. We manage the migration end-to-end — your team barely notices, except that things start working.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this,'contracts')">Are there long-term contracts? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>No lock-in beyond a 3-month onboarding period. We keep clients because the service is good — not because they're contractually trapped. Annual contracts are available with a discount if you prefer that structure.</p></div>
+        <div class="faq-a"><p>No lock-in beyond a 3-month onboarding period. We keep clients because the service is good.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this,'different')">How is Dividend IT different from our current IT provider? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>Most IT providers keep the lights on. We work directly with business owners and shareholders — not just your IT admin — and align every technology decision to EBITDA, valuation, and long-term value. If your current provider has never talked to you about your exit plans or how IT spend affects your multiple, <a href="/guide">that's the difference</a>.</p></div>
+        <button class="faq-q" onclick="toggleFaq(this,'different')">How is Dividend IT different? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Most providers keep the lights on. We work directly with owners and align every technology decision to EBITDA and valuation. If your provider has never mentioned your multiple, <a href="/guide">that's the difference</a>.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this,'size')">We're not sure we're big enough for this. <span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>If you have between 10 and 150 people and your business depends on technology working — you're exactly the right size. The businesses that benefit most have outgrown their current IT setup but haven't yet justified a full internal team.</p></div>
+        <button class="faq-q" onclick="toggleFaq(this,'size')">Are we big enough? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>10 to 150 people and dependent on technology working — you're exactly right. Outgrown your setup, not yet ready for an internal team.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 14. FINAL CTA -->
+<!-- 12. FINAL CTA -->
 <section class="final" id="cta">
   <div class="final-inner">
-    <div class="eyebrow on-dark reveal" style="justify-content:center;">Ready to start?</div>
+    <p class="reveal" style="font-family:var(--font-display);font-size:1.3rem;color:rgba(255,255,255,0.85);margin-bottom:2rem;">People multiply money — <em style="color:var(--accent-green-mid);">not systems and processes.</em></p>
     <h2 class="title reveal">Let's find out if we're a fit.</h2>
-    <p class="lead reveal">We don't work with everyone — and we're not desperate for the work. We work with owners who are serious about using technology as a competitive advantage and a way to build lasting value. If that's you, let's have an honest conversation.</p>
+    <p class="lead reveal">We work with owners who treat technology as an engine, not a cost.</p>
     <div class="final-actions reveal">
       <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-light" onclick="trackEvent('book_call_click',{location:'final-cta'})">Book a Free 20-Min Call</a>
       <a href="/get-the-guide" class="btn-outline-light" onclick="trackEvent('guide_open',{location:'final-cta'})">Get the Free Guide</a>
