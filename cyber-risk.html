@@ -1070,7 +1070,8 @@
   </div></div>
   <div class="wp-hero"><div class="wp-hero-inner">
     <div class="wp-tag">Cybersecurity Research</div>
-    <h1 class="wp-title">The Cyber Risk Facing Irish SMBs &mdash; What the Data Really Tells Us</h1>
+    <p style="margin:0 0 1.1rem;font-size:0.8rem;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Part of <a href="/guide" style="color:#b7dac9;text-decoration:underline;text-underline-offset:3px;" onclick="trackEvent('guide_open',{location:'cluster-breadcrumb'})">The Business Owner&#8217;s Guide to Building Value with Outsourced IT</a></p>
+      <h1 class="wp-title">The Cyber Risk Facing Irish SMBs &mdash; What the Data Really Tells Us</h1>
     <p class="wp-intro">Half of Irish small and medium businesses experienced a cyber attack last year. One in six that were hit are no longer operating. This is not a large-company problem &mdash; and the data makes that abundantly clear.</p>
     <div class="wp-meta">
       <div class="wp-meta-item"><strong>Published by:</strong> The Dividend Index</div>
@@ -1192,4 +1193,24 @@
   document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){b.parentElement.classList.toggle('open');});});
   // Mobile nav toggle + dropdown tap
   (function(){
-    var togg
+    var toggle = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
+    if (toggle && links) {
+      toggle.addEventListener('click', function(){
+        var open = links.classList.toggle('open');
+        toggle.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+    document.querySelectorAll('.nav-dd-trigger').forEach(function(t){
+      t.addEventListener('click', function(e){
+        if (window.innerWidth <= 960) {
+          e.preventDefault();
+          t.parentElement.classList.toggle('open');
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
