@@ -789,11 +789,39 @@
     .reveal.visible { opacity: 1; transform: none; }
 
     /* ── RESPONSIVE ── */
+    
+    /* Equation moment */
+    .eqx { background: var(--text-dark); padding: 88px 2rem; }
+    .eqx-inner { max-width: 980px; margin: 0 auto; text-align: center; }
+    .eqx-label { justify-content: center; color: rgba(255,255,255,0.5); }
+    .eqx-label::before { background: rgba(255,255,255,0.3); }
+    .eqx-title { font-family: var(--font-display); font-size: clamp(1.7rem, 3.2vw, 2.5rem); line-height: 1.2; letter-spacing: -0.015em; color: var(--white); margin-bottom: 2.6rem; }
+    .eqx-display { display: flex; align-items: center; justify-content: center; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 2.2rem; }
+    .eqx-term { padding: 1.3rem 2rem; border: 1px solid rgba(255,255,255,0.18); border-radius: 8px; }
+    .eqx-fig { font-family: var(--font-display); font-size: clamp(1.2rem, 2.4vw, 1.7rem); color: var(--white); white-space: nowrap; }
+    .eqx-result { border-color: #b7dac9; }
+    .eqx-result .eqx-fig { color: #b7dac9; }
+    .eqx-op { font-family: var(--font-display); font-size: 1.9rem; color: rgba(255,255,255,0.45); padding: 0 0.5rem; }
+    .eqx-line { font-size: 1rem; color: rgba(255,255,255,0.7); line-height: 1.75; max-width: 720px; margin: 0 auto; }
+    .eqx-line strong { color: var(--white); }
+    /* Field receipts inside Proof */
+    .sp-receipts { margin-top: 2.8rem; border-top: 2px solid var(--text-dark); }
+    .sp-receipts-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); padding: 1.1rem 0 0.3rem; }
+    .sp-receipt { display: grid; grid-template-columns: 210px 1fr 190px; gap: 2rem; align-items: center; padding: 1.15rem 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; transition: background 0.15s; }
+    .sp-receipt:hover { background: var(--off-white); }
+    .sp-receipt-sector { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--accent-green); }
+    .sp-receipt-line { font-size: 0.93rem; color: var(--text-body); line-height: 1.5; }
+    .sp-receipt-num { font-family: var(--font-display); font-size: 1.05rem; color: var(--text-dark); text-align: right; }
+
     @media (max-width: 960px) {
       .hero-inner, .problem-grid, .story-inner, .about-grid, .index-header { grid-template-columns: 1fr; gap: 3rem; }
       .hero-bg { display: none; }
       .pillars-grid, .packages-grid, .stats-grid, .sectors-grid, .index-grid { grid-template-columns: 1fr; }
       .journey-panel.active { grid-template-columns: 1fr; gap: 2.5rem; }
+      .sp-receipt { grid-template-columns: 1fr; gap: 0.35rem; }
+      .sp-receipt-num { text-align: left; }
+      .eqx-display { flex-direction: column; }
+      .eqx-op { padding: 0.15rem 0; }
       /* Mobile nav */
       .nav-toggle { display: flex; }
       .nav-links {
@@ -1553,6 +1581,23 @@
   </div>
 </section>
 
+
+<!-- 3B. THE EQUATION — the mechanic behind "IT that pays back" -->
+<section id="the-equation" class="eqx">
+  <div class="eqx-inner">
+    <div class="section-label eqx-label">The part nobody shows you</div>
+    <h2 class="eqx-title">Your business is worth a multiple of its earnings.<br>Your IT sits inside that equation.</h2>
+    <div class="eqx-display reveal">
+      <div class="eqx-term"><span class="eqx-fig">EBITDA</span></div>
+      <div class="eqx-op">×</div>
+      <div class="eqx-term"><span class="eqx-fig">Multiple</span></div>
+      <div class="eqx-op">=</div>
+      <div class="eqx-term eqx-result"><span class="eqx-fig">Enterprise Value</span></div>
+    </div>
+    <p class="eqx-line reveal">Every euro of recurring technology cost is subtracted from EBITDA — and multiplied at exit. Every risk your systems carry is priced into the multiple. <strong>If your IT provider has never mentioned your multiple, they're managing computers — not value.</strong></p>
+  </div>
+</section>
+
 <!-- 4. THE GUIDE — PILLARS AS JOURNEY -->
 <section id="solution" class="sp-journey">
   <div class="sp-journey-inner">
@@ -1612,6 +1657,24 @@
     </div>
     <div class="sp-proof-pivot">
       <p>The question is no longer <strong>"will it happen to me?"</strong> — it's <strong>"when it does, will my business survive it?"</strong> The owners who thrive treat IT and security not as a cost to minimise, but as an investment in the value of what they've built.</p>
+    </div>
+    <div class="sp-receipts reveal">
+      <div class="sp-receipts-label">And it's not theory — from the field:</div>
+      <a class="sp-receipt" href="/guide" onclick="trackEvent('guide_open',{location:'receipt-compute'})">
+        <span class="sp-receipt-sector">Distribution &amp; Manufacturing</span>
+        <span class="sp-receipt-line">€1,350/month of rented cloud compute replaced by €8k owned — ran seven years.</span>
+        <span class="sp-receipt-num">6-month payback</span>
+      </a>
+      <a class="sp-receipt" href="/guide" onclick="trackEvent('guide_open',{location:'receipt-multiple'})">
+        <span class="sp-receipt-sector">Medical Distribution</span>
+        <span class="sp-receipt-line">Every cost decision priced twice: the saving — then the saving × their exit multiple.</span>
+        <span class="sp-receipt-num">Acquired within a year</span>
+      </a>
+      <a class="sp-receipt" href="/guide" onclick="trackEvent('guide_open',{location:'receipt-people'})">
+        <span class="sp-receipt-sector">Financial Services</span>
+        <span class="sp-receipt-line">Security budget moved from idle compute to the advisers who create the value.</span>
+        <span class="sp-receipt-num">Cost down, risk down</span>
+      </a>
     </div>
   </div>
 </section>
