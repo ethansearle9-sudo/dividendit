@@ -14,10 +14,10 @@
     function trackEvent(name, params){ try { gtag('event', name, params || {}); } catch(e){} }
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Own vs Rent: The Real Economics of Your Compute | Dividend IT</title>
-  <meta name="description" content="Cloud vs owned infrastructure for SMBs in 2026: repatriation data, real TCO numbers, capitalising vs expensing compute, and when each side wins." />
+  <title>CRM Selection & Implementation | Dividend IT</title>
+  <meta name="description" content="CRM done right: vendor-agnostic selection, clean implementation, and adoption your team actually sustains — turning pipeline into an asset a buyer can see." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232d6a4f'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' font-weight='bold' fill='%23f8f8f6' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
-  <link rel="canonical" href="https://dividendit.com/own-vs-rent-compute" />
+  <link rel="canonical" href="https://dividendit.com/crm" />
   <meta property="og:title" content="Outsourced IT &amp; Cybersecurity for Business Owners | Dividend IT" />
   <meta property="og:description" content="Ireland &amp; UK's outsourced cybersecurity & IT partner for business owners. IT that pays back — protecting your business, driving efficiency, building long-term value." />
   <meta property="og:type" content="website" />
@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
-  <link rel="canonical" href="https://dividendit.com/own-vs-rent-compute" />
+  <link rel="canonical" href="https://dividendit.com/crm" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1236,10 +1236,18 @@
       .nav-mega-col.open .nav-mega-divider { display: block !important; margin: 0.4rem 0 0.4rem 1.7rem !important; }
       .nav-mega-col ul li a { padding: 0.55rem 0 !important; font-size: 0.9rem !important; }
     }
+/*dd-drill-v1*/
+    .pl-toc { padding: 1.4rem 1.5rem 0.9rem; }
+    .pl-toc h2 { margin-bottom: 0.4rem; }
+    .pl-toc ol { columns: 1 !important; }
+    .pl-toc li { margin: 0 !important; border-bottom: 1px solid var(--border); }
+    .pl-toc li:last-child { border-bottom: none; }
+    .pl-toc a { padding: 0.7rem 0.2rem; font-size: 0.9rem; align-items: baseline; }
+    .pl-toc a:active { background: var(--white); }
 
   </style>
   <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Own vs Rent: The Real Economics of Your Compute","author":{"@type":"Person","name":"Ethan Searle"},"publisher":{"@type":"Organization","name":"Dividend IT","url":"https://dividendit.com/"},"url":"https://dividendit.com/own-vs-rent-compute","isPartOf":{"@type":"Article","name":"The Business Owner's Guide to Building Value with Outsourced IT","url":"https://dividendit.com/guide"},"about":["Cloud repatriation","IT cost management","EBITDA","Capital expenditure"]}
+{"@context": "https://schema.org", "@type": "Service", "serviceType": "CRM Selection & Implementation", "provider": {"@type": "Organization", "name": "Dividend IT", "url": "https://dividendit.com/"}, "areaServed": ["IE", "GB"], "url": "https://dividendit.com/crm", "description": "CRM done right: vendor-agnostic selection, clean implementation, and adoption your team actually sustains \u2014 turning pipeline into an asset a buyer can see."}
 </script>
 </head>
 <body>
@@ -1374,100 +1382,39 @@
 })();
 </script>
 <main>
-<!-- CLUSTER HERO -->
 <section class="pl-hero">
   <div class="pl-hero-inner">
-    <p style="margin:0 0 1rem;font-size:0.8rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);">Part of <a href="/guide" style="color:var(--accent-green);text-decoration:underline;text-underline-offset:3px;" onclick="trackEvent('guide_open',{location:'cluster-breadcrumb'})">The Business Owner&#8217;s Guide to Building Value with Outsourced IT</a></p>
-    <h1 class="pl-title">Own vs rent: the real economics of <em>your compute.</em></h1>
-    <p class="pl-sub">"Move it all to the cloud" was the default answer for a decade. The data now says the honest answer is workload-by-workload — and for steady workloads, the difference lands directly in your EBITDA.</p>
-    <div class="pl-meta"><span>Deep dive</span><span>·</span><span>9 min read</span><span>·</span><span>Updated July 2026</span></div>
+    <p style="margin:0 0 1rem;font-size:0.8rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-muted);"><a href="/communication-collaboration" style="color:var(--accent-green);text-decoration:none;">Communication &amp; Collaboration</a></p>
+    <h1 class="pl-title">Your pipeline is an asset. <em>Treat it like one.</em></h1>
+    <p class="pl-sub">Customer relationships that live in one person's head — or one person's inbox — are not a business asset. A well-run CRM turns them into one.</p>
   </div>
 </section>
 
 <section class="pl-ch">
   <div class="pl-ch-inner">
-    <span class="pl-ch-num">Part one</span>
-    <h2>The market has already changed its mind.</h2>
-    <p>Quietly, over the last three years, the most cloud-committed operators on the planet started moving workloads back. In IDC's survey, <strong>86% of CIOs planned to repatriate at least some public-cloud workloads in 2025</strong> — the highest rate ever recorded. Only around 8% plan a full exit. The story isn't "cloud was a mistake." It's that <strong>the default was</strong>.</p>
-    <p>The waste data explains why. Flexera's 2025 State of the Cloud report found organisations estimate roughly <strong>27% of their cloud spend is wasted</strong> — paid for, not used. For a business spending €5,000 a month on cloud services, that's around €16,000 a year buying nothing.</p>
-    <div class="pl-fig">
-      <div class="pl-fig-row"><span>CIOs planning some repatriation in 2025</span><span class="v up">86%</span></div>
-      <div class="pl-fig-row"><span>Planning a full cloud exit</span><span class="v">~8%</span></div>
-      <div class="pl-fig-row"><span>Cloud spend estimated as wasted</span><span class="v">~27%</span></div>
-      <div class="pl-fig-src">Sources: IDC Cloud Pulse / server-market commentary 2025; Flexera State of the Cloud 2025.</div>
-    </div>
-  </div>
-</section>
-
-<section class="pl-ch">
-  <div class="pl-ch-inner">
-    <span class="pl-ch-num">Part two</span>
-    <h2>The most public receipt: 37signals.</h2>
-    <p>The clearest documented case comes from 37signals, the company behind Basecamp and HEY. Their cloud bill was running at <strong>$3.2 million a year</strong>. They spent roughly <strong>$700,000 once</strong> on their own Dell servers, moved seven applications onto them, and watched the annual bill fall by about <strong>$2 million</strong> — with five-year savings projected around <strong>$10 million</strong>, rising further after leaving cloud storage entirely.</p>
-    <p>They're not alone at scale: Dropbox famously saved about <strong>$75 million over two years</strong> after building its own infrastructure. The pattern repeats because the economics repeat: <strong>steady workloads don't need elasticity — and elasticity is what you're paying the premium for.</strong></p>
-    <div class="pl-fig">
-      <div class="pl-fig-row"><span>Annual cloud spend before the move</span><span class="v">$3.2M</span></div>
-      <div class="pl-fig-row"><span>One-off owned hardware spend</span><span class="v">$700k</span></div>
-      <div class="pl-fig-row"><span>Annual saving achieved</span><span class="v up">~$2M</span></div>
-      <div class="pl-fig-row"><span>Projected five-year saving</span><span class="v up">~$10M</span></div>
-      <div class="pl-fig-src">Source: 37signals via The Register, May 2025. Dropbox figures: company filings and public reporting.</div>
-    </div>
-    <p>Scale the same logic down to a 40-person business and the shape holds: modern server hardware is extraordinarily capable, warranties run five years, and well-specified machines routinely serve seven. Meanwhile the rented equivalent bills you every month, forever.</p>
-  </div>
-</section>
-
-<section class="pl-ch">
-  <div class="pl-ch-inner">
-    <span class="pl-ch-num">Part three</span>
-    <h2>Capitalise vs expense: the accounting is half the story.</h2>
-    <p>Two businesses run the same workload. One owns the infrastructure; one rents it. Their <em>operations</em> are identical — their <em>accounts</em> are not.</p>
+    <span class="pl-ch-num">What we do</span>
+    <h2>Selection, implementation, adoption.</h2>
     <ul>
-      <li><strong>Owned compute is capitalised.</strong> It sits on the balance sheet as an asset and is depreciated over its useful life, typically three to seven years. Depreciation lands <em>below</em> EBITDA.</li>
-      <li><strong>Rented compute is expensed.</strong> It hits the P&amp;L every month as an operating cost — directly reducing EBITDA, the exact figure your valuation multiple is applied to.</li>
-    </ul>
-    <p>At the multiples typical of UK &amp; Ireland SME transactions — an average around <strong>5.3×</strong> in recent lower mid-market data — every €10,000 of recurring compute cost you eliminate is worth roughly <strong>€50,000 of enterprise value</strong>. That's the multiplication that makes this a shareholder decision rather than an IT preference.</p>
-    <div class="pl-quote">Every cost decision is two numbers: the saving — and the saving times your multiple.</div>
+<li><strong>Vendor-agnostic selection.</strong> We do not resell a CRM, so our advice is not a sales pitch. We match the tool to your sales process, team size and budget.</li>
+<li><strong>Clean implementation.</strong> Data migrated properly, pipelines configured to how you actually sell, integrated with Microsoft 365 and telephony so nothing is typed twice.</li>
+<li><strong>Adoption that sticks.</strong> The graveyard of failed CRMs is a training problem, not a software problem. We set up the habits, not just the system.</li>
+</ul>
   </div>
 </section>
 
 <section class="pl-ch">
   <div class="pl-ch-inner">
-    <span class="pl-ch-num">Part four</span>
-    <h2>When renting genuinely wins.</h2>
-    <p>Honesty cuts both ways — public cloud and SaaS earn their place in specific, predictable situations:</p>
-    <ul>
-      <li><strong>Genuinely variable demand.</strong> Customer-facing products that scale with usage, seasonal spikes, unpredictable growth.</li>
-      <li><strong>Commodity collaboration.</strong> Email and file collaboration belong in Microsoft 365 — the economics and security of doing this yourself stopped making sense years ago.</li>
-      <li><strong>Early stage.</strong> Before your workload patterns are known, renting is the right way to learn them.</li>
-      <li><strong>Global distribution.</strong> Serving users across regions where owning presence would be absurd.</li>
-    </ul>
-    <p>The destination for most established SMBs is <strong>hybrid</strong>: rent the elastic and the commodity, own the steady — each workload placed deliberately, with the EBITDA effect on the table.</p>
-  </div>
-</section>
-
-<section class="pl-ch">
-  <div class="pl-ch-inner">
-    <span class="pl-ch-num">Part five</span>
-    <h2>The five questions to ask.</h2>
-    <ul>
-      <li><strong>Which of our workloads are actually variable?</strong> List them. Most SMBs find fewer than they expect.</li>
-      <li><strong>What is our all-in monthly rented compute cost?</strong> Including the licences and egress fees that hide in the invoice.</li>
-      <li><strong>What would the owned equivalent cost — once?</strong> Hardware, hosting, and management, over a realistic five-to-seven-year life.</li>
-      <li><strong>What's the payback period?</strong> For steady workloads it is frequently measured in months, not years.</li>
-      <li><strong>What does each option do to our EBITDA?</strong> The question your provider should have asked first.</li>
-    </ul>
-    <p>If your current provider can't work through those five with you — commercially, not just technically — that's a signal about which conversation they're equipped to have.</p>
-    <div class="pl-cluster">
-      <p><strong>Back to the full picture:</strong> compute is one of four value levers. The flagship guide covers all four.</p>
-      <a href="/guide" class="btn-green" onclick="trackEvent('guide_open',{location:'cluster-footer'})">Read the full guide →</a>
-    </div>
+    <span class="pl-ch-num">The value angle</span>
+    <h2>Buyers pay for pipelines they can verify.</h2>
+    <p>In diligence, &ldquo;strong customer relationships&rdquo; is a claim. A CRM with years of clean pipeline history is <em>evidence</em> &mdash; of recurring revenue, of sales process, of a business that runs on systems rather than heroics. It is one of the quietest contributors to a stronger multiple.</p>
+<p><a href="/guide" style="color:var(--accent-green);text-decoration:underline;text-underline-offset:3px;">How systems build enterprise value &rarr;</a></p>
   </div>
 </section>
 
 <section class="pl-cta-band">
-  <h2>Want the numbers run for your workloads?</h2>
-  <p>Twenty minutes, your actual invoices, and a straight answer on what you should own, what you should rent, and what it's worth.</p>
-  <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-outline-light" style="background:var(--white);color:var(--text-dark);border-color:var(--white)" onclick="trackEvent('book_call_click',{location:'cluster-cta'})">Book a Free 20-Min Call</a>
+  <h2>Make the pipeline visible.</h2>
+  <p>Twenty minutes on how you sell today — and an honest read on whether your current setup is helping or hiding it.</p>
+  <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-outline-light" style="background:var(--white);color:var(--text-dark);border-color:var(--white)" onclick="trackEvent('book_call_click',{location:'crm-cta'})">Book a Free 20-Min Call</a>
 </section>
 </main>
 <footer>
@@ -1486,7 +1433,7 @@
   </div>
 </footer>
 <script>
-  trackEvent('page_view', { page_title: 'Own vs Rent Compute', page_location: location.href, page_path: location.pathname });
+  trackEvent('page_view', { page_title: 'CRM', page_location: location.href, page_path: location.pathname });
   /* FAQ accordion */
   function toggleFaq(btn, id) {
     var item = btn.parentElement;

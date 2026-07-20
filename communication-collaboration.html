@@ -180,7 +180,27 @@
       .nav-cta { display: inline-block; text-align: center; margin-top: 0.25rem; }
       .cta-strip { flex-direction: column; gap: 1.25rem; }
     }
-</style>
+/*dd-drill-v1*/
+    @media (max-width: 960px) {
+      /* Level 1: dropdowns collapsed until tapped */
+      .nav-dd .nav-dd-menu, .nav-dd .nav-mega-menu { display: none !important; }
+      .nav-dd.open > .nav-dd-menu { display: block !important; position: static !important; transform: none !important; opacity: 1 !important; visibility: visible !important; box-shadow: none !important; border: none !important; background: none !important; padding: 0 0 0.6rem 0.85rem !important; }
+      .nav-dd.open > .nav-mega-menu { display: flex !important; position: static !important; transform: none !important; opacity: 1 !important; visibility: visible !important; box-shadow: none !important; border: none !important; background: none !important; flex-direction: column !important; gap: 0 !important; padding: 0 0 0.5rem 0 !important; min-width: 0 !important; }
+      .nav-dd-trigger svg { display: inline-block !important; transition: transform 0.25s; width: 10px; }
+      .nav-dd.open > .nav-dd-trigger svg { transform: rotate(180deg); }
+      /* Level 2: columns collapsed to their heading until tapped */
+      .nav-mega-col { border-top: 1px solid var(--border); padding: 0 !important; }
+      .nav-mega-col .nav-mega-label { display: flex !important; justify-content: space-between; align-items: center; padding: 0.85rem 0 0.85rem 0.85rem !important; margin: 0 !important; font-size: 0.9rem !important; }
+      .nav-mega-col .nav-mega-label::after { content: '+'; font-size: 1.1rem; color: var(--text-muted); margin-right: 0.25rem; transition: transform 0.25s; }
+      .nav-mega-col.open .nav-mega-label::after { content: '\2013'; color: var(--accent-green); }
+      .nav-mega-col ul, .nav-mega-col .nav-mega-divider, .nav-mega-col .nav-mega-sublabel { display: none !important; }
+      .nav-mega-col.open ul { display: block !important; padding-left: 1.7rem !important; }
+      .nav-mega-col.open .nav-mega-sublabel { display: block !important; padding: 0.6rem 0 0.2rem 1.7rem !important; }
+      .nav-mega-col.open .nav-mega-divider { display: block !important; margin: 0.4rem 0 0.4rem 1.7rem !important; }
+      .nav-mega-col ul li a { padding: 0.55rem 0 !important; font-size: 0.9rem !important; }
+    }
+
+  </style>
 </head>
 <body>
 <nav>
@@ -198,6 +218,7 @@
           <div class="nav-mega-col">
             <a href="/outsourced-cyber" class="nav-mega-label">Outsourced Cyber Security</a>
             <ul>
+              <li><a href="/outsourced-cyber">Overview</a></li>
               <li><a href="/fully-managed-cyber">Fully Managed Cyber Security</a></li>
               <li><a href="/co-managed-cyber">Co-Managed Cyber Security</a></li>
             </ul>
@@ -224,6 +245,7 @@
           <div class="nav-mega-col nav-mega-col--right">
             <a href="/outsourced-it" class="nav-mega-label">Outsourced IT</a>
             <ul>
+              <li><a href="/outsourced-it">Overview</a></li>
               <li><a href="/fully-managed-it">Fully Managed IT Support</a></li>
               <li><a href="/co-managed-it">Co-Managed IT Support</a></li>
             </ul>
@@ -252,6 +274,11 @@
             <a href="/communication-collaboration" class="nav-mega-label">Communication &amp; Collaboration</a>
             <ul>
               <li><a href="/communication-collaboration">Overview</a></li>
+              <li><a href="/microsoft-365">Microsoft 365</a></li>
+              <li><a href="/public-cloud">Public Cloud</a></li>
+              <li><a href="/private-cloud">Private Cloud</a></li>
+              <li><a href="/telephony">Telephony</a></li>
+              <li><a href="/crm">CRM</a></li>
             </ul>
           </div>
 
@@ -395,5 +422,42 @@
   </div>
 </footer>
 
+<script>/*dd-drill-v1*/
+(function(){
+  function isMobile(){ return window.innerWidth <= 960; }
+  /* Hamburger: rebind cleanly */
+  var oldT = document.querySelector('.nav-toggle');
+  if (oldT) {
+    var t = oldT.cloneNode(true); oldT.replaceWith(t);
+    var links = document.querySelector('.nav-links');
+    t.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      t.classList.toggle('open', open);
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+  /* Level 1: dropdown triggers */
+  document.querySelectorAll('.nav-dd-trigger').forEach(function(old){
+    var el = old.cloneNode(true); old.replaceWith(el);
+    el.addEventListener('click', function(e){
+      if (!isMobile()) return;
+      e.preventDefault();
+      var dd = el.parentElement;
+      var was = dd.classList.contains('open');
+      document.querySelectorAll('.nav-dd.open').forEach(function(d){ d.classList.remove('open'); });
+      if (!was) dd.classList.add('open');
+    });
+  });
+  /* Level 2: mega column headings drill down on mobile */
+  document.querySelectorAll('.nav-mega-col > .nav-mega-label').forEach(function(old){
+    var el = old.cloneNode(true); old.replaceWith(el);
+    el.addEventListener('click', function(e){
+      if (!isMobile()) return;
+      e.preventDefault();
+      el.parentElement.classList.toggle('open');
+    });
+  });
+})();
+</script>
 </body>
 </html>
