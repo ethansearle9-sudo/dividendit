@@ -40,4 +40,6 @@
   <url><loc>https://dividendit.com/cyber-risk-assessment</loc><priority>0.6</priority></url>
   <url><loc>https://dividendit.com/pen-testing</loc><priority>0.6</priority></url>
   <url><loc>https://dividendit.com/ma-cyber-due-diligence</loc><priority>0.6</priority></url>
+  <url><loc>https://dividendit.com/about</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://dividendit.com/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
