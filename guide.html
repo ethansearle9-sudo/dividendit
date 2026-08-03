@@ -65,7 +65,7 @@
 
     /* ── NAV ── */
     /* ── NAV (grouped dropdowns + mobile hamburger) ── */
-    nav {
+    body > nav {
       position: fixed; top: 0; left: 0; right: 0;
       z-index: 100;
       background: rgba(255,255,255,0.96);
@@ -819,7 +819,7 @@
     .pl-title em { font-style: italic; color: var(--accent-green); }
     .pl-sub { font-size: 1.15rem; color: var(--text-body); line-height: 1.7; max-width: 680px; }
     .pl-meta { display: flex; gap: 1rem; margin-top: 1.75rem; font-size: 0.83rem; color: var(--text-muted); flex-wrap: wrap; }
-    .pl-toc { background: var(--off-white); border: 1px solid var(--border); border-radius: 10px; padding: 1.75rem 2rem; margin: 2.5rem auto 0; max-width: 860px; }
+    .pl-toc { position: static; z-index: auto; backdrop-filter: none; background: var(--off-white); border: 1px solid var(--border); border-radius: 10px; padding: 1.75rem 2rem; margin: 2.5rem auto 0; max-width: 860px; }
     .pl-toc h2 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
     .pl-toc ol { list-style: none; counter-reset: toc; columns: 2; column-gap: 2.5rem; }
     .pl-toc li { counter-increment: toc; margin-bottom: 0.6rem; break-inside: avoid; }
@@ -1237,13 +1237,15 @@
       .nav-mega-col ul li a { padding: 0.55rem 0 !important; font-size: 0.9rem !important; }
     }
 /*dd-drill-v1*/
-    .pl-toc { padding: 1.4rem 1.5rem 0.9rem; }
-    .pl-toc h2 { margin-bottom: 0.4rem; }
-    .pl-toc ol { columns: 1 !important; }
-    .pl-toc li { margin: 0 !important; border-bottom: 1px solid var(--border); }
-    .pl-toc li:last-child { border-bottom: none; }
-    .pl-toc a { padding: 0.7rem 0.2rem; font-size: 0.9rem; align-items: baseline; }
-    .pl-toc a:active { background: var(--white); }
+    @media (max-width: 760px) {
+      .pl-toc { padding: 1.4rem 1.5rem 0.9rem; }
+      .pl-toc h2 { margin-bottom: 0.4rem; }
+      .pl-toc ol { columns: 1 !important; }
+      .pl-toc li { margin: 0 !important; border-bottom: 1px solid var(--border); }
+      .pl-toc li:last-child { border-bottom: none; }
+      .pl-toc a { padding: 0.7rem 0.2rem; font-size: 0.9rem; align-items: baseline; }
+      .pl-toc a:active { background: var(--white); }
+    }
 
   </style>
   <script type="application/ld+json">
