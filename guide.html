@@ -1544,19 +1544,69 @@
       <li><strong>Get an outside read.</strong> A second opinion on your posture and spend costs nothing and anchors everything else.</li>
     </ul>
     <div class="pl-cluster">
-      <p><strong>Want these five expanded into a working checklist?</strong> The free companion guide covers each with the practical steps.</p>
+      <p><strong>Want a second opinion on where you actually stand?</strong> Ten minutes, no pitch — I'll tell you honestly what I'd prioritise.</p>
       <a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="btn-green" onclick="trackEvent('book_call_click',{location:'pillar-ch8'})">Get a Straight Answer →</a>
     </div>
+  </div>
+</section>
+
+<!-- SAVE FOR LATER -->
+<style>
+  .pl-save { background: var(--off-white); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 56px 2rem; }
+  .pl-save-inner { max-width: 620px; margin: 0 auto; text-align: center; }
+  .pl-save h3 { font-family: var(--font-display); font-size: 1.5rem; line-height: 1.25; color: var(--text-dark); margin: 0 0 .6rem; }
+  .pl-save p { font-size: .95rem; color: var(--text-muted); line-height: 1.6; margin: 0 0 1.5rem; }
+  .pl-save-form { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
+  .pl-save-form input {
+    flex: 1 1 280px; max-width: 340px; padding: .8rem 1rem;
+    border: 1px solid var(--border); border-radius: var(--radius);
+    font-family: var(--font-body); font-size: .9rem; color: var(--text-dark); background: var(--white);
+  }
+  .pl-save-form input:focus { outline: none; border-color: var(--accent-green); }
+  .pl-save-form button {
+    background: var(--accent-green); color: var(--white); border: none; cursor: pointer;
+    padding: .8rem 1.6rem; border-radius: var(--radius);
+    font-family: var(--font-body); font-size: .9rem; font-weight: 600;
+    transition: background .2s;
+  }
+  .pl-save-form button:hover { background: #245740; }
+  .pl-save-note { font-size: .78rem; color: var(--text-muted); margin-top: .9rem; }
+  .pl-save-done { font-size: .95rem; color: var(--accent-green); font-weight: 600; }
+</style>
+<section class="pl-save">
+  <div class="pl-save-inner">
+    <h3>Want to come back to this?</h3>
+    <p>Made it this far? I'll email you the link so you can pick it up later, or forward it to whoever else needs to read it.</p>
+    <div class="pl-save-form" id="save-form">
+      <input type="email" id="save-email" placeholder="you@yourcompany.ie" aria-label="Your email address" />
+      <button type="button" onclick="saveGuideLink()">Email me the link</button>
+    </div>
+    <div class="pl-save-done" id="save-done" style="display:none">Sent — check your inbox shortly.</div>
+    <p class="pl-save-note">Your address is used to send you this link. No list, no sequence, no sharing.</p>
   </div>
 </section>
 
 <!-- PILLAR CTA -->
 <section class="pl-cta-band">
   <h2>An honest read on where you stand.</h2>
-  <p>Twenty minutes. Your business, your systems, your goals — and a straight answer on where technology is helping or hurting the value you're building.</p>
-  <a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="btn-outline-light" style="background:var(--white);color:var(--text-dark);border-color:var(--white)" onclick="trackEvent('book_call_click',{location:'pillar-cta'})">Book a Free 20-Min Call</a>
+  <p>Ten minutes. Your business, your systems, your goals — and a straight answer on where technology is helping or hurting the value you're building.</p>
+  <a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="btn-outline-light" style="background:var(--white);color:var(--text-dark);border-color:var(--white)" onclick="trackEvent('book_call_click',{location:'pillar-cta'})">Get a Straight Answer</a>
 </section>
 </main>
+<script>
+  function saveGuideLink(){
+    var el = document.getElementById('save-email');
+    var email = (el.value || '').trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { el.focus(); el.style.borderColor = '#b3261e'; return; }
+    trackEvent('generate_lead', { method: 'guide_email_link', location: 'pillar-save', currency: 'EUR', value: 1 });
+    fetch('https://formspree.io/f/xlgvqpbb', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email, source: 'Guide - email me the link', page: location.pathname })
+    }).catch(function(){});
+    document.getElementById('save-form').style.display = 'none';
+    document.getElementById('save-done').style.display = 'block';
+  }
+</script>
 <footer>
   <div class="footer-inner">
     <div><a href="/" class="footer-logo">Dividend<span>IT</span></a>
