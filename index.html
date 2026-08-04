@@ -1413,22 +1413,22 @@
       <h1 class="sp-hero-title">You built the business.<br>It shouldn't <em>own</em> you.</h1>
       <p class="sp-hero-sub">Most owners are trapped in the day-to-day — with technology that's a cost and a risk instead of an engine. We change that: seamlessly secure IT that frees your time, sharpens your edge, and builds what your business is worth.</p>
       <div class="sp-hero-actions">
+        <a href="/guide" class="btn-primary" onclick="trackEvent('guide_open',{location:'hero'})">Drive Business Value</a>
         <a href="https://calendly.com/ethan-searle9/30min" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'hero'})">Book a Free 20-Min Call</a>
-        <a href="/guide" class="btn-secondary" style="align-self:center" onclick="trackEvent('guide_open',{location:'hero'})">Or read the free guide first</a>
       </div>
       <div class="sp-hero-trust">
         <span>No jargon</span><span>·</span><span>No lock-in</span><span>·</span><span>No surprises</span>
       </div>
     </div>
     <div class="sp-hero-stats">
-      <a class="sp-hero-stat" href="/exit-value" onclick="trackEvent('hero_stat_click',{stat:'exit-failure-rate'})">
-        <div class="sp-hero-stat-num"><span>70%</span></div>
-        <div class="sp-hero-stat-label">of business owners who want to exit will never successfully do so</div>
-        <div class="sp-hero-stat-source">See the research →</div>
-      </a>
       <a class="sp-hero-stat" href="/cyber-risk" onclick="trackEvent('hero_stat_click',{stat:'cyber-attack-rate'})">
         <div class="sp-hero-stat-num"><span>50%</span></div>
         <div class="sp-hero-stat-label">of Irish SMBs experienced a cyber attack in the past 12 months</div>
+        <div class="sp-hero-stat-source">See the research →</div>
+      </a>
+      <a class="sp-hero-stat" href="/exit-value" onclick="trackEvent('hero_stat_click',{stat:'exit-failure-rate'})">
+        <div class="sp-hero-stat-num"><span>70%</span></div>
+        <div class="sp-hero-stat-label">of business owners who want to exit will never successfully do so</div>
         <div class="sp-hero-stat-source">See the research →</div>
       </a>
       <a class="sp-hero-stat" href="/true-cost" onclick="trackEvent('hero_stat_click',{stat:'avg-remediation-cost'})">
@@ -1443,56 +1443,13 @@
 <!-- TRUST BAR -->
 <div class="sp-trust-bar">
   <div class="sp-trust-inner">
-    <div class="sp-trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:.45rem"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Seamlessly Secure</div>
-    <div class="sp-trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:.45rem"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>24/7 Monitoring, Remediation &amp; Support</div>
-    <div class="sp-trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:.45rem"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>Business-First Thinking</div>
-    <div class="sp-trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:.45rem"><path d="M3 20h18"/><rect x="6" y="12" width="3" height="6"/><rect x="11" y="8" width="3" height="10"/><rect x="16" y="4" width="3" height="14"/></svg>EBITDA Aligned</div>
-    <div class="sp-trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:.45rem"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ireland &amp; UK</div>
+    <div class="sp-trust-item">🔒 Seamlessly Secure</div>
+    <div class="sp-trust-item">⏱ 24/7 Monitoring, Remediation &amp; Support</div>
+    <div class="sp-trust-item">💼 Business-First Thinking</div>
+    <div class="sp-trust-item">📊 EBITDA Aligned</div>
+    <div class="sp-trust-item">🌍 Ireland &amp; UK</div>
   </div>
 </div>
-
-<!-- FOUNDER PROOF -->
-<style>
-  .sp-founder { background: var(--white); padding: 72px 2rem; border-bottom: 1px solid var(--border); }
-  .sp-founder-inner { max-width: var(--max-w); margin: 0 auto; display: grid; grid-template-columns: 1.25fr 1fr; gap: 4rem; align-items: center; }
-  .sp-founder-label { display:inline-flex; align-items:center; gap:.5rem; font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-green); margin-bottom:1rem; }
-  .sp-founder-label::before { content:''; width:20px; height:1px; background:var(--accent-green); }
-  .sp-founder h2 { font-family: var(--font-display); font-size: clamp(1.7rem, 2.6vw, 2.2rem); line-height:1.2; color:var(--text-dark); margin-bottom:1.1rem; letter-spacing:-.01em; }
-  .sp-founder p { font-size:1rem; line-height:1.75; color:var(--text-body); margin-bottom:1rem; }
-  .sp-founder p:last-of-type { margin-bottom:1.6rem; }
-  .sp-founder strong { color:var(--text-dark); font-weight:600; }
-  .sp-founder-metrics { display:flex; flex-direction:column; gap:1rem; }
-  .sp-founder-metric { background:var(--off-white); border:1px solid var(--border); border-radius:10px; padding:1.4rem 1.5rem; }
-  .sp-founder-metric-num { font-family:var(--font-display); font-size:2.1rem; line-height:1; color:var(--accent-green); margin-bottom:.35rem; }
-  .sp-founder-metric-label { font-size:.86rem; color:var(--text-muted); line-height:1.5; }
-  @media (max-width: 900px) { .sp-founder-inner { grid-template-columns:1fr; gap:2.5rem; } .sp-founder { padding:56px 1.25rem; } }
-</style>
-<section id="founder" class="sp-founder">
-  <div class="sp-founder-inner">
-    <div class="reveal">
-      <div class="sp-founder-label">Who's Behind This</div>
-      <h2>I've sat on your side of the table for ten years.</h2>
-      <p>I'm Ethan Searle. Before Dividend IT, I spent a decade helping scale an outsourced IT and cybersecurity business from <strong>€1 million to €4 million in revenue</strong>, and held equity in it until I exited in 2026. Ten years of sitting across from owners, working out what they actually needed from technology — not products, not jargon, a partner who spoke their language.</p>
-      <p>Dividend IT is new in Ireland, and I'd rather say that plainly than dress it up with stock photos and invented client logos. What isn't new is the experience behind it, or the conviction that owners deserve better than what most providers give them.</p>
-      <p>If that sounds like the kind of honesty you want from a technology partner, the fastest way to test it is twenty minutes on a call.</p>
-      <a href="/about" class="btn-secondary" onclick="trackEvent('founder_story_click',{location:'homepage'})">Read the full story</a>
-    </div>
-    <div class="sp-founder-metrics reveal">
-      <div class="sp-founder-metric">
-        <div class="sp-founder-metric-num">10 yrs</div>
-        <div class="sp-founder-metric-label">Scaling outsourced IT &amp; cybersecurity operations for owner-led businesses</div>
-      </div>
-      <div class="sp-founder-metric">
-        <div class="sp-founder-metric-num">€1M → €4M</div>
-        <div class="sp-founder-metric-label">Revenue growth at prior MSP, where I held equity through to exit</div>
-      </div>
-      <div class="sp-founder-metric">
-        <div class="sp-founder-metric-num">3 sectors</div>
-        <div class="sp-founder-metric-label">Distribution, manufacturing and financial services — where we go deep</div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- WHO WE SERVE — 3 audience journey -->
 <section id="who-we-serve">
@@ -1659,7 +1616,7 @@
     <div class="sp-journey-steps">
       <a href="/outsourced-it" class="sp-step-card">
         <div class="sp-step-stage">Step One</div>
-        <div class="sp-step-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="sp-step-icon">🔒</div>
         <h3>Secure</h3>
         <p class="sp-step-tag">Protect what you've built</p>
         <p>Seamlessly secure IT and cybersecurity that runs quietly in the background — so a breach, a fraud, or a failure never becomes the thing that brings it all down.</p>
@@ -1667,7 +1624,7 @@
       </a>
       <a href="/outsourced-it" class="sp-step-card">
         <div class="sp-step-stage">Step Two</div>
-        <div class="sp-step-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg></div>
+        <div class="sp-step-icon">⚡</div>
         <h3>Compete</h3>
         <p class="sp-step-tag">Sharpen your edge</p>
         <p>Fast, reliable systems and the right business software, working together — so your team executes at full capacity and you win the customers who expect you to be modern and secure.</p>
@@ -1675,7 +1632,7 @@
       </a>
       <a href="/exit-value" class="sp-step-card">
         <div class="sp-step-stage">Step Three</div>
-        <div class="sp-step-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 7-7"/><path d="M15 8h5v5"/></svg></div>
+        <div class="sp-step-icon">📈</div>
         <h3>Build Value</h3>
         <p class="sp-step-tag">Create something worth something</p>
         <p>A technology strategy aligned to your EBITDA and your long-term goals — because the value you create deserves to be realised, whether you sell one day or never do.</p>
@@ -1802,13 +1759,13 @@
     <h2 class="section-title">Don't take our word for it.<br>Run the numbers.</h2>
     <div class="sp-tools-grid">
       <a href="/cost-calculator" class="sp-tool-card" onclick="trackEvent('tool_card_click',{tool:'cost'})">
-        <div class="sp-tool-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h3M8 15h3M15 11v4"/></svg></div>
+        <div class="sp-tool-icon">🧮</div>
         <h3>Cost Calculator</h3>
         <p>Compare the true cost of an in-house IT hire against outsourcing — for your exact headcount. Most owners are surprised.</p>
         <span class="sp-step-link">Calculate your cost →</span>
       </a>
       <a href="/value-calculator" class="sp-tool-card" onclick="trackEvent('tool_card_click',{tool:'value'})">
-        <div class="sp-tool-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent-green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><rect x="6" y="12" width="3" height="6"/><rect x="11" y="8" width="3" height="10"/><rect x="16" y="4" width="3" height="14"/></svg></div>
+        <div class="sp-tool-icon">📊</div>
         <h3>Value Impact Calculator</h3>
         <p>See what your IT decisions are actually worth at exit — using real EBITDA multiples. The number behind "IT that pays back."</p>
         <span class="sp-step-link">See your value impact →</span>
@@ -1827,7 +1784,7 @@
         <p class="section-sub">Research, frameworks, and plain-English insights to help you use technology as a competitive advantage — at every stage of your business journey.</p>
       </div>
       <div class="index-header-right">
-        <div class="index-badge">Dividend IT Insights Hub</div>
+        <div class="index-badge">🔬 Dividend IT Insights Hub</div>
         <p style="font-size:0.825rem; color:var(--text-muted); text-align:right; max-width:280px; line-height:1.6;">Practical intelligence for entrepreneurs and value creators. No jargon. No vendor bias. Just insight you can act on.</p>
       </div>
     </div>
