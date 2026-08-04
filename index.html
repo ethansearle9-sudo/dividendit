@@ -998,9 +998,12 @@
     .btn-primary--green { background: var(--accent-green); }
     .btn-primary--green:hover { background: #245740; }
     @media (max-width: 640px) { .sp-hero-actions { gap: 1.75rem; } .sp-cta-block { max-width: 340px; } }
-    .sp-hero-trust { display: flex; gap: 0.6rem; font-size: 0.85rem; color: var(--text-dark); font-weight: 500; flex-wrap: wrap; align-items: center; justify-content: center; }
-    .sp-hero-trust span:nth-child(odd) { letter-spacing: 0.01em; }
-    .sp-hero-trust span:nth-child(even) { color: var(--accent-green); }
+    .sp-hero-loop {
+      max-width: 640px; margin: 2.25rem auto 0;
+      font-size: 1rem; line-height: 1.65; color: var(--text-muted);
+      font-style: italic;
+    }
+    @media (max-width: 640px) { .sp-loop-br { display: none; } .sp-hero-loop { font-size: 0.95rem; margin-top: 1.75rem; } }
 
     /* Hero stat cards */
     .sp-hero-stats { display: flex; flex-direction: column; gap: 1rem; }
@@ -1019,9 +1022,10 @@
     .sp-hero-stat:hover .sp-hero-stat-source { opacity: 1; }
 
     /* Trust bar under hero — tight */
-    .sp-trust-bar { background: var(--text-dark); padding: 0.75rem 2rem; }
-    .sp-trust-inner { max-width: var(--max-w); margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 2.25rem; flex-wrap: wrap; }
-    .sp-trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 500; color: rgba(255,255,255,0.78); letter-spacing: 0.04em; text-transform: uppercase; }
+    .sp-trust-bar { background: var(--text-dark); padding: 1.6rem 2rem; }
+    .sp-trust-inner { max-width: 780px; margin: 0 auto; text-align: center; }
+    .sp-bridge { font-size: 1rem; line-height: 1.6; color: rgba(255,255,255,0.82); margin: 0; }
+    @media (max-width: 640px) { .sp-trust-bar { padding: 1.4rem 1.25rem; } .sp-bridge { font-size: 0.92rem; } }
 
     /* WHO WE SERVE — Journey tabs */
     #who-we-serve { background: var(--off-white); padding: 90px 2rem; }
@@ -1426,9 +1430,7 @@
           <p class="sp-cta-caption">Ten minutes on a call. I'll tell you honestly whether your IT is driving value — or costing you.</p>
         </div>
       </div>
-      <div class="sp-hero-trust">
-        <span>No jargon</span><span>·</span><span>No lock-in</span><span>·</span><span>No surprises</span>
-      </div>
+      <p class="sp-hero-loop">Most owners are two or three decisions away from a materially more valuable business.<br class="sp-loop-br">They're rarely the decisions they expect.</p>
     </div>
   </div>
 </section>
@@ -1436,11 +1438,7 @@
 <!-- TRUST BAR -->
 <div class="sp-trust-bar">
   <div class="sp-trust-inner">
-    <div class="sp-trust-item">🔒 Seamlessly Secure</div>
-    <div class="sp-trust-item">⏱ 24/7 Monitoring, Remediation &amp; Support</div>
-    <div class="sp-trust-item">💼 Business-First Thinking</div>
-    <div class="sp-trust-item">📊 EBITDA Aligned</div>
-    <div class="sp-trust-item">🌍 Ireland &amp; UK</div>
+    <p class="sp-bridge">We work with owners at three very different stages — and the decisions that build value aren't the same for each.</p>
   </div>
 </div>
 
