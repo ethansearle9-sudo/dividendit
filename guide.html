@@ -1574,6 +1574,29 @@
 </footer>
 <script>
   trackEvent('page_view', { page_title: 'Guide — Building Value with Outsourced IT', page_location: location.href, page_path: location.pathname });
+  /* Engagement tracking — scroll depth + qualified read signal for nurture branching */
+  (function(){
+    var _sd = {}, _start = Date.now(), _read = false;
+    function pct(){
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      return h > 0 ? (window.scrollY / h) * 100 : 100;
+    }
+    function check(){
+      var p = pct();
+      [25,50,75,90].forEach(function(m){
+        if (p >= m && !_sd[m]) {
+          _sd[m] = true;
+          trackEvent('scroll_depth', { page_id: 'guide-pillar', percent: m });
+        }
+      });
+      if (!_read && p >= 75 && (Date.now() - _start) > 60000) {
+        _read = true;
+        trackEvent('guide_read', { page_id: 'guide-pillar', seconds: Math.round((Date.now() - _start) / 1000) });
+      }
+    }
+    window.addEventListener('scroll', check, { passive: true });
+    setTimeout(check, 61000);
+  })();
   /* FAQ accordion */
   function toggleFaq(btn, id) {
     var item = btn.parentElement;
