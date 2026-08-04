@@ -992,7 +992,19 @@
     .sp-hero-title { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.08; letter-spacing: -0.02em; color: var(--text-dark); margin-bottom: 1.5rem; }
     .sp-hero-title em { font-style: italic; color: var(--accent-green); }
     .sp-hero-sub { font-size: 1.15rem; line-height: 1.7; color: var(--text-body); max-width: 660px; margin: 0 auto 2.25rem; }
-    .sp-hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; justify-content: center; }
+    .sp-hero-actions { display: flex; gap: 2.5rem; flex-wrap: wrap; margin-bottom: 2rem; justify-content: center; align-items: flex-start; }
+    .sp-cta-block { display: flex; flex-direction: column; align-items: center; gap: 0.85rem; max-width: 300px; }
+    .sp-cta-caption { font-size: 0.85rem; line-height: 1.55; color: var(--text-muted); margin: 0; text-align: center; }
+    .btn-outline {
+      background: transparent; color: var(--text-dark);
+      border: 1.5px solid var(--text-dark);
+      padding: 0.78rem 1.7rem; border-radius: var(--radius);
+      font-size: 0.9rem; font-weight: 600; text-decoration: none;
+      transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+      display: inline-block; white-space: nowrap;
+    }
+    .btn-outline:hover { background: var(--accent-green); border-color: var(--accent-green); color: var(--white); transform: translateY(-1px); }
+    @media (max-width: 640px) { .sp-hero-actions { gap: 1.75rem; } .sp-cta-block { max-width: 340px; } }
     .sp-hero-trust { display: flex; gap: 0.6rem; font-size: 0.85rem; color: var(--text-dark); font-weight: 500; flex-wrap: wrap; align-items: center; justify-content: center; }
     .sp-hero-trust span:nth-child(odd) { letter-spacing: 0.01em; }
     .sp-hero-trust span:nth-child(even) { color: var(--accent-green); }
@@ -1412,8 +1424,14 @@
       <h1 class="sp-hero-title">You built the business.<br>It shouldn't <em>own</em> you.</h1>
       <p class="sp-hero-sub">Most owners are trapped in the day-to-day — with technology that's a cost and a risk instead of an engine. We change that: seamlessly secure IT that frees your time, sharpens your edge, and builds what your business is worth.</p>
       <div class="sp-hero-actions">
-        <a href="/guide" class="btn-primary" onclick="trackEvent('guide_open',{location:'hero'})">Drive Business Value</a>
-        <a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'hero'})">Book a Free 20-Min Call</a>
+        <div class="sp-cta-block">
+          <a href="/guide" class="btn-primary" onclick="trackEvent('guide_open',{location:'hero'})">Get the Free Guide</a>
+          <p class="sp-cta-caption">The Business Owner's Guide to Building Value with Outsourced IT — free, no email required.</p>
+        </div>
+        <div class="sp-cta-block">
+          <a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="btn-outline" onclick="trackEvent('book_call_click',{location:'hero'})">Get a Straight Answer</a>
+          <p class="sp-cta-caption">Ten minutes on a call. I'll tell you honestly whether your IT is driving value — or quietly costing you.</p>
+        </div>
       </div>
       <div class="sp-hero-trust">
         <span>No jargon</span><span>·</span><span>No lock-in</span><span>·</span><span>No surprises</span>
