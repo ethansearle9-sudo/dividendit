@@ -1024,6 +1024,9 @@
     /* Trust bar under hero — tight */
     .sp-trust-bar { background: var(--text-dark); padding: 1.6rem 2rem; }
     .sp-trust-inner { max-width: 780px; margin: 0 auto; text-align: center; }
+    .sp-bridge-alt { font-size: 0.85rem; color: rgba(255,255,255,0.55); margin: 0.6rem 0 0; }
+    .sp-bridge-alt a { color: rgba(255,255,255,0.8); text-decoration: underline; text-underline-offset: 3px; }
+    .sp-bridge-alt a:hover { color: #fff; }
     .sp-bridge { font-family: var(--font-display); font-size: 1.35rem; line-height: 1.4; color: rgba(255,255,255,0.92); margin: 0; letter-spacing: -0.01em; }
     @media (max-width: 640px) { .sp-trust-bar { padding: 1.4rem 1.25rem; } .sp-bridge { font-size: 1.15rem; } }
 
@@ -1438,6 +1441,7 @@
 <div class="sp-trust-bar">
   <div class="sp-trust-inner">
     <p class="sp-bridge">Both are more common than most owners think.</p>
+    <p class="sp-bridge-alt">Rather see the mechanics first? <a href="/services" onclick="trackEvent('nav_shortcut',{location:'hero-bridge'})">What we do &rarr;</a></p>
   </div>
 </div>
 
