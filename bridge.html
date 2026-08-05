@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>The Bridge — Dividend IT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink:#14160f; --ink2:#3a3d32; --paper:#f6f4ed; --card:#fff;
+    --line:#e4e0d3; --line2:#ccc6b4; --muted:#7c7a6b;
+    --green:#2d6a4f; --green-s:#e7f0ea; --amber:#a56d0f; --amber-s:#f8eed3; --red:#9c3a2a;
+    --serif:'DM Serif Display',serif; --sans:'DM Sans',sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  html{-webkit-font-smoothing:antialiased}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55}
+  .wrap{max-width:1180px;margin:0 auto;padding:32px 26px 90px}
+
+  .head{display:flex;justify-content:space-between;align-items:flex-start;gap:26px;
+        padding-bottom:18px;border-bottom:1px solid var(--line2);margin-bottom:26px}
+  .brand{font-family:var(--serif);font-size:1.55rem}
+  .brand span{color:var(--green)}
+  .brand small{display:block;font-family:var(--mono);font-size:0.61rem;letter-spacing:0.2em;
+               text-transform:uppercase;color:var(--muted);margin-top:5px}
+  .client{text-align:right;font-size:0.8rem;color:var(--muted)}
+  .client b{display:block;font-family:var(--serif);font-size:1.15rem;color:var(--ink)}
+  .client .meta{font-family:var(--mono);font-size:0.64rem;letter-spacing:0.06em;margin-top:3px}
+
+  .lab{font-family:var(--mono);font-size:0.63rem;font-weight:600;letter-spacing:0.18em;
+       text-transform:uppercase;color:var(--muted);margin-bottom:12px;display:flex;align-items:center;gap:9px}
+  .lab::after{content:'';flex:1;height:1px;background:var(--line)}
+
+  /* INPUTS */
+  .inputs{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin-bottom:30px}
+  .igrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .ifield label{display:block;font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;
+                text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .ifield input{width:100%;font-family:var(--sans);font-size:0.95rem;font-weight:600;color:var(--ink);
+                background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:9px 11px}
+  .ifield input:focus{outline:2px solid var(--green);outline-offset:1px}
+  .ifield .note{font-size:0.68rem;color:var(--muted);margin-top:5px;line-height:1.35}
+  .derived{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);
+           display:flex;gap:34px;flex-wrap:wrap;font-family:var(--mono);font-size:0.72rem;color:var(--muted)}
+  .derived b{color:var(--ink);font-weight:600}
+
+  /* HEADLINE */
+  .headline{background:var(--ink);color:#fff;border-radius:12px;padding:28px 32px;margin-bottom:30px;
+            display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:30px;align-items:end}
+  .hcell .k{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.16em;text-transform:uppercase;
+            color:rgba(255,255,255,0.45);margin-bottom:9px}
+  .hcell .v{font-family:var(--serif);font-size:3.1rem;line-height:0.95;color:#7fc9a4}
+  .hcell.sm .v{font-size:2.1rem;color:#fff}
+  .hcell .s{font-size:0.78rem;color:rgba(255,255,255,0.55);margin-top:8px;line-height:1.5}
+
+  /* LEVERS */
+  .lever{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:16px;overflow:hidden}
+  .lhead{display:grid;grid-template-columns:26px 1fr 150px 130px;gap:16px;align-items:center;
+         padding:17px 22px;cursor:pointer}
+  .lhead:hover{background:var(--paper)}
+  .lnum{font-family:var(--mono);font-size:0.66rem;color:var(--line2)}
+  .ltitle b{display:block;font-size:0.97rem;font-weight:600}
+  .ltitle p{font-size:0.77rem;color:var(--muted);margin-top:2px;line-height:1.45}
+  .tag{font-family:var(--mono);font-size:0.57rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+       padding:3px 8px;border-radius:3px;white-space:nowrap;justify-self:start}
+  .tag.bank{background:var(--green-s);color:var(--green)}
+  .tag.model{background:var(--amber-s);color:var(--amber)}
+  .tag.risk{background:#eee9dc;color:var(--ink2)}
+  .lval{font-family:var(--mono);font-size:0.9rem;font-weight:600;text-align:right;color:var(--green)}
+  .lval.risk{color:var(--ink2)}
+  .lbody{display:none;padding:0 22px 20px;border-top:1px solid var(--line)}
+  .lever.open .lbody{display:block}
+  .lever.open .lhead{background:var(--paper)}
+
+  .work{margin-top:16px}
+  .wrow{display:grid;grid-template-columns:1fr 190px 110px;gap:14px;align-items:baseline;
+        padding:9px 0;border-bottom:1px solid var(--line);font-size:0.83rem}
+  .wrow:last-child{border-bottom:none}
+  .wrow .f{font-family:var(--mono);font-size:0.7rem;color:var(--muted);text-align:right}
+  .wrow .n{font-family:var(--mono);font-size:0.78rem;font-weight:600;text-align:right}
+  .wsum{display:flex;justify-content:space-between;margin-top:12px;padding-top:12px;
+        border-top:1.5px solid var(--ink);font-size:0.85rem;font-weight:600}
+  .wsum b{font-family:var(--mono)}
+  .src{margin-top:14px;font-size:0.75rem;color:var(--muted);line-height:1.55;
+       background:var(--paper);border-left:2px solid var(--line2);padding:10px 14px;border-radius:0 6px 6px 0}
+  .src b{color:var(--ink2);font-weight:600}
+
+  /* TOTALS */
+  .totals{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px;margin:26px 0 20px}
+  .trow{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;
+        border-bottom:1px solid var(--line);font-size:0.9rem}
+  .trow .lft{display:flex;align-items:center;gap:10px}
+  .trow b{font-family:var(--mono);font-size:0.85rem;font-weight:600}
+  .tfinal{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px;
+          padding-top:16px;border-top:1.5px solid var(--ink)}
+  .tfinal span{font-family:var(--mono);font-size:0.64rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--muted)}
+  .tfinal b{font-family:var(--serif);font-size:2.2rem;color:var(--green);line-height:1}
+
+  .risknote{background:#f1ede2;border:1px solid var(--line2);border-radius:10px;padding:18px 22px;margin-bottom:26px}
+  .risknote h4{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;
+               color:var(--ink2);margin-bottom:8px}
+  .risknote p{font-size:0.83rem;color:var(--ink2);line-height:1.6}
+
+  .foot{margin-top:38px;padding-top:20px;border-top:1px solid var(--line);
+        font-family:var(--serif);font-size:1.1rem;color:var(--ink2);line-height:1.5;max-width:740px}
+  .disc{margin-top:14px;font-size:0.73rem;color:var(--muted);line-height:1.5;max-width:740px}
+
+  @media (max-width:900px){
+    .igrid{grid-template-columns:1fr 1fr}
+    .headline{grid-template-columns:1fr;gap:22px}
+    .lhead{grid-template-columns:1fr auto;gap:8px}
+    .lnum,.tag{display:none}
+    .wrow{grid-template-columns:1fr auto}
+    .wrow .f{display:none}
+    .head{flex-direction:column}.client{text-align:left}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <div class="brand">Dividend<span> IT</span><small>The Bridge</small></div>
+    <div class="client">
+      <b>Shannon Valley Distribution Ltd</b>
+      <div class="meta">42 PEOPLE · 3 SITES · DISTRIBUTION</div>
+      <div class="meta">MODELLED POSITION, 12 MONTHS</div>
+    </div>
+  </div>
+
+  <div class="lab">Your numbers, not ours</div>
+  <div class="inputs">
+    <div class="igrid">
+      <div class="ifield">
+        <label>Annual turnover</label>
+        <input type="number" id="turnover" value="8400000" />
+        <div class="note">From your accounts</div>
+      </div>
+      <div class="ifield">
+        <label>Contribution margin %</label>
+        <input type="number" id="margin" value="22" />
+        <div class="note">Gross margin after variable cost</div>
+      </div>
+      <div class="ifield">
+        <label>People</label>
+        <input type="number" id="heads" value="42" />
+        <div class="note">Productive headcount</div>
+      </div>
+      <div class="ifield">
+        <label>Productive hours each, per year</label>
+        <input type="number" id="hours" value="1680" />
+        <div class="note">After leave and downtime</div>
+      </div>
+      <div class="ifield">
+        <label>Realisation factor %</label>
+        <input type="number" id="realise" value="60" />
+        <div class="note">How much recovered time becomes output. Set it low.</div>
+      </div>
+      <div class="ifield">
+        <label>EBITDA multiple</label>
+        <input type="number" id="multiple" value="5" step="0.5" />
+        <div class="note">What your sector trades at</div>
+      </div>
+      <div class="ifield">
+        <label>Years to exit</label>
+        <input type="number" id="years" value="3" />
+        <div class="note">Your horizon, your call</div>
+      </div>
+      <div class="ifield">
+        <label>Annual IT spend</label>
+        <input type="number" id="spend" value="126000" />
+        <div class="note">All in, current run rate</div>
+      </div>
+    </div>
+    <div class="derived">
+      <span>Revenue per productive hour <b id="dRev">—</b></span>
+      <span>Contribution per productive hour <b id="dCont">—</b></span>
+      <span>Total productive hours <b id="dHours">—</b></span>
+      <span>IT spend as % of turnover <b id="dPct">—</b></span>
+    </div>
+  </div>
+
+  <div class="headline">
+    <div class="hcell">
+      <div class="k">Annual effect on EBITDA</div>
+      <div class="v" id="hEbitda">—</div>
+      <div class="s"><span id="hSplit">—</span></div>
+    </div>
+    <div class="hcell sm">
+      <div class="k">Effect on enterprise value</div>
+      <div class="v" id="hEv">—</div>
+      <div class="s">At the multiple you entered</div>
+    </div>
+    <div class="hcell sm">
+      <div class="k">Cumulative to exit</div>
+      <div class="v" id="hCum">—</div>
+      <div class="s">EBITDA effect compounded over your horizon, plus the value uplift at sale</div>
+    </div>
+  </div>
+
+  <div class="lab">Where it comes from</div>
+
+  <!-- LEVER 1 -->
+  <div class="lever open" data-lever>
+    <div class="lhead">
+      <div class="lnum">01</div>
+      <div class="ltitle"><b>Provisioning</b><p>How the spend is structured, and how much of it is duplicated</p></div>
+      <span class="tag bank">Banked · invoice verifiable</span>
+      <div class="lval" id="v1">—</div>
+    </div>
+    <div class="lbody">
+      <div class="work">
+        <div class="wrow">
+          <span>Six suppliers consolidated to one</span>
+          <span class="f">prior invoices less current</span>
+          <span class="n" id="w1a">—</span>
+        </div>
+        <div class="wrow">
+          <span>Licences right sized, 14 seats retired</span>
+          <span class="f">14 × €38.50 × 12</span>
+          <span class="n" id="w1b">—</span>
+        </div>
+        <div class="wrow">
+          <span>Perpetual licensing for frontline users instead of subscription</span>
+          <span class="f">(€48,000 × 4yr) − €96,000, per year</span>
+          <span class="n" id="w1c">—</span>
+        </div>
+        <div class="wsum"><span>Banked cash effect</span><b id="w1t">—</b></div>
+      </div>
+      <div class="src"><b>How this is evidenced:</b> supplier invoices before and after, licence tenancy export,
+        purchase order for the perpetual estate. An accountant can tie every line to a bank statement.
+        <br /><br /><b>Worth knowing:</b> capitalising the perpetual purchase moves the cost below the EBITDA line
+        as depreciation, which flatters EBITDA in isolation. The genuine saving is the cash difference over the
+        four year life, which is what is shown here. A buyer's quality of earnings review will normalise the rest,
+        so we do not count it.</div>
+    </div>
+  </div>
+
+  <!-- LEVER 2 -->
+  <div class="lever" data-lever>
+    <div class="lhead">
+      <div class="lnum">02</div>
+      <div class="ltitle"><b>Productivity</b><p>Availability and responsiveness, converted at your own margin</p></div>
+      <span class="tag model">Modelled · assumption led</span>
+      <div class="lval" id="v2">—</div>
+    </div>
+    <div class="lbody">
+      <div class="work">
+        <div class="wrow">
+          <span>Unplanned downtime avoided, 38 hrs</span>
+          <span class="f">38 × people × contribution/hr × realisation</span>
+          <span class="n" id="w2a">—</span>
+        </div>
+        <div class="wrow">
+          <span>Slow systems and waiting, 8 min per person per day</span>
+          <span class="f">8min × people × 220 days × contribution/hr × realisation</span>
+          <span class="n" id="w2b">—</span>
+        </div>
+        <div class="wsum"><span>Modelled effect</span><b id="w2t">—</b></div>
+      </div>
+      <div class="src"><b>What is measured:</b> outage minutes from monitoring, ticket volume and handle time,
+        device boot and logon telemetry. These are hard numbers.
+        <br /><br /><b>What is assumed:</b> that recovered time turns into output. It does not, entirely, which is
+        what the realisation factor is for. Drop it to 40% and the figure moves with it. We would rather show
+        you the dial than hide it inside a total.
+        <br /><br /><b>Why contribution and not revenue:</b> an hour returned to your team produces the margin on
+        that hour's work, not the top line. Valuing it at revenue overstates the number by roughly four times.</div>
+    </div>
+  </div>
+
+  <!-- LEVER 3 -->
+  <div class="lever" data-lever>
+    <div class="lhead">
+      <div class="lnum">03</div>
+      <div class="ltitle"><b>Security</b><p>What the market actually charges to carry your risk</p></div>
+      <span class="tag bank">Banked · market priced</span>
+      <div class="lval" id="v3">—</div>
+    </div>
+    <div class="lbody">
+      <div class="work">
+        <div class="wrow">
+          <span>Cyber insurance premium, repriced on verified controls</span>
+          <span class="f">€8,400 renewal less €6,300 quoted</span>
+          <span class="n" id="w3a">—</span>
+        </div>
+        <div class="wsum"><span>Banked cash effect</span><b id="w3t">—</b></div>
+      </div>
+      <div class="src"><b>Why only the premium:</b> a breach that did not happen cannot be priced honestly.
+        Anyone showing you "€400,000 of breach cost avoided" is multiplying a borrowed probability by a borrowed
+        impact and presenting the result as income. The premium delta is different: it is a real price, quoted by
+        an underwriter who has seen the evidence pack. That is the one security number that belongs in a P&L
+        conversation. The exposure itself is set out below, and deliberately not added in.</div>
+    </div>
+  </div>
+
+  <div class="totals">
+    <div class="trow"><div class="lft"><span>Banked</span><span class="tag bank">Verifiable</span></div><b id="tBank">—</b></div>
+    <div class="trow"><div class="lft"><span>Modelled</span><span class="tag model">Assumption led</span></div><b id="tModel">—</b></div>
+    <div class="tfinal"><span>Annual EBITDA effect</span><b id="tTotal">—</b></div>
+  </div>
+
+  <div class="risknote">
+    <h4>Held separately, not counted</h4>
+    <p id="riskText">—</p>
+  </div>
+
+  <p class="foot">Every figure above moves when you change your own numbers.
+    Nothing on this page is a figure we made up and asked you to trust.</p>
+  <p class="disc">Demonstration scenario. Banked lines are those that can be tied to an invoice, a licence export
+    or a written quotation. Modelled lines depend on stated assumptions and are shown separately for that reason.
+    This is not a valuation, and it is not advice on the sale of your business.</p>
+
+</div>
+
+<script>
+(function () {
+  var f = ['turnover','margin','heads','hours','realise','multiple','years','spend'];
+  var el = {};
+  f.forEach(function (k) { el[k] = document.getElementById(k); });
+
+  function eur(n) {
+    var s = Math.round(Math.abs(n)).toLocaleString('en-IE');
+    return (n < 0 ? '\u2212\u20ac' : '+\u20ac') + s;
+  }
+  function plain(n) { return '\u20ac' + Math.round(n).toLocaleString('en-IE'); }
+  function set(id, v) { document.getElementById(id).textContent = v; }
+
+  function calc() {
+    var turnover = +el.turnover.value || 0,
+        margin   = (+el.margin.value || 0) / 100,
+        heads    = +el.heads.value || 1,
+        hours    = +el.hours.value || 1,
+        realise  = (+el.realise.value || 0) / 100,
+        mult     = +el.multiple.value || 0,
+        years    = +el.years.value || 0,
+        spend    = +el.spend.value || 0;
+
+    var totalHours = heads * hours;
+    var revPerHour = turnover / totalHours;
+    var contPerHour = revPerHour * margin;
+
+    set('dRev', plain(revPerHour));
+    set('dCont', plain(contPerHour));
+    set('dHours', Math.round(totalHours).toLocaleString('en-IE'));
+    set('dPct', turnover ? ((spend / turnover) * 100).toFixed(2) + '%' : '\u2014');
+
+    // Lever 1 — banked
+    var l1a = 22600;
+    var l1b = 14 * 38.50 * 12;
+    var l1c = ((48000 * 4) - 96000) / 4;
+    var l1 = l1a + l1b + l1c;
+    set('w1a', eur(l1a)); set('w1b', eur(l1b)); set('w1c', eur(l1c));
+    set('w1t', eur(l1)); set('v1', eur(l1));
+
+    // Lever 2 — modelled
+    var l2a = 38 * heads * contPerHour * realise;
+    var l2b = (8 / 60) * heads * 220 * contPerHour * realise;
+    var l2 = l2a + l2b;
+    set('w2a', eur(l2a)); set('w2b', eur(l2b));
+    set('w2t', eur(l2)); set('v2', eur(l2));
+
+    // Lever 3 — banked
+    var l3 = 8400 - 6300;
+    set('w3a', eur(l3)); set('w3t', eur(l3)); set('v3', eur(l3));
+
+    var banked = l1 + l3, modelled = l2, total = banked + modelled;
+    set('tBank', eur(banked)); set('tModel', eur(modelled)); set('tTotal', eur(total));
+
+    set('hEbitda', eur(total));
+    set('hSplit', eur(banked).replace('+', '') + ' banked, ' + eur(modelled).replace('+', '') + ' modelled');
+    var ev = total * mult;
+    set('hEv', eur(ev));
+    set('hCum', eur((total * years) + ev));
+
+    // Risk, held out
+    var dayRev = turnover / 250;
+    document.getElementById('riskText').textContent =
+      'A full trading halt costs you roughly ' + plain(dayRev) + ' a day at your current turnover. '
+      + 'Recovery time is now under four hours rather than the two to three days it would have been on the old '
+      + 'backup arrangement. That is a genuine reduction in exposure and it is why the insurer repriced you. '
+      + 'It is not income, so it is not in the total above.';
+  }
+
+  f.forEach(function (k) { el[k].addEventListener('input', calc); });
+
+  document.querySelectorAll('[data-lever] .lhead').forEach(function (h) {
+    h.addEventListener('click', function () { h.parentElement.classList.toggle('open'); });
+  });
+
+  calc();
+})();
+</script>
+</body>
+</html>
