@@ -324,6 +324,12 @@
       letter-spacing: 0.02em;
     }
     .journey-tab:last-child { border-right: none; }
+    @media (max-width: 900px) { .journey-tab { padding: 0.75rem 1.1rem; font-size: 0.82rem; } }
+    @media (max-width: 640px) {
+      .journey-tabs { flex-direction: column; width: 100%; margin-top: 2rem; }
+      .journey-tab { border-right: none; border-bottom: 1px solid var(--border); width: 100%; text-align: left; padding: 0.85rem 1.1rem; font-size: 0.9rem; }
+      .journey-tab:last-child { border-bottom: none; }
+    }
     .journey-tab.active {
       background: var(--text-dark); color: var(--white);
     }
@@ -1527,9 +1533,9 @@
     <h2 class="section-title reveal">Three owners.<br>Three very different problems.</h2>
 
     <div class="journey-tabs reveal">
-      <button class="journey-tab active" onclick="switchTab('entrepreneur')">Entrepreneur</button>
-      <button class="journey-tab" onclick="switchTab('value-creator')">Value Creator</button>
-      <button class="journey-tab" onclick="switchTab('startup')">Startup</button>
+      <button class="journey-tab active" onclick="switchTab('entrepreneur')">In the day-to-day</button>
+      <button class="journey-tab" onclick="switchTab('value-creator')">Thinking about what's next</button>
+      <button class="journey-tab" onclick="switchTab('startup')">Just getting started</button>
     </div>
 
     <div class="journey-panels">
