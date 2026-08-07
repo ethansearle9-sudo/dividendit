@@ -1009,11 +1009,19 @@
     .btn-primary--green:hover { background: #245740; }
     @media (max-width: 640px) { .sp-hero-actions { gap: 1.75rem; } .sp-cta-block { max-width: 340px; } }
     .sp-hero-loop {
-      max-width: 700px; margin: 2.5rem auto 0;
-      font-size: 1.02rem; line-height: 1.7; color: var(--text-muted);
+      max-width: 660px; margin: 2.75rem auto 0;
+      background: var(--off-white);
+      border-left: 3px solid var(--accent-green);
+      border-radius: 0 8px 8px 0;
+      padding: 1.6rem 1.9rem;
+      font-size: 1rem; line-height: 1.7; color: var(--text-muted);
+      text-align: left;
     }
-    .sp-hero-loop-turn { display: inline-block; margin-top: 0.9rem; color: var(--text-dark); font-weight: 500; }
-    @media (max-width: 640px) { .sp-loop-br { display: none; } .sp-hero-loop { font-size: 0.95rem; margin-top: 1.75rem; } }
+    .sp-hero-loop-turn { display: block; margin-top: 0.9rem; color: var(--text-dark); font-weight: 500; }
+    @media (max-width: 640px) {
+      .sp-loop-br { display: none; }
+      .sp-hero-loop { font-size: 0.94rem; margin-top: 1.75rem; padding: 1.25rem 1.35rem; }
+    }
 
     /* Hero stat cards */
     .sp-hero-stats { display: flex; flex-direction: column; gap: 1rem; }
@@ -1431,7 +1439,7 @@
     <div class="sp-hero-content">
       <div class="sp-hero-eyebrow">Outsourced Cybersecurity &amp; IT · Ireland</div>
       <h1 class="sp-hero-title">You built the business.<br>It shouldn't <em>own</em> you.</h1>
-      <p class="sp-hero-sub">Most owners are trapped in the day-to-day — with IT that's a cost and a risk instead of an engine. We change that: seamlessly secure IT that frees your time, sharpens your edge, and builds what your business is worth.</p>
+      
       <div class="sp-hero-actions">
         <div class="sp-cta-block">
           <a href="/guide" class="btn-primary btn-primary--green" onclick="trackEvent('guide_open',{location:'hero'})">Read the Free Guide</a>
