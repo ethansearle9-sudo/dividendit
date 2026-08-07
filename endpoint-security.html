@@ -200,6 +200,104 @@
       .nav-mega-col ul li a { padding: 0.55rem 0 !important; font-size: 0.9rem !important; }
     }
 
+      /* Dropdown trigger */
+    .nav-dd-trigger {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      cursor: pointer; font-size: 0.875rem; font-weight: 500;
+      color: var(--text-body); transition: color 0.2s;
+      background: none; border: none; font-family: var(--font-body);
+      padding: 0; letter-spacing: 0.01em;
+    }
+    .nav-dd-trigger:hover { color: var(--accent-green); }
+    .nav-dd-trigger svg { width: 10px; height: 10px; transition: transform 0.2s; }
+    .nav-dd:hover .nav-dd-trigger svg { transform: rotate(180deg); }
+    /* Dropdown menu */
+    .nav-dd-menu {
+      position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(8px);
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 8px; box-shadow: 0 12px 32px rgba(0,0,0,0.10);
+      padding: 0.5rem; min-width: 190px;
+      opacity: 0; visibility: hidden; transition: opacity 0.18s, transform 0.18s;
+      list-style: none;
+    }
+    .nav-dd:hover .nav-dd-menu,
+    .nav-dd.open .nav-dd-menu {
+      opacity: 1; visibility: visible; transform: translateX(-50%) translateY(2px);
+    }
+    .nav-dd-menu li { display: block; }
+    .nav-dd-menu a {
+      display: block; padding: 0.6rem 0.85rem; border-radius: 6px;
+      font-size: 0.85rem; color: var(--text-body); transition: background 0.15s, color 0.15s;
+    }
+    .nav-dd-menu a:hover { background: var(--off-white); color: var(--accent-green); }
+    .nav-cta {
+      background: var(--text-dark) !important;
+      color: var(--white) !important;
+      padding: 0.55rem 1.25rem !important;
+      border-radius: var(--radius) !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--accent-green) !important; }
+    /* Hamburger */
+    .nav-toggle {
+      display: none; background: none; border: none; cursor: pointer;
+      padding: 0.4rem; flex-direction: column; gap: 4px;
+    }
+    .nav-toggle span {
+      display: block; width: 22px; height: 2px; background: var(--text-dark);
+      border-radius: 2px; transition: transform 0.25s, opacity 0.25s;
+    }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* ── MEGA MENU ── */
+    /* No gap between nav bar and menu — use padding-top for visual breathing room */
+    .nav-mega-menu {
+      position: absolute; top: 100%; left: 0;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 0 0 10px 10px; box-shadow: 0 16px 40px rgba(0,0,0,0.11);
+      padding: 1rem 1.5rem 1.5rem; min-width: 980px;
+      display: flex; gap: 0;
+      opacity: 0; visibility: hidden; pointer-events: none;
+      transition: opacity 0.18s, visibility 0s 0.18s;
+      z-index: 200;
+    }
+    .nav-dd:hover .nav-mega-menu,
+    .nav-dd.open .nav-mega-menu {
+      opacity: 1; visibility: visible; pointer-events: auto;
+      transition: opacity 0.18s;
+    }
+    /* Suppress re-open immediately after navigation */
+    .nav-dd.nav-closing .nav-mega-menu,
+    .nav-dd.nav-closing:hover .nav-mega-menu {
+      opacity: 0 !important; visibility: hidden !important; pointer-events: none !important;
+    }
+    .nav-mega-col { flex: 1 1 0; min-width: 290px; padding-right: 1.5rem; }
+    .nav-mega-col--right { flex: 1 1 0; min-width: 290px; border-left: 1px solid var(--border); padding-left: 1.5rem; padding-right: 1.5rem; }
+    .nav-mega-col--right:last-child { padding-right: 0; }
+    .nav-mega-label {
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.09em;
+      text-transform: uppercase; color: var(--text-muted);
+      padding: 0 0.75rem 0.6rem; display: block;
+      border-bottom: 1px solid var(--border); margin-bottom: 0.4rem;
+      text-decoration: none;
+    }
+    a.nav-mega-label:hover { color: var(--accent-green); }
+    .nav-mega-menu ul { list-style: none; }
+    .nav-mega-menu ul a {
+      display: block; padding: 0.5rem 0.75rem; border-radius: 6px;
+      font-size: 0.83rem; color: var(--text-body); transition: background 0.14s, color 0.14s;
+      pointer-events: auto; position: relative; z-index: 1;
+    }
+    .nav-mega-menu ul a:hover { background: var(--off-white); color: var(--accent-green); }
+    .nav-mega-divider { height: 1px; background: var(--border); margin: 0.4rem 0.75rem; }
+    .nav-mega-sublabel {
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.07em;
+      text-transform: uppercase; color: var(--text-muted);
+      padding: 0.6rem 0.75rem 0.2rem; display: block;
+    }
+    
   </style>
 </head>
 <body>
