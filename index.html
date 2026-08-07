@@ -419,6 +419,13 @@
       font-size: 0.875rem; color: var(--text-body);
       margin-bottom: 1rem; line-height: 1.6;
     }
+    .journey-segue {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-size: 0.875rem; font-weight: 600; color: var(--accent-green);
+      text-decoration: underline; text-underline-offset: 3px;
+      transition: opacity 0.2s;
+    }
+    .journey-segue:hover { opacity: 0.75; }
     .journey-cta strong { color: var(--text-dark); }
 
     /* ── CORE STORY ── */
@@ -1615,19 +1622,9 @@
             <p>We've got the scar tissue to show for it. We know this journey. <strong>Our promise is simple — IT and cybersecurity will never add to your list of headaches.</strong></p>
             <p style="margin-top:0.85rem; font-size:0.875rem; color:rgba(255,255,255,0.65);">We take it completely off your plate — the day-to-day running, the fires, the things nobody has time for. And we act as your CIO: the strategy, the frameworks, and one eye on where the business needs to go, not just where it is today.</p>
           </div>
-          <div class="journey-90">
-            <h4>What's different in 90 days</h4>
-            <ul>
-              <li>Your team stops losing an hour a day to things that should just work</li>
-              <li>The fake invoice gets stopped before it reaches anyone who could pay it</li>
-              <li>You stop being the person who gets called when something breaks</li>
-              <li>You know what your IT is costing you, and what it should be doing instead</li>
-            </ul>
-            <p class="journey-90-note">And you get the thing you actually wanted: your attention back.</p>
-          </div>
-          <div class="journey-cta">
-            <p><strong>Recommended package:</strong> Operate — Your complete outsourced IT department. Everything managed, everything included.</p>
-            <a href="/services" class="btn-green">View the Operate Package →</a>
+<div class="journey-cta">
+            <p>And you get the thing you actually wanted: <strong>your attention back.</strong></p>
+            <a href="#solution" class="journey-segue" onclick="trackEvent('section_shortcut',{location:'who-we-serve-entrepreneur'})">Seen enough? Here's how we do it &rarr;</a>
           </div>
         </div>
       </div>
