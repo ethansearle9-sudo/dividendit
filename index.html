@@ -1034,11 +1034,19 @@
     .btn-primary--green:hover { background: #245740; }
     @media (max-width: 640px) { .sp-hero-actions { gap: 1.75rem; } .sp-cta-block { max-width: 340px; } }
     .sp-hero-loop {
-      max-width: 700px; margin: 2.5rem auto 0;
-      font-size: 1.02rem; line-height: 1.7; color: var(--text-muted);
+      max-width: 660px; margin: 3rem auto 0;
+      background: var(--off-white);
+      border-left: 3px solid var(--accent-green);
+      border-radius: 0 8px 8px 0;
+      padding: 1.6rem 1.9rem;
+      text-align: left;
+      font-size: 0.98rem; line-height: 1.7; color: var(--text-muted);
     }
-    .sp-hero-loop-turn { display: inline-block; margin-top: 0.9rem; color: var(--text-dark); font-weight: 500; }
-    @media (max-width: 640px) { .sp-loop-br { display: none; } .sp-hero-loop { font-size: 0.95rem; margin-top: 1.75rem; } }
+    .sp-hero-loop-turn { display: block; margin-top: 0.9rem; color: var(--text-dark); font-weight: 500; }
+    @media (max-width: 640px) {
+      .sp-loop-br { display: none; }
+      .sp-hero-loop { font-size: 0.93rem; margin-top: 2rem; padding: 1.25rem 1.35rem; }
+    }
 
     /* Hero stat cards */
     .sp-hero-stats { display: flex; flex-direction: column; gap: 1rem; }
