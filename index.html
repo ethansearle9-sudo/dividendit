@@ -1033,6 +1033,15 @@
     .btn-primary--green { background: var(--accent-green); }
     .btn-primary--green:hover { background: #245740; }
     @media (max-width: 640px) { .sp-hero-actions { gap: 1.75rem; } .sp-cta-block { max-width: 340px; } }
+    @media (min-width: 901px) and (max-height: 800px) {
+      .sp-hero { padding-top: 88px !important; padding-bottom: 40px !important; }
+      .sp-hero-title { font-size: clamp(2.1rem, 4vw, 3.2rem); margin-bottom: 1.9rem; }
+      .sp-hero-sub { font-size: 1.05rem; margin-bottom: 1.9rem; }
+      .sp-hero-eyebrow { margin-bottom: 0.9rem; }
+      .sp-cta-caption { font-size: 0.8rem; }
+      .sp-trust-bar { padding: 0.9rem 2rem !important; }
+      .sp-bridge { font-size: 1.15rem; }
+    }
     .sp-hero-loop {
       max-width: 660px; margin: 3rem auto 0;
       background: var(--off-white);
@@ -1065,7 +1074,7 @@
     .sp-hero-stat:hover .sp-hero-stat-source { opacity: 1; }
 
     /* Trust bar under hero — tight */
-    .sp-trust-bar { background: var(--text-dark); padding: 1.6rem 2rem; }
+    .sp-trust-bar { background: var(--text-dark); padding: 1.1rem 2rem; }
     .sp-trust-inner { max-width: 780px; margin: 0 auto; text-align: center; }
     .sp-bridge-alt { font-size: 0.85rem; color: rgba(255,255,255,0.55); margin: 0.6rem 0 0; }
     .sp-bridge-alt a { color: rgba(255,255,255,0.8); text-decoration: underline; text-underline-offset: 3px; }
