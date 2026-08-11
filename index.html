@@ -996,20 +996,24 @@
 
     /* SOUND FAMILIAR */
     .sp-symptoms { background: var(--off-white); padding: 100px 2rem; }
-    .symptom-list {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 2.5rem;
-      margin-top: 3rem;
+    .symptom-rows { margin-top: 3rem; border-top: 1px solid var(--border); }
+    .symptom-row {
+      display: flex; align-items: center; gap: 1.5rem;
+      padding: 1.35rem 0; border-bottom: 1px solid var(--border);
     }
-    .symptom-item {
-      display: flex; gap: 0.85rem; align-items: flex-start;
-      background: var(--white); border: 1px solid var(--border); border-radius: 10px;
-      padding: 1.1rem 1.3rem;
+    .symptom-chip {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: var(--accent-green-light); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
     }
-    .symptom-ico { width: 20px; height: 20px; flex-shrink: 0; color: var(--accent-green); margin-top: 0.1rem; }
-    .symptom-item span { font-size: 0.95rem; color: var(--text-body); line-height: 1.5; }
+    .symptom-chip svg { width: 20px; height: 20px; color: var(--accent-green); }
+    .symptom-row span {
+      font-family: var(--font-display); font-style: italic;
+      font-size: 1.2rem; color: var(--text-dark); line-height: 1.4;
+    }
     .symptom-close { margin-top: 2.75rem; text-align: center; }
     .symptom-close p { font-size: 1.15rem; font-family: var(--font-display); color: var(--text-dark); margin-bottom: 1.5rem; }
-    @media (max-width: 700px) { .symptom-list { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) { .symptom-row span { font-size: 1.05rem; } .symptom-row { gap: 1rem; } }
 
     /* MID-PAGE GUIDE CTA */
     .mid-guide-cta { background: var(--text-dark); padding: 80px 2rem; }
@@ -1765,13 +1769,39 @@
   <div class="section-inner">
     <div class="section-label reveal">SOUND FAMILIAR?</div>
     <h2 class="section-title reveal">Some of this happens<br>in every business we take on.</h2>
-    <div class="symptom-list">
-      <div class="symptom-item reveal"><svg class="symptom-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg><span>You&rsquo;ve paid an invoice, then had a nagging feeling about it.</span></div>
-      <div class="symptom-item reveal"><svg class="symptom-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg><span>Someone left, and you&rsquo;re not sure what they can still get into.</span></div>
-      <div class="symptom-item reveal"><svg class="symptom-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg><span>The last time something broke, nobody could tell you why.</span></div>
-      <div class="symptom-item reveal"><svg class="symptom-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg><span>You&rsquo;ve said &ldquo;I&rsquo;ll deal with the IT stuff later&rdquo; more than once this month.</span></div>
-      <div class="symptom-item reveal"><svg class="symptom-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg><span>Your backups run &mdash; but nobody&rsquo;s ever actually checked they&rsquo;d work.</span></div>
-      <div class="symptom-item reveal"><svg class="symptom-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4"/><path d="M12 17h.01"/></svg><span>You&rsquo;ve thought about what happens if you got hit tomorrow, and didn&rsquo;t like the answer.</span></div>
+    <div class="symptom-rows">
+      <div class="symptom-row reveal">
+        <div class="symptom-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <span>Everyone waiting on a screen that should be instant.</span>
+      </div>
+      <div class="symptom-row reveal">
+        <div class="symptom-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <span>Two providers, one problem, and neither will own it.</span>
+      </div>
+      <div class="symptom-row reveal">
+        <div class="symptom-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg></div>
+        <span>An invoice that looked right &mdash; until it didn&rsquo;t.</span>
+      </div>
+      <div class="symptom-row reveal">
+        <div class="symptom-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h.79a4.5 4.5 0 1 1 0 9z"/><line x1="2" y1="2" x2="22" y2="22"/></svg></div>
+        <span>No real idea how long you&rsquo;d be down if the server died tonight.</span>
+      </div>
+      <div class="symptom-row reveal">
+        <div class="symptom-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><line x1="12" y1="8" x2="12" y2="21"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg></div>
+        <span>Paying for IT, and still managing it yourself.</span>
+      </div>
+      <div class="symptom-row reveal">
+        <div class="symptom-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <span>Press 1. Explain it again. Get nowhere.</span>
+      </div>
+      <div class="symptom-row reveal">
+        <div class="symptom-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" y1="8" x2="22" y2="13"/><line x1="22" y1="8" x2="17" y2="13"/></svg></div>
+        <span>Someone left, and nobody&rsquo;s sure what they can still get into.</span>
+      </div>
+      <div class="symptom-row reveal">
+        <div class="symptom-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <span>Someone on your team has wanted to throw their laptop out the window.</span>
+      </div>
     </div>
     <div class="symptom-close reveal">
       <p>If two of these are true, don&rsquo;t wait for the year-end audit to find out the hard way.</p>
@@ -1779,8 +1809,6 @@
     </div>
   </div>
 </section>
-
-
 
 <section class="mid-guide-cta">
   <div class="mid-guide-inner">
