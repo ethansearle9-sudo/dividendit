@@ -996,24 +996,47 @@
 
     /* SOUND FAMILIAR */
     .sp-symptoms { background: var(--off-white); padding: 100px 2rem; }
-    .symptom-rows { margin-top: 3rem; border-top: 1px solid var(--border); }
-    .symptom-row {
-      display: flex; align-items: center; gap: 1.5rem;
-      padding: 1.35rem 0; border-bottom: 1px solid var(--border);
+    .symptom-list {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem;
+      margin-top: 3rem;
+    }
+    .symptom-item {
+      display: flex; gap: 0.9rem; align-items: center;
+      background: var(--white); border: 1px solid var(--border); border-radius: 10px;
+      padding: 1.1rem 1.3rem;
     }
     .symptom-chip {
-      width: 44px; height: 44px; flex-shrink: 0;
+      width: 40px; height: 40px; flex-shrink: 0;
       background: var(--accent-green-light); border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
     }
-    .symptom-chip svg { width: 20px; height: 20px; color: var(--accent-green); }
-    .symptom-row span {
-      font-family: var(--font-display); font-style: italic;
-      font-size: 1.2rem; color: var(--text-dark); line-height: 1.4;
-    }
+    .symptom-chip svg { width: 18px; height: 18px; color: var(--accent-green); }
+    .symptom-item span { font-family: var(--font-body); font-size: 0.95rem; color: var(--text-body); line-height: 1.5; }
     .symptom-close { margin-top: 2.75rem; text-align: center; }
-    .symptom-close p { font-size: 1.15rem; font-family: var(--font-display); color: var(--text-dark); margin-bottom: 1.5rem; }
-    @media (max-width: 640px) { .symptom-row span { font-size: 1.05rem; } .symptom-row { gap: 1rem; } }
+    .symptom-close p { font-size: 1.1rem; font-family: var(--font-body); font-weight: 600; color: var(--text-dark); margin-bottom: 1.5rem; }
+    @media (max-width: 700px) { .symptom-list { grid-template-columns: 1fr; } }
+
+/* SOUND FAMILIAR */
+    .sp-symptoms { background: var(--off-white); padding: 100px 2rem; }
+    .symptom-list {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem;
+      margin-top: 3rem;
+    }
+    .symptom-item {
+      display: flex; gap: 0.9rem; align-items: center;
+      background: var(--white); border: 1px solid var(--border); border-radius: 10px;
+      padding: 1.1rem 1.3rem;
+    }
+    .symptom-chip {
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: var(--accent-green-light); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .symptom-chip svg { width: 18px; height: 18px; color: var(--accent-green); }
+    .symptom-item span { font-family: var(--font-body); font-size: 0.95rem; color: var(--text-body); line-height: 1.5; }
+    .symptom-close { margin-top: 2.75rem; text-align: center; }
+    .symptom-close p { font-size: 1.1rem; font-family: var(--font-body); font-weight: 600; color: var(--text-dark); margin-bottom: 1.5rem; }
+    @media (max-width: 700px) { .symptom-list { grid-template-columns: 1fr; } }
 
     /* MID-PAGE GUIDE CTA */
     .mid-guide-cta { background: var(--text-dark); padding: 80px 2rem; }
@@ -1769,36 +1792,36 @@
   <div class="section-inner">
     <div class="section-label reveal">SOUND FAMILIAR?</div>
     <h2 class="section-title reveal">Some of this happens<br>in every business we take on.</h2>
-    <div class="symptom-rows">
-      <div class="symptom-row reveal">
+    <div class="symptom-list">
+      <div class="symptom-item reveal">
         <div class="symptom-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
         <span>Everyone waiting on a screen that should be instant.</span>
       </div>
-      <div class="symptom-row reveal">
+      <div class="symptom-item reveal">
         <div class="symptom-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <span>Two providers, one problem, and neither will own it.</span>
       </div>
-      <div class="symptom-row reveal">
+      <div class="symptom-item reveal">
         <div class="symptom-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg></div>
         <span>An invoice that looked right &mdash; until it didn&rsquo;t.</span>
       </div>
-      <div class="symptom-row reveal">
+      <div class="symptom-item reveal">
         <div class="symptom-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h.79a4.5 4.5 0 1 1 0 9z"/><line x1="2" y1="2" x2="22" y2="22"/></svg></div>
         <span>No real idea how long you&rsquo;d be down if the server died tonight.</span>
       </div>
-      <div class="symptom-row reveal">
+      <div class="symptom-item reveal">
         <div class="symptom-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><line x1="12" y1="8" x2="12" y2="21"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg></div>
         <span>Paying for IT, and still managing it yourself.</span>
       </div>
-      <div class="symptom-row reveal">
+      <div class="symptom-item reveal">
         <div class="symptom-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
         <span>Press 1. Explain it again. Get nowhere.</span>
       </div>
-      <div class="symptom-row reveal">
+      <div class="symptom-item reveal">
         <div class="symptom-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" y1="8" x2="22" y2="13"/><line x1="22" y1="8" x2="17" y2="13"/></svg></div>
         <span>Someone left, and nobody&rsquo;s sure what they can still get into.</span>
       </div>
-      <div class="symptom-row reveal">
+      <div class="symptom-item reveal">
         <div class="symptom-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <span>Someone on your team has wanted to throw their laptop out the window.</span>
       </div>
@@ -1810,33 +1833,68 @@
   </div>
 </section>
 
-<section class="mid-guide-cta">
-  <div class="mid-guide-inner">
-    <div class="mid-guide-text">
-      <div class="section-label">Free resource</div>
-      <h2>Drive business value with your outsourced IT</h2>
-      <p>Most owners don't know what good outsourced IT &amp; cybersecurity looks like — let alone how to make it pay back. The guide covers the five foundations every growing business should have in place.</p>
-      <ul class="mid-guide-points">
-        <li>How to build a security foundation without a full-time IT hire</li>
-        <li>What a proper IT setup actually costs vs. what you're probably spending</li>
-        <li>How technology decisions affect your exit multiple and EBITDA</li>
-        <li>The five systems every growing Irish business needs by year three</li>
-        <li>What good IT governance looks like when you're scaling</li>
-      </ul>
+<section id="about" class="sp-about">
+  <div class="sp-about-inner">
+    <div class="sp-about-left">
+      <div class="section-label">Why we exist</div>
+      <h2 class="section-title">We started this because owners deserve better.</h2>
     </div>
-    <div class="mid-guide-form-wrap">
-      <h3>Get the free guide</h3>
-      <p>Delivered to your inbox — no obligation, no hard sell.</p>
-      <form class="mid-guide-form" onsubmit="submitMidGuideForm(event)">
-        <input type="email" id="mid-guide-email" class="mid-guide-input" placeholder="Your email address" required>
-        <button type="submit" class="mid-guide-submit">Send Me the Guide →</button>
-      </form>
-      <p class="mid-guide-note">No spam. Unsubscribe any time.</p>
+    <div class="sp-about-right">
+      <p>For the past decade I helped scale an outsourced IT and cybersecurity business from €1 million to €4 million — ten years sitting across the table from owners, learning what they actually needed from technology. Not products. Not jargon. A partner who spoke their language.</p>
+      <p>Most IT companies weren't delivering that. They still aren't. <strong>That's why I built Dividend IT.</strong> The name is intentional: a dividend is a return on investment — something that pays you back. That's exactly what your IT should do.</p>
+      <p class="sp-about-promise">We'll never blind you with jargon, never sell you what you don't need, and always tell you the truth about where you're exposed.</p>
     </div>
   </div>
 </section>
 
-<!-- 6. THE TOOLS -->
+<!-- FAQ — mirrors FAQPage structured data -->
+<section id="faq" class="sp-faq">
+  <div class="sp-faq-inner">
+    <div class="section-label reveal">Common questions</div>
+    <h2 class="section-title reveal">Everything you want to know<br>before you call.</h2>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this,'cost')">What does it cost to outsource IT support and cybersecurity? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Our packages start at <strong>€75 per user per month</strong> — fully inclusive: support, security, backup and monitoring, no hidden fees. A 25-person business on our most popular Operate package pays €2,500 per month. Compare that to the average €21k cost of remediating a single cyber attack — <a href="/true-cost">the maths tends to take care of itself</a>. Run your own numbers with the <a href="/cost-calculator">cost calculator</a>.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this,'what-is')">What is outsourced IT &amp; cybersecurity? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>A specialist partner runs your technology for you — helpdesk, infrastructure, security monitoring, threat detection and response, backup and disaster recovery, and technology strategy. Instead of hiring an internal team, you get a full IT department for a fixed monthly fee per user, with enterprise-grade security most SMBs couldn't justify buying alone. <a href="/outsourced-it">See what's included</a>.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this,'switching')">How long does it take to switch IT providers? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Most businesses are fully onboarded within 30 days. We manage the migration end-to-end, including the handover from your current provider, so your team barely notices the change — except that things start working better.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this,'contracts')">Are there long-term contracts? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>No lock-in beyond a 3-month onboarding period. We keep clients because the service is good — not because they're contractually trapped. Annual contracts are available with a discount if you prefer that structure.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this,'different')">How is Dividend IT different from our current IT provider? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Most IT providers keep the lights on. We work directly with business owners and shareholders — not just your IT admin — and align every technology decision to EBITDA, valuation, and long-term value. If your current provider has never talked to you about succession, sale or how IT spend affects your multiple, <a href="/guide">that's the difference</a>.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this,'size')">We're not sure we're big enough for this. <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>If you have between 10 and 150 people and your business depends on technology working — you're exactly the right size. The businesses that benefit most have outgrown their current IT setup but haven't yet justified a full internal team.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. THE INVITATION -->
+<section id="cta" class="sp-cta">
+  <div class="sp-cta-inner">
+    <div class="section-label" style="justify-content:center;">Ready to start?</div>
+    <h2 class="sp-cta-title">Let's find out if<br>we're a fit.</h2>
+    <p>We don't work with everyone. We work with owners who are serious about using technology as a competitive advantage and a way to build lasting value. If that's you, let's have an honest conversation — no obligation, no hard sell.</p>
+    <div class="sp-cta-actions">
+      <a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="btn-light" onclick="trackEvent('book_call_click',{location:'final-cta'})">Book a Free 20-Min Call</a>
+      <a href="/guide" class="btn-outline-light">Read the Free Guide</a>
+    </div>
+    <p class="sp-cta-note">No obligation · No hard sell · No jargon</p>
+  </div>
+</section>
+
 <section id="tools" class="sp-tools">
   <div class="sp-tools-inner">
     <div class="section-label">See it for your own business</div>
@@ -1915,68 +1973,6 @@
 </section>
 
 <!-- ABOUT (kept, condensed) -->
-<section id="about" class="sp-about">
-  <div class="sp-about-inner">
-    <div class="sp-about-left">
-      <div class="section-label">Why we exist</div>
-      <h2 class="section-title">We started this because owners deserve better.</h2>
-    </div>
-    <div class="sp-about-right">
-      <p>For the past decade I helped scale an outsourced IT and cybersecurity business from €1 million to €4 million — ten years sitting across the table from owners, learning what they actually needed from technology. Not products. Not jargon. A partner who spoke their language.</p>
-      <p>Most IT companies weren't delivering that. They still aren't. <strong>That's why I built Dividend IT.</strong> The name is intentional: a dividend is a return on investment — something that pays you back. That's exactly what your IT should do.</p>
-      <p class="sp-about-promise">We'll never blind you with jargon, never sell you what you don't need, and always tell you the truth about where you're exposed.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ — mirrors FAQPage structured data -->
-<section id="faq" class="sp-faq">
-  <div class="sp-faq-inner">
-    <div class="section-label reveal">Common questions</div>
-    <h2 class="section-title reveal">Everything you want to know<br>before you call.</h2>
-    <div class="faq-list reveal">
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this,'cost')">What does it cost to outsource IT support and cybersecurity? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>Our packages start at <strong>€75 per user per month</strong> — fully inclusive: support, security, backup and monitoring, no hidden fees. A 25-person business on our most popular Operate package pays €2,500 per month. Compare that to the average €21k cost of remediating a single cyber attack — <a href="/true-cost">the maths tends to take care of itself</a>. Run your own numbers with the <a href="/cost-calculator">cost calculator</a>.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this,'what-is')">What is outsourced IT &amp; cybersecurity? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>A specialist partner runs your technology for you — helpdesk, infrastructure, security monitoring, threat detection and response, backup and disaster recovery, and technology strategy. Instead of hiring an internal team, you get a full IT department for a fixed monthly fee per user, with enterprise-grade security most SMBs couldn't justify buying alone. <a href="/outsourced-it">See what's included</a>.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this,'switching')">How long does it take to switch IT providers? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>Most businesses are fully onboarded within 30 days. We manage the migration end-to-end, including the handover from your current provider, so your team barely notices the change — except that things start working better.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this,'contracts')">Are there long-term contracts? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>No lock-in beyond a 3-month onboarding period. We keep clients because the service is good — not because they're contractually trapped. Annual contracts are available with a discount if you prefer that structure.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this,'different')">How is Dividend IT different from our current IT provider? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>Most IT providers keep the lights on. We work directly with business owners and shareholders — not just your IT admin — and align every technology decision to EBITDA, valuation, and long-term value. If your current provider has never talked to you about succession, sale or how IT spend affects your multiple, <a href="/guide">that's the difference</a>.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this,'size')">We're not sure we're big enough for this. <span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>If you have between 10 and 150 people and your business depends on technology working — you're exactly the right size. The businesses that benefit most have outgrown their current IT setup but haven't yet justified a full internal team.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 8. THE INVITATION -->
-<section id="cta" class="sp-cta">
-  <div class="sp-cta-inner">
-    <div class="section-label" style="justify-content:center;">Ready to start?</div>
-    <h2 class="sp-cta-title">Let's find out if<br>we're a fit.</h2>
-    <p>We don't work with everyone. We work with owners who are serious about using technology as a competitive advantage and a way to build lasting value. If that's you, let's have an honest conversation — no obligation, no hard sell.</p>
-    <div class="sp-cta-actions">
-      <a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="btn-light" onclick="trackEvent('book_call_click',{location:'final-cta'})">Book a Free 20-Min Call</a>
-      <a href="/guide" class="btn-outline-light">Read the Free Guide</a>
-    </div>
-    <p class="sp-cta-note">No obligation · No hard sell · No jargon</p>
-  </div>
-</section>
-
 </main>
 <footer>
   <div class="footer-inner">
