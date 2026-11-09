@@ -1,0 +1,5 @@
+# Applies the shared site shell (nav, footer, CSS, JS) to every page on each deploy.
+# See tools/shell.js and _shell/.
+[build]
+  command = "node tools/shell.js"
+  publish = "."
