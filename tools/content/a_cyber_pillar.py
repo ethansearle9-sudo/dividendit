@@ -1,0 +1,105 @@
+CSBS = '<a href="https://www.gov.uk/government/statistics/cyber-security-breaches-survey-2025/cyber-security-breaches-survey-2025" target="_blank" rel="noopener">UK Government, Cyber Security Breaches Survey 2025</a>'
+
+PAGES = [dict(
+    kind='article', slug='outsourced-cyber',
+    title='Cyber Security for Small Business: The Owner\'s Guide | Dividend IT',
+    og_title='Cyber Security for Small Business: The Owner\'s Guide',
+    meta='Cyber security for small business in plain English: what actually goes wrong, the handful of controls that matter, and when outsourced cyber security makes sense.',
+    card_kind='Pillar guide', card_title='Cyber Security for Small Business: The Owner\'s Guide',
+    card_desc='What actually goes wrong, the controls that matter, and when to outsource.',
+    trail=[('Outsourced Cyber Security', '/outsourced-cyber')],
+    eyebrow='Outsourced Cyber Security', read=16,
+    h1='Cyber security for small business, <em>explained for owners</em>',
+    sub='Most cyber security advice is written for IT people. This guide is written for the person whose money, reputation and business value are on the line. It covers what actually goes wrong in smaller businesses, the handful of controls that stop most of it, and how to decide whether to run it yourself or hand it to an outsourced cyber security partner.',
+    sections=[
+        ('why', 'Why smaller businesses are now the target', f'''
+<p>Criminals go where the money is easy. Large companies have security teams, approval chains and people watching their systems through the night. A business with 40 staff usually has none of that, but it still pays suppliers, holds customer data and moves serious money by email every week.</p>
+<p>The UK Government's annual survey is one of the most reliable measures of how often this happens. In 2025, <strong>43% of businesses reported a cyber breach or attack in the previous twelve months, rising to 67% of medium-sized businesses</strong>. Among those hit, phishing was by far the most common route in, experienced by 85% of them.</p>
+<p>The pattern is the same wherever we work. The attacks that hurt owners most are rarely clever. They are fraud: a convincing email, a stolen password, a payment sent to the wrong account. That is good news, because fraud of that kind is very preventable with the right controls and habits.</p>
+<div class="pull">Everyone sells you the promise that nothing will go wrong. Something always will. What protects the business is how fast it is spotted, how well it is contained, and how calmly it is fixed.</div>
+'''),
+        ('what-goes-wrong', 'What actually goes wrong', '''
+<p>Forget the hooded hacker. In smaller businesses, four kinds of incident cause almost all of the damage.</p>
+<h3>1. Payment diversion and invoice fraud</h3>
+<p>Someone gets into a mailbox, yours or a supplier's, reads the conversations, and at the right moment sends a perfectly timed request to change bank details. A real invoice gets paid into a criminal's account. It is the single most expensive thing that routinely happens to small businesses. <a href="/invoice-fraud">How invoice fraud works and how to stop it</a>.</p>
+<h3>2. Mailbox and account takeover</h3>
+<p>A staff member enters their password on a fake login page. Without strong sign-in protection, the attacker now has their email, files and often access to other systems. They usually sit quietly for days or weeks. <a href="/signs-your-business-has-been-hacked">The warning signs to look for</a>.</p>
+<h3>3. Ransomware</h3>
+<p>Criminals get in, copy your data, then lock your systems and demand payment. Less common than fraud, but the most disruptive when it happens, because the business stops. Recovery depends almost entirely on whether your backups are separate, recent and tested.</p>
+<h3>4. Data loss and human error</h3>
+<p>A laptop left on a train, a spreadsheet emailed to the wrong person, a former employee who still has access. Not dramatic, but each one can trigger regulatory obligations and awkward conversations with customers.</p>
+<div class="note"><p><strong>If you think something is wrong right now,</strong> stop reading this and go to <a href="/been-hacked-first-24-hours">what to do in the first 24 hours</a>.</p></div>
+'''),
+        ('controls', 'The handful of controls that stop most of it', '''
+<p>You do not need fifty security products. For a business of 10 to 150 people, eight controls, properly run, deal with the large majority of real-world risk. The words "properly run" matter: most businesses that get hurt had some of these in place on paper.</p>
+<ol>
+<li><strong>Multi-factor sign-in on everything.</strong> A password alone is no longer protection. Every email account, remote access tool and finance system should ask for a second proof of identity, ideally an app or a physical key rather than a text message.</li>
+<li><strong>Protected email.</strong> Filtering that catches fake senders and malicious links, warnings on external emails, and the email authentication records (SPF, DKIM and DMARC) that stop criminals sending email that looks like it comes from you.</li>
+<li><strong>Endpoint detection and response, with people watching it.</strong> Modern protection on every laptop and server that spots suspicious behaviour, not just known viruses. The tool is only half of it: someone has to see the alert and act on it, including at 3am on a Sunday.</li>
+<li><strong>Patching.</strong> Updates applied to every device and application on a schedule, with proof that they actually installed.</li>
+<li><strong>Backups that are separate and tested.</strong> Copies of your data that an attacker cannot reach or delete, restored on a test basis regularly so you know they work before you need them.</li>
+<li><strong>Least access.</strong> People only have access to what their job needs. Admin rights are rare and protected. Leavers lose access the day they leave.</li>
+<li><strong>A team that can spot fraud.</strong> Short, regular, practical training and a simple way to report something suspicious without embarrassment.</li>
+<li><strong>A plan for the first hour.</strong> Who does what when something goes wrong, written down, with phone numbers that work if email is down.</li>
+</ol>
+<p>Each of these is covered in more depth on our service pages: <a href="/iam">identity and access</a>, <a href="/endpoint-security">endpoint security</a>, <a href="/detection-response">detection and response</a>, <a href="/backup-dr">backup and recovery</a> and <a href="/governance-cyber">governance</a>.</p>
+'''),
+        ('in-house-or-outsourced', 'In-house or outsourced cyber security?', '''
+<p>Running these controls properly needs three things: the tools, the skills to configure them, and people watching around the clock. That third one is where in-house security usually breaks down for smaller businesses. One IT person cannot watch alerts 24 hours a day, take holidays and stay current on how attacks are changing.</p>
+<div class="tbl-wrap"><table class="cmp">
+<tr><th></th><th>Do it yourself</th><th>Outsourced cyber security</th></tr>
+<tr><td>Cover</td><td>Office hours, depends on one or two people</td><td>Monitoring around the clock by a team</td></tr>
+<tr><td>Tools</td><td>Bought and licensed on your own, often at list price</td><td>Enterprise-grade tooling shared across many clients</td></tr>
+<tr><td>Skills</td><td>Generalist IT, security is one job among many</td><td>Specialists who see attacks across many businesses</td></tr>
+<tr><td>Cost</td><td>Salary, training, tools and the cost of gaps</td><td>A predictable monthly fee per user</td></tr>
+<tr><td>Evidence</td><td>Usually informal</td><td>Reports you can show an insurer, auditor or buyer</td></tr>
+</table></div>
+<p>Outsourcing does not mean handing over responsibility and forgetting about it. Directors remain accountable for how the business manages risk. What it does mean is that the work gets done consistently, by people whose whole job it is, with evidence you can point to.</p>
+<p>The useful question is not "can we afford outsourced cyber security?" but "what is the cheapest way to get these eight controls running properly, around the clock, with evidence?" For most businesses under 150 people, the answer is a partner.</p>
+'''),
+        ('models', 'Fully managed or co-managed', '''
+<p>There are two sensible ways to outsource cyber security.</p>
+<p><strong><a href="/fully-managed-cyber">Fully managed cyber security</a></strong> means the partner runs the whole programme: the tools, the monitoring, the response, the reporting. It suits businesses without their own IT team, or where the IT team is stretched keeping everything else running.</p>
+<p><strong><a href="/co-managed-cyber">Co-managed cyber security</a></strong> means the partner works alongside your own IT people. They keep ownership of day-to-day IT; the partner adds 24/7 monitoring, specialist response and the governance work that rarely gets done. It suits businesses that have invested in internal IT and want to strengthen it rather than replace it.</p>
+<p>Either way, the price should be predictable, per user, and include the tools. If a provider quotes you a security tool and then bills separately for anyone to look at it, you are buying software, not security.</p>
+'''),
+        ('value', 'What security is worth to the business', '''
+<p>Owners usually think of cyber security as a cost of staying safe. It is also one of the few areas of IT that shows up directly in what the business is worth.</p>
+<ul>
+<li><strong>It protects earnings.</strong> One diverted payment or a week of downtime can wipe out a quarter's profit. Preventing that is real money.</li>
+<li><strong>It shapes insurability.</strong> Insurers now ask detailed questions about multi-factor sign-in, backups and monitoring before they quote. Good answers widen your options; poor ones narrow them. <a href="/cyber-insurance">What insurers ask for</a>.</li>
+<li><strong>It speeds up a sale.</strong> Buyers and their advisers now examine cyber security in due diligence. A clean, evidenced record removes a reason to chip the price or delay the deal. A breach in the year before a sale does the opposite.</li>
+<li><strong>It meets your legal duties.</strong> Data protection law in the UK, the EU and South Africa requires appropriate security and, when things go wrong, prompt notification. The EU's NIS2 Directive goes further for in-scope sectors and puts responsibility on management.</li>
+</ul>
+<p>We think about every security decision twice: what it costs, and what it does to the risk a buyer would price in. That is the same discipline we apply across <a href="/guide">all of your technology</a>.</p>
+'''),
+        ('how-we-deliver', 'How we deliver outsourced cyber security', '''
+<p>We structure security around the six functions of the NIST Cybersecurity Framework, the most widely used reference for this work: govern, identify, protect, detect, respond and recover. It gives you a clear picture of where you are covered and where you are not, and it maps neatly to what insurers, auditors and regulations ask for.</p>
+<p>Every client starts with the protection baseline: managed endpoint detection and response, email security, DNS filtering, multi-factor sign-in enforced on every account, automated patching, staff awareness training and backup. From there, the <a href="/services">Operate and Grow levels</a> add active threat response, conditional access, around-the-clock security operations, a written and tested incident response plan, quarterly restore testing and an annual independent penetration test.</p>
+<p>You get a plain-English report every month that tells you what was found, what was done, and what it means for the business. No dashboards you have to interpret.</p>
+<p><strong>Explore the services:</strong> <a href="/fully-managed-cyber">Fully managed</a> &middot; <a href="/co-managed-cyber">Co-managed</a> &middot; <a href="/iam">Identity and access</a> &middot; <a href="/endpoint-security">Endpoint security</a> &middot; <a href="/network-security">Network security</a> &middot; <a href="/detection-response">Detection and response</a> &middot; <a href="/backup-dr">Backup and recovery</a> &middot; <a href="/governance-cyber">Governance</a> &middot; <a href="/cyber-risk-assessment">Risk assessment</a> &middot; <a href="/pen-testing">Penetration testing</a> &middot; <a href="/ma-cyber-due-diligence">M&amp;A cyber due diligence</a></p>
+'''),
+        ('this-month', 'Five things to do this month', '''
+<p>Whether or not you ever work with us, these five actions close the most common gaps.</p>
+<ul class="check">
+<li><strong>Turn on multi-factor sign-in for every email account,</strong> starting with directors and finance. Check that nobody has been left out.</li>
+<li><strong>Agree a call-back rule for bank detail changes.</strong> Any request to change where money goes is confirmed by phone, on a number you already had, before a cent moves.</li>
+<li><strong>Ask when your backups were last restored as a test.</strong> If nobody knows, assume they do not work until proven otherwise.</li>
+<li><strong>Remove access for everyone who has left.</strong> Email, file shares, finance systems and any shared passwords.</li>
+<li><strong>Write down who to call.</strong> Your IT provider, your bank's fraud line and your insurer's incident line, on paper, somewhere you can find it if your systems are down.</li>
+</ul>
+'''),
+    ],
+    faqs=[
+        ('What is cyber security for small business?', 'It is the set of controls, habits and plans that protect a smaller business from fraud, data loss and disruption. In practice it means strong sign-in protection, protected email, monitored devices, tested backups, trained staff and a plan for when something goes wrong.'),
+        ('What does outsourced cyber security include?', 'A good service includes the security tools, the monitoring of those tools around the clock, response when something suspicious happens, staff training, backup and recovery, and regular plain-English reporting. It should be priced per user per month with the tools included.'),
+        ('Is outsourced cyber security worth it for a business with fewer than 50 staff?', 'Usually, yes. A smaller business faces the same attacks as a large one but cannot justify a security team or 24/7 monitoring on its own. An outsourced partner spreads that cost across many clients, so you get round-the-clock cover for a predictable monthly fee.'),
+        ('How much does outsourced cyber security cost?', 'It is normally priced per user per month, and the right number depends on how many people and devices you have and what is already in place. We give a fixed figure after a short conversation rather than publishing a rate card, because two 30-person businesses can need very different things.'),
+        ('What is the difference between managed IT and managed cyber security?', 'Managed IT keeps your systems running and your people productive. Managed cyber security protects them from attack and fraud and responds when something happens. They overlap heavily, which is why we deliver them together under one partner rather than splitting responsibility between two.'),
+    ],
+    sources=[CSBS + ', published April 2025.'],
+    related=['been-hacked-first-24-hours', 'invoice-fraud', 'fully-managed-cyber', 'co-managed-cyber', 'cyber-insurance', 'true-cost'],
+    cta_h='Find out where you are exposed.',
+    cta_p='A 20-minute call to walk through the eight controls and where you stand on each. You will leave knowing what to fix first, whether or not you work with us.',
+    cta_secondary=('Or start with a cyber risk assessment', '/cyber-risk-assessment'),
+)]

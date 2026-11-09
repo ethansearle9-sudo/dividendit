@@ -10,3 +10,15 @@
   to = "/guide"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/cloud"
+  to = "/public-cloud"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/microsoft-solutions"
+  to = "/microsoft-365"
+  status = 301
+  force = true
