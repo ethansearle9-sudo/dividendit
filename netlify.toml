@@ -3,3 +3,10 @@
 [build]
   command = "node tools/shell.js"
   publish = "."
+
+# Old "5 Ways" sign-up page now points to the hosted guide.
+[[redirects]]
+  from = "/get-the-guide"
+  to = "/guide"
+  status = 301
+  force = true
