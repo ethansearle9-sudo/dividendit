@@ -331,7 +331,7 @@ dict(
 ),
 dict(
     kind='article', slug='email-interception-man-in-the-middle',
-    title='Man-in-the-Middle Attacks and Email Interception | Dividend IT',
+    title='Man-in-the-Middle Attacks and Email Interception',
     og_title='Email interception and man-in-the-middle attacks, explained',
     meta='What a man-in-the-middle attack is, how criminals intercept business email and payments, why basic multi-factor sign-in is not enough and what stops it.',
     card_kind='Fraud guide', card_title='Email Interception and Man-in-the-Middle Attacks',

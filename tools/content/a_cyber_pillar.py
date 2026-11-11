@@ -2,7 +2,7 @@ CSBS = '<a href="https://www.gov.uk/government/statistics/cyber-security-breache
 
 PAGES = [dict(
     kind='article', slug='outsourced-cyber',
-    title='Cyber Security for Small Business: The Owner\'s Guide | Dividend IT',
+    title='Cyber Security for Small Business: The Owner\'s Guide',
     og_title='Cyber Security for Small Business: The Owner\'s Guide',
     meta='Cyber security for small business in plain English: what actually goes wrong, the handful of controls that matter, and when outsourced cyber security makes sense.',
     card_kind='Pillar guide', card_title='Cyber Security for Small Business: The Owner\'s Guide',
