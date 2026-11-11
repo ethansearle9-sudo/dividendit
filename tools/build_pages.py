@@ -206,7 +206,10 @@ def build_service(p, cards):
     schema = [
         {'@context': 'https://schema.org', '@type': 'Service', 'name': p['service_name'], 'serviceType': p['service_name'],
          'description': p['meta'], 'url': SITE + '/' + p['slug'],
-         'provider': PROVIDER, 'areaServed': AREA_SERVED,
+         'provider': PROVIDER,
+         'areaServed': ([{'@type': 'City', 'name': p['city']},
+                         {'@type': 'Country', 'name': p['country']}]
+                        if p.get('city') else AREA_SERVED),
          'audience': {'@type': 'BusinessAudience', 'name': 'Business owners and shareholders'}},
         crumbs_schema(trail), faq_schema(p['faqs'])]
     o = [head(p, schema)]
@@ -368,7 +371,7 @@ def main():
     for p in pages:
         for s in p.get('related', []):
             assert s in cards, f"{p['slug']}: unknown related page {s}"
-        fn = {'service': build_service, 'article': build_article, 'hub': build_hub}[p['kind']]
+        fn = {'service': build_service, 'location': build_service, 'article': build_article, 'hub': build_hub}[p['kind']]
         (ROOT / f"{p['slug']}.html").write_text(fn(p, cards), encoding='utf-8')
     print(f'built {len(pages)} pages')
 
