@@ -4,6 +4,23 @@
   <meta name="robots" content="noindex, nofollow" />
   <meta charset="UTF-8" />
   <!-- Google tag (gtag.js) — Dividend IT GA4 -->
+  <!-- Self-exclusion. Visit any page with ?notme=1 to stop this browser being
+       measured, ?notme=0 to start again. Survives IP and country changes. -->
+  <script>
+    (function(){
+      try {
+        var q = new URLSearchParams(location.search);
+        if (q.has('notme')) {
+          if (q.get('notme') === '0') localStorage.removeItem('ddit_optout');
+          else localStorage.setItem('ddit_optout', '1');
+        }
+        if (localStorage.getItem('ddit_optout') === '1') {
+          window['ga-disable-G-NRJXMHZ0N7'] = true;
+          console.log('Dividend IT: analytics off on this browser. Use ?notme=0 to re-enable.');
+        }
+      } catch (e) {}
+    })();
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRJXMHZ0N7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];

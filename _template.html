@@ -4,6 +4,23 @@
   <!-- TEMPLATE: copy this file to page-name.html, fill the CAPS placeholders, then add the page to sitemap.xml and delete the noindex line. -->
   <meta name="robots" content="noindex">
   <meta charset="UTF-8" />
+  <!-- Self-exclusion. Visit any page with ?notme=1 to stop this browser being
+       measured, ?notme=0 to start again. Survives IP and country changes. -->
+  <script>
+    (function(){
+      try {
+        var q = new URLSearchParams(location.search);
+        if (q.has('notme')) {
+          if (q.get('notme') === '0') localStorage.removeItem('ddit_optout');
+          else localStorage.setItem('ddit_optout', '1');
+        }
+        if (localStorage.getItem('ddit_optout') === '1') {
+          window['ga-disable-G-NRJXMHZ0N7'] = true;
+          console.log('Dividend IT: analytics off on this browser. Use ?notme=0 to re-enable.');
+        }
+      } catch (e) {}
+    })();
+  </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRJXMHZ0N7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
