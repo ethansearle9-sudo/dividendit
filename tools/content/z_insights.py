@@ -33,6 +33,7 @@ PAGES = [dict(
         ]),
         ('Hire or outsource', 'The decision most owners face before they buy anything at all.', [
             ('do-i-need-an-it-manager', '8 min read', True),
+            ('outsourced-it-cost', '7 min read', False),
         ]),
         ('Tools', 'Run the numbers on your own business.', [
             ('cost-calculator', 'Calculator', False),

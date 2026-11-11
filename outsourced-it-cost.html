@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Self-exclusion. Visit any page with ?notme=1 to stop this browser being
+       measured, ?notme=0 to start again. Survives IP and country changes. -->
+  <script>
+    (function(){
+      try {
+        var q = new URLSearchParams(location.search);
+        if (q.has('notme')) {
+          if (q.get('notme') === '0') localStorage.removeItem('ddit_optout');
+          else localStorage.setItem('ddit_optout', '1');
+        }
+        if (localStorage.getItem('ddit_optout') === '1') {
+          window['ga-disable-G-NRJXMHZ0N7'] = true;
+          console.log('Dividend IT: analytics off on this browser. Use ?notme=0 to re-enable.');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRJXMHZ0N7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NRJXMHZ0N7');
+    // Same helper the hand-built pages use, so event names stay consistent.
+    function trackEvent(name, params){ try { gtag('event', name, params || {}); } catch(e){} }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Much Does Outsourced IT Cost? A Plain Answer</title>
+  <meta name="description" content="How outsourced IT is priced, what moves the number up or down, what should be included, and how to compare two quotes that look nothing alike." />
+  <link rel="canonical" href="https://dividendit.com/outsourced-it-cost" />
+  <meta property="og:title" content="How Much Does Outsourced IT Cost? A Plain Answer" />
+  <meta property="og:description" content="How outsourced IT is priced, what moves the number up or down, what should be included, and how to compare two quotes that look nothing alike." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dividendit.com/outsourced-it-cost" />
+  <meta property="og:image" content="https://dividendit.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232d6a4f'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' font-weight='bold' fill='%23f8f8f6' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/assets/page.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "What Outsourced IT Costs", "serviceType": "What Outsourced IT Costs", "description": "How outsourced IT is priced, what moves the number up or down, what should be included, and how to compare two quotes that look nothing alike.", "url": "https://dividendit.com/outsourced-it-cost", "provider": {"@type": ["Organization", "ProfessionalService"], "@id": "https://dividendit.com/#org", "name": "Dividend IT", "url": "https://dividendit.com/", "areaServed": [{"@type": "Country", "name": "Ireland"}, {"@type": "City", "name": "Dublin"}, {"@type": "Country", "name": "United Kingdom"}]}, "areaServed": [{"@type": "Country", "name": "Ireland"}, {"@type": "City", "name": "Dublin"}, {"@type": "Country", "name": "United Kingdom"}], "audience": {"@type": "BusinessAudience", "name": "Business owners and shareholders"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dividendit.com/"}, {"@type": "ListItem", "position": 2, "name": "Insights", "item": "https://dividendit.com/insights"}, {"@type": "ListItem", "position": 3, "name": "What Outsourced IT Costs", "item": "https://dividendit.com/outsourced-it-cost"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does outsourced IT cost per user per month?", "acceptedAnswer": {"@type": "Answer", "text": "It is priced per user, per month, and the range is wide because what sits inside the number varies so much. The honest drivers are headcount, whether you run servers, how deep the security goes, whether Microsoft licensing is bundled, and the state of the environment today. Anyone quoting a precise figure without knowing those is guessing, and anyone refusing to explain the drivers is stalling."}}, {"@type": "Question", "name": "Why will nobody publish a price?", "acceptedAnswer": {"@type": "Answer", "text": "Partly because the drivers genuinely vary, and partly because a meeting is easier to sell than a number. The drivers are not a secret, which is why they are set out on this page. You should be able to narrow your own range before speaking to anyone."}}, {"@type": "Question", "name": "Is Microsoft 365 licensing usually included?", "acceptedAnswer": {"@type": "Answer", "text": "Sometimes, and it matters enormously. Licensing is a large component, so a quote that bundles it will look much higher than one that does not for identical service. Ask every provider to quote the same way or you are comparing nothing."}}, {"@type": "Question", "name": "Should I pay an onboarding fee?", "acceptedAnswer": {"@type": "Answer", "text": "It is reasonable. Taking over an environment properly, documenting it and fixing what is wrong is real work. What is not reasonable is discovering it after you have agreed the monthly figure."}}, {"@type": "Question", "name": "What should I avoid?", "acceptedAnswer": {"@type": "Answer", "text": "Three things. A long lock-in with no discount attached. Security tools sold without anybody monitoring them. And a quote so much cheaper than the others that something has clearly been left out, which is usually the monitoring or the licensing."}}, {"@type": "Question", "name": "What does Dividend IT charge?", "acceptedAnswer": {"@type": "Answer", "text": "Per user, per month, with tools included and contracts rolling monthly. The number depends on the drivers above. Twenty minutes and a look at what you have gives you a real figure rather than a range, and if we are not the right fit we will say so."}}]}</script>
+<!-- shell:head -->
+<link rel="stylesheet" href="/assets/site.css">
+<!-- /shell:head -->
+</head>
+<body>
+<!-- shell:nav -->
+<nav>
+  <div class="nav-inner">
+    <div class="brand-lockup"><a href="/" class="nav-logo">Dividend <span>IT</span></a><div class="brand-tag">Outsourced Cybersecurity &amp; IT</div></div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+
+      <!-- Solutions mega-menu -->
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">What We Do <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <div class="nav-mega-menu">
+
+          <!-- Left col: Cyber Security -->
+          <div class="nav-mega-col">
+            <a href="/outsourced-cyber" class="nav-mega-label">Outsourced Cyber Security</a>
+            <ul>
+              <li><a href="/outsourced-cyber">Overview</a></li>
+              <li><a href="/fully-managed-cyber">Fully Managed Cyber Security</a></li>
+              <li><a href="/co-managed-cyber">Co-Managed Cyber Security</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Services</span>
+            <ul>
+              <li><a href="/iam">Identity &amp; Access Management (IAM)</a></li>
+              <li><a href="/endpoint-security">Endpoint Security</a></li>
+              <li><a href="/network-security">Network Security</a></li>
+              <li><a href="/detection-response">Detection &amp; Response</a></li>
+              <li><a href="/backup-dr">Recover (Backup &amp; DR)</a></li>
+              <li><a href="/governance-cyber">Governance</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Advisory</span>
+            <ul>
+              <li><a href="/cyber-risk-assessment">Cyber Risk Assessment</a></li>
+              <li><a href="/pen-testing">Pen Testing</a></li>
+              <li><a href="/ma-cyber-due-diligence">M&amp;A Cyber Due Diligence</a></li>
+            </ul>
+          </div>
+
+          <!-- Middle-right col: Outsourced IT -->
+          <div class="nav-mega-col nav-mega-col--right">
+            <a href="/outsourced-it" class="nav-mega-label">Outsourced IT</a>
+            <ul>
+              <li><a href="/outsourced-it">Overview</a></li>
+              <li><a href="/fully-managed-it">Fully Managed IT Support</a></li>
+              <li><a href="/co-managed-it">Co-Managed IT Support</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Services</span>
+            <ul>
+              <li><a href="/service-desk">Service Desk &amp; Admin</a></li>
+              <li><a href="/proactive-pc">Proactive PC Support</a></li>
+              <li><a href="/proactive-server">Proactive Server Support</a></li>
+              <li><a href="/network-wifi">Seamless Network</a></li>
+              <li><a href="/wifi">Seamless WiFi</a></li>
+              <li><a href="/it-procurement">IT Procurement</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Advisory</span>
+            <ul>
+              <li><a href="/it-strategy">IT Strategy</a></li>
+              <li><a href="/cio-as-a-service">CIO as a Service</a></li>
+              <li><a href="/it-consulting">IT Consulting &amp; Projects</a></li>
+              <li><a href="/ma-it-strategy">M&amp;A IT Strategy</a></li>
+              <li><a href="/ma-it-due-diligence">M&amp;A Due Diligence</a></li>
+            </ul>
+          </div>
+
+          <!-- Far-right col: Communication & Collaboration -->
+          <div class="nav-mega-col nav-mega-col--right">
+            <a href="/communication-collaboration" class="nav-mega-label">Communication &amp; Collaboration</a>
+            <ul>
+              <li><a href="/communication-collaboration">Overview</a></li>
+              <li><a href="/microsoft-365">Microsoft 365</a></li>
+              <li><a href="/public-cloud">Public Cloud</a></li>
+              <li><a href="/private-cloud">Private Cloud</a></li>
+              <li><a href="/telephony">Telephony</a></li>
+              <li><a href="/crm">CRM</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </li>
+
+      <li><a href="/who-we-serve">Who We Serve</a></li>
+      <li><a href="/where-we-work">Where We Work</a></li>
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">Tools <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <ul class="nav-dd-menu">
+          <li><a href="/cost-calculator">Cost Calculator</a></li>
+          <li><a href="/value-calculator">Value Calculator</a></li>
+        </ul>
+      </li>
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">Insights <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <ul class="nav-dd-menu">
+          <li><a href="/guide">Owner&rsquo;s Guide to Outsourced IT</a></li>
+          <li><a href="/been-hacked-first-24-hours">Been Hacked? The First 24 Hours</a></li>
+          <li><a href="/invoice-fraud">Invoice Fraud Explained</a></li>
+          <li><a href="/insights">All Insights</a></li>
+          <li><a href="/#tools">Calculators</a></li>
+          <li><a href="/#about">About</a></li>
+        </ul>
+      </li>
+      <li><a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="nav-cta">Get a Straight Answer</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- /shell:nav -->
+<main>
+<section class="sv-hero"><div class="wrap">
+  <div class="crumbs" role="navigation" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/insights">Insights</a><span>/</span>What Outsourced IT Costs</div>
+  <div class="sv-hero-grid">
+    <div>
+      <div class="label">Decision guide</div>
+      <h1>How much does <em>outsourced IT</em> cost?</h1>
+      <p class="sv-lead">Almost every provider answers this with “it depends” and then asks for a meeting. Here is what it actually depends on, so you can work out your own number before you talk to anyone.</p>
+      <div class="actions"><a class="btn" href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" rel="noopener">Book a 20-minute call</a><a class="link-arrow" href="#included">See what's included</a></div>
+    </div>
+    <aside class="glance" aria-label="At a glance"><h2>At a glance</h2><dl><dt>How it is priced</dt><dd>Per user, per month, almost universally</dd><dt>What moves it</dt><dd>Servers, security depth, licensing, and how much is already in place</dd><dt>What should be included</dt><dd>Tools and licensing, not billed separately on top</dd><dt>What to watch</dt><dd>Onboarding fees, minimum terms, and out-of-scope charges</dd></dl></aside>
+  </div>
+</div></section>
+<section class="blk"><div class="wrap"><div class="narrow prose">
+  <div class="label">How the pricing actually works</div>
+  <h2 class="h2">Per user, per month. The question is what that user price contains.</h2>
+  <p>Managed IT is sold per user, per month. That part is near-universal. What differs enormously between providers is what sits inside the number, and that is where two quotes that look like they are for the same thing turn out not to be.</p><p>The honest drivers are straightforward. <strong>How many people</strong> you have, because the per-user price usually falls as headcount rises. <strong>Whether you run servers</strong>, since physical or virtual servers add real work that user counts do not capture. <strong>How much security</strong> you want: a basic protective baseline costs considerably less than round-the-clock monitored detection and response. <strong>Whether Microsoft licensing is included</strong> or billed separately, which alone can move a quote by a third. And <strong>what state things are in now</strong>, because an environment that has been neglected for five years takes work to stabilise before it becomes routine.</p><p>What should not drive it is a long contract. A provider confident in the service does not need to lock you in for three years to deliver it.</p>
+  
+</div></div></section>
+<section class="blk alt" id="included"><div class="wrap">
+  <div class="label">What's included</div>
+  <h2 class="h2">What to check is included before you compare prices</h2>
+  <p class="intro">Two quotes are only comparable once you know these answers for both.</p>
+  <div class="grid3"><div class="card"><span class="tick">&#10003;</span><h3>Is licensing in or out?</h3><p>Microsoft 365 licensing is a significant cost. A quote that includes it and one that does not are not comparable, and the gap is often around a third.</p></div><div class="card"><span class="tick">&#10003;</span><h3>Are the security tools included?</h3><p>Endpoint protection, email security, backup and monitoring should be in the per-user price. If a provider sells you a tool and then charges separately for anyone to watch it, you are buying software, not a service.</p></div><div class="card"><span class="tick">&#10003;</span><h3>Is anyone actually watching?</h3><p>Detection without response is a dashboard. Ask who looks at alerts, when, and what they are empowered to do at 3am.</p></div><div class="card"><span class="tick">&#10003;</span><h3>What is out of scope?</h3><p>Projects, migrations, hardware and on-site visits are often quoted separately. Fair enough, but you want to know before, not after.</p></div><div class="card"><span class="tick">&#10003;</span><h3>Is there an onboarding fee?</h3><p>Some charge it, some fold it in. Neither is wrong. Not knowing is.</p></div><div class="card"><span class="tick">&#10003;</span><h3>What is the term?</h3><p>Rolling monthly versus a twelve or thirty-six month commitment materially changes what you are agreeing to.</p></div></div>
+</div></section>
+<section class="blk dark"><div class="wrap">
+  <div class="label">How it works</div>
+  <h2 class="h2">How to work out your own number</h2>
+  <div class="steps"><div class="step"><h3>Count users, not devices</h3><p>A person with a laptop and a phone is one user. This is the figure every quote keys off.</p></div><div class="step"><h3>Count servers separately</h3><p>Physical or virtual, on site or hosted. These are priced on top of users almost everywhere.</p></div><div class="step"><h3>Decide your security level</h3><p>Protective baseline, or monitored detection and response around the clock. This is the single biggest lever on the number.</p></div><div class="step"><h3>Decide on licensing</h3><p>If you want Microsoft 365 bundled, say so when asking, so every quote is built the same way.</p></div></div>
+</div></section>
+<section class="blk alt"><div class="wrap"><div class="split">
+  <div><div class="label">What it's worth</div><h2 class="h2">What a fair arrangement looks like</h2><p class="intro">Price is only half of it. These are the terms that tell you how confident a provider is.</p></div>
+  <ul class="vlist"><li><strong>One number that includes the tools</strong>You should not be buying a service and then separately buying the things that make it work.</li><li><strong>No lock-in</strong>Rolling monthly says the provider expects to keep earning it. Annual terms are reasonable if they come with a discount and you choose them.</li><li><strong>Clear scope boundaries</strong>What is included and what is a project, agreed in advance and in writing.</li><li><strong>Reporting you can read</strong>A monthly account of what happened and what it meant, not a dashboard you have to interpret.</li></ul>
+</div></div></section>
+<section class="blk"><div class="wrap">
+  <div class="label">Is it right for you?</div>
+  <h2 class="h2">An honest fit check</h2>
+  <div class="fit"><div class="yes"><h3>A good fit if</h3><ul><li>Y</li><li>o</li><li>u</li><li> </li><li>a</li><li>r</li><li>e</li><li> </li><li>c</li><li>o</li><li>m</li><li>p</li><li>a</li><li>r</li><li>i</li><li>n</li><li>g</li><li> </li><li>q</li><li>u</li><li>o</li><li>t</li><li>e</li><li>s</li><li> </li><li>a</li><li>n</li><li>d</li><li> </li><li>t</li><li>h</li><li>e</li><li>y</li><li> </li><li>d</li><li>o</li><li> </li><li>n</li><li>o</li><li>t</li><li> </li><li>l</li><li>o</li><li>o</li><li>k</li><li> </li><li>c</li><li>o</li><li>m</li><li>p</li><li>a</li><li>r</li><li>a</li><li>b</li><li>l</li><li>e</li><li>.</li></ul></div><div class="no"><h3>Probably not the right fit if</h3><ul><li>Y</li><li>o</li><li>u</li><li> </li><li>w</li><li>a</li><li>n</li><li>t</li><li> </li><li>t</li><li>o</li><li> </li><li>k</li><li>n</li><li>o</li><li>w</li><li> </li><li>t</li><li>h</li><li>e</li><li> </li><li>d</li><li>r</li><li>i</li><li>v</li><li>e</li><li>r</li><li>s</li><li> </li><li>b</li><li>e</li><li>f</li><li>o</li><li>r</li><li>e</li><li> </li><li>y</li><li>o</li><li>u</li><li> </li><li>s</li><li>i</li><li>t</li><li> </li><li>i</li><li>n</li><li> </li><li>a</li><li> </li><li>s</li><li>a</li><li>l</li><li>e</li><li>s</li><li> </li><li>m</li><li>e</li><li>e</li><li>t</li><li>i</li><li>n</li><li>g</li><li>.</li></ul></div></div>
+</div></section>
+<section class="blk alt"><div class="wrap"><div class="narrow">
+  <div class="label">Questions owners ask</div>
+  <h2 class="h2">Frequently asked questions</h2>
+  <div class="faq">
+<details><summary>How much does outsourced IT cost per user per month?</summary><div class="a"><p>It is priced per user, per month, and the range is wide because what sits inside the number varies so much. The honest drivers are headcount, whether you run servers, how deep the security goes, whether Microsoft licensing is bundled, and the state of the environment today. Anyone quoting a precise figure without knowing those is guessing, and anyone refusing to explain the drivers is stalling.</p></div></details>
+<details><summary>Why will nobody publish a price?</summary><div class="a"><p>Partly because the drivers genuinely vary, and partly because a meeting is easier to sell than a number. The drivers are not a secret, which is why they are set out on this page. You should be able to narrow your own range before speaking to anyone.</p></div></details>
+<details><summary>Is Microsoft 365 licensing usually included?</summary><div class="a"><p>Sometimes, and it matters enormously. Licensing is a large component, so a quote that bundles it will look much higher than one that does not for identical service. Ask every provider to quote the same way or you are comparing nothing.</p></div></details>
+<details><summary>Should I pay an onboarding fee?</summary><div class="a"><p>It is reasonable. Taking over an environment properly, documenting it and fixing what is wrong is real work. What is not reasonable is discovering it after you have agreed the monthly figure.</p></div></details>
+<details><summary>What should I avoid?</summary><div class="a"><p>Three things. A long lock-in with no discount attached. Security tools sold without anybody monitoring them. And a quote so much cheaper than the others that something has clearly been left out, which is usually the monitoring or the licensing.</p></div></details>
+<details><summary>What does Dividend IT charge?</summary><div class="a"><p>Per user, per month, with tools included and contracts rolling monthly. The number depends on the drivers above. Twenty minutes and a look at what you have gives you a real figure rather than a range, and if we are not the right fit we will say so.</p></div></details>
+</div>
+</div></div></section>
+<section class="blk"><div class="wrap">
+  <div class="label">Keep reading</div>
+  <h2 class="h2">Related services and guides</h2>
+  <div class="rel"><a class="rc" href="/outsourced-it"><span class="rk">Overview</span><span class="rt">Outsourced IT Services</span><span class="rd">What you get from an outsourced IT partner and what it costs.</span></a><a class="rc" href="/do-i-need-an-it-manager"><span class="rk">Decision guide</span><span class="rt">Do You Need an IT Manager?</span><span class="rd">What an IT manager really costs, and when hiring one is the right call.</span></a><a class="rc" href="/cost-calculator"><span class="rk">Tool</span><span class="rt">In-House vs Outsourced IT Cost Calculator</span><span class="rd">Compare the full cost of an internal IT hire with an outsourced team.</span></a></div>
+</div></section>
+<section class="cta-band"><div class="wrap">
+  <h2>Want a real number rather than a range?</h2>
+  <p>Twenty minutes, your headcount and what you have now, and you will get an honest figure. If we are not the right fit, you will hear that too.</p>
+  <div class="actions"><a class="btn green" href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" rel="noopener">Book a 20-minute call</a></div>
+</div></section>
+</main>
+<!-- shell:footer -->
+<footer>
+  <div class="footer-inner">
+    <div><a href="/" class="footer-logo">Dividend <span>IT</span></a>
+    <div class="footer-tagline">Outsourced Cybersecurity &amp; IT — For Business Owners</div></div>
+    <div class="footer-links">
+      <a href="/who-we-serve">Who We Serve</a>
+      <a href="/services">Services</a>
+      <a href="/guide">Owner&rsquo;s Guide</a>
+      <a href="/insights">Insights</a>
+      <a href="/cost-calculator">Cost Calculator</a>
+      <a href="/value-calculator">Value Calculator</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 Dividend IT. All rights reserved.</div>
+  </div>
+</footer>
+<!-- /shell:footer -->
+<script>
+(function(){
+  if (typeof trackEvent !== 'function') return;
+  var hit = {};
+  window.addEventListener('scroll', function(){
+    var d = document.documentElement;
+    var h = Math.max(d.scrollHeight, document.body.scrollHeight) - window.innerHeight;
+    if (h <= 0) return;
+    var pct = (window.scrollY / h) * 100;
+    [50, 75, 90].forEach(function(m){
+      if (pct >= m && !hit[m]) {
+        hit[m] = true;
+        trackEvent('scroll_depth', { page_id: location.pathname, percent: m });
+      }
+    });
+  }, { passive: true });
+})();
+</script>
+<!-- shell:scripts -->
+<script src="/assets/site.js"></script>
+<!-- /shell:scripts -->
+</body>
+</html>
