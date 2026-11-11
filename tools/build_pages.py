@@ -62,6 +62,8 @@ def head(p, schema):
     function gtag(){{dataLayer.push(arguments);}}
     gtag('js', new Date());
     gtag('config', 'G-NRJXMHZ0N7');
+    // Same helper the hand-built pages use, so event names stay consistent.
+    function trackEvent(name, params){{ try {{ gtag('event', name, params || {{}}); }} catch(e){{}} }}
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{e(title)}</title>
@@ -92,6 +94,24 @@ def head(p, schema):
 TAIL = '''</main>
 <!-- shell:footer -->
 <!-- /shell:footer -->
+<script>
+(function(){
+  if (typeof trackEvent !== 'function') return;
+  var hit = {};
+  window.addEventListener('scroll', function(){
+    var d = document.documentElement;
+    var h = Math.max(d.scrollHeight, document.body.scrollHeight) - window.innerHeight;
+    if (h <= 0) return;
+    var pct = (window.scrollY / h) * 100;
+    [50, 75, 90].forEach(function(m){
+      if (pct >= m && !hit[m]) {
+        hit[m] = true;
+        trackEvent('scroll_depth', { page_id: location.pathname, percent: m });
+      }
+    });
+  }, { passive: true });
+})();
+</script>
 <!-- shell:scripts -->
 <!-- /shell:scripts -->
 </body>
