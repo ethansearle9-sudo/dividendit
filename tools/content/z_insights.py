@@ -31,6 +31,9 @@ PAGES = [dict(
             ('succession', 'Research', False),
             ('startup-survival', 'Research', False),
         ]),
+        ('Hire or outsource', 'The decision most owners face before they buy anything at all.', [
+            ('do-i-need-an-it-manager', '8 min read', True),
+        ]),
         ('Tools', 'Run the numbers on your own business.', [
             ('cost-calculator', 'Calculator', False),
             ('value-calculator', 'Calculator', False),
