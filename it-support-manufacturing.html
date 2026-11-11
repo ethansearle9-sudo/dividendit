@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Self-exclusion. Visit any page with ?notme=1 to stop this browser being
+       measured, ?notme=0 to start again. Survives IP and country changes. -->
+  <script>
+    (function(){
+      try {
+        var q = new URLSearchParams(location.search);
+        if (q.has('notme')) {
+          if (q.get('notme') === '0') localStorage.removeItem('ddit_optout');
+          else localStorage.setItem('ddit_optout', '1');
+        }
+        if (localStorage.getItem('ddit_optout') === '1') {
+          window['ga-disable-G-NRJXMHZ0N7'] = true;
+          console.log('Dividend IT: analytics off on this browser. Use ?notme=0 to re-enable.');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRJXMHZ0N7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NRJXMHZ0N7');
+    // Same helper the hand-built pages use, so event names stay consistent.
+    function trackEvent(name, params){ try { gtag('event', name, params || {}); } catch(e){} }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT Support for Manufacturing and Engineering Businesses</title>
+  <meta name="description" content="Outsourced IT and cyber security for manufacturers, planned around production rather than imposed on it, with cover across shifts." />
+  <link rel="canonical" href="https://dividendit.com/it-support-manufacturing" />
+  <meta property="og:title" content="IT Support for Manufacturing and Engineering Businesses" />
+  <meta property="og:description" content="Outsourced IT and cyber security for manufacturers, planned around production rather than imposed on it, with cover across shifts." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dividendit.com/it-support-manufacturing" />
+  <meta property="og:image" content="https://dividendit.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232d6a4f'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' font-weight='bold' fill='%23f8f8f6' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/assets/page.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "IT Support for Manufacturing and Engineering", "serviceType": "IT Support for Manufacturing and Engineering", "description": "Outsourced IT and cyber security for manufacturers, planned around production rather than imposed on it, with cover across shifts.", "url": "https://dividendit.com/it-support-manufacturing", "provider": {"@type": ["Organization", "ProfessionalService"], "@id": "https://dividendit.com/#org", "name": "Dividend IT", "url": "https://dividendit.com/", "areaServed": [{"@type": "Country", "name": "Ireland"}, {"@type": "City", "name": "Dublin"}, {"@type": "Country", "name": "United Kingdom"}]}, "areaServed": [{"@type": "Country", "name": "Ireland"}, {"@type": "City", "name": "Dublin"}, {"@type": "Country", "name": "United Kingdom"}], "audience": {"@type": "BusinessAudience", "name": "Business owners and shareholders"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dividendit.com/"}, {"@type": "ListItem", "position": 2, "name": "Who We Serve", "item": "https://dividendit.com/who-we-serve"}, {"@type": "ListItem", "position": 3, "name": "Manufacturing and Engineering", "item": "https://dividendit.com/it-support-manufacturing"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can you work around our production schedule?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and it is the first thing we agree. Your production calendar decides maintenance windows, written down rather than renegotiated each month. Nothing on or near the line gets touched mid-run without agreement."}}, {"@type": "Question", "name": "We have machines running older software that cannot be updated. Can you help?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and that is normal in manufacturing. Where a system genuinely cannot be patched, the answer is to isolate it so a compromise elsewhere cannot reach it, control who can access it, and monitor it. Replacing it is rarely realistic and we will not pretend otherwise."}}, {"@type": "Question", "name": "Is our intellectual property really at risk?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, in two ways that look very different. Ransomware encrypts it, which is loud and obvious. Someone copying the design library on their way to a competitor is quiet, and in our experience owners worry far less about it than they should."}}, {"@type": "Question", "name": "Do you cover shift patterns?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If you run two or three shifts, support needs to match, which is one of the clearest arguments for a team over a single hire. One person covers roughly a third of the week."}}, {"@type": "Question", "name": "What does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "Per user, per month, tools included, depending on headcount and what is already in place. Twenty minutes gives an honest number. Contracts roll monthly."}}]}</script>
+<!-- shell:head -->
+<link rel="stylesheet" href="/assets/site.css">
+<!-- /shell:head -->
+</head>
+<body>
+<!-- shell:nav -->
+<nav>
+  <div class="nav-inner">
+    <div class="brand-lockup"><a href="/" class="nav-logo">Dividend <span>IT</span></a><div class="brand-tag">Outsourced Cybersecurity &amp; IT</div></div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+
+      <!-- Solutions mega-menu -->
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">What We Do <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <div class="nav-mega-menu">
+
+          <!-- Left col: Cyber Security -->
+          <div class="nav-mega-col">
+            <a href="/outsourced-cyber" class="nav-mega-label">Outsourced Cyber Security</a>
+            <ul>
+              <li><a href="/outsourced-cyber">Overview</a></li>
+              <li><a href="/fully-managed-cyber">Fully Managed Cyber Security</a></li>
+              <li><a href="/co-managed-cyber">Co-Managed Cyber Security</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Services</span>
+            <ul>
+              <li><a href="/iam">Identity &amp; Access Management (IAM)</a></li>
+              <li><a href="/endpoint-security">Endpoint Security</a></li>
+              <li><a href="/network-security">Network Security</a></li>
+              <li><a href="/detection-response">Detection &amp; Response</a></li>
+              <li><a href="/backup-dr">Recover (Backup &amp; DR)</a></li>
+              <li><a href="/governance-cyber">Governance</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Advisory</span>
+            <ul>
+              <li><a href="/cyber-risk-assessment">Cyber Risk Assessment</a></li>
+              <li><a href="/pen-testing">Pen Testing</a></li>
+              <li><a href="/ma-cyber-due-diligence">M&amp;A Cyber Due Diligence</a></li>
+            </ul>
+          </div>
+
+          <!-- Middle-right col: Outsourced IT -->
+          <div class="nav-mega-col nav-mega-col--right">
+            <a href="/outsourced-it" class="nav-mega-label">Outsourced IT</a>
+            <ul>
+              <li><a href="/outsourced-it">Overview</a></li>
+              <li><a href="/fully-managed-it">Fully Managed IT Support</a></li>
+              <li><a href="/co-managed-it">Co-Managed IT Support</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Services</span>
+            <ul>
+              <li><a href="/service-desk">Service Desk &amp; Admin</a></li>
+              <li><a href="/proactive-pc">Proactive PC Support</a></li>
+              <li><a href="/proactive-server">Proactive Server Support</a></li>
+              <li><a href="/network-wifi">Seamless Network</a></li>
+              <li><a href="/wifi">Seamless WiFi</a></li>
+              <li><a href="/it-procurement">IT Procurement</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Advisory</span>
+            <ul>
+              <li><a href="/it-strategy">IT Strategy</a></li>
+              <li><a href="/cio-as-a-service">CIO as a Service</a></li>
+              <li><a href="/it-consulting">IT Consulting &amp; Projects</a></li>
+              <li><a href="/ma-it-strategy">M&amp;A IT Strategy</a></li>
+              <li><a href="/ma-it-due-diligence">M&amp;A Due Diligence</a></li>
+            </ul>
+          </div>
+
+          <!-- Far-right col: Communication & Collaboration -->
+          <div class="nav-mega-col nav-mega-col--right">
+            <a href="/communication-collaboration" class="nav-mega-label">Communication &amp; Collaboration</a>
+            <ul>
+              <li><a href="/communication-collaboration">Overview</a></li>
+              <li><a href="/microsoft-365">Microsoft 365</a></li>
+              <li><a href="/public-cloud">Public Cloud</a></li>
+              <li><a href="/private-cloud">Private Cloud</a></li>
+              <li><a href="/telephony">Telephony</a></li>
+              <li><a href="/crm">CRM</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </li>
+
+      <li><a href="/who-we-serve">Who We Serve</a></li>
+      <li><a href="/where-we-work">Where We Work</a></li>
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">Tools <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <ul class="nav-dd-menu">
+          <li><a href="/cost-calculator">Cost Calculator</a></li>
+          <li><a href="/value-calculator">Value Calculator</a></li>
+        </ul>
+      </li>
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">Insights <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <ul class="nav-dd-menu">
+          <li><a href="/guide">Owner&rsquo;s Guide to Outsourced IT</a></li>
+          <li><a href="/been-hacked-first-24-hours">Been Hacked? The First 24 Hours</a></li>
+          <li><a href="/invoice-fraud">Invoice Fraud Explained</a></li>
+          <li><a href="/insights">All Insights</a></li>
+          <li><a href="/#tools">Calculators</a></li>
+          <li><a href="/#about">About</a></li>
+        </ul>
+      </li>
+      <li><a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="nav-cta">Get a Straight Answer</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- /shell:nav -->
+<main>
+<section class="sv-hero"><div class="wrap">
+  <div class="crumbs" role="navigation" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/who-we-serve">Who We Serve</a><span>/</span>Manufacturing and Engineering</div>
+  <div class="sv-hero-grid">
+    <div>
+      <div class="label">Who We Serve</div>
+      <h1>IT support for <em>manufacturing and engineering</em></h1>
+      <p class="sv-lead">Most IT providers plan maintenance around their week. In manufacturing that is how you end up patching during a production run.</p>
+      <div class="actions"><a class="btn" href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" rel="noopener">Book a 20-minute call</a><a class="link-arrow" href="#included">See what's included</a></div>
+    </div>
+    <aside class="glance" aria-label="At a glance"><h2>At a glance</h2><dl><dt>Who this is for</dt><dd>Manufacturers and engineering businesses of roughly 10 to 150 people</dd><dt>What is usually at stake</dt><dd>Production systems, the ERP behind them, and the drawings and designs</dd><dt>The quiet risk</dt><dd>Intellectual property walking out, or being encrypted</dd><dt>How it works</dt><dd>Maintenance planned around production, cover across shifts</dd></dl></aside>
+  </div>
+</div></section>
+<section class="blk"><div class="wrap"><div class="narrow prose">
+  <div class="label">Why manufacturing is different</div>
+  <h2 class="h2">The constraint is not what you fix. It is when you are allowed to touch it.</h2>
+  <p>A manufacturer's IT estate has two halves that rarely get treated as one. There is the office side, which looks like any other business. And there is everything near the floor: machine controllers, the PCs that drive them, scanners, label printers and the ERP that ties production to orders.</p><p>The second half is where generic IT support falls down. Those systems often run older software for good reasons, cannot simply be rebooted mid-run, and have maintenance windows dictated by production rather than by a support rota. A provider who patches on a schedule that suits them will eventually take a line down.</p><p>There is a second exposure that owners under-price: the drawings, designs, tooling specifications and process knowledge. That is often worth more than the machinery. If it is encrypted by ransomware, or copied on the way out of the building by someone leaving, the loss is permanent and it is competitive.</p><p><strong>Manufacturing needs IT that is planned around the production calendar, and security that treats the design library as the asset it is.</strong></p>
+  
+</div></div></section>
+<section class="blk alt" id="included"><div class="wrap">
+  <div class="label">What's included</div>
+  <h2 class="h2">What matters in a manufacturing environment</h2>
+  
+  <div class="grid3"><div class="card"><span class="tick">&#10003;</span><h3>Maintenance planned around production</h3><p>Patching and reboots scheduled to your calendar, not ours. Nothing touched mid-run without agreement.</p></div><div class="card"><span class="tick">&#10003;</span><h3>The floor treated as part of the estate</h3><p>The PCs, scanners and controllers near production are in scope, not quietly excluded because they are awkward.</p></div><div class="card"><span class="tick">&#10003;</span><h3>Design and process data protected</h3><p>Access limited to those who need it, movement of large volumes noticed, and leavers' access removed the day they leave.</p></div><div class="card"><span class="tick">&#10003;</span><h3>Backups that are tested</h3><p>Proven by restoring from them, including the systems that would stop production.</p></div><div class="card"><span class="tick">&#10003;</span><h3>Cover across shifts</h3><p>If you run two or three shifts, support has to match. One person does not cover that.</p></div><div class="card"><span class="tick">&#10003;</span><h3>One predictable bill</h3><p>Per user, per month, tools included, rolling monthly.</p></div></div>
+</div></section>
+<section class="blk dark"><div class="wrap">
+  <div class="label">How it works</div>
+  <h2 class="h2">How we start with a manufacturer</h2>
+  <div class="steps"><div class="step"><h3>Walk the floor, not just the server room</h3><p>Find what is actually connected, including the machines nobody lists as IT.</p></div><div class="step"><h3>Agree the maintenance calendar</h3><p>Your production schedule decides when we touch things. Written down, so it is not renegotiated every month.</p></div><div class="step"><h3>Secure the design library</h3><p>Access reviewed, protection in place, and alerting on bulk movement of files.</p></div><div class="step"><h3>Take over the day to day</h3><p>Support, patching, monitoring, vendor chasing. Onboarded within 30 days.</p></div></div>
+</div></section>
+<section class="blk alt"><div class="wrap"><div class="split">
+  <div><div class="label">What it's worth</div><h2 class="h2">What this is worth to a manufacturer</h2><p class="intro">A recurring saving is worth a multiple of itself when the business is valued.</p></div>
+  <ul class="vlist"><li><strong>Downtime avoided is margin kept</strong>An hour of stopped production has a known cost. Most prevention costs less than one.</li><li><strong>Recurring savings compound into value</strong>A five thousand a year saving on one system becomes roughly thirty thousand of enterprise value at a six times multiple, because recurring costs are capitalised when a business is sold.</li><li><strong>The IP stays yours</strong>Protection against both encryption and quiet copying, which is the version that does not make the news.</li><li><strong>It stands up to customer audits</strong>Larger customers increasingly audit their supply chain. Evidence of how you run security is a commercial asset.</li></ul>
+</div></div></section>
+<section class="blk"><div class="wrap">
+  <div class="label">Is it right for you?</div>
+  <h2 class="h2">An honest fit check</h2>
+  <div class="fit"><div class="yes"><h3>A good fit if</h3><ul><li>Y</li><li>o</li><li>u</li><li> </li><li>m</li><li>a</li><li>n</li><li>u</li><li>f</li><li>a</li><li>c</li><li>t</li><li>u</li><li>r</li><li>e</li><li> </li><li>o</li><li>r</li><li> </li><li>p</li><li>r</li><li>o</li><li>v</li><li>i</li><li>d</li><li>e</li><li> </li><li>e</li><li>n</li><li>g</li><li>i</li><li>n</li><li>e</li><li>e</li><li>r</li><li>i</li><li>n</li><li>g</li><li> </li><li>s</li><li>e</li><li>r</li><li>v</li><li>i</li><li>c</li><li>e</li><li>s</li><li>,</li><li> </li><li>w</li><li>i</li><li>t</li><li>h</li><li> </li><li>r</li><li>o</li><li>u</li><li>g</li><li>h</li><li>l</li><li>y</li><li> </li><li>1</li><li>0</li><li> </li><li>t</li><li>o</li><li> </li><li>1</li><li>5</li><li>0</li><li> </li><li>s</li><li>t</li><li>a</li><li>f</li><li>f</li><li>.</li></ul></div><div class="no"><h3>Probably not the right fit if</h3><ul><li>S</li><li>t</li><li>o</li><li>p</li><li>p</li><li>e</li><li>d</li><li> </li><li>p</li><li>r</li><li>o</li><li>d</li><li>u</li><li>c</li><li>t</li><li>i</li><li>o</li><li>n</li><li> </li><li>h</li><li>a</li><li>s</li><li> </li><li>a</li><li>n</li><li> </li><li>i</li><li>m</li><li>m</li><li>e</li><li>d</li><li>i</li><li>a</li><li>t</li><li>e</li><li> </li><li>a</li><li>n</li><li>d</li><li> </li><li>m</li><li>e</li><li>a</li><li>s</li><li>u</li><li>r</li><li>a</li><li>b</li><li>l</li><li>e</li><li> </li><li>c</li><li>o</li><li>s</li><li>t</li><li>.</li></ul></div></div>
+</div></section>
+<section class="blk alt"><div class="wrap"><div class="narrow">
+  <div class="label">Questions owners ask</div>
+  <h2 class="h2">Frequently asked questions</h2>
+  <div class="faq">
+<details><summary>Can you work around our production schedule?</summary><div class="a"><p>Yes, and it is the first thing we agree. Your production calendar decides maintenance windows, written down rather than renegotiated each month. Nothing on or near the line gets touched mid-run without agreement.</p></div></details>
+<details><summary>We have machines running older software that cannot be updated. Can you help?</summary><div class="a"><p>Yes, and that is normal in manufacturing. Where a system genuinely cannot be patched, the answer is to isolate it so a compromise elsewhere cannot reach it, control who can access it, and monitor it. Replacing it is rarely realistic and we will not pretend otherwise.</p></div></details>
+<details><summary>Is our intellectual property really at risk?</summary><div class="a"><p>Yes, in two ways that look very different. Ransomware encrypts it, which is loud and obvious. Someone copying the design library on their way to a competitor is quiet, and in our experience owners worry far less about it than they should.</p></div></details>
+<details><summary>Do you cover shift patterns?</summary><div class="a"><p>Yes. If you run two or three shifts, support needs to match, which is one of the clearest arguments for a team over a single hire. One person covers roughly a third of the week.</p></div></details>
+<details><summary>What does it cost?</summary><div class="a"><p>Per user, per month, tools included, depending on headcount and what is already in place. Twenty minutes gives an honest number. Contracts roll monthly.</p></div></details>
+</div>
+</div></div></section>
+<section class="blk"><div class="wrap">
+  <div class="label">Keep reading</div>
+  <h2 class="h2">Related services and guides</h2>
+  <div class="rel"><a class="rc" href="/outsourced-it"><span class="rk">Overview</span><span class="rt">Outsourced IT Services</span><span class="rd">What you get from an outsourced IT partner and what it costs.</span></a><a class="rc" href="/backup-dr"><span class="rk">Cyber security service</span><span class="rt">Backup and Disaster Recovery</span><span class="rd">Protected, tested backups and a plan to get the business running again.</span></a><a class="rc" href="/do-i-need-an-it-manager"><span class="rk">Decision guide</span><span class="rt">Do You Need an IT Manager?</span><span class="rd">What an IT manager really costs, and when hiring one is the right call.</span></a></div>
+</div></section>
+<section class="cta-band"><div class="wrap">
+  <h2>Twenty minutes on what would stop your line</h2>
+  <p>An honest read on where production is exposed and what to fix first.</p>
+  <div class="actions"><a class="btn green" href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" rel="noopener">Book a 20-minute call</a></div>
+</div></section>
+</main>
+<!-- shell:footer -->
+<footer>
+  <div class="footer-inner">
+    <div><a href="/" class="footer-logo">Dividend <span>IT</span></a>
+    <div class="footer-tagline">Outsourced Cybersecurity &amp; IT — For Business Owners</div></div>
+    <div class="footer-links">
+      <a href="/who-we-serve">Who We Serve</a>
+      <a href="/services">Services</a>
+      <a href="/guide">Owner&rsquo;s Guide</a>
+      <a href="/insights">Insights</a>
+      <a href="/cost-calculator">Cost Calculator</a>
+      <a href="/value-calculator">Value Calculator</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 Dividend IT. All rights reserved.</div>
+  </div>
+</footer>
+<!-- /shell:footer -->
+<script>
+(function(){
+  if (typeof trackEvent !== 'function') return;
+  var hit = {};
+  window.addEventListener('scroll', function(){
+    var d = document.documentElement;
+    var h = Math.max(d.scrollHeight, document.body.scrollHeight) - window.innerHeight;
+    if (h <= 0) return;
+    var pct = (window.scrollY / h) * 100;
+    [50, 75, 90].forEach(function(m){
+      if (pct >= m && !hit[m]) {
+        hit[m] = true;
+        trackEvent('scroll_depth', { page_id: location.pathname, percent: m });
+      }
+    });
+  }, { passive: true });
+})();
+</script>
+<!-- shell:scripts -->
+<script src="/assets/site.js"></script>
+<!-- /shell:scripts -->
+</body>
+</html>

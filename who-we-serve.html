@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Self-exclusion. Visit any page with ?notme=1 to stop this browser being
+       measured, ?notme=0 to start again. Survives IP and country changes. -->
+  <script>
+    (function(){
+      try {
+        var q = new URLSearchParams(location.search);
+        if (q.has('notme')) {
+          if (q.get('notme') === '0') localStorage.removeItem('ddit_optout');
+          else localStorage.setItem('ddit_optout', '1');
+        }
+        if (localStorage.getItem('ddit_optout') === '1') {
+          window['ga-disable-G-NRJXMHZ0N7'] = true;
+          console.log('Dividend IT: analytics off on this browser. Use ?notme=0 to re-enable.');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRJXMHZ0N7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NRJXMHZ0N7');
+    // Same helper the hand-built pages use, so event names stay consistent.
+    function trackEvent(name, params){ try { gtag('event', name, params || {}); } catch(e){} }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who We Serve: Industries We Support</title>
+  <meta name="description" content="The industries Dividend IT works in, from distribution and manufacturing to financial services, medical and FMCG, and what is different about IT in each." />
+  <link rel="canonical" href="https://dividendit.com/who-we-serve" />
+  <meta property="og:title" content="Who We Serve: Industries We Support" />
+  <meta property="og:description" content="The industries Dividend IT works in, from distribution and manufacturing to financial services, medical and FMCG, and what is different about IT in each." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dividendit.com/who-we-serve" />
+  <meta property="og:image" content="https://dividendit.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232d6a4f'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' font-weight='bold' fill='%23f8f8f6' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/assets/page.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Who we serve", "url": "https://dividendit.com/who-we-serve", "description": "The industries Dividend IT works in, from distribution and manufacturing to financial services, medical and FMCG, and what is different about IT in each."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dividendit.com/"}, {"@type": "ListItem", "position": 2, "name": "Who We Serve", "item": "https://dividendit.com/who-we-serve"}]}</script>
+<!-- shell:head -->
+<link rel="stylesheet" href="/assets/site.css">
+<!-- /shell:head -->
+</head>
+<body>
+<!-- shell:nav -->
+<nav>
+  <div class="nav-inner">
+    <div class="brand-lockup"><a href="/" class="nav-logo">Dividend <span>IT</span></a><div class="brand-tag">Outsourced Cybersecurity &amp; IT</div></div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+
+      <!-- Solutions mega-menu -->
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">What We Do <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <div class="nav-mega-menu">
+
+          <!-- Left col: Cyber Security -->
+          <div class="nav-mega-col">
+            <a href="/outsourced-cyber" class="nav-mega-label">Outsourced Cyber Security</a>
+            <ul>
+              <li><a href="/outsourced-cyber">Overview</a></li>
+              <li><a href="/fully-managed-cyber">Fully Managed Cyber Security</a></li>
+              <li><a href="/co-managed-cyber">Co-Managed Cyber Security</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Services</span>
+            <ul>
+              <li><a href="/iam">Identity &amp; Access Management (IAM)</a></li>
+              <li><a href="/endpoint-security">Endpoint Security</a></li>
+              <li><a href="/network-security">Network Security</a></li>
+              <li><a href="/detection-response">Detection &amp; Response</a></li>
+              <li><a href="/backup-dr">Recover (Backup &amp; DR)</a></li>
+              <li><a href="/governance-cyber">Governance</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Advisory</span>
+            <ul>
+              <li><a href="/cyber-risk-assessment">Cyber Risk Assessment</a></li>
+              <li><a href="/pen-testing">Pen Testing</a></li>
+              <li><a href="/ma-cyber-due-diligence">M&amp;A Cyber Due Diligence</a></li>
+            </ul>
+          </div>
+
+          <!-- Middle-right col: Outsourced IT -->
+          <div class="nav-mega-col nav-mega-col--right">
+            <a href="/outsourced-it" class="nav-mega-label">Outsourced IT</a>
+            <ul>
+              <li><a href="/outsourced-it">Overview</a></li>
+              <li><a href="/fully-managed-it">Fully Managed IT Support</a></li>
+              <li><a href="/co-managed-it">Co-Managed IT Support</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Services</span>
+            <ul>
+              <li><a href="/service-desk">Service Desk &amp; Admin</a></li>
+              <li><a href="/proactive-pc">Proactive PC Support</a></li>
+              <li><a href="/proactive-server">Proactive Server Support</a></li>
+              <li><a href="/network-wifi">Seamless Network</a></li>
+              <li><a href="/wifi">Seamless WiFi</a></li>
+              <li><a href="/it-procurement">IT Procurement</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Advisory</span>
+            <ul>
+              <li><a href="/it-strategy">IT Strategy</a></li>
+              <li><a href="/cio-as-a-service">CIO as a Service</a></li>
+              <li><a href="/it-consulting">IT Consulting &amp; Projects</a></li>
+              <li><a href="/ma-it-strategy">M&amp;A IT Strategy</a></li>
+              <li><a href="/ma-it-due-diligence">M&amp;A Due Diligence</a></li>
+            </ul>
+          </div>
+
+          <!-- Far-right col: Communication & Collaboration -->
+          <div class="nav-mega-col nav-mega-col--right">
+            <a href="/communication-collaboration" class="nav-mega-label">Communication &amp; Collaboration</a>
+            <ul>
+              <li><a href="/communication-collaboration">Overview</a></li>
+              <li><a href="/microsoft-365">Microsoft 365</a></li>
+              <li><a href="/public-cloud">Public Cloud</a></li>
+              <li><a href="/private-cloud">Private Cloud</a></li>
+              <li><a href="/telephony">Telephony</a></li>
+              <li><a href="/crm">CRM</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </li>
+
+      <li><a href="/who-we-serve">Who We Serve</a></li>
+      <li><a href="/where-we-work">Where We Work</a></li>
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">Tools <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <ul class="nav-dd-menu">
+          <li><a href="/cost-calculator">Cost Calculator</a></li>
+          <li><a href="/value-calculator">Value Calculator</a></li>
+        </ul>
+      </li>
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">Insights <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <ul class="nav-dd-menu">
+          <li><a href="/guide">Owner&rsquo;s Guide to Outsourced IT</a></li>
+          <li><a href="/been-hacked-first-24-hours">Been Hacked? The First 24 Hours</a></li>
+          <li><a href="/invoice-fraud">Invoice Fraud Explained</a></li>
+          <li><a href="/insights">All Insights</a></li>
+          <li><a href="/#tools">Calculators</a></li>
+          <li><a href="/#about">About</a></li>
+        </ul>
+      </li>
+      <li><a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="nav-cta">Get a Straight Answer</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- /shell:nav -->
+<main>
+<section class="ar-hero"><div class="wrap">
+  <div class="crumbs" role="navigation" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span>Who We Serve</div>
+  <div class="label">Who We Serve</div>
+  <h1>Who we <em>serve</em></h1>
+  <p class="ar-sub">The argument for outsourcing IT is not the same in a factory as it is in a wealth management firm. These pages say what is actually different about each sector rather than repeating the same promises.</p>
+</div></section>
+<section class="blk alt"><div class="wrap">
+  <h2 class="h2">Where technology carries the product</h2><p class="intro">Businesses whose system of delivery stops when IT stops.</p>
+  <div class="hub"><a href="/it-support-distribution" class="feature"><span class="k">Industry</span><span class="t">Distribution and Wholesale</span><span class="d">For distributors where an outage means orders are not placed and stock does not move.</span><span class="r">Distribution</span></a><a href="/it-support-manufacturing"><span class="k">Industry</span><span class="t">Manufacturing and Engineering</span><span class="d">For manufacturers where downtime is measured in lost production, not lost email.</span><span class="r">Manufacturing</span></a><a href="/it-support-fmcg"><span class="k">Industry</span><span class="t">FMCG and Food Producers</span><span class="d">For FMCG brands and food producers supplying retail, where peaks are unforgiving.</span><span class="r">FMCG & Food</span></a></div>
+</div></section>
+<section class="blk"><div class="wrap">
+  <h2 class="h2">Where technology carries the trust</h2><p class="intro">Businesses where a breach damages confidence before it damages operations.</p>
+  <div class="hub"><a href="/it-support-financial-services" class="feature"><span class="k">Industry</span><span class="t">Financial Services and Wealth Management</span><span class="d">For wealth, insurance and financial firms where IT should be invisible and security is client trust.</span><span class="r">Financial & Wealth</span></a><a href="/it-support-medical"><span class="k">Industry</span><span class="t">Medical, Healthcare and Life Sciences</span><span class="d">For medical practices, device distributors and life sciences suppliers.</span><span class="r">Medical & Life Sciences</span></a></div>
+</div></section>
+<section class="cta-band"><div class="wrap">
+  <h2>Rather talk it through?</h2>
+  <p>Twenty minutes, no jargon, no obligation. Bring the question that is on your mind.</p>
+  <div class="actions"><a class="btn green" href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" rel="noopener">Book a 20-minute call</a></div>
+</div></section>
+</main>
+<!-- shell:footer -->
+<footer>
+  <div class="footer-inner">
+    <div><a href="/" class="footer-logo">Dividend <span>IT</span></a>
+    <div class="footer-tagline">Outsourced Cybersecurity &amp; IT — For Business Owners</div></div>
+    <div class="footer-links">
+      <a href="/who-we-serve">Who We Serve</a>
+      <a href="/services">Services</a>
+      <a href="/guide">Owner&rsquo;s Guide</a>
+      <a href="/insights">Insights</a>
+      <a href="/cost-calculator">Cost Calculator</a>
+      <a href="/value-calculator">Value Calculator</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 Dividend IT. All rights reserved.</div>
+  </div>
+</footer>
+<!-- /shell:footer -->
+<script>
+(function(){
+  if (typeof trackEvent !== 'function') return;
+  var hit = {};
+  window.addEventListener('scroll', function(){
+    var d = document.documentElement;
+    var h = Math.max(d.scrollHeight, document.body.scrollHeight) - window.innerHeight;
+    if (h <= 0) return;
+    var pct = (window.scrollY / h) * 100;
+    [50, 75, 90].forEach(function(m){
+      if (pct >= m && !hit[m]) {
+        hit[m] = true;
+        trackEvent('scroll_depth', { page_id: location.pathname, percent: m });
+      }
+    });
+  }, { passive: true });
+})();
+</script>
+<!-- shell:scripts -->
+<script src="/assets/site.js"></script>
+<!-- /shell:scripts -->
+</body>
+</html>
