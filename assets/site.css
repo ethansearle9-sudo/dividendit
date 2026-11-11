@@ -37,10 +37,14 @@ nav {
     }
 .nav-logo {
       font-family: var(--font-display);
-      font-size: 1.35rem; color: var(--text-dark);
+      font-size: 1.7rem; color: var(--text-dark);
       text-decoration: none; letter-spacing: -0.01em;
     }
 .nav-logo span { color: var(--accent-green); }
+.brand-lockup { display: inline-flex; flex-direction: column; align-items: stretch; width: max-content; line-height: 1; }
+.brand-lockup .nav-logo, .brand-lockup .footer-logo { display: block; width: max-content; line-height: 1.05; }
+.brand-tag { width: 0; min-width: 100%; white-space: nowrap; font-family: var(--font-body); font-weight: 500; font-size: 0.4375rem; letter-spacing: 0; text-transform: uppercase; color: var(--text-muted); text-align: justify; text-align-last: justify; margin-top: 4px; line-height: 1; }
+.brand-lockup--footer .brand-tag { color: rgba(255,255,255,0.55); }
 .nav-links { display: flex; align-items: center; gap: 1.1rem; list-style: none; margin-left: 2.5rem; }
 .nav-links > li:last-child { margin-left: auto; }
 .nav-links > li { position: relative; }
@@ -147,7 +151,7 @@ footer { background: var(--text-dark); border-top: 1px solid rgba(255,255,255,0.
       display: flex; justify-content: space-between;
       align-items: center; flex-wrap: wrap; gap: 1.5rem;
     }
-.footer-logo { font-family: var(--font-display); font-size: 1.15rem; color: var(--white); text-decoration: none; }
+.footer-logo { font-family: var(--font-display); font-size: 1.7rem; color: var(--white); text-decoration: none; }
 .footer-logo span { color: var(--accent-green); }
 .footer-tagline { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-top: 0.25rem; }
 .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }

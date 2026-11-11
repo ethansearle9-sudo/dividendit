@@ -1279,7 +1279,7 @@
 
     .sp-hero-sub { font-size: 1.15rem; line-height: 1.7; color: var(--text-body); max-width: 660px; margin: 0 auto 2.75rem; }
 
-    .sp-hero-actions { display: flex; gap: 2.5rem; flex-wrap: wrap; margin-bottom: 0; justify-content: center; align-items: flex-start; }
+    .sp-hero-actions { display: flex; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 0; justify-content: center; align-items: flex-start; }
 
     .sp-cta-block { display: flex; flex-direction: column; align-items: center; gap: 0.85rem; max-width: 300px; }
 
@@ -1698,7 +1698,7 @@
           {
             "@type": "Question",
             "name": "Are there long-term contracts?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No lock-in beyond a 3-month onboarding period. Dividend IT keeps clients because the service is good — not because they're contractually trapped. Annual contracts are available with a discount if you prefer that structure." }
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Contracts roll monthly, so there is no lock-in. Dividend IT keeps clients because the service is good, not because they are contractually trapped. Annual contracts are available with a discount if you prefer that structure." }
           },
           {
             "@type": "Question",
@@ -1723,7 +1723,7 @@
 <!-- shell:nav -->
 <nav>
   <div class="nav-inner">
-    <div style="display:flex;flex-direction:column;gap:2px;"><a href="/" class="nav-logo">Dividend<span>IT</span></a><div style="font-size:0.65rem;color:var(--text-muted);letter-spacing:0.02em;font-family:var(--font-body);font-weight:400;line-height:1;">Outsourced Cybersecurity &amp; IT</div></div>
+    <div class="brand-lockup"><a href="/" class="nav-logo">Dividend <span>IT</span></a><div class="brand-tag">Outsourced Cybersecurity &amp; IT</div></div>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <ul class="nav-links">
 
@@ -1839,12 +1839,10 @@
       <p class="sp-hero-sub">Most owners are trapped in the day-to-day — with IT that's a cost and a risk instead of an engine. We change that: seamlessly secure IT that frees your time, sharpens your edge, and builds what your business is worth.</p>
       <div class="sp-hero-actions">
         <div class="sp-cta-block">
-          <a href="/guide" class="btn-primary btn-primary--green" onclick="trackEvent('guide_open',{location:'hero'})">Read the Free Guide</a>
-          <p class="sp-cta-caption">The Owner's Guide to Outsourced IT Support That Builds Value. Ten chapters, free, no sign-up.</p>
+          <a href="/guide" class="btn-primary btn-primary--green" onclick="trackEvent('guide_open',{location:'hero'})">Read the Owner&rsquo;s Guide</a>
         </div>
         <div class="sp-cta-block">
           <a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{location:'hero'})">Get a Straight Answer</a>
-          <p class="sp-cta-caption">Ten minutes on a call. I'll tell you honestly whether your IT is driving value — or costing you.</p>
         </div>
       </div>
     </div>
@@ -2186,7 +2184,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this,'contracts')">Are there long-term contracts? <span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>No lock-in beyond a 3-month onboarding period. We keep clients because the service is good — not because they're contractually trapped. Annual contracts are available with a discount if you prefer that structure.</p></div>
+        <div class="faq-a"><p>No. Contracts roll monthly, so there is no lock-in. We keep clients because the service is good — not because they&rsquo;re contractually trapped. Annual contracts are available with a discount if you prefer that structure.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this,'different')">How is Dividend IT different from our current IT provider? <span class="faq-icon">+</span></button>
@@ -2297,8 +2295,7 @@
 <!-- shell:footer -->
 <footer>
   <div class="footer-inner">
-    <div><a href="/" class="footer-logo">Dividend<span>IT</span></a>
-    <div class="footer-tagline">Outsourced Cybersecurity &amp; IT — For Business Owners</div></div>
+    <div><div class="brand-lockup brand-lockup--footer"><a href="/" class="footer-logo">Dividend <span>IT</span></a><div class="brand-tag">Outsourced Cybersecurity &amp; IT</div></div></div>
     <div class="footer-links">
       <a href="/#who-we-serve">Who We Serve</a>
       <a href="/services">Services</a>
