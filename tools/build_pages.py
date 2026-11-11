@@ -184,12 +184,29 @@ def cta_band(h, p, secondary=None):
 '''
 
 
+AREA_SERVED = [
+    {'@type': 'Country', 'name': 'Ireland'},
+    {'@type': 'City', 'name': 'Dublin'},
+    {'@type': 'Country', 'name': 'United Kingdom'},
+]
+
+# Service-area business: no street address, but Google still needs to know
+# where we operate. Linked by @id to the Organization node on the homepage.
+PROVIDER = {
+    '@type': ['Organization', 'ProfessionalService'],
+    '@id': SITE + '/#org',
+    'name': 'Dividend IT',
+    'url': SITE + '/',
+    'areaServed': AREA_SERVED,
+}
+
+
 def build_service(p, cards):
     trail = p['trail']
     schema = [
         {'@context': 'https://schema.org', '@type': 'Service', 'name': p['service_name'], 'serviceType': p['service_name'],
          'description': p['meta'], 'url': SITE + '/' + p['slug'],
-         'provider': {'@type': 'Organization', 'name': 'Dividend IT', 'url': SITE + '/'},
+         'provider': PROVIDER, 'areaServed': AREA_SERVED,
          'audience': {'@type': 'BusinessAudience', 'name': 'Business owners and shareholders'}},
         crumbs_schema(trail), faq_schema(p['faqs'])]
     o = [head(p, schema)]
@@ -274,7 +291,7 @@ def build_article(p, cards):
     schema = [
         {'@context': 'https://schema.org', '@type': 'Article', 'headline': strip(p['h1']), 'description': p['meta'],
          'author': {'@type': 'Person', 'name': 'Ethan Searle', 'jobTitle': 'Founder, Dividend IT'},
-         'publisher': {'@type': 'Organization', 'name': 'Dividend IT', 'url': SITE + '/'},
+         'publisher': PROVIDER,
          'datePublished': p.get('published', TODAY), 'dateModified': TODAY, 'mainEntityOfPage': url, 'url': url,
          'image': SITE + '/og-image.png'},
         crumbs_schema(p['trail'])]

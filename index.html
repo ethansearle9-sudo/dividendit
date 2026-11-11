@@ -1667,13 +1667,18 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": ["Organization", "ProfessionalService"],
         "@id": "https://dividendit.com/#org",
         "name": "Dividend IT",
         "url": "https://dividendit.com/",
         "description": "Outsourced cybersecurity & IT for business owners and shareholders. EBITDA-aligned technology that protects, sharpens and builds enterprise value.",
         "email": "hello@dividendit.com",
-        "areaServed": ["IE", "GB", "ZA"],
+        "areaServed": [
+          { "@type": "Country", "name": "Ireland" },
+          { "@type": "City", "name": "Dublin" },
+          { "@type": "Country", "name": "United Kingdom" },
+          { "@type": "Country", "name": "South Africa" }
+        ],
         "founder": { "@type": "Person", "name": "Ethan Searle" }
       },
       {
@@ -1688,7 +1693,12 @@
         "@id": "https://dividendit.com/#service",
         "serviceType": "Outsourced IT & Cybersecurity",
         "provider": { "@id": "https://dividendit.com/#org" },
-        "areaServed": ["IE", "GB", "ZA"],
+        "areaServed": [
+          { "@type": "Country", "name": "Ireland" },
+          { "@type": "City", "name": "Dublin" },
+          { "@type": "Country", "name": "United Kingdom" },
+          { "@type": "Country", "name": "South Africa" }
+        ],
         "audience": { "@type": "BusinessAudience", "name": "Business owners and shareholders, 10–150 users" },
         "description": "Fully managed and co-managed outsourced IT support and cybersecurity: 24/7 monitoring, remediation and support, EDR/MDR, backup & disaster recovery, IT strategy and vCIO — aligned to EBITDA and enterprise value.",
         "offers": { "@type": "AggregateOffer", "priceCurrency": "EUR", "lowPrice": "75", "highPrice": "120", "offerCount": "3", "description": "Per user per month, all-inclusive, monthly rolling" }
