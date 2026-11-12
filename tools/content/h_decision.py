@@ -134,6 +134,23 @@ dict(
 
 PAGES.append(dict(
     kind='service', slug='outsourced-it-cost',
+    comparison=dict(
+        label='Side by side',
+        heading='What to check line by line before comparing two quotes',
+        intro='Two per-user prices are only comparable once you know what each one contains. These are the lines that usually explain the gap.',
+        caption='What a complete per-user price contains, against what is commonly charged separately.',
+        row_header='What you are checking',
+        columns=['In a complete per-user price', 'Often charged separately'],
+        rows=[
+            ['Microsoft 365 licensing', 'Included and itemised, so you can see it.', 'Billed on top. The gap between a quote that includes it and one that does not is often around a third.'],
+            ['Endpoint and email security', 'Included in the per-user price.', 'An add-on priced per tool, which adds up quickly.'],
+            ['Backup', 'Microsoft 365, devices and servers all covered.', 'Priced per device or per gigabyte, so it grows without warning.'],
+            ['Monitoring and patching', 'Included.', 'Only in a higher tier.'],
+            ['Onboarding', 'A one-off fee agreed up front.', 'Billed hourly as work is discovered.'],
+            ['Out-of-hours and on-site visits', 'Defined in the agreement.', 'Charged at an hourly rate.'],
+            ['Projects, moves and migrations', 'Quoted separately, by agreement.', 'Out of scope and open-ended.'],
+        ],
+        note='A lower headline price is not automatically the cheaper deal. Price the same scope both ways before you decide.'),
     pillar_note='Price only means something next to what you get for it. That is set out on our <a href="/outsourced-it">outsourced IT services</a> page.',
     service_name='What Outsourced IT Costs',
     card_kind='Decision guide', card_title='What Outsourced IT Costs',

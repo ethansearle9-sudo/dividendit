@@ -190,9 +190,23 @@ def crumbs_schema(trail):
     return {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': items}
 
 
+def _answer_text(a):
+    """Plain text for the FAQPage schema.
+
+    An answer may contain a comparison table. strip() alone would jam the
+    cells together ("AntivirusEDRKnown files only..."), so rows and cells get
+    separators first and the schema answer stays readable to an answer engine.
+    """
+    s = ' '.join(a if isinstance(a, list) else [a])
+    s = re.sub(r'</t[dh]>\s*', ' — ', s)
+    s = re.sub(r'</tr>\s*', '. ', s)
+    s = re.sub(r'\s*—\s*\.', '.', s)
+    return re.sub(r'\s+', ' ', strip(s)).strip()
+
+
 def faq_schema(faqs):
     return {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
-        {'@type': 'Question', 'name': strip(q), 'acceptedAnswer': {'@type': 'Answer', 'text': strip(' '.join(a if isinstance(a, list) else [a]))}}
+        {'@type': 'Question', 'name': strip(q), 'acceptedAnswer': {'@type': 'Answer', 'text': _answer_text(a)}}
         for q, a in faqs]}
 
 
@@ -205,7 +219,10 @@ def faq_html(faqs):
         # so AI systems get multiple extraction points per page; a bare <summary>
         # carries no heading weight. One heading element inside <summary> is
         # valid HTML, and .faq summary h3 in page.css keeps it looking identical.
-        out.append(f'<details><summary><h3>{q}</h3></summary><div class="a">' + ''.join(f'<p>{x}</p>' for x in paras) + '</div></details>')
+        # A block that is already markup (a comparison table) is emitted as-is;
+        # everything else is a paragraph.
+        body = ''.join(x if x.lstrip().startswith('<') else f'<p>{x}</p>' for x in paras)
+        out.append(f'<details><summary><h3>{q}</h3></summary><div class="a">{body}</div></details>')
     out.append('</div>')
     return '\n'.join(out)
 

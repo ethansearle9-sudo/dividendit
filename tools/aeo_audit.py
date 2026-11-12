@@ -41,9 +41,25 @@ def body_only(h):
 
 # Heading words that mean the page actually contrasts options, which is the
 # condition HubSpot attaches to the comparison-table item.
-COMPARATIVE = (' vs ', ' vs.', 'versus', 'compare', 'comparison', 'compared',
-               'difference between', 'which is better', 'alternative',
-               'instead of', 'or rent', 'or buy', 'in-house or')
+COMPARATIVE = (' vs ', ' vs.', 'versus', 'comparison', 'compared with',
+               'compared to', 'difference between', 'which is better',
+               'or rent', 'or buy', 'in-house or')
+# Deliberately NOT here: a bare "compare", "alternative" or "instead of".
+# Those matched a process step named "Compare" and a benefit card reading
+# "A team instead of a person" — neither is a comparison the reader is
+# making, and a table bolted onto either would be filler.
+
+# Pages whose heading reads as a comparison but whose content concludes the
+# two terms mean the same thing. A table of "these are synonyms" is filler,
+# which is the opposite of what the checklist asks for. Judged once, recorded
+# here with the reason, so the audit stops reporting it as a gap.
+NO_TABLE = {
+    'fully-managed-it':    'FAQ concludes managed IT and outsourced IT support are the same thing',
+    'service-desk':        'FAQ concludes service desk and help desk mean the same thing',
+    'cio-as-a-service':    'FAQ concludes virtual CIO and fractional CIO mean the same thing',
+    'ma-it-due-diligence': 'FAQ concludes IT and technology due diligence are the same exercise',
+    'guide':               'own vs rent is tabled in full on /own-vs-rent-compute, which this section links to',
+}
 
 # Pages with no audience content: the editorial checks do not apply.
 UTILITY = {'privacy', 'terms', 'cookie-policy', 'thank-you', '404'}
@@ -82,7 +98,7 @@ def audit_page(slug, html):
     # pushes tables onto pages that compare nothing. A page counts as
     # comparative only if its own headings say so.
     heads = ' '.join([h1] + h2s + h3s).lower() if (h1 or h2s or h3s) else ''
-    comparative = any(t in heads for t in COMPARATIVE)
+    comparative = any(t in heads for t in COMPARATIVE) and slug not in NO_TABLE
     # Utility pages (privacy, terms) carry no audience content, so the
     # editorial checks do not apply to them.
     utility = slug in UTILITY
