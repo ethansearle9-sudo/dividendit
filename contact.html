@@ -29,9 +29,23 @@
           if (q.get('notme') === '0') localStorage.removeItem('ddit_optout');
           else localStorage.setItem('ddit_optout', '1');
         }
-        if (localStorage.getItem('ddit_optout') === '1') {
-          window['ga-disable-G-NRJXMHZ0N7'] = true;
-          console.log('Dividend IT: analytics off on this browser. Use ?notme=0 to re-enable.');
+        var off = localStorage.getItem('ddit_optout') === '1';
+        if (off) window['ga-disable-G-NRJXMHZ0N7'] = true;
+        if (q.has('notme')) {
+          document.addEventListener('DOMContentLoaded', function(){
+            var n = document.createElement('div');
+            n.setAttribute('role', 'status');
+            n.style.cssText = 'position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:99999;'
+              + 'max-width:92vw;padding:14px 18px;border-radius:10px;font:600 15px/1.4 system-ui,sans-serif;'
+              + 'color:#fff;box-shadow:0 6px 24px rgba(0,0,0,.28);text-align:center;'
+              + 'background:' + (off ? '#2d6a4f' : '#8a1c1c');
+            n.textContent = off
+              ? 'Analytics OFF on this browser. Your visits are no longer counted.'
+              : 'Analytics ON for this browser. Your visits are being counted again.';
+            document.body.appendChild(n);
+            setTimeout(function(){ n.style.transition = 'opacity .6s'; n.style.opacity = '0'; }, 6000);
+            setTimeout(function(){ n.remove(); }, 6800);
+          });
         }
       } catch (e) {}
     })();
