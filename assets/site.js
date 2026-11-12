@@ -25,6 +25,61 @@
     toggle.setAttribute('aria-expanded', links.classList.contains('open'));
   });
 })();
+/* dd-convtrack-v1 — conversion tracking, delegated.
+   Every Calendly and mailto link on the site fires an event, including links
+   added later. Links that already carry an inline trackEvent handler keep it
+   (their hand-written `location` label is better) and are skipped here, so
+   nothing is counted twice. */
+(function(){
+  function clean(t){ return (t || '').replace(/\s+/g, ' ').trim().slice(0, 48); }
+  function label(el){
+    /* A readable location in GA4, so a click can be traced to a place on the page. */
+    if (el.closest('nav, .nav-links, .nav-cta, header')) return 'nav';
+    if (el.closest('footer')) return 'footer';
+    var s = el.closest('section, .cta-band, .xlinks, .blk');
+    if (s) {
+      if (s.id) return s.id;
+      var c = (s.className || '').toString().trim().split(/\s+/)[0];
+      var h = s.querySelector('h1, h2, h3');
+      if (h && clean(h.textContent)) return (c ? c + ':' : '') + clean(h.textContent);
+      if (c) return c;
+    }
+    /* No section wrapper: use the nearest heading above the link. */
+    var all = Array.prototype.slice.call(document.querySelectorAll('h1,h2,h3,a'));
+    var i = all.indexOf(el);
+    for (var j = i - 1; j >= 0; j--) {
+      if (/^H[123]$/.test(all[j].tagName) && clean(all[j].textContent)) return clean(all[j].textContent);
+    }
+    return 'body';
+  }
+  function pageId(){
+    var p = location.pathname.replace(/\.html$/, '').replace(/^\//, '');
+    return p === '' ? 'home' : p;
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    /* Already instrumented inline — leave it alone, don't double-count. */
+    var inline = a.getAttribute('onclick') || '';
+    try {
+      if (href.indexOf('calendly.com') !== -1) {
+        if (inline.indexOf('book_call_click') !== -1) return;
+        gtag('event', 'book_call_click', {
+          page_id: pageId(),
+          location: label(a),
+          button_label: (a.textContent || '').trim().slice(0, 48)
+        });
+      } else if (href.slice(0, 7) === 'mailto:') {
+        if (inline.indexOf('trackEvent') !== -1) return;
+        gtag('event', 'email_click', {
+          page_id: pageId(),
+          location: label(a)
+        });
+      }
+    } catch (err) {}
+  }, true);
+})();
 /*dd-drill-v1*/
 (function(){
   function isMobile(){ return window.innerWidth <= 960; }
