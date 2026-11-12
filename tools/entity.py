@@ -37,7 +37,7 @@ LOCATIONS = {
 }
 
 # The registered/primary contact point, used on the Organization node.
-PRIMARY = {'phone': '', 'email': 'hello@dividendit.com',
+PRIMARY = {'phone': '', 'email': 'ethan@dividendit.com',
            'street': '', 'city': '', 'region': '', 'postcode': '', 'country': 'IE'}
 
 

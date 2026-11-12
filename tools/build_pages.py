@@ -363,6 +363,14 @@ def build_hub(p, cards):
   <p class="ar-sub">{p['sub']}</p>
 </div></section>
 ''')
+    # Pillar body: a hub is the page that has to rank for the head term, so it
+    # carries real prose, not just tiles. Sections render before the groups.
+    for bi, (bh, paras) in enumerate(p.get('body', [])):
+        o.append(f'''<section class="blk{' alt' if bi % 2 else ''}"><div class="wrap"><div class="narrow prose">
+  <h2 class="h2">{bh}</h2>
+  {''.join(f'<p>{x}</p>' for x in paras)}
+</div></div></section>
+''')
     for gi, (gh, gp, items) in enumerate(p['groups']):
         tiles = []
         for slug, read, feature in items:

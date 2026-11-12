@@ -432,6 +432,21 @@ PAGES.append(dict(
     h1='Where we work: IT support Ireland, UK and South Africa',
     sub='We work remotely first, because it is faster. But the argument for outsourcing IT is not the same everywhere, so each place gets an honest page of its own rather than the same text with the name swapped.',
     trail=[('Where We Work', '/where-we-work')],
+    body=[
+        ("What outsourced IT support actually means",
+         ["Outsourced IT support means a business hands its technology to an outside team instead of employing people to run it. In practice that covers the service desk your staff ring when something breaks, the patching and monitoring that stop most things breaking in the first place, the security controls that keep an intruder out, and someone senior who owns the plan rather than just the tickets.",
+          "For a business of 10 to 150 people that is usually the only way to get the full range. One IT manager cannot be a security specialist, a network engineer, a Microsoft 365 administrator and a strategist, and cannot be on call every day of the year. A team can.",
+          "We work across Ireland, the United Kingdom and South Africa. The service itself does not change between them. The argument for buying it does, which is why each place has its own page rather than the same text with the name swapped."]),
+        ("What is the same wherever you are",
+         ["The standard does not move. Every client gets the same service desk, the same monitoring, the same security baseline aligned to the NIST Cybersecurity Framework, and the same monthly rhythm of reporting and review. Contracts roll monthly everywhere, so you are never locked in anywhere.",
+          "Pricing works the same way too: per user, per month, with the tools included rather than billed as extras. What moves the number is how many people you have and how much is already in place, not which country you are in.",
+          "We are remote first because it is faster. Most issues are resolved before anyone could have reached a car park. When a job genuinely needs hands on hardware, we are on site."]),
+        ("What changes from one market to another",
+         ["In Dublin the problem is staffing. You are bidding for IT people against multinationals who can pay more than the role is worth to you, so building a team in-house is a fight you lose slowly.",
+          "In Limerick and the Mid-West the bench is shallower, and in Galway the medtech cluster pushes supplier questionnaires down the chain onto companies who have never had to answer them. In Clare the honest problem is that cover often depends on one person being free.",
+          "In Winchester and across Hampshire the question is paying London rates for provincial service. In Johannesburg it is power, connectivity failover and a skills market that keeps losing people to emigration.",
+          "Same service, different reason for buying it. The local pages below set out each one plainly."]),
+    ],
     groups=[
         ('Ireland', 'Our home market, and where most of our work is.', [
             ('it-support-dublin', 'Dublin', True),
