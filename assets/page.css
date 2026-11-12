@@ -203,3 +203,14 @@ table.cmp td:first-child { font-weight: 600; color: var(--text-dark); }
 .byline-bio { font-size: 0.9rem; color: #5d5a55; line-height: 1.6; margin: 0 0 0.6rem; }
 .byline-dates { font-size: 0.82rem; color: #7a766f; margin: 0; }
 @media (max-width: 700px) { .byline { padding: 1.75rem 1rem; } }
+
+/* Comparison tables — the most-cited content format in answer engines. */
+.cmp-wrap { overflow-x: auto; margin: 1.5rem 0 0; -webkit-overflow-scrolling: touch; }
+.cmp { width: 100%; border-collapse: collapse; font-size: 0.94rem; background: var(--white); }
+.cmp caption { caption-side: top; text-align: left; font-size: 0.82rem; color: #7a766f; padding: 0 0 0.6rem; }
+.cmp th, .cmp td { border: 1px solid var(--border); padding: 0.8rem 0.9rem; text-align: left; vertical-align: top; line-height: 1.5; }
+.cmp thead th { background: var(--accent-green); color: var(--white); font-weight: 600; font-size: 0.88rem; }
+.cmp tbody th { background: var(--off-white, #faf9f7); font-weight: 600; color: var(--text-dark); width: 30%; }
+.cmp tbody tr:nth-child(even) td { background: #fcfcfb; }
+.cmp-note { font-size: 0.86rem; color: #5d5a55; margin-top: 0.9rem; line-height: 1.6; }
+@media (max-width: 700px) { .cmp { font-size: 0.86rem; min-width: 520px; } .cmp tbody th { width: 34%; } }

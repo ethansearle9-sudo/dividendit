@@ -283,6 +283,28 @@ def build_service(p, cards):
   <div class="grid3">{cards_html}</div>
 </div></section>
 ''')
+    # comparison table. Comparison content is the single most-cited format in
+    # answer engines (95% on ChatGPT per HubSpot's 2026 citation study), and
+    # the AEO checklist asks for labelled, extractable tables.
+    if p.get('comparison'):
+        c = p['comparison']
+        head_cells = ''.join(f'<th scope="col">{e(x)}</th>' for x in c['columns'])
+        body_rows = ''.join(
+            '<tr><th scope="row">' + e(r[0]) + '</th>'
+            + ''.join(f'<td>{x}</td>' for x in r[1:]) + '</tr>'
+            for r in c['rows'])
+        o.append(f'''<section class="blk"><div class="wrap"><div class="narrow">
+  <div class="label">{e(c.get('label', 'Side by side'))}</div>
+  <h2 class="h2">{c['heading']}</h2>
+  {f"<p class='intro'>{c['intro']}</p>" if c.get('intro') else ''}
+  <div class="cmp-wrap"><table class="cmp">
+    <caption>{e(c['caption'])}</caption>
+    <thead><tr><th scope="col">{e(c.get('row_header', ''))}</th>{head_cells}</tr></thead>
+    <tbody>{body_rows}</tbody>
+  </table></div>
+  {f"<p class='cmp-note'>{c['note']}</p>" if c.get('note') else ''}
+</div></div></section>
+''')
     # steps
     n = len(p['steps'])
     steps = ''.join(f'<div class="step"><h3>{h}</h3><p>{d}</p></div>' for h, d in p['steps'])

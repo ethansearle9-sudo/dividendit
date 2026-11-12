@@ -15,6 +15,41 @@ PARENT = ('Insights', '/insights')
 PAGES = [
 dict(
     kind='service', slug='do-i-need-an-it-manager',
+    comparison=dict(
+        label='Side by side',
+        heading='Hiring versus outsourcing, on the things that actually differ',
+        intro='Same job, two ways of buying it. The figures below are the ones from this page, not round numbers.',
+        caption='Hiring a system administrator compared with outsourcing, for an Irish business of 10 to 150 people.',
+        row_header='What you are comparing',
+        columns=['Hiring a system administrator', 'Outsourcing to a provider'],
+        rows=[
+            ['Year-one cost',
+             'Roughly &euro;65,000 to &euro;75,000 for a &euro;50,000 salary, once employer PRSI, recruitment, equipment and training are counted.',
+             'Per user, per month, with tools included. Rises with headcount rather than stepping up in &euro;50,000 increments.'],
+            ['Cover',
+             'One person, office hours. Holidays, sickness and notice periods are gaps you carry yourself.',
+             'A team. Holidays and out-of-hours cover without a second hire.'],
+            ['Range of skills',
+             'One generalist. Security, networks, cloud and strategy are rarely all strong in the same person.',
+             'Specialists in each, drawn on when the work needs them.'],
+            ['Recruitment',
+             'Typically 15 to 20 per cent of first-year salary through an agency, plus the weeks it takes to hire.',
+             'None.'],
+            ['Key-person risk',
+             'One individual holds every password, every supplier relationship and every undocumented decision.',
+             'Documented and held by the provider. No single point of failure.'],
+            ['If it is not working',
+             'Notice, recruitment and a rehire. Months, and the knowledge leaves with them.',
+             'Rolling monthly contract. Notice and move.'],
+            ['When it is the right answer',
+             'Above roughly 80 to 100 staff, or when technology is the product you sell.',
+             'Between 10 and 150 staff with no real IT function. The sweet spot is 10 to 50.'],
+        ],
+        note=('Salary figures: roleup.ie, November 2026 (median IT manager salary, Ireland) and the '
+              'Hero IT Salary Guide 2026 (system administrator, three to five years). The 1.3 to 1.5 '
+              'multiple on salary is the true cost of employment once PRSI, recruitment, equipment, '
+              'training and cover are counted.'),
+    ),
     pillar_note='Hiring is one answer. The other is to buy the capability, which is what <a href="/outsourced-it">outsourced IT services</a> covers in full.',
     service_name='Do You Need an IT Manager?',
     card_kind='Decision guide', card_title='Do You Need an IT Manager?',
