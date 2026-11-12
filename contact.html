@@ -449,6 +449,7 @@ html{scroll-behavior:auto}}
 .cap-in{padding:0.9rem 1.1rem;border-radius:6px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.07);color:var(--paper);font-family:var(--sans);font-size:var(--text-sm)}
 
 .cap-in::placeholder{color:rgba(255,255,255,0.4)}
+#contact-form .cap-in::placeholder{color:var(--ink-muted);opacity:1}
 
 .cap-in:focus{outline:2px solid var(--forest-mid);border-color:transparent}
 
@@ -767,9 +768,9 @@ textarea.cap-in{min-height:130px;resize:vertical}
       <h3 style="color:var(--ink)">Send a message</h3>
       <p style="color:var(--ink-muted)">Tell us a little about your business.</p>
       <form class="cap-form" id="contact-form">
-        <input type="text" name="name" class="cap-in" placeholder="Your name" required autocomplete="name" style="background:var(--paper);border-color:var(--hairline);color:var(--ink)">
-        <input type="email" name="email" id="c-email" class="cap-in" placeholder="Your email" required autocomplete="email" style="background:var(--paper);border-color:var(--hairline);color:var(--ink)">
-        <textarea name="message" class="cap-in" placeholder="What's going on with your technology?" required style="background:var(--paper);border-color:var(--hairline);color:var(--ink)"></textarea>
+        <input type="text" name="name" class="cap-in" aria-label="Your name" placeholder="Your name" required autocomplete="name" style="background:var(--paper);border-color:var(--hairline);color:var(--ink)">
+        <input type="email" name="email" id="c-email" class="cap-in" aria-label="Your email" placeholder="Your email" required autocomplete="email" style="background:var(--paper);border-color:var(--hairline);color:var(--ink)">
+        <textarea name="message" class="cap-in" aria-label="Your message" placeholder="What's going on with your technology?" required style="background:var(--paper);border-color:var(--hairline);color:var(--ink)"></textarea>
         <button type="submit" class="cap-btn">Send Message →</button>
       </form>
       <div class="cap-ok" id="contact-ok"><p style="color:var(--forest)">Got it — we'll come back to you within one business day.</p></div>

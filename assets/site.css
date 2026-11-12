@@ -43,7 +43,7 @@ nav {
 .nav-logo span { color: var(--accent-green); }
 .brand-lockup { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; line-height: 1; }
 .brand-lockup .nav-logo { display: block; line-height: 1; }
-.brand-tag { font-family: var(--font-body); font-weight: 400; font-size: 0.65rem; letter-spacing: normal; color: var(--text-muted); line-height: 1; white-space: nowrap; }
+.brand-tag, nav .brand-tag { font-family: var(--font-body); font-weight: 400; font-size: 0.65rem; letter-spacing: normal; text-transform: none; color: var(--text-muted); line-height: 1; white-space: nowrap; }
 .nav-links { display: flex; align-items: center; gap: 1.1rem; list-style: none; margin-left: 2.5rem; }
 .nav-links > li:last-child { margin-left: auto; }
 .nav-links > li { position: relative; }
