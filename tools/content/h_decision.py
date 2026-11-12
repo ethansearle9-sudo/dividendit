@@ -60,7 +60,7 @@ dict(
     title="Do You Need an IT Manager? What One Really Costs",
     meta="Do I need an IT manager? What the role costs in Ireland in 2026, the full cost of the hire once everything is counted, and when hiring is the right answer.",
     h1="Do you need an <em>IT manager</em>?",
-    lead="Most owners ask this at a particular moment: something broke, or the person who quietly handles IT is leaving. Here is the arithmetic, including the cases where hiring is the right answer.",
+    lead="Most owners ask this at a particular moment: something broke, or the person who quietly handles IT is leaving. Here is the arithmetic, including the cases where hiring is the right answer. A Dublin IT manager is advertised at around &euro;90,000, the fully loaded cost is higher again, and hiring starts to win above roughly 80 to 100 staff.",
 
     glance=[('Median IT manager salary, Ireland', '€90,000 (roleup.ie, November 2026)'),
             ('System administrator, 3 to 5 years', '€40,000 to €55,000 (Hero IT Salary Guide 2026)'),
@@ -143,7 +143,7 @@ PAGES.append(dict(
     title="How Much Does Outsourced IT Cost? A Plain Answer",
     meta="The cost of outsourcing IT services explained: how it is priced, what moves the number up or down, and how to compare two quotes that look nothing alike.",
     h1="How much does <em>outsourced IT</em> cost?",
-    lead="Almost every provider answers this with \u201cit depends\u201d and then asks for a meeting. Here is what it actually depends on, so you can work out your own number before you talk to anyone.",
+    lead="Almost every provider answers this with \u201cit depends\u201d and then asks for a meeting. Here is what it actually depends on, so you can work out your own number before you talk to anyone: your user count, whether you run servers, how much security depth you need, and how much is already in place.",
     glance=[('How it is priced', 'Per user, per month, almost universally'),
             ('What moves it', 'Servers, security depth, licensing, and how much is already in place'),
             ('What should be included', 'Tools and licensing, not billed separately on top'),

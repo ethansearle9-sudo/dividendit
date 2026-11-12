@@ -16,7 +16,7 @@ dict(
     trail=[('Insights', '/insights'), ('The cyber risk facing SMBs', '/cyber-risk')],
     eyebrow='Cybersecurity research', read=7,
     h1='The cyber risk facing small and medium businesses: <em>what the data says</em>',
-    sub='Nearly a third of businesses suffered a successful cyber attack in the past year. This is not a large-company problem, and the most reliable recent research makes that very clear. Here is what it shows, without the scare tactics.',
+    sub='Nearly a third of businesses suffered a successful cyber attack in the past year. This is not a large-company problem, and the most reliable recent research makes that very clear. Here is what it shows, without the scare tactics: who gets hit, how they get in, what it costs, and which controls actually move the numbers.',
     sections=[
         ('scale', 'The scale of the problem', '''
 <p>For years, cyber security was treated as something for banks and governments to worry about. The data has comprehensively overturned that view.</p>

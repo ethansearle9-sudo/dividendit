@@ -10,7 +10,7 @@ PAGES = [dict(
     trail=[('Outsourced Cyber Security', '/outsourced-cyber')],
     eyebrow='Outsourced Cyber Security', read=16,
     h1='Cyber security for small business, <em>explained for owners</em>',
-    sub='Most cyber security advice is written for IT people. This guide is written for the person whose money, reputation and business value are on the line. It covers what actually goes wrong in smaller businesses, the handful of controls that stop most of it, and how to decide whether to run it yourself or hand it to an outsourced cyber security partner.',
+    sub='Most cyber security advice is written for IT people. This guide is written for the person whose money, reputation and business value are on the line. It covers what actually goes wrong in smaller businesses, the handful of controls that stop most of it, and how to decide whether to outsource.',
     sections=[
         ('why', 'Why smaller businesses are now the target', f'''
 <p>Criminals go where the money is easy. Large companies have security teams, approval chains and people watching their systems through the night. A business with 40 staff usually has none of that, but it still pays suppliers, holds customer data and moves serious money by email every week.</p>

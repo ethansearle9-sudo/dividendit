@@ -7,7 +7,7 @@ PAGES = [dict(
     trail=[('Insights', '/insights')],
     eyebrow='Insights',
     h1='Insights for owners who want technology <em>to pay its way</em>',
-    sub='Plain-English guides for business owners and shareholders. No jargon, no scare tactics: what actually goes wrong, what actually works, and what it means for the value of your business.',
+    sub='Plain-English guides for business owners and shareholders. No jargon, no scare tactics: what actually goes wrong, what actually works, and what it means for the value of your business. Written for the person who signs the cheque rather than the person who configures the firewall, and sourced throughout.',
     groups=[
         ('If something is wrong right now', 'Start here if you think your business has been hacked or defrauded.', [
             ('been-hacked-first-24-hours', '9 min read', True),
