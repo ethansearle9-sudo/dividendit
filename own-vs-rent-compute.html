@@ -1800,6 +1800,34 @@
   </div>
 </section>
 
+<!-- cmp:start -->
+<style>
+.cmp-wrap{overflow-x:auto;margin:1.5rem 0 0;-webkit-overflow-scrolling:touch}
+.cmp{width:100%;border-collapse:collapse;font-size:.94rem;background:var(--white)}
+.cmp caption{caption-side:top;text-align:left;font-size:.82rem;color:#7a766f;padding:0 0 .6rem}
+.cmp th,.cmp td{border:1px solid var(--border);padding:.8rem .9rem;text-align:left;vertical-align:top;line-height:1.5}
+.cmp thead th{background:var(--accent-green);color:var(--white);font-weight:600;font-size:.88rem}
+.cmp tbody th{background:var(--off-white,#faf9f7);font-weight:600;color:var(--text-dark);width:28%}
+.cmp tbody tr:nth-child(even) td{background:#fcfcfb}
+.cmp-sec{padding:3.5rem 2rem;border-top:1px solid var(--border)}
+.cmp-sec .inner{max-width:900px;margin:0 auto}
+.cmp-sec .lbl{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-green)}
+.cmp-sec h2{font-family:var(--font-display,Georgia,serif);font-size:1.9rem;color:var(--text-dark);margin:.5rem 0 1rem;line-height:1.25}
+.cmp-note{font-size:.86rem;color:#5d5a55;margin-top:.9rem;line-height:1.6}
+@media(max-width:700px){.cmp{font-size:.86rem;min-width:540px}.cmp-sec{padding:2.5rem 1rem}.cmp-sec h2{font-size:1.5rem}}
+</style>
+<section class="cmp-sec"><div class="inner">
+  <div class="lbl">Side by side</div>
+  <h2>Owning versus renting, in plain terms</h2>
+  <p>Stripped of the jargon, the decision comes down to seven things. Neither column is the right answer on its own; the size and shape of your workload decides it.</p>
+  <div class="cmp-wrap"><table class="cmp">
+    <caption>Owning your compute compared with renting it from a cloud provider.</caption>
+    <thead><tr><th scope="col">What you are comparing</th><th scope="col">Owning the hardware</th><th scope="col">Renting from a cloud provider</th></tr></thead>
+    <tbody><tr><th scope="row">How you pay for it</th><td>A capital purchase, written down over three to five years. Money out up front, then the cost spreads across every year it keeps working.</td><td>A monthly operating cost. Nothing up front, and it never stops.</td></tr><tr><th scope="row">What it does to the accounts</th><td>Sits on the balance sheet as an asset. Depreciation falls below EBITDA, so the headline profit figure looks better.</td><td>Hits operating costs every month, so it comes straight off EBITDA.</td></tr><tr><th scope="row">Cost when the workload is steady</th><td>Usually cheaper once the kit is paid for, and the saving compounds every further year it runs.</td><td>You pay the same rate in year five as in year one.</td></tr><tr><th scope="row">Cost when demand is spiky or unknown</th><td>You have to buy for the busiest day and carry that capacity all year.</td><td>You pay for what you actually use. This is what renting is genuinely good at.</td></tr><tr><th scope="row">Speed to change</th><td>Weeks. Procurement, delivery, racking, configuration.</td><td>Minutes.</td></tr><tr><th scope="row">Who carries the risk</th><td>You do. Hardware failure, running out of capacity, and the refresh when it ages out.</td><td>The provider does, to whatever their contract actually promises. Worth reading.</td></tr><tr><th scope="row">When it is the right answer</th><td>Predictable, long-running workloads at a size that justifies the hardware, and data with a reason to sit somewhere you can point at.</td><td>Variable or unknown demand, early-stage growth, and anything you might switch off inside a year or two.</td></tr></tbody>
+  </table></div>
+  <p class="cmp-note">The most public worked example is 37signals, who published their own figures after moving off the cloud. Their case is set out earlier on this page.</p>
+</div></section>
+<!-- cmp:end -->
 <section class="pl-ch">
   <div class="pl-ch-inner">
     <span class="pl-ch-num">Part five</span>
