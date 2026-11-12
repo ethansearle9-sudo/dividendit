@@ -24,6 +24,7 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: (function(){ try { return localStorage.getItem('ddit_consent') === 'granted' ? 'granted' : 'denied'; } catch (e) { return 'denied'; } })(), wait_for_update: 500 });
     gtag('js', new Date());
     // send_page_view:false — we fire page_view manually per in-app page so each article reports separately
     gtag('config', 'G-NRJXMHZ0N7', { send_page_view: false });
@@ -1814,19 +1815,49 @@
 <!-- shell:footer -->
 <footer>
   <div class="footer-inner">
-    <div><a href="/" class="footer-logo">Dividend <span>IT</span></a>
-    <div class="footer-tagline">Outsourced Cybersecurity &amp; IT — For Business Owners</div></div>
-    <div class="footer-links">
-      <a href="/who-we-serve">Who We Serve</a>
-      <a href="/services">Services</a>
-      <a href="/guide">Owner&rsquo;s Guide</a>
-      <a href="/insights">Insights</a>
-      <a href="/cost-calculator">Cost Calculator</a>
-      <a href="/value-calculator">Value Calculator</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">Dividend <span>IT</span></a>
+      <div class="footer-tagline">Outsourced Cybersecurity &amp; IT for business owners</div>
+      <a href="mailto:hello@dividendit.com" class="footer-mail">hello@dividendit.com</a>
+      <a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" rel="noopener" class="footer-cta">Book a 20 minute call</a>
     </div>
-    <div class="footer-copy">© 2026 Dividend IT. All rights reserved.</div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>What we do</h4>
+        <a href="/outsourced-cyber">Outsourced Cybersecurity</a>
+        <a href="/outsourced-it">Outsourced IT</a>
+        <a href="/communication-collaboration">Communication &amp; Collaboration</a>
+        <a href="/outsourced-it-cost">What outsourced IT costs</a>
+        <a href="/services">All services</a>
+      </div>
+      <div class="footer-col">
+        <h4>Where we work</h4>
+        <a href="/it-support-dublin">Dublin</a>
+        <a href="/it-support-limerick">Limerick</a>
+        <a href="/it-support-ennis-shannon">Ennis &amp; Shannon</a>
+        <a href="/it-support-galway">Galway</a>
+        <a href="/it-support-winchester">Winchester</a>
+        <a href="/it-support-johannesburg">Johannesburg</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="/guide">Owner&rsquo;s Guide</a>
+        <a href="/insights">Insights</a>
+        <a href="/cost-calculator">Cost Calculator</a>
+        <a href="/value-calculator">Value Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about">About</a>
+        <a href="/who-we-serve">Who We Serve</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-base">
+    <span>&copy; 2026 Dividend IT</span>
+    <a href="/privacy">Privacy</a>
+    <button type="button" class="footer-consent" data-consent-open>Cookie settings</button>
   </div>
 </footer>
 <!-- /shell:footer -->

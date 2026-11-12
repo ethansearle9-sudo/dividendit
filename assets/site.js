@@ -61,3 +61,25 @@
     });
   });
 })();
+/*consent-v1: analytics only runs after an explicit yes (Google Consent Mode v2) */
+(function(){
+  var KEY = 'ddit_consent';
+  function get(){ try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function set(v){ try { localStorage.setItem(KEY, v); } catch (e) {} }
+  function apply(v){
+    if (typeof gtag === 'function') gtag('consent', 'update', { analytics_storage: v === 'granted' ? 'granted' : 'denied' });
+  }
+  var bar = document.createElement('div');
+  bar.className = 'consent'; bar.setAttribute('role', 'region'); bar.setAttribute('aria-label', 'Cookie consent'); bar.hidden = true;
+  bar.innerHTML = '<p>We use analytics cookies to see which pages are useful to business owners. Nothing is set unless you agree. <a href="/privacy#cookies">Privacy</a></p>' +
+    '<div class="consent-actions"><button type="button" class="consent-no">Decline</button><button type="button" class="consent-yes">Accept</button></div>';
+  document.body.appendChild(bar);
+  function choose(v){ set(v); apply(v); bar.hidden = true; }
+  bar.querySelector('.consent-yes').addEventListener('click', function(){ choose('granted'); });
+  bar.querySelector('.consent-no').addEventListener('click', function(){ choose('denied'); });
+  document.addEventListener('click', function(e){
+    var t = e.target.closest && e.target.closest('[data-consent-open]');
+    if (t) { e.preventDefault(); bar.hidden = false; bar.querySelector('.consent-yes').focus(); }
+  });
+  if (!get()) bar.hidden = false;
+})();

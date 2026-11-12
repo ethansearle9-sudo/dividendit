@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Self-exclusion. Visit any page with ?notme=1 to stop this browser being
+       measured, ?notme=0 to start again. Survives IP and country changes. -->
+  <script>
+    (function(){
+      try {
+        var q = new URLSearchParams(location.search);
+        if (q.has('notme')) {
+          if (q.get('notme') === '0') localStorage.removeItem('ddit_optout');
+          else localStorage.setItem('ddit_optout', '1');
+        }
+        if (localStorage.getItem('ddit_optout') === '1') {
+          window['ga-disable-G-NRJXMHZ0N7'] = true;
+          console.log('Dividend IT: analytics off on this browser. Use ?notme=0 to re-enable.');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRJXMHZ0N7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: (function(){ try { return localStorage.getItem('ddit_consent') === 'granted' ? 'granted' : 'denied'; } catch (e) { return 'denied'; } })(), wait_for_update: 500 });
+    gtag('js', new Date());
+    gtag('config', 'G-NRJXMHZ0N7');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Dividend IT</title>
+  <meta name="description" content="How Dividend IT collects, uses and protects your personal data, which cookies the site uses, and how to exercise your rights under GDPR." />
+  <meta property="og:title" content="Privacy Policy, Dividend IT" />
+  <meta property="og:description" content="How Dividend IT collects, uses and protects your personal data, which cookies the site uses, and how to exercise your rights under GDPR." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dividendit.com/privacy" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <meta property="og:image" content="https://dividendit.com/og-image.png" />
+  <link rel="canonical" href="https://dividendit.com/privacy" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white: #ffffff; --off-white: #f8f8f6; --light-grey: #f0efed;
+      --mid-grey: #e2e0dc; --text-muted: #8a8780; --text-body: #3d3c3a;
+      --text-dark: #1a1917; --accent-green: #2d6a4f; --accent-green-light: #e8f4ef;
+      --border: #e2e0dc; --font-display: 'DM Serif Display', serif;
+      --font-body: 'DM Sans', sans-serif; --max-w: 1160px; --radius: 4px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body { font-family: var(--font-body); color: var(--text-body); background: var(--white);
+      font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+
+    /* Page content */
+    .page-wrap { max-width: var(--max-w); margin: 0 auto; padding: 120px 2rem 80px; }
+
+    h1 { font-family: var(--font-display); font-size: clamp(2rem,4vw,3rem);
+      line-height: 1.1; letter-spacing: -0.02em; color: var(--text-dark); margin-bottom: 1.25rem; }
+
+    h1 em { font-style: italic; color: var(--accent-green); }
+
+    h2 { font-family: var(--font-display); font-size: 1.6rem; color: var(--text-dark);
+      margin: 2.5rem 0 0.75rem; }
+
+    h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin: 1.5rem 0 0.4rem; }
+
+    p { margin-bottom: 1rem; max-width: 680px; }
+
+    .eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent-green); margin-bottom: 1rem; display: block; }
+
+    .lead { font-size: 1.15rem; color: var(--text-body); line-height: 1.7; max-width: 640px; margin-bottom: 2rem; }
+
+    .pill-list { display: flex; flex-wrap: wrap; gap: 0.6rem; list-style: none; margin: 1rem 0 2rem; }
+
+    .pill-list li { background: var(--accent-green-light); color: var(--accent-green);
+      padding: 0.35rem 0.85rem; border-radius: 100px; font-size: 0.82rem; font-weight: 500; }
+
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap: 1.5rem; margin: 2rem 0; }
+
+    .card { background: var(--off-white); border-radius: 8px; padding: 1.5rem; }
+
+    .card h3 { margin-top: 0; }
+
+    .card p { font-size: 0.9rem; margin-bottom: 0; }
+
+    .cta-strip { background: var(--text-dark); color: var(--white); border-radius: 10px;
+      padding: 2.5rem; margin-top: 4rem; display: flex; align-items: center;
+      justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+
+    .cta-strip h2 { font-family: var(--font-display); font-size: 1.6rem; color: var(--white); margin: 0; }
+
+    .cta-strip p { color: rgba(255,255,255,0.7); margin: 0.5rem 0 0; max-width: none; }
+
+    .btn-primary { display: inline-block; background: var(--accent-green); color: var(--white);
+      padding: 0.75rem 1.75rem; border-radius: var(--radius); font-weight: 600;
+      font-size: 0.9rem; text-decoration: none; transition: opacity 0.2s; white-space: nowrap; }
+
+    .btn-primary:hover { opacity: 0.88; }
+
+    @media (max-width: 960px) {
+      .cta-strip { flex-direction: column; gap: 1.25rem; }
+    }
+    
+    .policy h2 { font-size: 1.4rem; margin: 2.75rem 0 0.75rem; }
+    .policy ul { margin: 0 0 1rem 1.25rem; max-width: 680px; }
+    .policy li { margin-bottom: 0.45rem; }
+    .policy a { color: var(--accent-green); text-underline-offset: 3px; }
+    .policy table { border-collapse: collapse; width: 100%; max-width: 760px; margin: 0.5rem 0 1.5rem; font-size: 0.9rem; }
+    .policy th, .policy td { text-align: left; padding: 0.65rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .policy th { font-weight: 600; color: var(--text-dark); background: var(--off-white); }
+    .updated { color: var(--text-muted); font-size: 0.9rem; }
+    @media (max-width: 640px) { .policy table { display: block; overflow-x: auto; } }
+  </style>
+<!-- shell:head -->
+<link rel="stylesheet" href="/assets/site.css">
+<!-- /shell:head -->
+</head>
+<body>
+<!-- shell:nav -->
+<nav>
+  <div class="nav-inner">
+    <div class="brand-lockup"><a href="/" class="nav-logo">Dividend <span>IT</span></a><div class="brand-tag">Outsourced Cybersecurity &amp; IT</div></div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+
+      <!-- Solutions mega-menu -->
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">What We Do <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <div class="nav-mega-menu">
+
+          <!-- Left col: Cyber Security -->
+          <div class="nav-mega-col">
+            <a href="/outsourced-cyber" class="nav-mega-label">Outsourced Cyber Security</a>
+            <ul>
+              <li><a href="/outsourced-cyber">Overview</a></li>
+              <li><a href="/fully-managed-cyber">Fully Managed Cyber Security</a></li>
+              <li><a href="/co-managed-cyber">Co-Managed Cyber Security</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Services</span>
+            <ul>
+              <li><a href="/iam">Identity &amp; Access Management (IAM)</a></li>
+              <li><a href="/endpoint-security">Endpoint Security</a></li>
+              <li><a href="/network-security">Network Security</a></li>
+              <li><a href="/detection-response">Detection &amp; Response</a></li>
+              <li><a href="/backup-dr">Recover (Backup &amp; DR)</a></li>
+              <li><a href="/governance-cyber">Governance</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Advisory</span>
+            <ul>
+              <li><a href="/cyber-risk-assessment">Cyber Risk Assessment</a></li>
+              <li><a href="/pen-testing">Pen Testing</a></li>
+              <li><a href="/ma-cyber-due-diligence">M&amp;A Cyber Due Diligence</a></li>
+            </ul>
+          </div>
+
+          <!-- Middle-right col: Outsourced IT -->
+          <div class="nav-mega-col nav-mega-col--right">
+            <a href="/outsourced-it" class="nav-mega-label">Outsourced IT</a>
+            <ul>
+              <li><a href="/outsourced-it">Overview</a></li>
+              <li><a href="/fully-managed-it">Fully Managed IT Support</a></li>
+              <li><a href="/co-managed-it">Co-Managed IT Support</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Services</span>
+            <ul>
+              <li><a href="/service-desk">Service Desk &amp; Admin</a></li>
+              <li><a href="/proactive-pc">Proactive PC Support</a></li>
+              <li><a href="/proactive-server">Proactive Server Support</a></li>
+              <li><a href="/network-wifi">Seamless Network</a></li>
+              <li><a href="/wifi">Seamless WiFi</a></li>
+              <li><a href="/it-procurement">IT Procurement</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Advisory</span>
+            <ul>
+              <li><a href="/it-strategy">IT Strategy</a></li>
+              <li><a href="/cio-as-a-service">CIO as a Service</a></li>
+              <li><a href="/it-consulting">IT Consulting &amp; Projects</a></li>
+              <li><a href="/ma-it-strategy">M&amp;A IT Strategy</a></li>
+              <li><a href="/ma-it-due-diligence">M&amp;A Due Diligence</a></li>
+            </ul>
+          </div>
+
+          <!-- Far-right col: Communication & Collaboration -->
+          <div class="nav-mega-col nav-mega-col--right">
+            <a href="/communication-collaboration" class="nav-mega-label">Communication &amp; Collaboration</a>
+            <ul>
+              <li><a href="/communication-collaboration">Overview</a></li>
+              <li><a href="/microsoft-365">Microsoft 365</a></li>
+              <li><a href="/public-cloud">Public Cloud</a></li>
+              <li><a href="/private-cloud">Private Cloud</a></li>
+              <li><a href="/telephony">Telephony</a></li>
+              <li><a href="/crm">CRM</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </li>
+
+      <li><a href="/who-we-serve">Who We Serve</a></li>
+      <li><a href="/where-we-work">Where We Work</a></li>
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">Tools <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <ul class="nav-dd-menu">
+          <li><a href="/cost-calculator">Cost Calculator</a></li>
+          <li><a href="/value-calculator">Value Calculator</a></li>
+        </ul>
+      </li>
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">Insights <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <ul class="nav-dd-menu">
+          <li><a href="/guide">Owner&rsquo;s Guide to Outsourced IT</a></li>
+          <li><a href="/been-hacked-first-24-hours">Been Hacked? The First 24 Hours</a></li>
+          <li><a href="/invoice-fraud">Invoice Fraud Explained</a></li>
+          <li><a href="/insights">All Insights</a></li>
+          <li><a href="/#tools">Calculators</a></li>
+          <li><a href="/#about">About</a></li>
+        </ul>
+      </li>
+      <li><a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="nav-cta">Get a Straight Answer</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- /shell:nav -->
+<main class="page-wrap policy">
+  <span class="eyebrow">Privacy</span>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated 12 November 2026</p>
+  <p class="lead">We are a cybersecurity business, so we hold your data to the standard we would hold our own. This page explains what we collect, why, who handles it for us and what you can ask us to do with it.</p>
+
+  <h2>Who we are</h2>
+  <p>Dividend IT is run by Ethan Searle in Co. Clare, Ireland. For anything on this page, including a request about your data, email <a href="mailto:ethan@dividendit.com">ethan@dividendit.com</a>.</p>
+
+  <h2>What we collect and why</h2>
+  <table>
+    <tr><th>What</th><th>Why</th><th>Lawful basis</th></tr>
+    <tr><td>Your name, email and message when you use the contact form</td><td>To reply to you</td><td>Legitimate interest in answering enquiries</td></tr>
+    <tr><td>Your email when you ask for the Owner&rsquo;s Guide</td><td>To send the guide and a short series of follow up emails, which you can stop at any time</td><td>Consent</td></tr>
+    <tr><td>Your name, email and answers when you book a call</td><td>To arrange and prepare for the call</td><td>Steps you ask us to take before a contract</td></tr>
+    <tr><td>Pages viewed, device type and approximate location (Google Analytics)</td><td>To see which pages are useful and improve the site</td><td>Consent, only if you click Accept</td></tr>
+    <tr><td>Technical request data such as IP address</td><td>To serve the site and protect it from abuse</td><td>Legitimate interest in running a secure website</td></tr>
+  </table>
+  <p>We do not sell your data, and we do not use it for advertising profiles.</p>
+
+  <h2>Who handles it for us</h2>
+  <p>We use a small number of providers who process data on our behalf under written agreements:</p>
+  <ul>
+    <li>Formspree (contact and guide forms)</li>
+    <li>Calendly (call bookings)</li>
+    <li>Google (Workspace email, Analytics and the fonts on this site)</li>
+    <li>Netlify and Cloudflare (hosting, delivery and security)</li>
+  </ul>
+  <p>Some of these providers are based outside the European Economic Area. Where data leaves the EEA it is protected by the EU&ndash;US Data Privacy Framework or the European Commission&rsquo;s Standard Contractual Clauses.</p>
+
+  <h2>How long we keep it</h2>
+  <ul>
+    <li>Enquiries and booking details: up to two years after our last contact, unless you become a client.</li>
+    <li>Guide sign ups: until you unsubscribe or ask us to delete them.</li>
+    <li>Analytics data: no longer than 14 months.</li>
+  </ul>
+
+  <h2 id="cookies">Cookies</h2>
+  <p>Analytics cookies are only set if you click Accept on the cookie notice. You can change your choice at any time with <a href="#" data-consent-open>cookie settings</a>.</p>
+  <table>
+    <tr><th>Name</th><th>Purpose</th><th>Lasts</th></tr>
+    <tr><td>_ga, _ga_*</td><td>Google Analytics: tells visits apart so we can count them</td><td>Up to 2 years</td></tr>
+    <tr><td>ddit_consent (browser storage)</td><td>Remembers your cookie choice</td><td>Until you clear it</td></tr>
+  </table>
+
+  <h2>Your rights</h2>
+  <p>You can ask to see the data we hold about you, correct it, delete it, restrict or object to how we use it, or take a copy with you. Where we rely on consent you can withdraw it at any time. Email <a href="mailto:ethan@dividendit.com">ethan@dividendit.com</a> and we will respond within one month.</p>
+  <p>If you are unhappy with how we handle your data, you can complain to the <a href="https://www.dataprotection.ie" target="_blank" rel="noopener">Data Protection Commission</a> in Ireland, or the data protection authority where you live.</p>
+
+  <h2>Changes</h2>
+  <p>If we change how we use your data, we will update this page and the date at the top.</p>
+</main>
+<!-- shell:footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">Dividend <span>IT</span></a>
+      <div class="footer-tagline">Outsourced Cybersecurity &amp; IT for business owners</div>
+      <a href="mailto:hello@dividendit.com" class="footer-mail">hello@dividendit.com</a>
+      <a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" rel="noopener" class="footer-cta">Book a 20 minute call</a>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>What we do</h4>
+        <a href="/outsourced-cyber">Outsourced Cybersecurity</a>
+        <a href="/outsourced-it">Outsourced IT</a>
+        <a href="/communication-collaboration">Communication &amp; Collaboration</a>
+        <a href="/outsourced-it-cost">What outsourced IT costs</a>
+        <a href="/services">All services</a>
+      </div>
+      <div class="footer-col">
+        <h4>Where we work</h4>
+        <a href="/it-support-dublin">Dublin</a>
+        <a href="/it-support-limerick">Limerick</a>
+        <a href="/it-support-ennis-shannon">Ennis &amp; Shannon</a>
+        <a href="/it-support-galway">Galway</a>
+        <a href="/it-support-winchester">Winchester</a>
+        <a href="/it-support-johannesburg">Johannesburg</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="/guide">Owner&rsquo;s Guide</a>
+        <a href="/insights">Insights</a>
+        <a href="/cost-calculator">Cost Calculator</a>
+        <a href="/value-calculator">Value Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about">About</a>
+        <a href="/who-we-serve">Who We Serve</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-base">
+    <span>&copy; 2026 Dividend IT</span>
+    <a href="/privacy">Privacy</a>
+    <button type="button" class="footer-consent" data-consent-open>Cookie settings</button>
+  </div>
+</footer>
+<!-- /shell:footer -->
+
+<!-- shell:scripts -->
+<script src="/assets/site.js"></script>
+<!-- /shell:scripts -->
+</body>
+</html>

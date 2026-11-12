@@ -77,6 +77,7 @@ def head(p, schema):
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){{dataLayer.push(arguments);}}
+    gtag('consent', 'default', {{ ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: (function(){{ try {{ return localStorage.getItem('ddit_consent') === 'granted' ? 'granted' : 'denied'; }} catch (e) {{ return 'denied'; }} }})(), wait_for_update: 500 }});
     gtag('js', new Date());
     gtag('config', 'G-NRJXMHZ0N7');
     // Same helper the hand-built pages use, so event names stay consistent.
