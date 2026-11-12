@@ -23,7 +23,6 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: (function(){ try { return localStorage.getItem('ddit_consent') === 'granted' ? 'granted' : 'denied'; } catch (e) { return 'denied'; } })(), wait_for_update: 500 });
     gtag('js', new Date());
     gtag('config', 'G-NRJXMHZ0N7');
   </script>
@@ -268,11 +267,11 @@
   </ul>
 
   <h2 id="cookies">Cookies</h2>
-  <p>Analytics cookies are only set if you click Accept on the cookie notice. You can change your choice at any time with <a href="#" data-consent-open>cookie settings</a>.</p>
+  <p>We use Google Analytics to count visits and see which pages are useful. It sets the cookies below. We do not use cookies for advertising, and we do not sell or share your data with advertisers.</p>
+  <p>You can block or delete these at any time in your browser settings, or use your browser&rsquo;s private browsing mode. Doing so does not affect anything on this site.</p>
   <table>
     <tr><th>Name</th><th>Purpose</th><th>Lasts</th></tr>
     <tr><td>_ga, _ga_*</td><td>Google Analytics: tells visits apart so we can count them</td><td>Up to 2 years</td></tr>
-    <tr><td>ddit_consent (browser storage)</td><td>Remembers your cookie choice</td><td>Until you clear it</td></tr>
   </table>
 
   <h2>Your rights</h2>
@@ -327,7 +326,6 @@
   <div class="footer-base">
     <span>&copy; 2026 Dividend IT</span>
     <a href="/privacy">Privacy</a>
-    <button type="button" class="footer-consent" data-consent-open>Cookie settings</button>
   </div>
 </footer>
 <!-- /shell:footer -->

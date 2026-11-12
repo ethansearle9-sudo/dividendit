@@ -24,7 +24,6 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: (function(){ try { return localStorage.getItem('ddit_consent') === 'granted' ? 'granted' : 'denied'; } catch (e) { return 'denied'; } })(), wait_for_update: 500 });
     gtag('js', new Date());
     // send_page_view:false — we fire page_view manually per in-app page so each article reports separately
     gtag('config', 'G-NRJXMHZ0N7', { send_page_view: false });
@@ -1299,7 +1298,6 @@
   <div class="footer-base">
     <span>&copy; 2026 Dividend IT</span>
     <a href="/privacy">Privacy</a>
-    <button type="button" class="footer-consent" data-consent-open>Cookie settings</button>
   </div>
 </footer>
 <!-- /shell:footer -->
