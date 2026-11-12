@@ -12,7 +12,7 @@ PAGES = [
 svc('communication-collaboration', 'Communication and Collaboration',
     trail=[PARENT],
     title="Communication and Collaboration Tools for Business",
-    meta="Communication and collaboration for business: Microsoft 365, Teams, telephony, cloud and CRM chosen, set up and managed by one partner so that they work together.",
+    meta="Collaboration tools for business &mdash; Microsoft 365, Teams, telephony and CRM &mdash; chosen, set up and managed by one partner so that they work together.",
     card_desc="Microsoft 365, telephony, cloud and CRM that work together.",
     h1="Communication and collaboration, <em>joined up</em>",
     lead="Email, files, meetings, phones, customer records and the systems behind them. We choose, set up and manage the tools your team works in, so that they work together and each one earns its place.",

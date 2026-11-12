@@ -248,6 +248,7 @@ def build_service(p, cards):
   <div class="label">{e(p.get('problem_label', 'The problem'))}</div>
   <h2 class="h2">{p['problem_h']}</h2>
   {''.join(f'<p>{x}</p>' for x in p['problem'])}
+  {f'<p class="pillar-note">{p["pillar_note"]}</p>' if p.get('pillar_note') else ''}
   {f'<div class="pull">{p["quote"]}<span class="by">{p.get("quote_by", "")}</span></div>' if p.get('quote') else ''}
 </div></div></section>
 ''')

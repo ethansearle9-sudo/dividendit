@@ -15,6 +15,7 @@ PARENT = ('Insights', '/insights')
 PAGES = [
 dict(
     kind='service', slug='do-i-need-an-it-manager',
+    pillar_note='Hiring is one answer. The other is to buy the capability, which is what <a href="/outsourced-it">outsourced IT services</a> covers in full.',
     service_name='Do You Need an IT Manager?',
     card_kind='Decision guide', card_title='Do You Need an IT Manager?',
     card_desc="What an IT manager really costs, and when hiring one is the right call.",
@@ -22,7 +23,7 @@ dict(
     trail=[PARENT, ('Do You Need an IT Manager?', '/do-i-need-an-it-manager')],
 
     title="Do You Need an IT Manager? What One Really Costs",
-    meta="What an IT manager costs in Ireland in 2026, the full cost of the hire once everything is counted, and when hiring is the right answer.",
+    meta="Do I need an IT manager? What the role costs in Ireland in 2026, the full cost of the hire once everything is counted, and when hiring is the right answer.",
     h1="Do you need an <em>IT manager</em>?",
     lead="Most owners ask this at a particular moment: something broke, or the person who quietly handles IT is leaving. Here is the arithmetic, including the cases where hiring is the right answer.",
 
@@ -98,13 +99,14 @@ dict(
 
 PAGES.append(dict(
     kind='service', slug='outsourced-it-cost',
+    pillar_note='Price only means something next to what you get for it. That is set out on our <a href="/outsourced-it">outsourced IT services</a> page.',
     service_name='What Outsourced IT Costs',
     card_kind='Decision guide', card_title='What Outsourced IT Costs',
     card_desc="How managed IT is priced, what moves the number, and what a fair quote looks like.",
     eyebrow='Decision guide',
     trail=[('Insights', '/insights'), ('What Outsourced IT Costs', '/outsourced-it-cost')],
     title="How Much Does Outsourced IT Cost? A Plain Answer",
-    meta="How outsourced IT is priced, what moves the number up or down, what should be included, and how to compare two quotes that look nothing alike.",
+    meta="The cost of outsourcing IT services explained: how it is priced, what moves the number up or down, and how to compare two quotes that look nothing alike.",
     h1="How much does <em>outsourced IT</em> cost?",
     lead="Almost every provider answers this with \u201cit depends\u201d and then asks for a meeting. Here is what it actually depends on, so you can work out your own number before you talk to anyone.",
     glance=[('How it is priced', 'Per user, per month, almost universally'),

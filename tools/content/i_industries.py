@@ -14,7 +14,8 @@ PARENT = ('Who We Serve', '/who-we-serve')
 
 
 def ind(slug, name, **kw):
-    d = dict(kind='service', slug=slug, service_name=f'IT Support for {name}',
+    d = dict(kind='service', slug=slug,
+             pillar_note=('This is one of the industries we work in. The others, and what is different about each, are on our <a href="/who-we-serve">managed IT services by industry</a> page.'), service_name=f'IT Support for {name}',
              card_kind='Industry', card_title=name,
              eyebrow='Who We Serve', trail=[PARENT, (name, '/' + slug)])
     d.update(kw)
@@ -25,7 +26,7 @@ PAGES = [
 
 ind('it-support-distribution', 'Distribution and Wholesale',
     title="IT Support for Distribution and Wholesale Businesses",
-    meta="Outsourced IT and cyber security for distributors and wholesalers, where an outage means an order is not placed and the product is not on the shelf.",
+    meta="IT support for distribution and wholesale, where an outage means an order is not placed and the product is not on the shelf.",
     card_desc="For distributors where an outage means orders are not placed and stock does not move.",
     h1="IT support for <em>distribution and wholesale</em>",
     lead="In distribution, an IT failure does not inconvenience you. It stops an order being placed, and your customer notices before you do.",
@@ -88,7 +89,7 @@ ind('it-support-distribution', 'Distribution and Wholesale',
 
 ind('it-support-manufacturing', 'Manufacturing',
     title="IT Support for Manufacturing Businesses",
-    meta="Outsourced IT and cyber security for manufacturers, planned around production rather than imposed on it, with cover across shifts.",
+    meta="IT support for manufacturing, planned around production rather than imposed on it, with cover across every shift.",
     card_desc="For manufacturers where downtime is measured in lost production, not lost email.",
     h1="IT support for <em>manufacturing</em>",
     lead="Most IT providers plan maintenance around their week. In manufacturing that is how you end up patching during a production run.",
@@ -151,7 +152,7 @@ ind('it-support-manufacturing', 'Manufacturing',
 
 ind('it-support-financial-services', 'Financial Services and Wealth Management',
     title="IT Support for Financial Services and Wealth Firms",
-    meta="Outsourced IT and cyber security for financial services, wealth management and insurance firms, where a compromised mailbox is a client trust incident.",
+    meta="IT support for financial services, wealth management and insurance firms, where a compromised mailbox is a client trust incident.",
     card_desc="For wealth, insurance and financial firms where IT should be invisible and security is client trust.",
     h1="IT support for <em>financial services and wealth</em>",
     lead="In a wealth or insurance business, a compromised mailbox is not an IT incident. It is a client trust incident, and it is the one you cannot undo.",
@@ -213,7 +214,7 @@ ind('it-support-financial-services', 'Financial Services and Wealth Management',
 
 ind('it-support-medical', 'Medical, Healthcare and Life Sciences',
     title="IT Support for Medical, Healthcare and Life Sciences",
-    meta="Outsourced IT and cyber security for medical practices, device distributors and life sciences suppliers, where patient data carries the highest obligations.",
+    meta="IT support for medical practices, device distributors and life sciences suppliers, where patient data carries the highest obligations.",
     card_desc="For medical practices, device distributors and life sciences suppliers.",
     h1="IT support for <em>medical and life sciences</em>",
     lead="Health data carries the strictest obligations in data protection law, and most practices and suppliers are running it on systems nobody has reviewed in years.",
@@ -276,7 +277,7 @@ ind('it-support-medical', 'Medical, Healthcare and Life Sciences',
 
 ind('it-support-fmcg', 'FMCG and Food Producers',
     title="IT Support for FMCG and Food Producers",
-    meta="Outsourced IT and cyber security for FMCG brands and food producers, built around retail supply chains, seasonal peaks and traceability.",
+    meta="IT support for food producers and FMCG brands, built around retailer supply chains, seasonal peaks and traceability.",
     card_desc="For FMCG brands and food producers supplying retail, where peaks are unforgiving.",
     h1="IT support for <em>FMCG and food producers</em>",
     lead="Retail does not accept that your systems were down. The order window closes, the promotion runs without you, and the shelf gets filled by someone else.",
@@ -344,7 +345,7 @@ PAGES.append(dict(
     card_kind='Industries', card_title='Who We Serve',
     card_desc='The sectors we work in, and what is different about each one.',
     title="Who We Serve: Industries We Support",
-    meta="The industries Dividend IT works in, from distribution and manufacturing to financial services, medical and FMCG, and what is different about IT in each.",
+    meta="Industry IT support from Dividend IT: distribution, manufacturing, financial services, medical and FMCG, and what is different about technology in each.",
     eyebrow='Who We Serve',
     h1='Who we <em>serve</em>',
     sub='The argument for outsourcing IT is not the same in a factory as it is in a wealth management firm. These pages say what is actually different about each sector rather than repeating the same promises.',

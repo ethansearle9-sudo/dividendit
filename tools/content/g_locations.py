@@ -16,6 +16,9 @@ PARENT = ('Where We Work', '/where-we-work')
 
 def loc(slug, city, country, **kw):
     d = dict(kind='location', slug=slug, city=city, country=country,
+             pillar_note=(f'{city} has its own page because the local argument is different here. '
+                          f'The wider picture is on our <a href="/where-we-work">outsourced IT support '
+                          f'across Ireland, the UK and South Africa</a> page.'),
              service_name=f'Outsourced IT and Cyber Security in {city}',
              card_kind='Location', card_title=f'{city} IT Support',
              eyebrow='Where We Work', trail=[PARENT, (city, '/' + slug)])
@@ -26,7 +29,7 @@ def loc(slug, city, country, **kw):
 PAGES = [
 loc('it-support-dublin', 'Dublin', 'Ireland',
     title="IT Support Dublin: Outsourced IT and Cyber Security",
-    meta="Outsourced IT support and cyber security for Dublin businesses of 10 to 150 people, for owners who cannot outbid the multinationals for IT staff.",
+    meta="IT support Dublin: outsourced IT and cyber security for businesses of 10 to 150 people, for owners who cannot outbid the multinationals for IT staff.",
     card_desc="Outsourced IT and security for Dublin businesses of 10 to 150 people.",
     h1="IT support in <em>Dublin</em>",
     lead="Dublin is the hardest city in Ireland to hire an IT person into a small business, and it has very little to do with your salary band. Outsourcing is not the cheap option here. It is the only one that holds.",
@@ -102,7 +105,7 @@ loc('it-support-dublin', 'Dublin', 'Ireland',
 
 loc('it-support-limerick', 'Limerick', 'Ireland',
     title="IT Support Limerick: Outsourced IT and Cyber Security",
-    meta="Outsourced IT support and cyber security for Limerick and Mid-West businesses of 10 to 150 people, built around manufacturing and the Shannon corridor.",
+    meta="IT support Limerick: outsourced IT and cyber security for Mid-West businesses of 10 to 150 people, built around manufacturing and the Shannon corridor.",
     card_desc="Outsourced IT and security for Limerick and Mid-West businesses.",
     h1="IT support in <em>Limerick</em>",
     lead="Limerick's problem is not the salary. It is depth. There are fewer experienced IT people in the Mid-West, and when the one you hired leaves, the replacement pool is small.",
@@ -165,7 +168,7 @@ loc('it-support-limerick', 'Limerick', 'Ireland',
 
 loc('it-support-galway', 'Galway', 'Ireland',
     title="IT Support Galway: Outsourced IT and Cyber Security",
-    meta="Outsourced IT support and cyber security for Galway businesses of 10 to 150 people, including the medtech cluster and the companies that supply it.",
+    meta="IT support Galway: outsourced IT and cyber security for businesses of 10 to 150 people, including the medtech cluster and the companies that supply it.",
     card_desc="Outsourced IT and security for Galway businesses, including medtech suppliers.",
     h1="IT support in <em>Galway</em>",
     lead="Galway's medtech cluster has raised the bar for everyone around it. If you supply into it, you will be asked security questions you cannot answer with a shrug.",
@@ -228,7 +231,7 @@ loc('it-support-galway', 'Galway', 'Ireland',
 
 loc('it-support-ennis-shannon', 'Ennis and Shannon', 'Ireland',
     title="IT Support Ennis and Shannon: Outsourced IT and Security",
-    meta="Outsourced IT support and cyber security for businesses in Ennis, Shannon and across Clare, with local presence and cover that does not depend on one person.",
+    meta="IT support Clare: outsourced IT and cyber security for Ennis, Shannon and across the county, with cover that does not depend on one person being free.",
     card_desc="Outsourced IT and security for businesses in Ennis, Shannon and Clare.",
     h1="IT support in <em>Ennis and Shannon</em>",
     lead="Clare businesses have fewer credible options than Dublin or Limerick, and the ones they do have are often one person. That is the real exposure here.",
@@ -293,7 +296,7 @@ loc('it-support-ennis-shannon', 'Ennis and Shannon', 'Ireland',
 PAGES.append(
 loc('it-support-winchester', 'Winchester', 'United Kingdom',
     title="IT Support Winchester: Outsourced IT and Cyber Security",
-    meta="Outsourced IT support and cyber security for Winchester and Hampshire businesses of 10 to 150 people, without London rates or London response times.",
+    meta="IT support Winchester: outsourced IT and cyber security for Hampshire businesses of 10 to 150 people, without London rates or London response times.",
     card_desc="Outsourced IT and security for Winchester and Hampshire businesses.",
     h1="IT support in <em>Winchester</em>",
     lead="Winchester businesses usually get one of two deals: a London provider charging London rates who rarely comes out, or a capable local individual who is one person. Neither is what you want.",
@@ -357,7 +360,7 @@ loc('it-support-winchester', 'Winchester', 'United Kingdom',
 PAGES.append(
 loc('it-support-johannesburg', 'Johannesburg', 'South Africa',
     title="IT Support Johannesburg: Outsourced IT and Security",
-    meta="Outsourced IT support and cyber security for Johannesburg businesses of 10 to 150 people, built for load shedding, connectivity failover and skills scarcity.",
+    meta="IT support Johannesburg: outsourced IT and cyber security for businesses of 10 to 150 people, built for load shedding, connectivity failover and skills scarcity.",
     card_desc="Outsourced IT and security for Johannesburg businesses, built for local conditions.",
     h1="IT support in <em>Johannesburg</em>",
     lead="Everywhere else, resilience means backups. In Johannesburg it also means power, connectivity and the fact that your best technical people keep emigrating.",
@@ -424,7 +427,7 @@ PAGES.append(dict(
     card_kind='Locations', card_title='Where We Work',
     card_desc='The places we support, and what is different about each one.',
     title="Where We Work: IT Support Across Ireland",
-    meta="Outsourced IT support and cyber security across Ireland, the UK and South Africa. The local argument is different in each place, so each has its own page.",
+    meta="IT support Ireland, the UK and South Africa. The local argument is different in each place, so each has its own page.",
     eyebrow='Where We Work',
     h1='Where we <em>work</em>',
     sub='We work remotely first, because it is faster. But the argument for outsourcing IT is not the same everywhere, so each place gets an honest page of its own rather than the same text with the name swapped.',
