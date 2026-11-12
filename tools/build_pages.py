@@ -200,7 +200,12 @@ def faq_html(faqs):
     out = ['<div class="faq">']
     for q, a in faqs:
         paras = a if isinstance(a, list) else [a]
-        out.append(f'<details><summary>{q}</summary><div class="a">' + ''.join(f'<p>{x}</p>' for x in paras) + '</div></details>')
+        # The question goes in an h3 inside the summary. HubSpot's AEO checklist
+        # is explicit that sub-questions should be surfaced through H2/H3 headers
+        # so AI systems get multiple extraction points per page; a bare <summary>
+        # carries no heading weight. One heading element inside <summary> is
+        # valid HTML, and .faq summary h3 in page.css keeps it looking identical.
+        out.append(f'<details><summary><h3>{q}</h3></summary><div class="a">' + ''.join(f'<p>{x}</p>' for x in paras) + '</div></details>')
     out.append('</div>')
     return '\n'.join(out)
 

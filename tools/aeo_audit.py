@@ -39,6 +39,16 @@ def body_only(h):
     return h
 
 
+# Heading words that mean the page actually contrasts options, which is the
+# condition HubSpot attaches to the comparison-table item.
+COMPARATIVE = (' vs ', ' vs.', 'versus', 'compare', 'comparison', 'compared',
+               'difference between', 'which is better', 'alternative',
+               'instead of', 'or rent', 'or buy', 'in-house or')
+
+# Pages with no audience content: the editorial checks do not apply.
+UTILITY = {'privacy', 'terms', 'cookie-policy', 'thank-you', '404'}
+
+
 def first_answer(body_html):
     """Text of the first substantive paragraph after the H1."""
     m = re.search(r'</h1>(.*)', body_html, re.S)
@@ -66,6 +76,16 @@ def audit_page(slug, html):
 
     ans = first_answer(b)
     ans_words = len(ans.split())
+    # HubSpot's checklist scopes the comparison-table item: "Comparison tables
+    # are used WHERE THE CONTENT evaluates or contrasts two or more options,
+    # tools, or approaches." Scoring every page against it invents a gap and
+    # pushes tables onto pages that compare nothing. A page counts as
+    # comparative only if its own headings say so.
+    heads = ' '.join([h1] + h2s + h3s).lower() if (h1 or h2s or h3s) else ''
+    comparative = any(t in heads for t in COMPARATIVE)
+    # Utility pages (privacy, terms) carry no audience content, so the
+    # editorial checks do not apply to them.
+    utility = slug in UTILITY
     q_heads = [x for x in h2s + h3s if x.strip().endswith('?')]
     vague = [x for x in h2s if x.strip().lower().rstrip(':') in VAGUE_HEADINGS]
     imgs = re.findall(r'<img[^>]*>', b)
@@ -81,17 +101,20 @@ def audit_page(slug, html):
         'h2_not_vague': not vague,
         'vague_h2': vague,
         'question_heads': len(q_heads),
-        'has_question_head': bool(q_heads),
+        'has_question_head': utility or bool(q_heads),
         'hierarchy_ok': not (h3s and not h2s),
         # 3. Section independence
         'no_transitions': not any(t in low for t in TRANSITIONS),
         'n_h2': len(h2s),
         # 4. Query fan-out
-        'has_faq': 'FAQPage' in html,
+        'has_faq': utility or ('FAQPage' in html),
         'n_faq': len(re.findall(r'<details', b)),
         # 5. Definitions, lists, scannable
-        'has_list': bool(re.search(r'<(ul|ol)\b', b)),
-        'has_table': bool(re.search(r'<table\b', b)),
+        'has_list': utility or bool(re.search(r'<(ul|ol)\b', b)),
+        # n/a on non-comparative pages, per the checklist's own wording.
+        'has_table': (not comparative) or bool(re.search(r'<table\b', b)),
+        'comparative': comparative,
+        'utility': utility,
         # 6. Credibility and information gain
         'has_author': bool(re.search(r'\bauthor\b|\bbyline\b|itemprop="author"|"author"', html, re.I)),
         'has_outbound_citation': bool(re.search(r'href="https?://(?!(?:www\.)?dividendit\.com)', b)),

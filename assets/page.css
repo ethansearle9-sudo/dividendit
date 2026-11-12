@@ -214,3 +214,8 @@ table.cmp td:first-child { font-weight: 600; color: var(--text-dark); }
 .cmp tbody tr:nth-child(even) td { background: #fcfcfb; }
 .cmp-note { font-size: 0.86rem; color: #5d5a55; margin-top: 0.9rem; line-height: 1.6; }
 @media (max-width: 700px) { .cmp { font-size: 0.86rem; min-width: 520px; } .cmp tbody th { width: 34%; } }
+
+/* FAQ questions are h3 inside summary (AEO: sub-questions need heading weight
+   so answer engines get multiple extraction points). Reset heading styling so
+   the accordion looks exactly as it did. */
+.faq summary h3 { display: inline; margin: 0; padding: 0; font-size: inherit; font-weight: inherit; line-height: inherit; color: inherit; letter-spacing: inherit; font-family: inherit; }
