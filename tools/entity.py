@@ -116,3 +116,29 @@ def status():
     return (f'entity: {len(PROFILES)} profiles, '
             f'{len(ready)}/{len(LOCATIONS)} locations with NAP'
             + (f' ({", ".join(ready)})' if ready else ''))
+
+
+# The named author behind the site's content. HubSpot's AEO checklist wants a
+# visible byline with visible credentials: AI systems weight identifiable,
+# credentialled sources. Everything here is factual.
+AUTHOR = {
+    'name': 'Ethan Searle',
+    'role': 'Founder, Dividend IT',
+    'bio': ('Founder of Dividend IT. Previously part-owner of LanDynamix, a South African '
+            'managed service provider he helped grow from one to four million in revenue '
+            'before exiting.'),
+}
+
+
+def author_node():
+    node = {
+        '@type': 'Person',
+        '@id': SITE + '/#author',
+        'name': AUTHOR['name'],
+        'jobTitle': AUTHOR['role'],
+        'description': AUTHOR['bio'],
+        'worksFor': {'@id': SITE + '/#org'},
+    }
+    if PROFILES:
+        node['sameAs'] = list(PROFILES)
+    return node

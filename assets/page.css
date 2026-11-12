@@ -194,3 +194,12 @@ table.cmp td:first-child { font-weight: 600; color: var(--text-dark); }
 .pull .by { display: block; font-family: var(--font-body); font-style: normal; font-size: 0.82rem; color: var(--text-muted); margin-top: 0.6rem; }
 .urgent ol { margin: 0.3rem 0 0 1.2rem; }
 .urgent li { font-size: 0.97rem; line-height: 1.6; margin-bottom: 0.35rem; }
+
+/* Author byline and dates — AEO credibility and freshness signals. */
+.byline { border-top: 1px solid var(--border); padding: 2.25rem 2rem; background: var(--off-white, #faf9f7); }
+.byline .narrow { max-width: 760px; margin: 0 auto; }
+.byline-who { font-size: 0.98rem; color: var(--text-dark); margin: 0 0 0.4rem; }
+.byline-name { font-weight: 700; }
+.byline-bio { font-size: 0.9rem; color: #5d5a55; line-height: 1.6; margin: 0 0 0.6rem; }
+.byline-dates { font-size: 0.82rem; color: #7a766f; margin: 0; }
+@media (max-width: 700px) { .byline { padding: 1.75rem 1rem; } }

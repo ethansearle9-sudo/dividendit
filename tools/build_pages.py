@@ -48,6 +48,12 @@ def strip(s):
 
 
 def head(p, schema):
+    import dates as _dates
+    _pub, _mod = _dates.for_slug(p['slug'])
+    if schema and isinstance(schema[0], dict):
+        schema[0].setdefault('datePublished', _pub)
+        schema[0].setdefault('dateModified', _mod)
+        schema[0].setdefault('author', _entity.author_node())
     title = p['title']
     desc = p['meta']
     url = SITE + '/' + p['slug']
@@ -121,6 +127,23 @@ def head(p, schema):
 <!-- shell:nav -->
 <!-- /shell:nav -->
 <main>
+'''
+
+
+def byline(slug):
+    """Visible author and dates. HubSpot's AEO checklist asks for a named
+    author with visible credentials plus publish and update dates; AI systems
+    weight identifiable, credentialled sources."""
+    import dates as _dates
+    pub, mod = _dates.for_slug(slug)
+    a = _entity.AUTHOR
+    upd = (f' &middot; Updated <time datetime="{mod}">{_dates.pretty(mod)}</time>'
+           if mod != pub else '')
+    return f'''<section class="byline"><div class="wrap"><div class="narrow">
+  <p class="byline-who">Written by <span class="byline-name">{e(a['name'])}</span>, {e(a['role'])}</p>
+  <p class="byline-bio">{e(a['bio'])}</p>
+  <p class="byline-dates">Published <time datetime="{pub}">{_dates.pretty(pub)}</time>{upd}</p>
+</div></div></section>
 '''
 
 
@@ -301,6 +324,7 @@ def build_service(p, cards):
     o.append(cta_band(p.get('cta_h', 'Get a straight answer on where you stand.'),
                       p.get('cta_p', 'Twenty minutes, no jargon, no obligation. You will leave knowing what is working, what is exposed, and what it is costing you.'),
                       p.get('cta_secondary')))
+    o.append(byline(p['slug']))
     o.append(TAIL)
     return ''.join(o)
 
@@ -348,6 +372,7 @@ def build_article(p, cards):
     o.append(cta_band(p.get('cta_h', 'Want a straight answer on your exposure?'),
                       p.get('cta_p', 'Twenty minutes with someone who will tell you what is working, what is exposed, and what to fix first. No jargon, no obligation.'),
                       p.get('cta_secondary')))
+    o.append(byline(p['slug']))
     o.append(TAIL)
     return ''.join(o)
 
@@ -383,6 +408,7 @@ def build_hub(p, cards):
 </div></section>
 ''')
     o.append(cta_band('Rather talk it through?', 'Twenty minutes, no jargon, no obligation. Bring the question that is on your mind.'))
+    o.append(byline(p['slug']))
     o.append(TAIL)
     return ''.join(o)
 
