@@ -208,13 +208,9 @@ AREA_SERVED = [
 
 # Service-area business: no street address, but Google still needs to know
 # where we operate. Linked by @id to the Organization node on the homepage.
-PROVIDER = {
-    '@type': ['Organization', 'ProfessionalService'],
-    '@id': SITE + '/#org',
-    'name': 'Dividend IT',
-    'url': SITE + '/',
-    'areaServed': AREA_SERVED,
-}
+# NAP and sameAs profiles live in tools/entity.py, the single source of truth.
+import entity as _entity
+PROVIDER = dict(_entity.organization(), areaServed=AREA_SERVED)
 
 
 def build_service(p, cards):
@@ -228,6 +224,9 @@ def build_service(p, cards):
                         if p.get('city') else AREA_SERVED),
          'audience': {'@type': 'BusinessAudience', 'name': 'Business owners and shareholders'}},
         crumbs_schema(trail), faq_schema(p['faqs'])]
+    _lb = _entity.local_business(p['slug'])
+    if _lb:
+        schema.append(_lb)
     o = [head(p, schema)]
     glance = ''.join(f'<dt>{e(k)}</dt><dd>{v}</dd>' for k, v in p['glance'])
     o.append(f'''<section class="sv-hero"><div class="wrap">
