@@ -1238,8 +1238,8 @@
         </div>
         <div class="roi-verdict" id="roi-verdict"></div>
         <div class="roi-cta">
-          <a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="btn-primary" onclick="trackEvent('book_call_click',{button_label:'ROI Calculator',location:'roi'})">Book a Free 20-Min Review</a>
-          <a href="/value-calculator" style="cursor:pointer; display:block; margin-top:1rem; font-size:0.9rem; color:var(--accent-green); font-weight:600;">Now see what that saving is worth at exit &rarr;</a>
+          <a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="btn-primary">Book a Free 20-Min Review</a>
+          <a href="/value-calculator" id="roi-to-value" style="cursor:pointer; display:block; margin-top:1rem; font-size:0.9rem; color:var(--accent-green); font-weight:600;">Now see what that saving is worth at exit &rarr;</a>
         </div>
       </div>
     </div>
@@ -1409,6 +1409,7 @@
   .roi-verdict { font-size: 1.05rem; line-height: 1.6; color: var(--text-dark); padding: 1.25rem; background: var(--accent-green-light); border-radius: 8px; margin-bottom: 1.5rem; }
   .roi-verdict strong { color: var(--accent-green); }
   .roi-cta { text-align: center; }
+  .wp-body-inner .roi-cta a.btn-primary { color: var(--white); text-decoration: none; }
   .roi-disclaimer { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; font-style: italic; margin-top: 1rem; }
   @media (max-width: 760px) {
     .roi-calc { grid-template-columns: 1fr; gap: 2rem; }
@@ -1451,12 +1452,15 @@
       verdict.innerHTML = 'A single hire looks cheaper on paper here &mdash; but one person can\'t cover the full security framework, and you carry the key-person risk, the cover gaps, and the admin. <strong>The real question is capability, not just cost.</strong> A 20-minute review shows you exactly where you\'d be exposed.';
     }
     // Fire GA event once after the user stops adjusting (debounced) for clean data
-    window._roiSaving = saving; // stash for the value-impact page
+    window._roiSaving = saving;
+    var toValue = document.getElementById('roi-to-value');
+    if (toValue) toValue.href = '/value-calculator' + (saving > 0 ? '?saving=' + Math.round(saving) : '');
     clearTimeout(window._roiTimer);
     window._roiTimer = setTimeout(function(){
       trackEvent('roi_calculated', { staff: staff, level: roiState.level, tooling: roiState.tooling, inhouse: inhouse, saving: saving });
     }, 1200);
   }
+  calcROI();
   // Mobile nav toggle + dropdown tap
   (function(){
     var toggle = document.querySelector('.nav-toggle');

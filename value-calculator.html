@@ -132,6 +132,7 @@
       font-size: 0.9rem; font-weight: 600; text-decoration: none;
       transition: background 0.2s, transform 0.15s; display: inline-block;
     }
+    .wp-body-inner a.btn-primary { color: var(--white); text-decoration: none; }
 
     .btn-primary:hover { background: var(--accent-green); transform: translateY(-1px); }
 
@@ -1243,7 +1244,7 @@
         <div class="val-breakdown" id="val-breakdown"></div>
         <div class="val-erosion" id="val-erosion"></div>
         <div class="val-cta">
-          <a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="btn-primary" id="val-cta-btn" onclick="trackEvent('book_call_click',{button_label:'Value Impact Calculator',location:'value',stage:valState.stage})">Book a Free 20-Min Review</a>
+          <a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="btn-primary" id="val-cta-btn">Book a Free 20-Min Review</a>
           <p class="val-cta-sub" id="val-cta-sub"></p>
         </div>
       </div>
@@ -1356,6 +1357,7 @@
     document.getElementById('val-ebitda-hint').innerHTML = copy.ebitdaHint;
     document.getElementById('val-calc').style.display = 'grid';
     // Prefill from ROI calculator if they came from there with a positive saving
+    if (!window._roiSaving) { try { window._roiSaving = parseInt(new URLSearchParams(location.search).get('saving'), 10) || 0; } catch (e) {} }
     if (window._roiSaving && window._roiSaving > 0) {
       document.getElementById('val-ebitda').value = Math.round(window._roiSaving);
     }
