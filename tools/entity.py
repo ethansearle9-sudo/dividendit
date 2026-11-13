@@ -124,9 +124,11 @@ def status():
 AUTHOR = {
     'name': 'Ethan Searle',
     'role': 'Founder, Dividend IT',
+    # Currency confirmed by Ethan: the exit figure was R80 million, roughly
+    # &euro;4 million. The site states it in euro, so the bio matches.
     'bio': ('Founder of Dividend IT. Previously part-owner of LanDynamix, a South African '
-            'managed service provider he helped grow from one to four million in revenue '
-            'before exiting.'),
+            'managed service provider he helped grow from €1 million to €4 million '
+            'in revenue before exiting.'),
 }
 
 
