@@ -13,7 +13,6 @@ body { font-family: var(--font-body); color: var(--text-body); background: var(-
 main a { color: var(--accent-green); text-underline-offset: 3px; }
 main a:hover { color: var(--text-dark); }
 .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
-.narrow { max-width: 760px; margin: 0 auto; }
 section.blk { padding: 84px 0; scroll-margin-top: 80px; }
 section.blk.alt { background: var(--off-white); }
 section.blk.dark { background: var(--text-dark); color: rgba(255,255,255,0.82); }
@@ -95,14 +94,6 @@ h1, h2, h3 { color: var(--text-dark); }
 .fit .no li::before { content: '\2013'; position: absolute; left: 0; color: var(--text-muted); font-weight: 700; }
 
 /* faq */
-.faq { margin-top: 2rem; border-top: 1px solid var(--border); }
-.faq details { border-bottom: 1px solid var(--border); }
-.faq summary { cursor: pointer; list-style: none; padding: 1.2rem 2.5rem 1.2rem 0; font-weight: 600; color: var(--text-dark); font-size: 1.02rem; position: relative; }
-.faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: '+'; position: absolute; right: 0.25rem; top: 1.05rem; font-size: 1.4rem; font-weight: 400; color: var(--accent-green); }
-.faq details[open] summary::after { content: '\2212'; }
-.faq .a { padding: 0 0 1.3rem; max-width: 720px; }
-.faq .a p { font-size: 0.98rem; line-height: 1.75; margin-bottom: 0.8rem; }
 
 /* related */
 .rel { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
@@ -218,4 +209,3 @@ table.cmp td:first-child { font-weight: 600; color: var(--text-dark); }
 /* FAQ questions are h3 inside summary (AEO: sub-questions need heading weight
    so answer engines get multiple extraction points). Reset heading styling so
    the accordion looks exactly as it did. */
-.faq summary h3 { display: inline; margin: 0; padding: 0; font-size: inherit; font-weight: inherit; line-height: inherit; color: inherit; letter-spacing: inherit; font-family: inherit; }

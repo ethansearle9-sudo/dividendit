@@ -178,7 +178,7 @@ svc('endpoint-security', 'Endpoint Security',
         ("Web and DNS filtering", "Known malicious websites blocked before they load, whether the device is in the office or at home."),
         ("Device compliance", "Encryption, screen locks and security settings enforced, so a lost laptop is an inconvenience and not a breach."),
         ("Awareness training", "Short, practical training so your people recognise the attempts that technology does not catch.")],
-    steps_h="How it works",
+    steps_h="How does endpoint protection get rolled out across our devices?",
     steps=[
         ("Inventory", "We find and record every device, including the ones nobody remembered."),
         ("Deploy", "Protection and management tools go on quietly, without interrupting anyone's day."),
