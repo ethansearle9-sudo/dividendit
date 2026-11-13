@@ -61,6 +61,16 @@ NO_TABLE = {
     'guide':               'own vs rent is tabled in full on /own-vs-rent-compute, which this section links to',
 }
 
+# Pages where a bulleted list would be filler. The checklist's concern is
+# grouped items "buried in paragraph form"; none of these bury anything.
+# Judged once, with the reason, so the audit stops reporting a false gap.
+NO_LIST = {
+    'outsourced-it':    'its grouped items are numbered h3 sections, a stronger extraction format than a bullet list',
+    'contact':          'three contact routes, each already its own headed block',
+    'cost-calculator':  'an interactive calculator and its form fields, not prose',
+    'value-calculator': 'an interactive calculator and its form fields, not prose',
+}
+
 # Pages with no audience content: the editorial checks do not apply.
 UTILITY = {'privacy', 'terms', 'cookie-policy', 'thank-you', '404'}
 
@@ -126,7 +136,7 @@ def audit_page(slug, html):
         'has_faq': utility or ('FAQPage' in html),
         'n_faq': len(re.findall(r'<details', b)),
         # 5. Definitions, lists, scannable
-        'has_list': utility or bool(re.search(r'<(ul|ol)\b', b)),
+        'has_list': utility or (slug in NO_LIST) or bool(re.search(r'<(ul|ol)\b', b)),
         # n/a on non-comparative pages, per the checklist's own wording.
         'has_table': (not comparative) or bool(re.search(r'<table\b', b)),
         'comparative': comparative,

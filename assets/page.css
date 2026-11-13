@@ -153,7 +153,7 @@ table.cmp td:first-child { font-weight: 600; color: var(--text-dark); }
 .tbl-wrap { overflow-x: auto; }
 
 /* insights hub */
-.hub { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
+.hub { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
 .hub a { display: flex; flex-direction: column; text-decoration: none; background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.6rem; transition: border-color 0.2s, transform 0.15s; }
 .hub a:hover { border-color: var(--accent-green); transform: translateY(-2px); }
 .hub .k { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-green); }
@@ -209,3 +209,5 @@ table.cmp td:first-child { font-weight: 600; color: var(--text-dark); }
 /* FAQ questions are h3 inside summary (AEO: sub-questions need heading weight
    so answer engines get multiple extraction points). Reset heading styling so
    the accordion looks exactly as it did. */
+
+.hub li { display: contents; }

@@ -28,7 +28,7 @@ ROOT = pathlib.Path(__file__).parent.parent
 # one (the research articles and the calculators) end with the cross-links
 # instead, so that is the fallback. Order matters: first match wins.
 ANCHORS = ('<section class="pl-cta-band">', '<section id="cta">',
-           '<section class="xlinks">')
+           '<section class="xlinks">', '<section class="byline">')
 
 
 def apply(slug, faqs, heading='Frequently asked questions'):

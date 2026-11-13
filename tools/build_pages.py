@@ -424,6 +424,8 @@ def build_article(p, cards):
 def build_hub(p, cards):
     schema = [{'@context': 'https://schema.org', '@type': 'CollectionPage', 'name': strip(p['h1']), 'url': SITE + '/' + p['slug'], 'description': p['meta']},
               crumbs_schema(p['trail'])]
+    if p.get('faqs'):
+        schema.append(faq_schema(p['faqs']))
     o = [head(p, schema)]
     o.append(f'''<section class="ar-hero"><div class="wrap">
   {crumbs_html(p['trail'])}
@@ -445,12 +447,20 @@ def build_hub(p, cards):
         for slug, read, feature in items:
             k, t, d = cards[slug]
             cls = ' class="feature"' if feature else ''
-            tiles.append(f'<a href="/{slug}"{cls}><span class="k">{e(k)}</span><span class="t">{e(t)}</span><span class="d">{e(d)}</span><span class="r">{read}</span></a>')
+            # Each tile is a list item: a hub is a grouped list of pages, and
+            # marking it up as one helps screen readers and answer engines read
+            # it as a set rather than as loose links. .hub li uses
+            # display:contents so the grid layout is unchanged.
+            tiles.append(f'<li><a href="/{slug}"{cls}><span class="k">{e(k)}</span><span class="t">{e(t)}</span><span class="d">{e(d)}</span><span class="r">{read}</span></a></li>')
         o.append(f'''<section class="blk{' alt' if gi % 2 == 0 else ''}"><div class="wrap">
   <h2 class="h2">{gh}</h2><p class="intro">{gp}</p>
-  <div class="hub">{''.join(tiles)}</div>
+  <ul class="hub">{''.join(tiles)}</ul>
 </div></section>
 ''')
+    if p.get('faqs'):
+        o.append(f'<section class="blk" id="faq"><div class="wrap"><div class="narrow">'
+                 f'<h2 class="h2">Frequently asked questions</h2>{faq_html(p["faqs"])}'
+                 f'</div></div></section>\n')
     o.append(cta_band('Rather talk it through?', 'Twenty minutes, no jargon, no obligation. Bring the question that is on your mind.'))
     o.append(byline(p['slug']))
     o.append(TAIL)

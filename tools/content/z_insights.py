@@ -1,5 +1,13 @@
 PAGES = [dict(
     kind='hub', slug='insights',
+    faqs=[
+        ("Who are these guides written for?",
+         "Business owners and shareholders, not IT staff. They assume you care about what something costs, what it risks and what it does to the value of the business, and that you have no interest in being taught networking."),
+        ("Are the numbers in these guides sourced?",
+         "Yes. Figures and claims link to their original source, and where the evidence is thin or contested we say so rather than quoting the most alarming number available."),
+        ("Where should I start?",
+         "If you are weighing up whether to outsource, start with the Owner&rsquo;s Guide to Outsourced IT. If you are dealing with an incident right now, start with Been Hacked? The First 24 Hours."),
+    ],
     title='Insights for Business Owners | Dividend IT',
     og_title='Insights for business owners',
     meta='Plain-English guides for business owners and shareholders on cybersecurity, fraud, outsourced IT and using technology to build what the business is worth.',

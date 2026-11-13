@@ -424,6 +424,16 @@ loc('it-support-johannesburg', 'Johannesburg', 'South Africa',
 
 PAGES.append(dict(
     kind='hub', slug='where-we-work',
+    faqs=[
+        ("Do you need to be local to support our IT?",
+         "Mostly no. The great majority of support is delivered remotely, and it is faster that way because nobody is sitting in traffic. What local presence actually buys you is hands on the hardware when something physical breaks, and a provider who understands the labour market, the connectivity and the suppliers where you are."),
+        ("Which areas do you cover?",
+         "Ireland, across Dublin, Limerick, Galway, and Ennis and Shannon. The UK, from Winchester across Hampshire. South Africa, from Johannesburg across Gauteng."),
+        ("Can you support a business with several sites?",
+         "Yes, and multi-site is one of the clearest cases for outsourcing. One team covers every location under one agreement, instead of a person at each site or one person driving between them."),
+        ("Can you support a business operating in more than one country?",
+         "Yes. We run across Ireland, the UK and South Africa, which covers the common case of an Irish or UK business with an operation, a development team or a shared service centre in South Africa."),
+    ],
     card_kind='Locations', card_title='Where We Work',
     card_desc='The places we support, and what is different about each one.',
     title="Where We Work: IT Support Across Ireland",

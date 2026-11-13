@@ -342,6 +342,14 @@ ind('it-support-fmcg', 'FMCG and Food Producers',
 
 PAGES.append(dict(
     kind='hub', slug='who-we-serve',
+    faqs=[
+        ("Why does the industry matter for IT support?",
+         "Because the thing that must not stop is different in each one. In distribution it is the order going in. In manufacturing it is the production run. In financial services it is client data and payment instructions. That changes what gets protected first, when maintenance can happen, and what the cover has to look like."),
+        ("Do you only work with those industries?",
+         "No. Those are the sectors where we have done the most work and where the argument differs enough to be worth writing down separately. We work with businesses of roughly 10 to 150 people more generally."),
+        ("What size of business do you work with?",
+         "Roughly 10 to 150 people, with the strongest fit between about 10 and 50. Below that the economics rarely work for either side. Above it, you are often better off hiring internally and keeping a provider behind that person."),
+    ],
     card_kind='Industries', card_title='Who We Serve',
     card_desc='The sectors we work in, and what is different about each one.',
     title="Who We Serve: Industries We Support",
