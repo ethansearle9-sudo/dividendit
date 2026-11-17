@@ -10,41 +10,76 @@ Keyword Planner plans: `1445357873` (Ireland, 30 terms, 13 Nov) and
 
 ---
 
-## Part 1 — The headline finding: we have been measuring the wrong country
+## Correction, 17 Nov (same evening)
 
-The same keywords, same tool, same period. Ireland against the UK:
+**The first version of Part 1 compared bare UK terms against geo-modified
+Irish terms, which is not a like-for-like comparison and overstated the gap.**
+The 16 terms were re-run against Ireland unmodified. Two specific claims were
+wrong:
 
-| Keyword | Ireland | **UK** | UK competition | UK top-of-page bid |
-|---|---|---|---|---|
-| managed it services | 10 – 100 | **1k – 10k** | **Low** | €12.02 – €42.94 |
-| it support | — | **1k – 10k** | **Low** | €10.16 – €46.35 |
-| cyber insurance | 10 – 100 | **1k – 10k** | High | €11.62 – €40.19 |
-| managed service provider | — | **1k – 10k** | Medium | €9.51 – €46.46 |
-| outsourced it support | **no data** | **100 – 1k** | **Low** | €20.34 – €72.00 |
-| cyber security for small business | — | 100 – 1k | Medium | €14.44 – €47.52 |
-| disaster recovery plan | 10 – 100 | **100 – 1k** | **Low** | €3.84 – €12.15 |
-| invoice fraud | 10 – 100 | **100 – 1k** | **Low** | €10.34 – €49.08 |
-| technology due diligence | 10 – 100 | **100 – 1k** | Medium | €6.00 – €16.09 |
-| business valuation | 10 – 100 | **100 – 1k** | Medium | €4.51 – €14.20 |
-| selling a business | 10 – 100 | **100 – 1k** | Medium | €4.81 – €21.09 |
-| it support hampshire | — | **100 – 1k** | Medium | €3.99 – €8.82 |
-| it support winchester | — | 10 – 100 | **Low** | — |
-| it due diligence | 10 – 100 | 10 – 100 | **Low** | €8.53 – €14.93 |
-| outsourced it cost | 0 – 10 | 10 – 100 | **Low** | €6.65 – €22.54 |
+1. *"'outsourced it support' has no measurable Irish volume at all."* **Wrong.**
+   The bare term is **10–100 a month in Ireland, Low competition.** What has
+   no data is "outsourced it support **ireland**".
+2. *"The UK is 10× to 100× Ireland."* **Overstated.** On like-for-like bare
+   terms it is **about 10× for most**, which tracks the 12× population ratio.
+   Only three terms are ~100×.
 
-**The UK is 10× to 100× Ireland on the same terms, and frequently at *lower*
-competition.** Google's own reach figures: UK 67,700,000 against Ireland
-5,720,000 — about 12×. The keyword gap is wider than the population gap.
+A third thing the re-run surfaced, which had been missed entirely:
+**"it support" is 100–1k a month in Ireland** — the largest relevant Irish
+term found so far, larger than "cyber security ireland". It had never been
+tested, because every earlier Irish test carried a geo modifier.
 
-Three that matter most:
+The corrected like-for-like table is Part 1 below. The strategic direction
+still holds — the UK is materially bigger on every term and cheaper to
+compete on for several — but it is a 10× argument, not a 100× one, and
+Ireland is not the dead market the first draft implied.
 
-- **"managed it services" — UK 1k–10k at Low competition.** A hundred times
-  the Irish volume, with less advertiser competition, and advertisers paying
-  up to €42.94 a click.
-- **"outsourced it support" — no measurable Irish volume at all, 100–1k in the
-  UK**, Low competition, and the highest bids in the set at €20.34–€72.00.
-  That phrase is in the title of our main pillar page.
-- **"it support hampshire" — 100–1k**, ten times any Irish city term.
+---
+
+## Part 1 — Ireland against the UK, like for like
+
+Identical bare terms, same tool, same period (plan `1445959405`).
+
+| Keyword | Ireland | IE comp. | **UK** | UK comp. | Gap |
+|---|---|---|---|---|---|
+| **it support** | **100 – 1k** | Medium | **1k – 10k** | **Low** | 10× |
+| managed it services | 10 – 100 | **Low** | **1k – 10k** | **Low** | ~100× |
+| managed service provider | 10 – 100 | Medium | **1k – 10k** | Medium | ~100× |
+| cyber insurance | 10 – 100 | Medium | **1k – 10k** | High | ~100× |
+| outsourced it support | 10 – 100 | **Low** | 100 – 1k | **Low** | 10× |
+| cyber security for small business | 10 – 100 | **High** | 100 – 1k | Medium | 10× |
+| disaster recovery plan | 10 – 100 | **Low** | 100 – 1k | **Low** | 10× |
+| invoice fraud | 10 – 100 | **Low** | 100 – 1k | **Low** | 10× |
+| technology due diligence | 10 – 100 | Medium | 100 – 1k | Medium | 10× |
+| business valuation | 10 – 100 | **Low** | 100 – 1k | Medium | 10× |
+| selling a business | 10 – 100 | **Low** | 100 – 1k | Medium | 10× |
+| it support hampshire | 10 – 100 | — | 100 – 1k | Medium | 10× |
+| outsourced it cost | 0 – 10 | — | 10 – 100 | **Low** | 10× |
+| it due diligence | 10 – 100 | **Low** | 10 – 100 | **Low** | **1×** |
+| it downtime cost | 10 – 100 | — | 10 – 100 | — | **1×** |
+| it support winchester | 10 – 100 | — | 10 – 100 | **Low** | **1×** |
+
+Google's reach figures: UK 67,700,000 against Ireland 5,720,000 — about 12×.
+**The keyword gap tracks the population gap for most terms**, which is the
+sane result and a check that the data is behaving.
+
+What actually stands out, now the comparison is clean:
+
+- **"it support" is the biggest relevant Irish term we have found — 100–1k,
+  Medium competition, €5.07–€8.82 a click.** Bigger than "cyber security
+  ireland". We had never tested it because every earlier Irish test carried a
+  geo modifier.
+- **Three terms are genuinely ~100× rather than 10×**: *managed it services*,
+  *managed service provider* and *cyber insurance*. Those are the real UK
+  outliers, and *managed it services* is **Low competition in both markets**.
+- **Bare terms are often less contested than geo-modified ones.** "managed it
+  services" is Low in Ireland; "managed it services ireland" was High and
+  "managed it services dublin" Medium. We have been chasing the harder
+  variants of our own keywords.
+- **Irish clicks are worth less.** "it support" costs €5.07–€8.82 in Ireland
+  against €10.16–€46.35 in the UK. Advertisers price the UK buyer far higher.
+- **"cyber security for small business" is High competition in Ireland** and
+  only Medium in the UK — one of the few places Ireland is the harder market.
 
 ### This was already visible in Search Console
 
@@ -195,8 +230,9 @@ pages could serve a market where they get 100–1,000 or 1,000–10,000.
 
 | Rank | Term | Volume | Comp. | Why |
 |---|---|---|---|---|
-| 1 | **managed it services (UK)** | 1k–10k | Low | 100× Irish volume, low competition, €42.94 top bid |
-| 2 | **outsourced it support (UK)** | 100–1k | Low | Our pillar's exact phrase; €72.00 top bid; no Irish volume at all |
+| 1 | **managed it services (UK)** | 1k–10k | Low | ~100x Irish volume, Low competition in BOTH markets, €42.94 top bid |
+| 2 | **it support (IE + UK)** | 1k–10k UK / 100–1k IE | Low / Medium | The biggest term in both markets; Ireland's largest relevant term |
+| 2= | **outsourced it support (UK)** | 100–1k | Low | Our pillar's exact phrase; €72.00 top bid (Ireland 10–100, also Low) |
 | 3 | **invoice fraud (UK)** | 100–1k | Low | Page exists, already earning impressions, €49.08 top bid |
 | 4 | **disaster recovery plan (UK)** | 100–1k | Low | Page exists; reframe from service to answer |
 | 5 | **it support hampshire** | 100–1k | Medium | Only gap with no page; Winchester already proves the territory |
