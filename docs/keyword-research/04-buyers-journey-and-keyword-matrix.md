@@ -1,0 +1,226 @@
+# Buyer's journey and keyword matrix
+
+Built 2026-11-17 using HubSpot Academy's framework from *Creating Content for
+the Buyer's Journey* (Inbound Marketing Certification, section 4), against
+Google Ads Keyword Planner data for **Ireland and the United Kingdom**,
+Nov 2025 – Oct 2026.
+
+Keyword Planner plans: `1445357873` (Ireland, 30 terms, 13 Nov) and
+`1445959405` (16 terms, Ireland then UK, 17 Nov).
+
+---
+
+## Part 1 — The headline finding: we have been measuring the wrong country
+
+The same keywords, same tool, same period. Ireland against the UK:
+
+| Keyword | Ireland | **UK** | UK competition | UK top-of-page bid |
+|---|---|---|---|---|
+| managed it services | 10 – 100 | **1k – 10k** | **Low** | €12.02 – €42.94 |
+| it support | — | **1k – 10k** | **Low** | €10.16 – €46.35 |
+| cyber insurance | 10 – 100 | **1k – 10k** | High | €11.62 – €40.19 |
+| managed service provider | — | **1k – 10k** | Medium | €9.51 – €46.46 |
+| outsourced it support | **no data** | **100 – 1k** | **Low** | €20.34 – €72.00 |
+| cyber security for small business | — | 100 – 1k | Medium | €14.44 – €47.52 |
+| disaster recovery plan | 10 – 100 | **100 – 1k** | **Low** | €3.84 – €12.15 |
+| invoice fraud | 10 – 100 | **100 – 1k** | **Low** | €10.34 – €49.08 |
+| technology due diligence | 10 – 100 | **100 – 1k** | Medium | €6.00 – €16.09 |
+| business valuation | 10 – 100 | **100 – 1k** | Medium | €4.51 – €14.20 |
+| selling a business | 10 – 100 | **100 – 1k** | Medium | €4.81 – €21.09 |
+| it support hampshire | — | **100 – 1k** | Medium | €3.99 – €8.82 |
+| it support winchester | — | 10 – 100 | **Low** | — |
+| it due diligence | 10 – 100 | 10 – 100 | **Low** | €8.53 – €14.93 |
+| outsourced it cost | 0 – 10 | 10 – 100 | **Low** | €6.65 – €22.54 |
+
+**The UK is 10× to 100× Ireland on the same terms, and frequently at *lower*
+competition.** Google's own reach figures: UK 67,700,000 against Ireland
+5,720,000 — about 12×. The keyword gap is wider than the population gap.
+
+Three that matter most:
+
+- **"managed it services" — UK 1k–10k at Low competition.** A hundred times
+  the Irish volume, with less advertiser competition, and advertisers paying
+  up to €42.94 a click.
+- **"outsourced it support" — no measurable Irish volume at all, 100–1k in the
+  UK**, Low competition, and the highest bids in the set at €20.34–€72.00.
+  That phrase is in the title of our main pillar page.
+- **"it support hampshire" — 100–1k**, ten times any Irish city term.
+
+### This was already visible in Search Console
+
+The 13–17 November comparison showed six Winchester and Hampshire queries
+appearing from nothing — *it outsourcing winchester* (7 impressions), *it
+companies in winchester* (5), *managed it services winchester* (3), *it
+support winchester* (2), *outsourced it support winchester* (1), *it
+outsourcing hampshire* (1) — making the Winchester page the best-performing
+location page on the site, ahead of every Irish one, off a single page with
+no links and no local entity signals.
+
+The volume data explains why. We were not unlucky in Ireland; we were in a
+market roughly a hundredth the size.
+
+### The caveat, stated plainly
+
+Keyword Planner's "Competition" measures **advertiser** competition, not SEO
+difficulty. Low competition means few people bidding, not necessarily an easy
+organic win. Irish SERPs were read directly on 13 Nov; **the UK SERPs have
+not been read yet**, and that is the confirmation step before committing.
+
+---
+
+## Part 2 — The buyer's journey
+
+HubSpot's definition: *"the active research process someone goes through
+leading up to a purchase."* Distinct from the customer journey, which
+continues after the purchase.
+
+They are emphatic about not inventing it: *"be mindful of assumptions.
+Creating an accurate narrative is one of the most important aspects of
+defining your buyer's journey."* Their preferred sources, in order, are
+customer interviews, then industry and sales-team interviews, then keyword
+research. **Below is a first draft built from keyword and SERP evidence plus
+Ethan's own operating experience of running and selling an MSP. It is not yet
+validated by customer interviews, and should be.**
+
+### Persona: the owner-manager
+
+Owner, MD or co-owner of a business of 10–150 people (best fit 10–50) in
+distribution, manufacturing, financial services, medical/life sciences or
+food/FMCG. No IT department, or one internal IT person. They carry the
+commercial risk personally. They are the person who signs the cheque — which
+answers HubSpot's decision-stage question *"who needs to be involved in the
+purchasing decision?"*: usually them alone, sometimes with an FD.
+
+### Awareness — "something is wrong, and I don't know it's IT"
+
+*How do buyers describe their challenges or goals?* Not in IT language. They
+describe a business symptom: margin pressure, an order that didn't go out, a
+near-miss on a fraudulent invoice, a key person who is the only one who knows
+how something works, or a vague worry about what the business is worth.
+
+*What symptoms are they experiencing?* Downtime they absorb as "just how it
+is". An invoice fraud attempt. A customer asking a security question they
+can't answer. An insurer asking questions at renewal. A conversation with an
+accountant about eventual sale.
+
+*How do they consume content or conduct research?* Google, increasingly an AI
+assistant, and peers. **Every SERP tested at this stage carries an AI
+Overview.**
+
+**Evidence this stage is real for us:** the single organic click the site has
+earned on a business query was *"security business profit margins"*. The
+uncontested SERPs found on 13 Nov — business valuation, IT due diligence —
+are all awareness stage.
+
+### Consideration — "it's IT, now what are my options?"
+
+*What are possible solutions?* Hire someone. Promote the person who already
+half-does it. Outsource. Do nothing and hope.
+
+*How do they perceive the pros and cons?* Hiring feels safer and more
+controllable; outsourcing feels cheaper but riskier. They have no reliable
+way to compare the two because nobody publishes real numbers.
+
+*How do they decide on the right solution?* Cost per month, whether cover
+survives holidays and illness, and whether they can get out of it.
+
+**Terms:** *do i need an it manager*, *in house it vs outsourced it*, *how
+much does outsourced it cost*, *outsourced it cost* (UK 10–100, Low),
+*it manager salary ireland* (10–100, **Low**), *disaster recovery plan*
+(UK 100–1k, **Low**).
+
+### Decision — "which provider?"
+
+*What criteria do they use?* What is actually included, response times,
+whether anyone will come on site, contract length, and whether the provider
+understands their sector.
+
+*What do they like or dislike versus alternatives?* They dislike not being
+able to compare quotes, surprise charges, and lock-in.
+
+**Terms:** *it support dublin*, *managed it services dublin*, *it support
+limerick*, *it support hampshire*, *it support winchester*, *msp ireland*.
+
+---
+
+## Part 3 — The matrix
+
+Volume shown is the better of the two markets, with the market noted.
+
+### Awareness — attract stage
+
+| Term | Volume | Comp. | Page | Status |
+|---|---|---|---|---|
+| invoice fraud | 100–1k **UK** | **Low** | `/invoice-fraud` | **Exists, already earning impressions** |
+| cyber security for small business | 100–1k UK | Medium | `/outsourced-cyber` | Exists |
+| disaster recovery plan | 100–1k **UK** | **Low** | `/backup-dr` | Exists, framed as a service not an answer |
+| business valuation | 100–1k UK | Medium | `/value-calculator`, `/exit-value` | Exists |
+| selling a business | 100–1k UK | Medium | `/exit-value`, `/succession` | Exists |
+| cyber attack small business | 10–100 IE | — | `/cyber-risk` | Exists |
+| it downtime cost | 10–100 both | — | `/true-cost` | Exists |
+| email interception / man-in-the-middle | — | — | `/email-interception-man-in-the-middle` | Exists, earning impressions |
+| phishing | — | — | `/how-to-spot-a-phishing-email` | Exists |
+
+### Consideration — engage stage
+
+| Term | Volume | Comp. | Page | Status |
+|---|---|---|---|---|
+| it due diligence | 10–100 both | **Low** | `/ma-it-due-diligence` | Exists |
+| technology due diligence | 100–1k UK | Medium | `/ma-it-due-diligence` | Exists |
+| outsourced it cost | 10–100 UK | **Low** | `/outsourced-it-cost`, `/cost-calculator` | Exists, with comparison table |
+| it manager salary | 10–100 IE | **Low** | `/do-i-need-an-it-manager` | Exists, with real figures |
+| own vs rent compute | — | — | `/own-vs-rent-compute` | Exists, with comparison table |
+
+### Decision — close stage
+
+| Term | Volume | Comp. | Page | Status |
+|---|---|---|---|---|
+| managed it services | **1k–10k UK** | **Low** | `/fully-managed-it` | **Exists but targets Ireland** |
+| it support | **1k–10k UK** | **Low** | `/outsourced-it` | **Exists but targets Ireland** |
+| outsourced it support | 100–1k UK | **Low** | `/outsourced-it` | **Exists but targets Ireland** |
+| it support hampshire | 100–1k UK | Medium | — | **MISSING** |
+| it support winchester | 10–100 UK | **Low** | `/it-support-winchester` | Exists — already performing |
+| it support dublin / limerick / galway / ennis | 10–100 IE | High–Med | location pages | Exist |
+
+---
+
+## Part 4 — What the matrix says
+
+**1. The content already exists. The geography is wrong.** Almost every
+awareness and consideration term above already has a page. They were built
+for a market where those terms get 10–100 searches a month, when the same
+pages could serve a market where they get 100–1,000 or 1,000–10,000.
+
+**2. The low-hanging fruit, by Ethan's definition — real volume, winnable:**
+
+| Rank | Term | Volume | Comp. | Why |
+|---|---|---|---|---|
+| 1 | **managed it services (UK)** | 1k–10k | Low | 100× Irish volume, low competition, €42.94 top bid |
+| 2 | **outsourced it support (UK)** | 100–1k | Low | Our pillar's exact phrase; €72.00 top bid; no Irish volume at all |
+| 3 | **invoice fraud (UK)** | 100–1k | Low | Page exists, already earning impressions, €49.08 top bid |
+| 4 | **disaster recovery plan (UK)** | 100–1k | Low | Page exists; reframe from service to answer |
+| 5 | **it support hampshire** | 100–1k | Medium | Only gap with no page; Winchester already proves the territory |
+| 6 | **it due diligence** | 10–100 both | Low | No MSP competitor on the SERP, growing, page exists |
+
+**3. Ireland is not abandoned — it is reweighted.** The location pages stay:
+they serve buyers who search that way and they are needed for local entity
+signals. But Irish head terms are 10–100 a month, High competition and down
+90% year on year. They cannot be the growth engine.
+
+**4. This does not change the AEO work.** Every SERP tested still carries an
+AI Overview, in both markets. Being cited still matters more than ranking.
+
+---
+
+## Next steps, in order
+
+1. **Read the UK SERPs** for the top six terms. Advertiser competition is not
+   organic difficulty, and this is the one unverified assumption in this
+   document.
+2. **Validate the buyer's journey with real interviews**, as HubSpot insists.
+   Ethan's own exit experience plus any former LanDynamix customers.
+3. Re-target the pillar and service pages for the UK as well as Ireland,
+   rather than replacing one with the other.
+4. Build the missing `/it-support-hampshire` page.
+5. Reframe the awareness pages from service descriptions to answers to the
+   business symptom, per the answer-first work already done.
