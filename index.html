@@ -251,8 +251,10 @@
       display: flex; gap: 0;
       border: 1.5px solid var(--border);
       border-radius: 10px; overflow: hidden;
-      margin: 3rem 0 0; width: fit-content;
+      margin: 3rem 0 0; width: 100%;
     }
+
+    @media (min-width: 641px) { .journey-tabs .journey-tab { flex: 1; text-align: center; } }
 
     .journey-tab {
       padding: 0.75rem 2rem;
