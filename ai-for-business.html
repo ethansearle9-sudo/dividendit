@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Self-exclusion. Visit any page with ?notme=1 to stop this browser being
+       measured, ?notme=0 to start again. Survives IP and country changes. -->
+  <script>
+    (function(){
+      try {
+        var q = new URLSearchParams(location.search);
+        if (q.has('notme')) {
+          if (q.get('notme') === '0') localStorage.removeItem('ddit_optout');
+          else localStorage.setItem('ddit_optout', '1');
+        }
+        var off = localStorage.getItem('ddit_optout') === '1';
+        if (off) window['ga-disable-G-NRJXMHZ0N7'] = true;
+        // Only when the switch was just used: show a visible confirmation, so it
+        // can be checked on a phone where there is no console to read.
+        if (q.has('notme')) {
+          document.addEventListener('DOMContentLoaded', function(){
+            var n = document.createElement('div');
+            n.setAttribute('role', 'status');
+            n.style.cssText = 'position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:99999;'
+              + 'max-width:92vw;padding:14px 18px;border-radius:10px;font:600 15px/1.4 system-ui,sans-serif;'
+              + 'color:#fff;box-shadow:0 6px 24px rgba(0,0,0,.28);text-align:center;'
+              + 'background:' + (off ? '#2d6a4f' : '#8a1c1c');
+            n.textContent = off
+              ? 'Analytics OFF on this browser. Your visits are no longer counted.'
+              : 'Analytics ON for this browser. Your visits are being counted again.';
+            document.body.appendChild(n);
+            setTimeout(function(){ n.style.transition = 'opacity .6s'; n.style.opacity = '0'; }, 6000);
+            setTimeout(function(){ n.remove(); }, 6800);
+          });
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NRJXMHZ0N7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NRJXMHZ0N7');
+    // Same helper the hand-built pages use, so event names stay consistent.
+    function trackEvent(name, params){ try { gtag('event', name, params || {}); } catch(e){} }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI for Business: Copilot, ChatGPT and Claude Set Up Safely</title>
+  <meta name="description" content="AI for business, set up safely: Microsoft Copilot, ChatGPT and Claude chosen for the right jobs, data permissions tidied first, and clear rules so your team gets the gains without the leaks." />
+  <link rel="canonical" href="https://dividendit.com/ai-for-business" />
+  <meta property="og:title" content="AI for Business: Copilot, ChatGPT and Claude Set Up Safely" />
+  <meta property="og:description" content="AI for business, set up safely: Microsoft Copilot, ChatGPT and Claude chosen for the right jobs, data permissions tidied first, and clear rules so your team gets the gains without the leaks." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dividendit.com/ai-for-business" />
+  <meta property="og:image" content="https://dividendit.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232d6a4f'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' font-weight='bold' fill='%23f8f8f6' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/assets/page.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "AI for Business", "serviceType": "AI for Business", "description": "AI for business, set up safely: Microsoft Copilot, ChatGPT and Claude chosen for the right jobs, data permissions tidied first, and clear rules so your team gets the gains without the leaks.", "url": "https://dividendit.com/ai-for-business", "provider": {"@type": ["Organization", "ProfessionalService"], "@id": "https://dividendit.com/#org", "name": "Dividend IT", "url": "https://dividendit.com/", "email": "ethan@dividendit.com", "areaServed": [{"@type": "Country", "name": "Ireland"}, {"@type": "City", "name": "Dublin"}, {"@type": "Country", "name": "United Kingdom"}]}, "areaServed": [{"@type": "Country", "name": "Ireland"}, {"@type": "City", "name": "Dublin"}, {"@type": "Country", "name": "United Kingdom"}], "audience": {"@type": "BusinessAudience", "name": "Business owners and shareholders"}, "datePublished": "2026-11-22", "dateModified": "2026-11-22", "author": {"@type": "Person", "@id": "https://dividendit.com/#author", "name": "Ethan Searle", "jobTitle": "Founder, Dividend IT", "description": "Founder of Dividend IT. Previously part-owner of LanDynamix, a South African managed service provider he helped grow from €1 million to €4 million in revenue before exiting.", "worksFor": {"@id": "https://dividendit.com/#org"}}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://dividendit.com/"}, {"@type": "ListItem", "position": 2, "name": "Communication & Collaboration", "item": "https://dividendit.com/communication-collaboration"}, {"@type": "ListItem", "position": 3, "name": "AI for Business", "item": "https://dividendit.com/ai-for-business"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it safe to use ChatGPT or Claude for business?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, on a business plan with sensible rules. The risk with free personal accounts is that the business does not control the account or know what has been put into it. Business plans give you control of accounts and clear terms on how your data is handled."}}, {"@type": "Question", "name": "What do we need to do before switching on Microsoft Copilot?", "acceptedAnswer": {"@type": "Answer", "text": "Tidy your permissions. Copilot can read anything the user is allowed to open, so files that were shared too widely become visible through it. Reviewing and tightening access first is the most important step."}}, {"@type": "Question", "name": "Should we ban AI tools at work?", "acceptedAnswer": {"@type": "Answer", "text": "Usually not. A ban tends to push use onto personal accounts where you cannot see it. Choosing approved tools and setting clear rules gives you the benefit and keeps control."}}, {"@type": "Question", "name": "Which AI tool should a small business use?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on where the work happens. If your team lives in Outlook, Word, Excel and Teams, Copilot fits naturally. For writing, analysis and research, ChatGPT or Claude may suit better. Many businesses use more than one, each for the job it does best."}}, {"@type": "Question", "name": "Do we need an AI policy?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, but a short one. It should say which tools are approved, what information must never go into them, and who to ask when unsure. One page your team will actually read is better than twenty they will not."}}, {"@type": "Question", "name": "Is AI part of your managed service?", "acceptedAnswer": {"@type": "Answer", "text": "Advice on AI is part of how we run your technology, and Microsoft 365 is included at every service level. The licence cost of Copilot or other AI tools depends on how many people need them, so we size it with you."}}]}</script>
+<!-- shell:head -->
+<link rel="stylesheet" href="/assets/site.css">
+<!-- /shell:head -->
+</head>
+<body>
+<!-- shell:nav -->
+<nav>
+  <div class="nav-inner">
+    <div class="brand-lockup"><a href="/" class="nav-logo">Dividend <span>IT</span></a><div class="brand-tag">Outsourced Cybersecurity &amp; IT</div></div>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+
+      <!-- Solutions mega-menu -->
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">What We Do <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <div class="nav-mega-menu">
+
+          <!-- Left col: Cyber Security -->
+          <div class="nav-mega-col">
+            <a href="/outsourced-cyber" class="nav-mega-label">Outsourced Cyber Security</a>
+            <ul>
+              <li><a href="/outsourced-cyber">Overview</a></li>
+              <li><a href="/fully-managed-cyber">Fully Managed Cyber Security</a></li>
+              <li><a href="/co-managed-cyber">Co-Managed Cyber Security</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Services</span>
+            <ul>
+              <li><a href="/iam">Identity &amp; Access Management (IAM)</a></li>
+              <li><a href="/endpoint-security">Endpoint Security</a></li>
+              <li><a href="/network-security">Network Security</a></li>
+              <li><a href="/detection-response">Detection &amp; Response</a></li>
+              <li><a href="/backup-dr">Recover (Backup &amp; DR)</a></li>
+              <li><a href="/governance-cyber">Governance</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Advisory</span>
+            <ul>
+              <li><a href="/cyber-risk-assessment">Cyber Risk Assessment</a></li>
+              <li><a href="/pen-testing">Pen Testing</a></li>
+              <li><a href="/ma-cyber-due-diligence">M&amp;A Cyber Due Diligence</a></li>
+            </ul>
+          </div>
+
+          <!-- Middle-right col: Outsourced IT -->
+          <div class="nav-mega-col nav-mega-col--right">
+            <a href="/outsourced-it" class="nav-mega-label">Outsourced IT</a>
+            <ul>
+              <li><a href="/outsourced-it">Overview</a></li>
+              <li><a href="/fully-managed-it">Fully Managed IT Support</a></li>
+              <li><a href="/co-managed-it">Co-Managed IT Support</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Services</span>
+            <ul>
+              <li><a href="/service-desk">Service Desk &amp; Admin</a></li>
+              <li><a href="/proactive-pc">Proactive PC Support</a></li>
+              <li><a href="/proactive-server">Proactive Server Support</a></li>
+              <li><a href="/network-wifi">Seamless Network</a></li>
+              <li><a href="/wifi">Seamless WiFi</a></li>
+              <li><a href="/it-procurement">IT Procurement</a></li>
+            </ul>
+            <div class="nav-mega-divider"></div>
+            <span class="nav-mega-sublabel">Advisory</span>
+            <ul>
+              <li><a href="/it-strategy">IT Strategy</a></li>
+              <li><a href="/cio-as-a-service">CIO as a Service</a></li>
+              <li><a href="/it-consulting">IT Consulting &amp; Projects</a></li>
+              <li><a href="/ma-it-strategy">M&amp;A IT Strategy</a></li>
+              <li><a href="/ma-it-due-diligence">M&amp;A Due Diligence</a></li>
+            </ul>
+          </div>
+
+          <!-- Far-right col: Communication & Collaboration -->
+          <div class="nav-mega-col nav-mega-col--right">
+            <a href="/communication-collaboration" class="nav-mega-label">Communication &amp; Collaboration</a>
+            <ul>
+              <li><a href="/communication-collaboration">Overview</a></li>
+              <li><a href="/microsoft-365">Microsoft 365</a></li>
+              <li><a href="/public-cloud">Public Cloud</a></li>
+              <li><a href="/private-cloud">Private Cloud</a></li>
+              <li><a href="/telephony">Telephony</a></li>
+              <li><a href="/crm">CRM</a></li>
+              <li><a href="/ai-for-business">AI for Business</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </li>
+
+      <li><a href="/who-we-serve">Who We Serve</a></li>
+      <li><a href="/where-we-work">Where We Work</a></li>
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">Tools <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <ul class="nav-dd-menu">
+          <li><a href="/cost-calculator">Cost Calculator</a></li>
+          <li><a href="/value-calculator">Value Calculator</a></li>
+        </ul>
+      </li>
+      <li class="nav-dd">
+        <button class="nav-dd-trigger" aria-haspopup="true">Insights <svg viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></button>
+        <ul class="nav-dd-menu">
+          <li><a href="/guide">Owner&rsquo;s Guide to Outsourced IT</a></li>
+          <li><a href="/been-hacked-first-24-hours">Been Hacked? The First 24 Hours</a></li>
+          <li><a href="/invoice-fraud">Invoice Fraud Explained</a></li>
+          <li><a href="/insights">All Insights</a></li>
+          <li><a href="/#tools">Calculators</a></li>
+          <li><a href="/#about">About</a></li>
+        </ul>
+      </li>
+      <li><a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" class="nav-cta">Get a Straight Answer</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- /shell:nav -->
+<main>
+<section class="sv-hero"><div class="wrap">
+  <div class="crumbs" role="navigation" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/communication-collaboration">Communication &amp; Collaboration</a><span>/</span>AI for Business</div>
+  <div class="sv-hero-grid">
+    <div>
+      <div class="label">Communication &amp; Collaboration</div>
+      <h1>AI for business, <em>without the leaks</em></h1>
+      <p class="sv-lead">AI tools such as Microsoft Copilot, ChatGPT and Claude can take hours of routine work off your team every week. The risk is not the tool. It is what the tool can reach. We treat AI as one more workload: we choose the right tools, put your data permissions in order first, and set clear rules for use.</p>
+      <div class="actions"><a class="btn" href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" rel="noopener">Book a 20-minute call</a><a class="link-arrow" href="#included">See what's included</a></div>
+    </div>
+    <aside class="glance" aria-label="At a glance"><h2>At a glance</h2><dl><dt>Best for</dt><dd>Teams already using AI, with or without permission</dd><dt>Covers</dt><dd>Copilot, ChatGPT, Claude, data readiness and usage rules</dd><dt>The principle</dt><dd>AI is a workload, with the same access controls as any other</dd><dt>Starts with</dt><dd>Where your data lives and who can see it</dd></dl></aside>
+  </div>
+</div></section>
+<section class="blk"><div class="wrap"><div class="narrow prose">
+  <div class="label">The problem</div>
+  <h2 class="h2">Your team is already using AI. The question is whether you know where your data is going.</h2>
+  <p>In most businesses, AI arrived the same way every other tool did: one person at a time, on a free account, without anyone deciding anything. Someone pastes a customer list into a chatbot to tidy it up. Someone else uploads a contract to get a summary. It saves them an hour, so they keep doing it.</p><p>That hour is real, and it is worth having. But nobody has checked what those accounts keep, who else can see it, or what happens to it when that person leaves. And when a business-grade tool like Copilot is switched on, it can read everything the user has permission to open, including the files that were shared too widely years ago.</p><p><strong>AI is not a separate project. It is another workload</strong>, and it needs the same things as every other workload: the right tool for the job, access that matches each role, and someone accountable for it.</p>
+  
+  
+</div></div></section>
+<section class="blk alt" id="included"><div class="wrap">
+  <div class="label">What's included</div>
+  <h2 class="h2">Chosen, prepared, governed</h2>
+  
+  <div class="grid3"><div class="card"><span class="tick">&#10003;</span><h3>An AI use review</h3><p>We find out where AI is already being used in the business, on which accounts, and with what data. No blame, just a clear picture.</p></div><div class="card"><span class="tick">&#10003;</span><h3>The right tool for each job</h3><p>Copilot where your work lives in Microsoft 365, ChatGPT or Claude where writing, analysis or research is the job. Business plans, not personal accounts.</p></div><div class="card"><span class="tick">&#10003;</span><h3>Data readiness first</h3><p>Before any AI tool gets near your files, permissions are tidied so that each person, and each AI assistant working for them, reaches only what they should.</p></div><div class="card"><span class="tick">&#10003;</span><h3>Clear rules for use</h3><p>A short, plain usage policy: what can go into an AI tool, what never should, and who to ask. Written for your team, not for lawyers.</p></div><div class="card"><span class="tick">&#10003;</span><h3>Accounts that leave when people do</h3><p>AI accounts tied to your business identity, so access ends the day someone leaves, the same as email.</p></div><div class="card"><span class="tick">&#10003;</span><h3>Practical use cases</h3><p>We work with your team on the routine jobs worth handing to AI first, so the gain shows up in hours saved rather than in a licence bill.</p></div></div>
+</div></section>
+<section class="blk"><div class="wrap"><div class="narrow">
+  <div class="label">Side by side</div>
+  <h2 class="h2">Free AI on personal accounts versus AI set up for the business</h2>
+  <p class='intro'>The tools can be the same. What differs is who controls the account and the data.</p>
+  <div class="cmp-wrap"><table class="cmp">
+    <caption>Staff using free AI tools on their own accounts compared with business AI set up and governed.</caption>
+    <thead><tr><th scope="col">What you are comparing</th><th scope="col">Free tools on personal accounts</th><th scope="col">Business AI, set up properly</th></tr></thead>
+    <tbody><tr><th scope="row">Who owns the account</th><td>The employee. It leaves when they do, with whatever they put into it.</td><td>The business, tied to your company sign-in and closed when someone leaves.</td></tr><tr><th scope="row">Where your data goes</th><td>Depends on each person's plan and settings. Some consumer plans can use conversations to improve the service.</td><td>Business plans chosen so your content is not used to train the models, and settings checked.</td></tr><tr><th scope="row">What the AI can reach</th><td>Whatever each person pastes in.</td><td>Only what each role is permitted to open, because permissions were tidied first.</td></tr><tr><th scope="row">Rules for use</th><td>None, or whatever each person assumes.</td><td>A short written policy: what goes in, what never does, who to ask.</td></tr><tr><th scope="row">Cost</th><td>Hidden on personal cards and expense claims.</td><td>Visible, licensed per person who needs it, reviewed as use grows.</td></tr></tbody>
+  </table></div>
+  
+</div></div></section>
+<section class="blk dark"><div class="wrap">
+  <div class="label">How it works</div>
+  <h2 class="h2">How we bring AI in safely</h2>
+  <div class="steps"><div class="step"><h3>Review</h3><p>Where AI is used today, on which accounts, and what data it has touched.</p></div><div class="step"><h3>Prepare</h3><p>Permissions and sharing tidied, so AI tools only reach what each role should see.</p></div><div class="step"><h3>Set up</h3><p>Business accounts for the right tools, tied to your company identity, with a plain usage policy.</p></div><div class="step"><h3>Adopt</h3><p>Your team shown the first jobs worth handing over, then reviewed as use grows.</p></div></div>
+</div></section>
+<section class="blk alt"><div class="wrap"><div class="split">
+  <div><div class="label">What it's worth</div><h2 class="h2">Time back, without a new risk</h2><p class="intro">Used well, AI gives your people time back on the routine work. Set up badly, it quietly moves your data somewhere you cannot see.</p></div>
+  <ul class="vlist"><li><strong>It gives hours back. </strong>Drafting, summarising and tidying data are where AI earns its keep first, and that time goes back into the work only your people can do.</li><li><strong>It keeps your data yours. </strong>Business accounts and clean permissions mean customer, pricing and financial data stay inside the business.</li><li><strong>It stands up to scrutiny. </strong>A buyer, insurer or auditor asking how you use AI gets a clear answer: which tools, which rules, and who is accountable. That is part of <a href="/exit-value">what your business is worth</a>.</li></ul>
+</div></div></section>
+<section class="blk"><div class="wrap">
+  <div class="label">Is it right for you?</div>
+  <h2 class="h2">An honest fit check</h2>
+  <div class="fit"><div class="yes"><h3>A good fit if</h3><ul><li>Staff are already using free AI tools for work</li><li>You are thinking about switching on Microsoft Copilot</li><li>You are not sure who can see which files in your shared drives</li><li>You want the productivity gain without the data risk</li></ul></div><div class="no"><h3>Probably not the right fit if</h3><ul><li>You want AI software built from scratch. We set up and govern the tools; we do not build custom models</li><li>You have decided AI has no place in the business at all</li></ul></div></div>
+</div></section>
+<section class="blk alt"><div class="wrap"><div class="narrow">
+  <div class="label">Questions owners ask</div>
+  <h2 class="h2">Frequently asked questions</h2>
+  <div class="faq">
+<details><summary><h3>Is it safe to use ChatGPT or Claude for business?</h3></summary><div class="a"><p>Yes, on a business plan with sensible rules. The risk with free personal accounts is that the business does not control the account or know what has been put into it. Business plans give you control of accounts and clear terms on how your data is handled.</p></div></details>
+<details><summary><h3>What do we need to do before switching on Microsoft Copilot?</h3></summary><div class="a"><p>Tidy your permissions. Copilot can read anything the user is allowed to open, so files that were shared too widely become visible through it. Reviewing and tightening access first is the most important step.</p></div></details>
+<details><summary><h3>Should we ban AI tools at work?</h3></summary><div class="a"><p>Usually not. A ban tends to push use onto personal accounts where you cannot see it. Choosing approved tools and setting clear rules gives you the benefit and keeps control.</p></div></details>
+<details><summary><h3>Which AI tool should a small business use?</h3></summary><div class="a"><p>It depends on where the work happens. If your team lives in Outlook, Word, Excel and Teams, Copilot fits naturally. For writing, analysis and research, ChatGPT or Claude may suit better. Many businesses use more than one, each for the job it does best.</p></div></details>
+<details><summary><h3>Do we need an AI policy?</h3></summary><div class="a"><p>Yes, but a short one. It should say which tools are approved, what information must never go into them, and who to ask when unsure. One page your team will actually read is better than twenty they will not.</p></div></details>
+<details><summary><h3>Is AI part of your managed service?</h3></summary><div class="a"><p>Advice on AI is part of how we run your technology, and Microsoft 365 is included at every service level. The licence cost of Copilot or other AI tools depends on how many people need them, so we size it with you.</p></div></details>
+</div>
+</div></div></section>
+<section class="blk"><div class="wrap">
+  <div class="label">Keep reading</div>
+  <h2 class="h2">Related services and guides</h2>
+  <div class="rel"><a class="rc" href="/microsoft-365"><span class="rk">Service</span><span class="rt">Microsoft 365</span><span class="rd">Licences matched to roles, security switched on, migration handled.</span></a><a class="rc" href="/iam"><span class="rk">Cyber security service</span><span class="rt">Identity and Access Management</span><span class="rd">Make sure a stolen password is never enough to get in.</span></a><a class="rc" href="/communication-collaboration"><span class="rk">Service</span><span class="rt">Communication and Collaboration</span><span class="rd">Microsoft 365, telephony, cloud and CRM that work together.</span></a></div>
+</div></section>
+<section class="cta-band"><div class="wrap">
+  <h2>Find out where AI already sits in your business.</h2>
+  <p>Twenty minutes: which AI tools your team is using, what data they can reach, and the first safe steps to get the gain without the risk.</p>
+  <div class="actions"><a class="btn green" href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" rel="noopener">Book a 20-minute call</a></div>
+</div></section>
+<section class="byline"><div class="wrap"><div class="narrow">
+  <p class="byline-who">Written by <span class="byline-name">Ethan Searle</span>, Founder, Dividend IT</p>
+  <p class="byline-bio">Founder of Dividend IT. Previously part-owner of LanDynamix, a South African managed service provider he helped grow from €1 million to €4 million in revenue before exiting.</p>
+  <p class="byline-dates">Published <time datetime="2026-11-22">22 November 2026</time></p>
+</div></div></section>
+</main>
+<!-- shell:footer -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">Dividend <span>IT</span></a>
+      <div class="footer-tagline">Outsourced Cybersecurity &amp; IT for business owners</div>
+      <a href="mailto:ethan@dividendit.com" class="footer-mail">ethan@dividendit.com</a>
+      <a href="https://calendly.com/dividendit/an-honest-read-on-your-it" target="_blank" rel="noopener" class="footer-cta">Book a 20 minute call</a>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>What we do</h4>
+        <a href="/outsourced-cyber">Outsourced Cybersecurity</a>
+        <a href="/outsourced-it">Outsourced IT</a>
+        <a href="/communication-collaboration">Communication &amp; Collaboration</a>
+        <a href="/outsourced-it-cost">What outsourced IT costs</a>
+        <a href="/services">All services</a>
+      </div>
+      <div class="footer-col">
+        <h4>Where we work</h4>
+        <a href="/it-support-dublin">Dublin</a>
+        <a href="/it-support-limerick">Limerick</a>
+        <a href="/it-support-ennis-shannon">Ennis &amp; Shannon</a>
+        <a href="/it-support-galway">Galway</a>
+        <a href="/it-support-winchester">Winchester</a>
+        <a href="/it-support-johannesburg">Johannesburg</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="/guide">Owner&rsquo;s Guide</a>
+        <a href="/insights">Insights</a>
+        <a href="/cost-calculator">Cost Calculator</a>
+        <a href="/value-calculator">Value Calculator</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about">About</a>
+        <a href="/who-we-serve">Who We Serve</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-base">
+    <span>&copy; 2026 Dividend IT</span>
+    <a href="/privacy">Privacy</a>
+  </div>
+</footer>
+<!-- /shell:footer -->
+<script>
+(function(){
+  if (typeof trackEvent !== 'function') return;
+  var hit = {};
+  window.addEventListener('scroll', function(){
+    var d = document.documentElement;
+    var h = Math.max(d.scrollHeight, document.body.scrollHeight) - window.innerHeight;
+    if (h <= 0) return;
+    var pct = (window.scrollY / h) * 100;
+    [50, 75, 90].forEach(function(m){
+      if (pct >= m && !hit[m]) {
+        hit[m] = true;
+        trackEvent('scroll_depth', { page_id: location.pathname, percent: m });
+      }
+    });
+  }, { passive: true });
+})();
+</script>
+<!-- shell:scripts -->
+<script src="/assets/site.js"></script>
+<!-- /shell:scripts -->
+</body>
+</html>
