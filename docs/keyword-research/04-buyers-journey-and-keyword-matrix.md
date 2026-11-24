@@ -254,7 +254,7 @@ AI Overview, in both markets. Being cited still matters more than ranking.
    organic difficulty, and this is the one unverified assumption in this
    document.
 2. **Validate the buyer's journey with real interviews**, as HubSpot insists.
-   Ethan's own exit experience plus any former LanDynamix customers.
+   Ethan's own exit experience plus former customers from the previous business.
 3. Re-target the pillar and service pages for the UK as well as Ireland,
    rather than replacing one with the other.
 4. Build the missing `/it-support-hampshire` page.

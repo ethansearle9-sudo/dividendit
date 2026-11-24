@@ -50,7 +50,7 @@ and industry pages have earned nothing.
 
 **Two readings are possible and the data cannot yet separate them:**
 
-1. The target terms are wrong — pattern-transferred from the 2019 LanDynamix
+1. The target terms are wrong — pattern-transferred from the 2019 the previous business
    Johannesburg matrix and never validated for Ireland.
 2. The pages are simply too new and too weak to surface at all. They were
    first crawled in the week of 9 November 2026, and average position across

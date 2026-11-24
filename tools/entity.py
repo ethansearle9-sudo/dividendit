@@ -126,9 +126,8 @@ AUTHOR = {
     'role': 'Founder, Dividend IT',
     # Currency confirmed by Ethan: the exit figure was R80 million, roughly
     # &euro;4 million. The site states it in euro, so the bio matches.
-    'bio': ('Founder of Dividend IT. Previously part-owner of LanDynamix, a South African '
-            'managed service provider he helped grow from €1 million to €4 million '
-            'in revenue before exiting.'),
+    'bio': ('Founder of Dividend IT. Previously scaled and exited a €4 million '
+            'outsourced IT and cybersecurity company.'),
 }
 
 

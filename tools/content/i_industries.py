@@ -2,7 +2,7 @@
 
 Buying-intent pages aimed at the sectors Dividend IT actually sells into:
 Ethan's stated verticals (distribution, manufacturing, financial services)
-combined with what the LanDynamix ICP work proved out (medical human and
+combined with what the earlier ICP work proved out (medical human and
 animal, FMCG, wealth managers, health and wellness).
 
 Same rule as the location pages: each one has to make an argument that is
